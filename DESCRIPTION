@@ -1,0 +1,27 @@
+Package: sfthemes
+Type: Package
+Title: Set of 'ggplot2' Scales and Themes Inspired by Apple's Human Interface Guidelines
+Version: 0.1.0
+Author: Amir Masoud Abdol
+Maintainer: Amir Masoud Abdol <amirmasoudabdol@icloud.com>
+Description: Collection of color scales inspired by default system colors in Apple's platforms, 
+    and [visual design guidelines](https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/color/).
+    As well as a dark and light theme inspired and interpolated by/from occasional use of charts in Apple's platforms, i.e.,
+    Apple Health, Screen Time. 
+    Design of the sfthemes package itself is heavily based on the excellent [hrbrthemes](https://github.com/hrbrmstr/hrbrthemes) package.
+License: MIT
+Encoding: UTF-8
+LazyData: true
+Depends:
+    R (>= 3.4.0)
+Imports:
+    ggplot2 (>= 3.3.0),
+    grDevices,
+    grid,
+    scales,
+    knitr,
+    rmarkdown,
+    extrafont,
+    testthat
+VignetteBuilder: knitr
+BugReports: https://github.com/amirmasoudabdol/sfthemes/issues
