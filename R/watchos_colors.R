@@ -17,7 +17,7 @@ watchos_dark_palette <- unname(unlist(watchos_dark_cols))
 #' @export
 #' @examples
 #' library(scales)
-#' scales::show_col(watchos_light_pal()(9), border = NA)
+#' scales::show_col(watchos_dark_pal()(9), border = NA)
 watchos_dark_pal <- function() {
     scales::manual_pal(watchos_dark_palette)
 }

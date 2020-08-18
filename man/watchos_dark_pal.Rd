@@ -11,5 +11,5 @@ A color palette based on iOS Light Palette
 }
 \examples{
 library(scales)
-scales::show_col(watchos_light_pal()(9), border = NA)
+scales::show_col(watchos_dark_pal()(9), border = NA)
 }
