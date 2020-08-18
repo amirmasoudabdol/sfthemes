@@ -25,3 +25,4 @@ Imports:
     testthat
 VignetteBuilder: knitr
 BugReports: https://github.com/amirmasoudabdol/sfthemes/issues
+RoxygenNote: 7.1.1
