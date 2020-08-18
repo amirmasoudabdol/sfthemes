@@ -2,8 +2,6 @@
 
 export(font_sf_pro_text)
 export(font_sf_pro_text_light)
-export(font_st_pro_text)
-export(font_st_pro_text_light)
 export(ios_dark_pal)
 export(ios_dark_palette)
 export(ios_gray_dark_pal)

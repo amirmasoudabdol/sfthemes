@@ -6,22 +6,20 @@
 Apple Health, Screen Time.}
 \usage{
 theme_sf_light(
-  base_family = "SF Pro Text",
+  base_family = "Inter",
   base_size = 11.5,
-  plot_title_family = "SF Pro Text Bold",
+  plot_title_family = "Inter Bold",
   plot_title_size = 18,
   plot_title_face = "plain",
   plot_title_margin = 10,
-  subtitle_family = if (.Platform$OS.type == "windows") "SF Pro Text" else
-    "SF Pro Text Light",
+  subtitle_family = if (.Platform$OS.type == "windows") "Inter" else "Inter Light",
   subtitle_size = 13,
   subtitle_face = "plain",
   subtitle_margin = 15,
-  strip_text_family = "SF Pro Text Medium",
+  strip_text_family = "Inter Medium",
   strip_text_size = 12,
   strip_text_face = "plain",
-  caption_family = if (.Platform$OS.type == "windows") "SF Pro Text" else
-    "SF Pro Text Thin",
+  caption_family = if (.Platform$OS.type == "windows") "Inter" else "Inter Thin",
   caption_size = 9,
   caption_face = "plain",
   caption_margin = 10,
@@ -80,7 +78,6 @@ It's free, has tolerable kerning pairs and multiple weights. It's also different
 }
 
 \examples{
-\dontrun{
 library(ggplot2)
 library(dplyr)
 
@@ -91,12 +88,9 @@ ggplot(mtcars, aes(mpg, wt)) +
        title="Seminal ggplot2 scatterplot example",
        subtitle="A plot that is only useful for demonstration purposes",
        caption="Brought to you by the letter 'g'") +
-  theme_ipsum_rc()
+  theme_sf_light()
 
 # seminal bar chart
-
-# note: make this font_rc on Windows
-update_geom_font_defaults(family=font_rc_light)
 
 count(mpg, class) \%>\%
   ggplot(aes(class, n)) +
@@ -106,8 +100,7 @@ count(mpg, class) \%>\%
        title="Seminal ggplot2 bar chart example",
        subtitle="A plot that is only useful for demonstration purposes",
        caption="Brought to you by the letter 'g'") +
-  theme_ipsum_rc(grid="Y") +
+  theme_sf_light(grid="Y") +
   theme(axis.text.y=element_blank())
-}
 }
 \concept{themes sflight}
