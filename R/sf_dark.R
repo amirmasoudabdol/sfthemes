@@ -18,9 +18,14 @@
 #' @param axis add x or y axes? `TRUE`, `FALSE`, "`xy`"
 #' @param ticks ticks if `TRUE` add ticks
 #' @export
-#' @examples \dontrun{
+#' @examples
 #' library(ggplot2)
 #' library(dplyr)
+#'
+#' opts <- options(
+#'   ggplot2.discrete.fill = list(scale_fill_ios_dark()),
+#'   ggplot2.discrete.color = list(scale_color_ios_dark())
+#' )
 #'
 #' # seminal scatterplot
 #' ggplot(mtcars, aes(mpg, wt)) +
@@ -29,12 +34,10 @@
 #'        title="Seminal ggplot2 scatterplot example",
 #'        subtitle="A plot that is only useful for demonstration purposes",
 #'        caption="Brought to you by the letter 'g'") +
-#'   theme_ipsum_rc()
+#'   theme_sf_dark() +
+#'   scale_color_ios_dark()
 #'
 #' # seminal bar chart
-#'
-#' # note: make this font_rc on Windows
-#' update_geom_font_defaults(family=font_rc_light)
 #'
 #' count(mpg, class) %>%
 #'   ggplot(aes(class, n)) +
@@ -44,9 +47,10 @@
 #'        title="Seminal ggplot2 bar chart example",
 #'        subtitle="A plot that is only useful for demonstration purposes",
 #'        caption="Brought to you by the letter 'g'") +
-#'   theme_ipsum_rc(grid="Y") +
-#'   theme(axis.text.y=element_blank())
-#' }
+#'   theme_sf_dark(grid="Y") +
+#'   theme(axis.text.y=element_blank()) +
+#'   scale_color_watchos_dark()
+#'
 theme_sf_dark <- function(
     base_family="SF Pro Text", base_size = 11.5,
     plot_title_family="SF Pro Text Bold", plot_title_size = 18,
@@ -67,6 +71,15 @@ theme_sf_dark <- function(
     plot_margin = ggplot2::margin(30, 30, 30, 30),
     grid_col = ios_text_on_dark_cols[["white"]], grid = TRUE,
     axis_col = ios_text_on_dark_cols[["white"]], axis = TRUE, ticks = TRUE) {
+
+    # Momentary hack for setting the defaults
+    ggplot2::update_geom_defaults("point", list(colour = ios_dark_palette[1]))
+    ggplot2::update_geom_defaults("line", list(colour = ios_dark_palette[1]))
+    ggplot2::update_geom_defaults("area", list(colour = ios_dark_palette[1], fill=ios_dark_palette[1]))
+    ggplot2::update_geom_defaults("rect", list(colour = ios_dark_palette[1], fill=ios_dark_palette[1]))
+    ggplot2::update_geom_defaults("density", list(colour = ios_dark_palette[1], fill=ios_dark_palette[1]))
+    ggplot2::update_geom_defaults("bar", list(colour = ios_dark_palette[1], fill=ios_dark_palette[1]))
+    ggplot2::update_geom_defaults("col", list(colour = ios_dark_palette[1], fill=ios_dark_palette[1]))
 
     sf_base(
         base_family="SF Pro Text", base_size = 11.5,

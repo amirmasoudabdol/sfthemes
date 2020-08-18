@@ -122,9 +122,10 @@ macos_light_palette <- unname(unlist(macos_light_cols))
 #' A color palette based on iOS Light Palette
 #'
 #' @export
-#' @examples
+#' @examples \dontrun{
 #' library(scales)
 #' scales::show_col(macos_light_pal()(9), border = NA)
+#' }
 macos_light_pal <- function(accessible = FALSE, vibrant = FALSE) {
     if (accessible) {
         if (vibrant){
@@ -195,9 +196,10 @@ scale_fill_macos_light <- function(accessible = FALSE, vibrant = FALSE, ...) {
 #' A color palette based on iOS Light Palette
 #'
 #' @export
-#' @examples
+#' @examples \dontrun{
 #' library(scales)
 #' scales::show_col(macos_light_pal()(9), border = NA)
+#' }
 macos_dark_pal <- function(accessible = FALSE, vibrant = FALSE) {
     if (accessible) {
         if (vibrant){

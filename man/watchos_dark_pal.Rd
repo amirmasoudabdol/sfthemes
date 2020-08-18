@@ -2,14 +2,16 @@
 % Please edit documentation in R/watchos_colors.R
 \name{watchos_dark_pal}
 \alias{watchos_dark_pal}
-\title{A color palette based on iOS Light Palette}
+\title{A color palette based on watchOS dark color palette}
 \usage{
 watchos_dark_pal()
 }
 \description{
-A color palette based on iOS Light Palette
+A color palette based on watchOS dark color palette
 }
 \examples{
+\dontrun{
 library(scales)
 scales::show_col(watchos_dark_pal()(9), border = NA)
+}
 }

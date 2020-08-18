@@ -54,6 +54,7 @@ ios_dark_cols <- list(cool.blue = "#0a84ff",
                       maya.blue = "#64d2ff",
                       gold = "#ffd60a")
 
+#' @export
 ios_dark_palette <- unname(unlist(ios_dark_cols))
 
 ios_accessible_dark_cols <- list(picton.blue = "#409cff",
@@ -71,9 +72,10 @@ ios_accessible_dark_palette <- unname(unlist(ios_accessible_dark_cols))
 #' A color palette based on iOS Light Color Palette
 #'
 #' @export
-#' @examples
+#' @examples \dontrun{
 #' library(scales)
 #' scales::show_col(ios_light_pal()(9))
+#' }
 ios_light_pal <- function(accessible = FALSE) {
     if (accessible) {
         scales::manual_pal(ios_accessible_light_palette)
@@ -89,6 +91,7 @@ ios_light_pal <- function(accessible = FALSE) {
 #' @md
 #' @inheritDotParams ggplot2::discrete_scale -expand -position
 #' @rdname scale_ios
+#' @aliases scale_color_ios_light
 #' @export
 scale_colour_ios_light <- function(accessible = FALSE, ...) {
     if (accessible){
@@ -118,9 +121,10 @@ scale_fill_ios_light <- function(accessible = FALSE, ...) {
 #' A color palette based on iOS Light Color Palette
 #'
 #' @export
-#' @examples
+#' @examples \dontrun{
 #' library(scales)
 #' scales::show_col(ios_dark_pal()(9))
+#' }
 ios_dark_pal <- function(accessible = FALSE) {
     if (accessible) {
         scales::manual_pal(ios_accessible_dark_palette)
@@ -202,9 +206,10 @@ ios_accessible_gray_dark_palette <- unname(unlist(ios_accessible_gray_dark_cols)
 #' A color palette based on iOS Light Color Palette
 #'
 #' @export
-#' @examples
+#' @examples \dontrun{
 #' library(scales)
 #' scales::show_col(ios_light_pal()(9))
+#' }
 ios_gray_light_pal <- function(accessible = FALSE) {
     if (accessible) {
         scales::manual_pal(ios_accessible_gray_light_palette)
@@ -249,9 +254,10 @@ scale_fill_ios_gray_light <- function(accessible = FALSE, ...) {
 #' A color palette based on iOS Light Color Palette
 #'
 #' @export
-#' @examples
+#' @examples \dontrun{
 #' library(scales)
 #' scales::show_col(ios_dark_pal()(9))
+#' }
 ios_gray_dark_pal <- function(accessible = FALSE) {
     if (accessible) {
         scales::manual_pal(ios_accessible_gray_dark_palette)

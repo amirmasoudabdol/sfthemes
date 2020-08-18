@@ -9,7 +9,7 @@ Description: Collection of color scales inspired by default system colors in App
     As well as a dark and light theme inspired and interpolated by/from occasional use of charts in Apple's platforms, i.e.,
     Apple Health, Screen Time. 
     Design of the sfthemes package itself is heavily based on the excellent [hrbrthemes](https://github.com/hrbrmstr/hrbrthemes) package.
-License: MIT
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Depends:

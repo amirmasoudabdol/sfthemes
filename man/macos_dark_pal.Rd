@@ -10,6 +10,8 @@ macos_dark_pal(accessible = FALSE, vibrant = FALSE)
 A color palette based on iOS Light Palette
 }
 \examples{
+\dontrun{
 library(scales)
 scales::show_col(macos_light_pal()(9), border = NA)
+}
 }

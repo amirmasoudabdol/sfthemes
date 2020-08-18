@@ -10,6 +10,8 @@ ios_light_pal(accessible = FALSE)
 A color palette based on iOS Light Color Palette
 }
 \examples{
+\dontrun{
 library(scales)
 scales::show_col(ios_light_pal()(9))
+}
 }

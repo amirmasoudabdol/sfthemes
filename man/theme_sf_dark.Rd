@@ -74,9 +74,13 @@ A light \link{ggplot2} theme inspired by Apple's HIG, and occasional appearance 
 Apple Health, Screen Time.
 }
 \examples{
-\dontrun{
 library(ggplot2)
 library(dplyr)
+
+opts <- options(
+  ggplot2.discrete.fill = list(scale_fill_ios_dark()),
+  ggplot2.discrete.color = list(scale_color_ios_dark())
+)
 
 # seminal scatterplot
 ggplot(mtcars, aes(mpg, wt)) +
@@ -85,12 +89,10 @@ ggplot(mtcars, aes(mpg, wt)) +
        title="Seminal ggplot2 scatterplot example",
        subtitle="A plot that is only useful for demonstration purposes",
        caption="Brought to you by the letter 'g'") +
-  theme_ipsum_rc()
+  theme_sf_dark() +
+  scale_color_ios_dark()
 
 # seminal bar chart
-
-# note: make this font_rc on Windows
-update_geom_font_defaults(family=font_rc_light)
 
 count(mpg, class) \%>\%
   ggplot(aes(class, n)) +
@@ -100,7 +102,8 @@ count(mpg, class) \%>\%
        title="Seminal ggplot2 bar chart example",
        subtitle="A plot that is only useful for demonstration purposes",
        caption="Brought to you by the letter 'g'") +
-  theme_ipsum_rc(grid="Y") +
-  theme(axis.text.y=element_blank())
-}
+  theme_sf_dark(grid="Y") +
+  theme(axis.text.y=element_blank()) +
+  scale_color_watchos_dark()
+
 }
