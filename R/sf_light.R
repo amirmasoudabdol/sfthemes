@@ -22,6 +22,8 @@
 #' @param axis_col axis color
 #' @param axis add x or y axes? `TRUE`, `FALSE`, "`xy`"
 #' @param ticks ticks if `TRUE` add ticks
+#' @param font_size_scale Scaling fonts
+#' 
 #' @export
 #' @inheritParams sfthemes::sf_base
 #' @family themes sflight
@@ -69,7 +71,8 @@ theme_sf_light <- function(
     axis_title_just = "rt",
     plot_margin = ggplot2::margin(30, 30, 30, 30),
     grid_col = "#cccccc", grid = TRUE,
-    axis_col = "#cccccc", axis = TRUE, ticks = TRUE) {
+    axis_col = "#cccccc", axis = TRUE, ticks = TRUE,
+    font_size_scale = "xSmall") {
 
     # Momentary hack for setting the defaults
     ggplot2::update_geom_defaults("point", list(colour = ios_light_palette[1]))
@@ -99,6 +102,7 @@ theme_sf_light <- function(
         axis_title_just = "rt",
         plot_margin = ggplot2::margin(30, 30, 30, 30),
         grid_col = "#cccccc", grid = TRUE,
-        axis_col = "#cccccc", axis = TRUE, ticks = TRUE)
+        axis_col = "#cccccc", axis = TRUE, ticks = TRUE,
+        font_size_scale = font_size_scale)
 
 }

@@ -17,6 +17,7 @@
 #' @param axis_col axis color
 #' @param axis add x or y axes? `TRUE`, `FALSE`, "`xy`"
 #' @param ticks ticks if `TRUE` add ticks
+#' @param font_size_scale Scaling fonts
 #'
 #' @importFrom ggplot2 margin theme
 sf_base <- function(
@@ -41,7 +42,18 @@ sf_base <- function(
     panel_background_col = "white",
     plot_margin = margin(30, 30, 30, 30),
     grid_col = "#cccccc", grid = TRUE,
-    axis_col = "#cccccc", axis = TRUE, ticks = TRUE) {
+    axis_col = "#cccccc", axis = TRUE, ticks = TRUE,
+    font_size_scale = "xSmall") {
+
+    font_scale <- sf_scale(font_size_scale);
+
+    base_size = font_scale[['sizes']][['body']]
+    plot_title_size = font_scale[['sizes']][['headline']]
+    subtitle_size = font_scale[['sizes']][['subhead']]
+    strip_text_size = font_scale[['sizes']][['footnote']]
+    caption_size = font_scale[['sizes']][['caption_1']]
+    axis_text_size = font_scale[['sizes']][['caption_1']]
+    axis_title_size = font_scale[['sizes']][['caption_1']]
 
     ret <- ggplot2::theme_minimal(base_family = base_family, base_size = base_size)
 

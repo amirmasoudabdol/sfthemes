@@ -17,6 +17,7 @@
 #' @param axis_col axis color
 #' @param axis add x or y axes? `TRUE`, `FALSE`, "`xy`"
 #' @param ticks ticks if `TRUE` add ticks
+#' @param font_size_scale Scaling fonts
 #' 
 #' @inheritParams sfthemes::sf_base
 #' 
@@ -73,7 +74,8 @@ theme_sf_dark <- function(
     axis_title_just = "rt",
     plot_margin = ggplot2::margin(30, 30, 30, 30),
     grid_col = ios_text_on_dark_cols[["white"]], grid = TRUE,
-    axis_col = ios_text_on_dark_cols[["white"]], axis = TRUE, ticks = TRUE) {
+    axis_col = ios_text_on_dark_cols[["white"]], axis = TRUE, ticks = TRUE,
+    font_size_scale = "xSmall") {
 
     # Momentary hack for setting the defaults
     ggplot2::update_geom_defaults("point", list(colour = ios_dark_palette[1]))
@@ -106,6 +108,7 @@ theme_sf_dark <- function(
         panel_background_col = ios_background_cols[["dark_jungle_green"]],
         plot_margin = ggplot2::margin(30, 30, 30, 30),
         grid_col = grid_col, grid = TRUE,
-        axis_col = axis_col, axis = TRUE, ticks = TRUE)
+        axis_col = axis_col, axis = TRUE, ticks = TRUE,
+        font_size_scale = font_size_scale)
 
 }

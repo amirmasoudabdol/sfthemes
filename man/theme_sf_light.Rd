@@ -33,7 +33,8 @@ theme_sf_light(
   grid = TRUE,
   axis_col = "#cccccc",
   axis = TRUE,
-  ticks = TRUE
+  ticks = TRUE,
+  font_size_scale = "xSmall"
 )
 }
 \arguments{
@@ -66,6 +67,8 @@ theme_sf_light(
 \item{axis}{add x or y axes? \code{TRUE}, \code{FALSE}, "\code{xy}"}
 
 \item{ticks}{ticks if \code{TRUE} add ticks}
+
+\item{font_size_scale}{Scaling fonts}
 }
 \description{
 A light \link{ggplot2} theme inspired by Apple's HIG, and occasional appearance of charts in Apple's platforms, i.e.,

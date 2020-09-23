@@ -35,7 +35,8 @@ sf_base(
   grid = TRUE,
   axis_col = "#cccccc",
   axis = TRUE,
-  ticks = TRUE
+  ticks = TRUE,
+  font_size_scale = "xSmall"
 )
 }
 \arguments{
@@ -68,6 +69,8 @@ sf_base(
 \item{axis}{add x or y axes? \code{TRUE}, \code{FALSE}, "\code{xy}"}
 
 \item{ticks}{ticks if \code{TRUE} add ticks}
+
+\item{font_size_scale}{Scaling fonts}
 }
 \description{
 A base theme for both SF Light and SF Dark

@@ -73,7 +73,6 @@ ios_accessible_dark_palette <- unname(unlist(ios_accessible_dark_cols))
 #'
 #' @param accessible Returns accessible alternative of colors
 #' @rdname scale_ios
-#' @rdname scale_ios_light
 #' @aliases scale_color_ios_light
 #'
 #' @examples \dontrun{
@@ -116,7 +115,6 @@ scale_color_ios_light <- scale_colour_ios_light
 #'
 #' @param accessible Returns accessible alternative of colors
 #' @rdname scale_ios
-#' @rdname scale_ios_light
 #' @aliases scale_color_ios_light
 #'
 #' @export
