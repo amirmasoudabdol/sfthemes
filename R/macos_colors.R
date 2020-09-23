@@ -120,6 +120,11 @@ macos_light_cols <- list(
 macos_light_palette <- unname(unlist(macos_light_cols))
 
 #' A color palette based on iOS Light Palette
+#' 
+#' @param accessible Returns accessible alternative of colors
+#' @param vibrant Returns vibrant alternative of colors
+#' 
+#' @rdname scale_macos_dark
 #'
 #' @export
 #' @examples \dontrun{
@@ -145,6 +150,9 @@ macos_light_pal <- function(accessible = FALSE, vibrant = FALSE) {
 #' Discrete color & fill scales based on the iOS Light Palette
 #'
 #' See [macos_light_palette()].
+#' 
+#' @param accessible Returns accessible alternative of colors
+#' @param vibrant Returns vibrant alternative of colors
 #'
 #' @md
 #' @inheritDotParams ggplot2::discrete_scale -expand -position
@@ -171,6 +179,9 @@ scale_colour_macos_light <- function(accessible = FALSE, vibrant = FALSE, ...) {
 #' @rdname scale_macos_light
 scale_color_macos_light <- scale_colour_macos_light
 
+#' 
+#' @param accessible Returns accessible alternative of colors
+#' @param vibrant Returns vibrant alternative of colors
 #' @export
 #' @rdname scale_macos_light
 scale_fill_macos_light <- function(accessible = FALSE, vibrant = FALSE, ...) {
@@ -194,7 +205,12 @@ scale_fill_macos_light <- function(accessible = FALSE, vibrant = FALSE, ...) {
 # Dark
 
 #' A color palette based on iOS Light Palette
-#'
+#' 
+#' @param accessible Returns accessible alternative of colors
+#' @param vibrant Returns vibrant alternative of colors
+#' 
+#' @rdname scale_macos_dark
+#' 
 #' @export
 #' @examples \dontrun{
 #' library(scales)
@@ -219,6 +235,9 @@ macos_dark_pal <- function(accessible = FALSE, vibrant = FALSE) {
 #' Discrete color & fill scales based on the iOS dark Palette
 #'
 #' See [macos_dark_palette()].
+#' 
+#' @param accessible Returns accessible alternative of colors
+#' @param vibrant Returns vibrant alternative of colors
 #'
 #' @md
 #' @inheritDotParams ggplot2::discrete_scale -expand -position
@@ -245,6 +264,10 @@ scale_colour_macos_dark <- function(accessible = FALSE, vibrant = FALSE, ...) {
 #' @rdname scale_macos_dark
 scale_color_macos_dark <- scale_colour_macos_dark
 
+#' 
+#' @param accessible Returns accessible alternative of colors
+#' @param vibrant Returns vibrant alternative of colors
+#' 
 #' @export
 #' @rdname scale_macos_dark
 scale_fill_macos_dark <- function(accessible = FALSE, vibrant = FALSE, ...) {

@@ -10,6 +10,10 @@ scale_colour_macos_light(accessible = FALSE, vibrant = FALSE, ...)
 scale_colour_macos_dark(accessible = FALSE, vibrant = FALSE, ...)
 }
 \arguments{
+\item{accessible}{Returns accessible alternative of colors}
+
+\item{vibrant}{Returns vibrant alternative of colors}
+
 \item{...}{
   Arguments passed on to \code{\link[ggplot2:discrete_scale]{ggplot2::discrete_scale}}, \code{\link[ggplot2:discrete_scale]{ggplot2::discrete_scale}}
   \describe{

@@ -1,4 +1,4 @@
-#' A light [ggplot2] theme inspired by Apple's HIG, and occasional appearance of charts in Apple's platforms, i.e.,
+#' A dark [ggplot2] theme inspired by Apple's HIG, and occasional appearance of charts in Apple's platforms, i.e.,
 #' Apple Health, Screen Time.
 #'
 #' @md
@@ -17,6 +17,9 @@
 #' @param axis_col axis color
 #' @param axis add x or y axes? `TRUE`, `FALSE`, "`xy`"
 #' @param ticks ticks if `TRUE` add ticks
+#' 
+#' @inheritParams sfthemes::sf_base
+#' 
 #' @export
 #' @examples
 #' library(ggplot2)

@@ -71,11 +71,17 @@ ios_accessible_dark_palette <- unname(unlist(ios_accessible_dark_cols))
 
 #' A color palette based on iOS Light Color Palette
 #'
-#' @export
+#' @param accessible Returns accessible alternative of colors
+#' @rdname scale_ios
+#' @rdname scale_ios_light
+#' @aliases scale_color_ios_light
+#'
 #' @examples \dontrun{
 #' library(scales)
 #' scales::show_col(ios_light_pal()(9))
 #' }
+#'
+#' @export
 ios_light_pal <- function(accessible = FALSE) {
     if (accessible) {
         scales::manual_pal(ios_accessible_light_palette)
@@ -85,6 +91,8 @@ ios_light_pal <- function(accessible = FALSE) {
 }
 
 #' Discrete color & fill scales based on the iOS Light Color Palette
+#'
+#' @param accessible Returns accessible alternative of colors
 #'
 #' See [ios_light_palette()].
 #'
@@ -105,8 +113,13 @@ scale_colour_ios_light <- function(accessible = FALSE, ...) {
 #' @rdname scale_ios_light
 scale_color_ios_light <- scale_colour_ios_light
 
-#' @export
+#'
+#' @param accessible Returns accessible alternative of colors
+#' @rdname scale_ios
 #' @rdname scale_ios_light
+#' @aliases scale_color_ios_light
+#'
+#' @export
 scale_fill_ios_light <- function(accessible = FALSE, ...) {
     if (accessible){
         ggplot2::discrete_scale("fill", "ios_light", ios_light_pal(accessible = TRUE), ...)
@@ -120,11 +133,16 @@ scale_fill_ios_light <- function(accessible = FALSE, ...) {
 
 #' A color palette based on iOS Light Color Palette
 #'
-#' @export
+#' @param accessible Returns accessible alternative of colors
+#' @rdname scale_ios
+#' @aliases scale_color_ios_light
+#'
 #' @examples \dontrun{
 #' library(scales)
 #' scales::show_col(ios_dark_pal()(9))
 #' }
+#'
+#' @export
 ios_dark_pal <- function(accessible = FALSE) {
     if (accessible) {
         scales::manual_pal(ios_accessible_dark_palette)
@@ -136,6 +154,8 @@ ios_dark_pal <- function(accessible = FALSE) {
 #' Discrete color & fill scales based on the iOS dark Palette
 #'
 #' See [ios_dark_palette()].
+#'
+#' @param accessible Returns accessible alternative of colors
 #'
 #' @md
 #' @inheritDotParams ggplot2::discrete_scale -expand -position
@@ -149,12 +169,16 @@ scale_colour_ios_dark <- function(accessible = FALSE, ...) {
     }
 }
 
+#'
 #' @export
 #' @rdname scale_ios_dark
+#' @aliases scale_colour_ios_dark
 scale_color_ios_dark <- scale_colour_ios_dark
 
-#' @export
+#'
+#' @param accessible Returns accessible alternative of colors
 #' @rdname scale_ios_dark
+#' @export
 scale_fill_ios_dark <- function(accessible = FALSE, ...) {
     if (accessible){
         ggplot2::discrete_scale("fill", "ios_dark", ios_dark_pal(accessible = TRUE), ...)
@@ -205,11 +229,16 @@ ios_accessible_gray_dark_palette <- unname(unlist(ios_accessible_gray_dark_cols)
 
 #' A color palette based on iOS Light Color Palette
 #'
-#' @export
+#' @param accessible Returns accessible alternative of colors
+#'
+#' @rdname scale_ios
+#'
 #' @examples \dontrun{
 #' library(scales)
 #' scales::show_col(ios_light_pal()(9))
 #' }
+#'
+#' @export
 ios_gray_light_pal <- function(accessible = FALSE) {
     if (accessible) {
         scales::manual_pal(ios_accessible_gray_light_palette)
@@ -222,9 +251,12 @@ ios_gray_light_pal <- function(accessible = FALSE) {
 #'
 #' See [ios_gray_light_palette()].
 #'
+#' @param accessible Returns accessible alternative of colors
+#'
 #' @md
 #' @inheritDotParams ggplot2::discrete_scale -expand -position
 #' @rdname scale_ios
+#'
 #' @export
 scale_colour_ios_gray_light <- function(accessible = FALSE, ...) {
     if (accessible){
@@ -238,8 +270,11 @@ scale_colour_ios_gray_light <- function(accessible = FALSE, ...) {
 #' @rdname scale_ios_gray_light
 scale_color_ios_gray_light <- scale_colour_ios_gray_light
 
-#' @export
+#'
+#' @param accessible Returns accessible alternative of colors
 #' @rdname scale_ios_gray_light
+#'
+#' @export
 scale_fill_ios_gray_light <- function(accessible = FALSE, ...) {
     if (accessible){
         ggplot2::discrete_scale("fill", "ios_gray_light", ios_gray_light_pal(accessible = TRUE), ...)
@@ -253,11 +288,15 @@ scale_fill_ios_gray_light <- function(accessible = FALSE, ...) {
 
 #' A color palette based on iOS Light Color Palette
 #'
-#' @export
+#' @rdname scale_ios
+#'
+#' @param accessible Returns accessible alternative of colors
 #' @examples \dontrun{
 #' library(scales)
 #' scales::show_col(ios_dark_pal()(9))
 #' }
+#'
+#' @export
 ios_gray_dark_pal <- function(accessible = FALSE) {
     if (accessible) {
         scales::manual_pal(ios_accessible_gray_dark_palette)
@@ -270,9 +309,12 @@ ios_gray_dark_pal <- function(accessible = FALSE) {
 #'
 #' See [ios_gray_dark_palette()].
 #'
+#' @param accessible Returns accessible alternative of colors
+#'
 #' @md
 #' @inheritDotParams ggplot2::discrete_scale -expand -position
 #' @rdname scale_ios
+#'
 #' @export
 scale_colour_ios_gray_dark <- function(accessible = FALSE, ...) {
     if (accessible){
@@ -282,12 +324,17 @@ scale_colour_ios_gray_dark <- function(accessible = FALSE, ...) {
     }
 }
 
-#' @export
 #' @rdname scale_ios_gray_dark
+#' @aliases scale_colour_ios_gray_dark
+#'
+#' @export
 scale_color_ios_gray_dark <- scale_colour_ios_gray_dark
 
-#' @export
+#'
+#' @param accessible Returns accessible alternative of colors
 #' @rdname scale_ios_gray_dark
+#'
+#' @export
 scale_fill_ios_gray_dark <- function(accessible = FALSE, ...) {
     if (accessible){
         ggplot2::discrete_scale("fill", "ios_gray_dark", ios_gray_dark_pal(accessible = TRUE), ...)
