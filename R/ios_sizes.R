@@ -1,3 +1,12 @@
+
+sf_element_sizes <- list("xSmall" = .75,
+                         "Small" = 1,
+                         "Medium" = 1.25,
+                         "Large" = 2,
+                         "xLarge" = 3,
+                         "xxLarge" = 4,
+                         "xxxLarge" = 5);
+
 #' sf_xSmall
 sf_xSmall_font_sizes <- list(types = list("large_title" = "regular",
 				"title_1" = "regular",

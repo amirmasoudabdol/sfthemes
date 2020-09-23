@@ -72,16 +72,21 @@ theme_sf_light <- function(
     plot_margin = ggplot2::margin(30, 30, 30, 30),
     grid_col = "#cccccc", grid = TRUE,
     axis_col = "#cccccc", axis = TRUE, ticks = TRUE,
-    font_size_scale = "xSmall") {
+    font_size_scale = "xSmall",
+    element_size_scale = "xSmall",
+    offset_x_ticks = FALSE,
+    offset_y_ticks = FALSE,
+    scale = NULL) {
+
 
     # Momentary hack for setting the defaults
-    ggplot2::update_geom_defaults("point", list(colour = ios_light_palette[1]))
-    ggplot2::update_geom_defaults("line", list(colour = ios_light_palette[1]))
-    ggplot2::update_geom_defaults("area", list(colour = ios_light_palette[1], fill=ios_light_palette[1]))
-    ggplot2::update_geom_defaults("rect", list(colour = ios_light_palette[1], fill=ios_light_palette[1]))
-    ggplot2::update_geom_defaults("density", list(colour = ios_light_palette[1], fill=ios_light_palette[1]))
-    ggplot2::update_geom_defaults("bar", list(colour = ios_light_palette[1], fill=ios_light_palette[1]))
-    ggplot2::update_geom_defaults("col", list(colour = ios_light_palette[1], fill=ios_light_palette[1]))
+    update_geom_defaults("point", list(colour = ios_light_palette[1]))
+    update_geom_defaults("line", list(colour = ios_light_palette[1]))
+    update_geom_defaults("area", list(colour = ios_light_palette[1], fill=ios_light_palette[1]))
+    update_geom_defaults("rect", list(colour = ios_light_palette[1], fill=ios_light_palette[1]))
+    update_geom_defaults("density", list(colour = ios_light_palette[1], fill=ios_light_palette[1]))
+    update_geom_defaults("bar", list(colour = ios_light_palette[1], fill=ios_light_palette[1]))
+    update_geom_defaults("col", list(colour = ios_light_palette[1], fill=ios_light_palette[1]))
 
     sf_base(
         base_family="Inter", base_size = base_size,
@@ -103,6 +108,10 @@ theme_sf_light <- function(
         plot_margin = ggplot2::margin(30, 30, 30, 30),
         grid_col = "#cccccc", grid = TRUE,
         axis_col = "#cccccc", axis = TRUE, ticks = TRUE,
-        font_size_scale = font_size_scale)
+        font_size_scale = font_size_scale,
+        element_size_scale = element_size_scale,
+        offset_x_ticks = offset_x_ticks,
+        offset_y_ticks = offset_y_ticks,
+        scale = scale)
 
 }

@@ -43,139 +43,213 @@ sf_base <- function(
     plot_margin = margin(30, 30, 30, 30),
     grid_col = "#cccccc", grid = TRUE,
     axis_col = "#cccccc", axis = TRUE, ticks = TRUE,
-    font_size_scale = "xSmall") {
+    font_size_scale = "xSmall",
+    element_size_scale = "xSmall",
+    offset_x_ticks = FALSE,
+    offset_y_ticks = FALSE,
+    scale = NULL) {
+
+    if (!is.null(scale)) {
+        font_size_scale = scale;
+        element_size_scale = scale;
+    }
 
     font_scale <- sf_scale(font_size_scale);
 
-    if (is.null(base_size)) {
+    if (is.null(base_size))
         base_size <- font_scale[['sizes']][['body']]
-    }
     else
-        warning("`base_size` is set manually. Since SFThemes scales font sizes automatically, manual changes to font sizes may cause disproportionate text sizes.")
+        warning("The `base_size` variable is set manually.\nSince SFThemes scales font sizes automatically, manual changes to font sizes may cause disproportionate text sizes.")
 
     if (is.null(plot_title_size))
         plot_title_size <- font_scale[['sizes']][['headline']]
     else
-        warning("`plot_title_size` is set manually. Since SFThemes scales font sizes automatically, manual changes to font sizes may cause disproportionate text sizes.")
+        warning("The `plot_title_size` variable is set manually.\nSince SFThemes scales font sizes automatically, manual changes to font sizes may cause disproportionate text sizes.")
 
     if (is.null(subtitle_size))
         subtitle_size <- font_scale[['sizes']][['subhead']]
     else
-        warning("`subtitle_size` is set manually. Since SFThemes scales font sizes automatically, manual changes to font sizes may cause disproportionate text sizes.")
+        warning("The `subtitle_size` variable is set manually.\nSince SFThemes scales font sizes automatically, manual changes to font sizes may cause disproportionate text sizes.")
 
     if (is.null(strip_text_size))
         strip_text_size <- font_scale[['sizes']][['footnote']]
     else
-        warning("`strip_text_size` is set manually. Since SFThemes scales font sizes automatically, manual changes to font sizes may cause disproportionate text sizes.")
+        warning("The `strip_text_size` variable is set manually.\nSince SFThemes scales font sizes automatically, manual changes to font sizes may cause disproportionate text sizes.")
 
     if (is.null(caption_size))
         caption_size <- font_scale[['sizes']][['caption_1']]
     else
-        warning("`caption_size` is set manually. Since SFThemes scales font sizes automatically, manual changes to font sizes may cause disproportionate text sizes.")
+        warning("The `caption_size` variable is set manually.\nSince SFThemes scales font sizes automatically, manual changes to font sizes may cause disproportionate text sizes.")
 
     if (is.null(axis_text_size))
         axis_text_size <- font_scale[['sizes']][['caption_1']]
     else
-        warning("`axis_text_size` is set manually. Since SFThemes scales font sizes automatically, manual changes to font sizes may cause disproportionate text sizes.")
+        warning("The `axis_text_size` variable is set manually.\nSince SFThemes scales font sizes automatically, manual changes to font sizes may cause disproportionate text sizes.")
 
     if (is.null(axis_title_size))
         axis_title_size <- font_scale[['sizes']][['caption_1']]
     else
-        warning("`axis_title_size` is set manually. Since SFThemes scales font sizes automatically, manual changes to font sizes may cause disproportionate text sizes.")
+        warning("The `axis_title_size` variable is set manually.\nSince SFThemes scales font sizes automatically, manual changes to font sizes may cause disproportionate text sizes.")
 
 
-    ret <- ggplot2::theme_minimal(base_family = base_family, base_size = base_size)
+    if (!is.null(element_size_scale)){
+        update_geom_defaults("point", list(size = sf_element_sizes[[element_size_scale]]))
+        update_geom_defaults("line", list(lwd = sf_element_sizes[[element_size_scale]]))
+    }
 
-    ret <- ret + ggplot2::theme(legend.background = ggplot2::element_blank())
-    ret <- ret + ggplot2::theme(legend.key = ggplot2::element_blank())
 
-    ret <- ret + ggplot2::theme(plot.background = ggplot2::element_rect(fill = plot_background_col, color = plot_background_col))
-    # ret <- ret + ggplot2::theme(panel.background = ggplot2::element_rect(fill = panel_background_col, color = text_color_palette[["label"]]))
-    # ret <- ret + ggplot2::theme(panel.grid = )
+    ret <- theme_minimal(base_family = base_family, base_size = base_size)
+
+    ret <- ret + theme(legend.background = element_blank())
+    ret <- ret + theme(legend.key = element_blank())
+
+    ret <- ret + theme(plot.background = element_rect(fill = plot_background_col, color = plot_background_col))
+    # ret <- ret + theme(panel.background = element_rect(fill = panel_background_col, color = text_color_palette[["label"]]))
+    # ret <- ret + theme(panel.grid = )
 
     # Grids
     if (inherits(grid, "character") | grid == TRUE) {
 
-        ret <- ret + ggplot2::theme(panel.grid = ggplot2::element_line(color = text_color_palette[["secondaryLabel"]], size = 0.2))
-        ret <- ret + ggplot2::theme(panel.grid.major.x = ggplot2::element_line(color = text_color_palette[["secondaryLabel"]], linetype = "dotted", size = 0.3))
-        ret <- ret + ggplot2::theme(panel.grid.minor.x = ggplot2::element_line(color = text_color_palette[["secondaryLabel"]], linetype = "dotted", size = 0.1))
+        ret <- ret + theme(panel.grid = element_line(color = text_color_palette[["secondaryLabel"]], size = 0.2))
 
-        ret <- ret + ggplot2::theme(panel.grid.major.y = ggplot2::element_line(color = text_color_palette[["secondaryLabel"]], linetype = "solid", size = 0.2))
-        ret <- ret + ggplot2::theme(panel.grid.minor.y = ggplot2::element_line(color = text_color_palette[["secondaryLabel"]], linetype = "solid", size = 0.1))
+        ret <- ret + theme(panel.grid.major.x = element_line(color = text_color_palette[["secondaryLabel"]], linetype = "dotted", size = 0.3))
+        ret <- ret + theme(panel.grid.minor.x = element_line(color = text_color_palette[["tertiaryLabel"]], linetype = "dotted", size = 0.3))
+
+        ret <- ret + theme(panel.grid.major.y = element_line(color = text_color_palette[["secondaryLabel"]], linetype = "solid", size = 0.175))
+        ret <- ret + theme(panel.grid.minor.y = element_line(color = text_color_palette[["tertiaryLabel"]], linetype = "solid", size = 0.1))
 
         if (inherits(grid, "character")) {
-            if (regexpr("X", grid)[1] < 0) ret <- ret + ggplot2::theme(panel.grid.major.x = ggplot2::element_blank())
-            if (regexpr("Y", grid)[1] < 0) ret <- ret + ggplot2::theme(panel.grid.major.y = ggplot2::element_blank())
-            if (regexpr("x", grid)[1] < 0) ret <- ret + ggplot2::theme(panel.grid.minor.x = ggplot2::element_blank())
-            if (regexpr("y", grid)[1] < 0) ret <- ret + ggplot2::theme(panel.grid.minor.y = ggplot2::element_blank())
+            if (regexpr("X", grid)[1] < 0) ret <- ret + theme(panel.grid.major.x = element_blank())
+            if (regexpr("Y", grid)[1] < 0) ret <- ret + theme(panel.grid.major.y = element_blank())
+            if (regexpr("x", grid)[1] < 0) ret <- ret + theme(panel.grid.minor.x = element_blank())
+            if (regexpr("y", grid)[1] < 0) ret <- ret + theme(panel.grid.minor.y = element_blank())
         }
 
     } else {
-        ret <- ret + ggplot2::theme(panel.grid = ggplot2::element_blank())
+        ret <- ret + theme(panel.grid = element_blank())
     }
 
+    # Axes
     if (inherits(axis, "character") | axis == TRUE) {
-        ret <- ret + ggplot2::theme(axis.line = ggplot2::element_line(color = text_color_palette[["secondaryLabel"]], size = 0.2))
+        ret <- ret + theme(axis.line = element_line(color = text_color_palette[["label"]], size = 0.2))
         if (inherits(axis, "character")) {
             axis <- tolower(axis)
             if (regexpr("x", axis)[1] < 0) {
-                ret <- ret + ggplot2::theme(axis.line.x = ggplot2::element_blank())
+                ret <- ret + theme(axis.line.x = element_blank())
             } else {
-                ret <- ret + ggplot2::theme(axis.line.x = ggplot2::element_line(color = text_color_palette[["secondaryLabel"]], size = 0.2))
+                ret <- ret + theme(axis.line.x = element_line(color = text_color_palette[["label"]], size = 0.2))
             }
             if (regexpr("y", axis)[1] < 0) {
-                ret <- ret + ggplot2::theme(axis.line.y = ggplot2::element_blank())
+                ret <- ret + theme(axis.line.y = element_blank())
             } else {
-                ret <- ret + ggplot2::theme(axis.line.y = ggplot2::element_line(color = text_color_palette[["secondaryLabel"]], size = 0.2))
+                ret <- ret + theme(axis.line.y = element_line(color = text_color_palette[["label"]], size = 0.2))
             }
         } else {
-            ret <- ret + ggplot2::theme(axis.line.x = ggplot2::element_line(color = text_color_palette[["secondaryLabel"]], size = 0.2))
-            ret <- ret + ggplot2::theme(axis.line.y = ggplot2::element_line(color = text_color_palette[["secondaryLabel"]], size = 0.2))
+            ret <- ret + theme(axis.line.x = element_line(color = text_color_palette[["label"]], size = 0.2))
+            ret <- ret + theme(axis.line.y = element_line(color = text_color_palette[["label"]], size = 0.2))
         }
     } else {
-        ret <- ret + ggplot2::theme(axis.line = ggplot2::element_blank())
+        ret <- ret + theme(axis.line = element_blank())
     }
 
+    # Ticks
     if (!ticks) {
-        ret <- ret + ggplot2::theme(axis.ticks = ggplot2::element_blank())
-        ret <- ret + ggplot2::theme(axis.ticks.x = ggplot2::element_blank())
-        ret <- ret + ggplot2::theme(axis.ticks.y = ggplot2::element_blank())
+        ret <- ret + theme(axis.ticks = element_blank())
+        ret <- ret + theme(axis.ticks.x = element_blank())
+        ret <- ret + theme(axis.ticks.y = element_blank())
     } else {
-        ret <- ret + ggplot2::theme(axis.ticks = ggplot2::element_line(linetype = "dotted", color = text_color_palette[["secondaryLabel"]], size = 0.3))
-        ret <- ret + ggplot2::theme(axis.ticks.x = ggplot2::element_line(linetype = "dotted", color = text_color_palette[["secondaryLabel"]], size = 0.3))
-        ret <- ret + ggplot2::theme(axis.ticks.length.x = grid::unit(20, "pt"))
+        # ret <- ret + theme(axis.ticks = element_line(linetype = "dotted", color = text_color_palette[["secondaryLabel"]], size = 0.3))
 
-        ret <- ret + ggplot2::theme(axis.ticks.y = ggplot2::element_blank())
+        # X
+        ret <- ret + theme(axis.ticks.x = element_line(linetype = "dotted", color = text_color_palette[["secondaryLabel"]], size = 0.3))
+        ret <- ret + theme(axis.ticks.length.x = grid::unit(2.5, "pt"))
+        if (offset_x_ticks)
+            ret <- ret + theme(axis.ticks.length.x = grid::unit(20, "pt"))
+
+        # Y
+        ret <- ret + theme(axis.ticks.y = element_line(linetype = "solid", color = text_color_palette[["secondaryLabel"]], size = 0.175))
+        ret <- ret + theme(axis.ticks.length.y = grid::unit(2.5, "pt"))
+        if (offset_y_ticks)
+            ret <- ret + theme(axis.ticks.length.y = grid::unit(20, "pt"))
     }
 
     xj <- switch(tolower(substr(axis_title_just, 1, 1)), b=0, l=0, m=0.5, c=0.5, r=1, t=1)
     yj <- switch(tolower(substr(axis_title_just, 2, 2)), b=0, l=0, m=0.5, c=0.5, r=1, t=1)
 
-    ret <- ret + ggplot2::theme(axis.text.x = ggplot2::element_text(color = text_color_palette[["label"]], size = axis_text_size, margin = ggplot2::margin(t = -5, b = 5), hjust = -.3))
-    ret <- ret + ggplot2::theme(axis.text.y = ggplot2::element_text(color = text_color_palette[["label"]], size = axis_text_size, margin = ggplot2::margin(r = 0)))
-    ret <- ret + ggplot2::theme(axis.title = ggplot2::element_text(color = text_color_palette[["label"]], size = axis_title_size, family=axis_title_family))
-    ret <- ret + ggplot2::theme(axis.title.x = ggplot2::element_text(color = text_color_palette[["label"]], hjust = xj, size = axis_title_size,
-                                                 family=axis_title_family, face=axis_title_face))
-    ret <- ret + ggplot2::theme(axis.title.y = ggplot2::element_text(color = text_color_palette[["label"]], hjust = yj, size = axis_title_size,
-                                                 family=axis_title_family, face=axis_title_face))
-    ret <- ret + ggplot2::theme(axis.title.y.right = ggplot2::element_text(color = text_color_palette[["label"]], hjust = yj, size = axis_title_size, angle=90,
-                                                       family=axis_title_family, face=axis_title_face))
-    ret <- ret + ggplot2::theme(strip.text = ggplot2::element_text(color = text_color_palette[["label"]], hjust = 0, size = strip_text_size,
-                                               face=strip_text_face, family=strip_text_family))
-    ret <- ret + ggplot2::theme(panel.spacing = grid::unit(2, "lines"))
-    ret <- ret + ggplot2::theme(plot.title = ggplot2::element_text(color = text_color_palette[["label"]], hjust = 0, size = plot_title_size,
-                                               margin = ggplot2::margin(b=plot_title_margin),
-                                               family=plot_title_family, face=plot_title_face))
-    ret <- ret + ggplot2::theme(plot.subtitle = ggplot2::element_text(color = text_color_palette[["label"]], hjust = 0, size = subtitle_size,
-                                                  margin = ggplot2::margin(b=subtitle_margin),
-                                                  family=subtitle_family, face=subtitle_face))
-    ret <- ret + ggplot2::theme(plot.caption = ggplot2::element_text(color = text_color_palette[["label"]], hjust = 1, size = caption_size,
-                                                 margin = ggplot2::margin(t=caption_margin),
-                                                 family=caption_family, face=caption_face))
-    ret <- ret + ggplot2::theme(plot.margin =plot_margin)
+    x_axis_ticks_text_offset = 0;
+    x_ticks_margin = margin(t = 5)
+    if (offset_x_ticks){
+        x_axis_ticks_text_offset = -0.3;
+        x_ticks_margin = margin(b = -5)
+    }
 
-    ret <- ret + ggplot2::theme(legend.text = ggplot2::element_text(color = text_color_palette[["label"]]))
-    ret <- ret + ggplot2::theme(legend.title = ggplot2::element_text(color = text_color_palette[["label"]]))
+    y_axis_ticks_text_offset = 0;
+    y_ticks_margin = margin(r = 5)
+    if (offset_y_ticks) {
+        y_axis_ticks_text_offset = -0.3;
+        y_ticks_margin = margin(r = -5)
+    }
+
+    ret <- ret + theme(axis.text.x = element_text(color = text_color_palette[["label"]],
+                                                    size = axis_text_size,
+                                                    margin = x_ticks_margin,
+                                                    hjust = x_axis_ticks_text_offset))
+
+    ret <- ret + theme(axis.text.y = element_text(color = text_color_palette[["label"]],
+                                                    size = axis_text_size,
+                                                    margin = y_ticks_margin,
+                                                    vjust = y_axis_ticks_text_offset))
+
+    ret <- ret + theme(axis.title = element_text(color = text_color_palette[["label"]],
+                                                    size = axis_title_size,
+                                                    family=axis_title_family))
+
+    ret <- ret + theme(axis.title.x = element_text(color = text_color_palette[["label"]],
+                                                    hjust = xj,
+                                                    size = axis_title_size,
+                                                    family=axis_title_family, face=axis_title_face))
+
+    ret <- ret + theme(axis.title.y = element_text(color = text_color_palette[["label"]], 
+                                                    hjust = yj,
+                                                    size = axis_title_size,
+                                                    family=axis_title_family, face=axis_title_face))
+
+    ret <- ret + theme(axis.title.y.right = element_text(color = text_color_palette[["label"]],
+                                                    size = axis_title_size,
+                                                    hjust = yj,
+                                                    angle=90,
+                                                    family=axis_title_family, face=axis_title_face))
+    
+    ret <- ret + theme(strip.text = element_text(color = text_color_palette[["label"]], 
+                                                    hjust = 0,
+                                                    size = strip_text_size,
+                                                    face=strip_text_face, family=strip_text_family))
+
+    ret <- ret + theme(panel.spacing = grid::unit(2, "lines"))
+
+    ret <- ret + theme(plot.title = element_text(color = text_color_palette[["label"]],
+                                                    hjust = 0,
+                                                    size = plot_title_size,
+                                                    margin = margin(b=plot_title_margin),
+                                                    family=plot_title_family, face=plot_title_face))
+
+    ret <- ret + theme(plot.subtitle = element_text(color = text_color_palette[["label"]],
+                                                    hjust = 0,
+                                                    size = subtitle_size,
+                                                    margin = margin(b=subtitle_margin),
+                                                    family=subtitle_family, face=subtitle_face))
+    
+    ret <- ret + theme(plot.caption = element_text(color = text_color_palette[["label"]],
+                                                    hjust = 1,
+                                                    size = caption_size,
+                                                    margin = margin(t=caption_margin),
+                                                    family=caption_family, face=caption_face))
+    
+    ret <- ret + theme(plot.margin =plot_margin)
+    ret <- ret + theme(legend.title = element_text(color = text_color_palette[["label"]],
+                                                    size = axis_text_size, face="bold"))
+    ret <- ret + theme(legend.text = element_text(color = text_color_palette[["label"]],
+                                                    size = axis_text_size))
 
     ret
 
