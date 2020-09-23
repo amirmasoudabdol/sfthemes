@@ -21,21 +21,21 @@
 #'
 #' @importFrom ggplot2 margin theme
 sf_base <- function(
-    base_family="Inter", base_size = 11.5,
-    plot_title_family="Inter Bold", plot_title_size = 18,
+    base_family="Inter", base_size = NULL,
+    plot_title_family="Inter Bold", plot_title_size = NULL,
     plot_title_face="plain", plot_title_margin = 10,
     subtitle_family=if (.Platform$OS.type == "windows") "Inter" else "Inter Light",
-    subtitle_size = 13,
+    subtitle_size = NULL,
     subtitle_face = "plain", subtitle_margin = 15,
-    strip_text_family = "Inter Medium", strip_text_size = 12,
+    strip_text_family = "Inter Medium", strip_text_size = NULL,
     strip_text_face = "plain",
     caption_family=if (.Platform$OS.type == "windows") "Inter" else "Inter Thin",
-    caption_size = 9,
+    caption_size = NULL,
     caption_face = "plain", caption_margin = 10,
-    axis_text_size = 9,
+    axis_text_size = NULL,
     text_color_palette = ios_text_on_light_cols,
     axis_title_family = base_family,
-    axis_title_size = 9,
+    axis_title_size = NULL,
     axis_title_face = "plain",
     axis_title_just = "rt",
     plot_background_col = "white",
@@ -47,13 +47,42 @@ sf_base <- function(
 
     font_scale <- sf_scale(font_size_scale);
 
-    base_size = font_scale[['sizes']][['body']]
-    plot_title_size = font_scale[['sizes']][['headline']]
-    subtitle_size = font_scale[['sizes']][['subhead']]
-    strip_text_size = font_scale[['sizes']][['footnote']]
-    caption_size = font_scale[['sizes']][['caption_1']]
-    axis_text_size = font_scale[['sizes']][['caption_1']]
-    axis_title_size = font_scale[['sizes']][['caption_1']]
+    if (is.null(base_size)) {
+        base_size <- font_scale[['sizes']][['body']]
+    }
+    else
+        warning("`base_size` is set manually. Since SFThemes scales font sizes automatically, manual changes to font sizes may cause disproportionate text sizes.")
+
+    if (is.null(plot_title_size))
+        plot_title_size <- font_scale[['sizes']][['headline']]
+    else
+        warning("`plot_title_size` is set manually. Since SFThemes scales font sizes automatically, manual changes to font sizes may cause disproportionate text sizes.")
+
+    if (is.null(subtitle_size))
+        subtitle_size <- font_scale[['sizes']][['subhead']]
+    else
+        warning("`subtitle_size` is set manually. Since SFThemes scales font sizes automatically, manual changes to font sizes may cause disproportionate text sizes.")
+
+    if (is.null(strip_text_size))
+        strip_text_size <- font_scale[['sizes']][['footnote']]
+    else
+        warning("`strip_text_size` is set manually. Since SFThemes scales font sizes automatically, manual changes to font sizes may cause disproportionate text sizes.")
+
+    if (is.null(caption_size))
+        caption_size <- font_scale[['sizes']][['caption_1']]
+    else
+        warning("`caption_size` is set manually. Since SFThemes scales font sizes automatically, manual changes to font sizes may cause disproportionate text sizes.")
+
+    if (is.null(axis_text_size))
+        axis_text_size <- font_scale[['sizes']][['caption_1']]
+    else
+        warning("`axis_text_size` is set manually. Since SFThemes scales font sizes automatically, manual changes to font sizes may cause disproportionate text sizes.")
+
+    if (is.null(axis_title_size))
+        axis_title_size <- font_scale[['sizes']][['caption_1']]
+    else
+        warning("`axis_title_size` is set manually. Since SFThemes scales font sizes automatically, manual changes to font sizes may cause disproportionate text sizes.")
+
 
     ret <- ggplot2::theme_minimal(base_family = base_family, base_size = base_size)
 
