@@ -17,19 +17,19 @@
 #' @param axis_col axis color
 #' @param axis add x or y axes? `TRUE`, `FALSE`, "`xy`"
 #' @param ticks ticks if `TRUE` add ticks
+#' 
 #' @param font_size_scale Scaling fonts
+#' @param element_size_scale Scaling element sizes
+#' @param offset_x_ticks fancy x tick labels
+#' @param offset_x_ticks fancy y tick labels
+#' @param scale scale everything
 #' 
-#' @inheritParams sfthemes::sf_base
+#' @importFrom ggplot2 update_geom_defaults
 #' 
-#' @export
 #' @examples
 #' library(ggplot2)
 #' library(dplyr)
 #'
-#' opts <- options(
-#'   ggplot2.discrete.fill = list(scale_fill_ios_dark()),
-#'   ggplot2.discrete.color = list(scale_color_ios_dark())
-#' )
 #'
 #' # seminal scatterplot
 #' ggplot(mtcars, aes(mpg, wt)) +
@@ -55,6 +55,7 @@
 #'   theme(axis.text.y=element_blank()) +
 #'   scale_color_watchos_dark()
 #'
+#' @export
 theme_sf_dark <- function(
     base_family="Inter", base_size = NULL,
     plot_title_family="Inter Bold", plot_title_size = NULL,

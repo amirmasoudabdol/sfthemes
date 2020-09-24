@@ -34,7 +34,11 @@ theme_sf_light(
   axis_col = "#cccccc",
   axis = TRUE,
   ticks = TRUE,
-  font_size_scale = "xSmall"
+  font_size_scale = "xSmall",
+  element_size_scale = "xSmall",
+  offset_x_ticks = FALSE,
+  offset_y_ticks = FALSE,
+  scale = NULL
 )
 }
 \arguments{
@@ -69,6 +73,12 @@ theme_sf_light(
 \item{ticks}{ticks if \code{TRUE} add ticks}
 
 \item{font_size_scale}{Scaling fonts}
+
+\item{element_size_scale}{Scaling element sizes}
+
+\item{offset_x_ticks}{fancy y tick labels}
+
+\item{scale}{scale everything}
 }
 \description{
 A light \link{ggplot2} theme inspired by Apple's HIG, and occasional appearance of charts in Apple's platforms, i.e.,
@@ -105,5 +115,6 @@ count(mpg, class) \%>\%
        caption="Brought to you by the letter 'g'") +
   theme_sf_light(grid="Y") +
   theme(axis.text.y=element_blank())
+
 }
 \concept{themes sflight}

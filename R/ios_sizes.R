@@ -1,3 +1,5 @@
+#' Size classes for different scaling
+#' 
 
 sf_element_sizes <- list("xSmall" = .75,
                          "Small" = 1,

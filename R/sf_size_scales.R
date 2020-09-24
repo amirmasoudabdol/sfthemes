@@ -1,4 +1,4 @@
-
+#' Size class scaling
 
 #' @export
 sf_xSmall_text <- function() {
@@ -36,7 +36,7 @@ sf_xxxLarge_text <- function() {
 }
 
 #' @export
-#' @importFrom ggplot2 margin theme
+#' @importFrom ggplot2 element_text
 sf_set_text_sizes <- function(size = "xSmall") {
 	font_scale <- sf_scale(size);
 	# base_size <- font_scale[['sizes']][['body']]

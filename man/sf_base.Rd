@@ -36,7 +36,11 @@ sf_base(
   axis_col = "#cccccc",
   axis = TRUE,
   ticks = TRUE,
-  font_size_scale = "xSmall"
+  font_size_scale = "xSmall",
+  element_size_scale = "xSmall",
+  offset_x_ticks = FALSE,
+  offset_y_ticks = FALSE,
+  scale = NULL
 )
 }
 \arguments{
@@ -54,9 +58,15 @@ sf_base(
 
 \item{axis_text_size}{font size of axis text}
 
+\item{text_color_palette}{text color palette}
+
 \item{axis_title_family, axis_title_face, axis_title_size}{axis title font family, face and size}
 
 \item{axis_title_just}{axis title font justificationk one of \verb{[blmcrt]}}
+
+\item{plot_background_col}{plot background color}
+
+\item{panel_background_col}{panel backgroun color}
 
 \item{plot_margin}{plot margin (specify with \link[ggplot2:element]{ggplot2::margin})}
 
@@ -71,6 +81,12 @@ sf_base(
 \item{ticks}{ticks if \code{TRUE} add ticks}
 
 \item{font_size_scale}{Scaling fonts}
+
+\item{element_size_scale}{Scaling element sizes}
+
+\item{offset_x_ticks}{fancy y tick labels}
+
+\item{scale}{scale everything}
 }
 \description{
 A base theme for both SF Light and SF Dark

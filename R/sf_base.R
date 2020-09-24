@@ -17,9 +17,18 @@
 #' @param axis_col axis color
 #' @param axis add x or y axes? `TRUE`, `FALSE`, "`xy`"
 #' @param ticks ticks if `TRUE` add ticks
+#' 
+#' @param text_color_palette text color palette
+#' @param plot_background_col plot background color
+#' @param panel_background_col panel backgroun color
+#' 
 #' @param font_size_scale Scaling fonts
+#' @param element_size_scale Scaling element sizes
+#' @param offset_x_ticks fancy x tick labels
+#' @param offset_x_ticks fancy y tick labels
+#' @param scale scale everything
 #'
-#' @importFrom ggplot2 margin theme
+#' @importFrom ggplot2 margin theme theme_minimal element_blank element_rect element_text element_line update_geom_defaults
 sf_base <- function(
     base_family="Inter", base_size = NULL,
     plot_title_family="Inter Bold", plot_title_size = NULL,

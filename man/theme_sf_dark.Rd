@@ -34,7 +34,11 @@ theme_sf_dark(
   axis_col = ios_text_on_dark_cols[["white"]],
   axis = TRUE,
   ticks = TRUE,
-  font_size_scale = "xSmall"
+  font_size_scale = "xSmall",
+  element_size_scale = "xSmall",
+  offset_x_ticks = FALSE,
+  offset_y_ticks = FALSE,
+  scale = NULL
 )
 }
 \arguments{
@@ -69,6 +73,12 @@ theme_sf_dark(
 \item{ticks}{ticks if \code{TRUE} add ticks}
 
 \item{font_size_scale}{Scaling fonts}
+
+\item{element_size_scale}{Scaling element sizes}
+
+\item{offset_x_ticks}{fancy y tick labels}
+
+\item{scale}{scale everything}
 }
 \description{
 A dark \link{ggplot2} theme inspired by Apple's HIG, and occasional appearance of charts in Apple's platforms, i.e.,
@@ -78,10 +88,6 @@ Apple Health, Screen Time.
 library(ggplot2)
 library(dplyr)
 
-opts <- options(
-  ggplot2.discrete.fill = list(scale_fill_ios_dark()),
-  ggplot2.discrete.color = list(scale_color_ios_dark())
-)
 
 # seminal scatterplot
 ggplot(mtcars, aes(mpg, wt)) +
