@@ -22,24 +22,24 @@ ios_text_on_dark_palette <- unname(unlist(ios_text_on_dark_cols))
 
 ios_light_cols <- list(azure = "#007aff",
                        ufo.green = "#34c759",
+                       radical.red = "#ff2d55",
+                       maya.blue = "#5ac8fa",
+                       medium.orchid = "#af52de",
                        iris = "#5856d6",
                        safety.orange = "#ff9500",
-                       radical.red = "#ff2d55",
-                       medium.orchid = "#af52de",
                        red.orange = "#ff3b30",
-                       maya.blue = "#5ac8fa",
                        tangerine = "#ffcc00")
 
 ios_light_palette <- unname(unlist(ios_light_cols))
 
 ios_accessible_light_cols <- list(palatinate.blue = "#0040dd",
                                   salem = "#248a3d",
+                                  crimson = "#d30f45",
+                                  allports = "#0071a4",
+                                  vivid.violet = "#8944ab",
                                   governor.bay = "#3634a3",
                                   mahogany = "#c93400",
-                                  crimson = "#d30f45",
-                                  vivid.violet = "#8944ab",
                                   harvard.crimson = "#d70015",
-                                  allports = "#0071a4",
                                   chelsea.gem = "#a05a00")
 
 ios_accessible_light_palette <- unname(unlist(ios_accessible_light_cols))
