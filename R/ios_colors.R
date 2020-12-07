@@ -20,20 +20,18 @@ ios_text_on_dark_cols <- list(label = "#ffffff", # white
 
 ios_text_on_dark_palette <- unname(unlist(ios_text_on_dark_cols))
 
-ios_light_cols <- list(azure = "#007aff",
-                       ufo.green = "#34c759",
-                       radical.red = "#ff2d55",
-                       maya.blue = "#5ac8fa",
-                       medium.orchid = "#af52de",
-                       iris = "#5856d6",
-                       safety.orange = "#ff9500",
-                       red.orange = "#ff3b30",
-                       tangerine = "#ffcc00")
+ios_light_cols <- list(azure = "#007aff",           # 1
+                       ufo.green = "#34c759",       # 2
+                       iris = "#5856d6",            # 3
+                       safety.orange = "#ff9500",   # 4
+                       radical.red = "#ff2d55",     # 5
+                       medium.orchid = "#af52de",   # 6
+                       red.orange = "#ff3b30",      # 7
+                       maya.blue = "#5ac8fa",       # 8
+                       tangerine = "#ffcc00")       # 9
 
-# ios_light_cols_order <- list("default" = c("azure", "ufo.green", "iris", "safety.orange",
-#                                            "radical.red", "medium.orchid", "red.orange",
-#                                            "maya.blue", "tangerine"),
-#                              "contrast" = c("azure", "ufo.green", ))
+ios_cols_order <- list("default" = 1:9,
+                       "contrast" = c(1, 2, 5, 6, 4, 8, 3, 7, 9 ))
 
 ios_light_palette <- unname(unlist(ios_light_cols))
 
@@ -86,11 +84,11 @@ ios_accessible_dark_palette <- unname(unlist(ios_accessible_dark_cols))
 #' }
 #'
 #' @export
-ios_light_pal <- function(accessible = FALSE) {
+ios_light_pal <- function(order = "contrast", accessible = FALSE) {
     if (accessible) {
-        scales::manual_pal(ios_accessible_light_palette)
+        scales::manual_pal(ios_accessible_light_palette[ios_cols_order[[order]]])
     }else{
-        scales::manual_pal(ios_light_palette)
+        scales::manual_pal(ios_light_palette[ios_cols_order[[order]]])
     }
 }
 
@@ -105,11 +103,11 @@ ios_light_pal <- function(accessible = FALSE) {
 #' @rdname scale_ios
 #' @aliases scale_color_ios_light
 #' @export
-scale_colour_ios_light <- function(accessible = FALSE, ...) {
+scale_colour_ios_light <- function(order = "contrast", accessible = FALSE, ...) {
     if (accessible){
-        ggplot2::discrete_scale("colour", "ios_light", ios_light_pal(accessible = TRUE), ...)
+        ggplot2::discrete_scale("colour", "ios_light", ios_light_pal(order = order, accessible = accessible), ...)
     }else{
-        ggplot2::discrete_scale("colour", "ios_accessible_light", ios_light_pal(accessible = FALSE), ...)
+        ggplot2::discrete_scale("colour", "ios_accessible_light", ios_light_pal(order = order, accessible = accessible), ...)
     }
 }
 
@@ -146,11 +144,11 @@ scale_fill_ios_light <- function(accessible = FALSE, ...) {
 #' }
 #'
 #' @export
-ios_dark_pal <- function(accessible = FALSE) {
+ios_dark_pal <- function(order = "contrast", accessible = FALSE) {
     if (accessible) {
-        scales::manual_pal(ios_accessible_dark_palette)
+        scales::manual_pal(ios_accessible_dark_palette[ios_cols_order[[order]]])
     }else{
-        scales::manual_pal(ios_dark_palette)
+        scales::manual_pal(ios_dark_palette[ios_cols_order[[order]]])
     }
 }
 
@@ -164,11 +162,11 @@ ios_dark_pal <- function(accessible = FALSE) {
 #' @inheritDotParams ggplot2::discrete_scale -expand -position
 #' @rdname scale_ios
 #' @export
-scale_colour_ios_dark <- function(accessible = FALSE, ...) {
+scale_colour_ios_dark <- function(order = "contrast", accessible = FALSE, ...) {
     if (accessible){
-        ggplot2::discrete_scale("colour", "ios_dark", ios_dark_pal(accessible = TRUE), ...)
+        ggplot2::discrete_scale("colour", "ios_dark", ios_dark_pal(order = order, accessible = accessible), ...)
     }else{
-        ggplot2::discrete_scale("colour", "ios_accessible_dark", ios_dark_pal(accessible = FALSE), ...)
+        ggplot2::discrete_scale("colour", "ios_accessible_dark", ios_dark_pal(order = order, accessible = accessible), ...)
     }
 }
 

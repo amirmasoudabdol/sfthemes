@@ -13,15 +13,15 @@
 \alias{scale_colour_ios_gray_dark}
 \title{A color palette based on iOS Light Color Palette}
 \usage{
-ios_light_pal(accessible = FALSE)
+ios_light_pal(order = "contrast", accessible = FALSE)
 
-scale_colour_ios_light(accessible = FALSE, ...)
+scale_colour_ios_light(order = "contrast", accessible = FALSE, ...)
 
 scale_fill_ios_light(accessible = FALSE, ...)
 
-ios_dark_pal(accessible = FALSE)
+ios_dark_pal(order = "contrast", accessible = FALSE)
 
-scale_colour_ios_dark(accessible = FALSE, ...)
+scale_colour_ios_dark(order = "contrast", accessible = FALSE, ...)
 
 ios_gray_light_pal(accessible = FALSE)
 
