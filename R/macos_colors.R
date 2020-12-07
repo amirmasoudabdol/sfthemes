@@ -106,24 +106,27 @@ macos_light_vibrant_cols <- list(
 macos_light_vibrant_palette <- unname(unlist(macos_light_vibrant_cols))
 
 macos_light_cols <- list(
-    steel.blue = "#497db6",
-    sorrell.brown = "#a2845e",
-    oslo.gray = "#8e8e93",
-    lime.green = "#28cd41",
-    iris = "#5856d6",
-    safety.orange = "#ff9500",
-    radical.red = "#ff2d55",
-    medium.orchid = "#af52de",
-    red.orange = "#ff3b30",
-    maya.blue = "#5ac8fa",
-    tangerine = "#ffcc00")
+    steel.blue = "#497db6",      # 1
+    sorrell.brown = "#a2845e",   # 2
+    oslo.gray = "#8e8e93",       # 3
+    lime.green = "#28cd41",      # 4
+    iris = "#5856d6",            # 5
+    safety.orange = "#ff9500",   # 6
+    radical.red = "#ff2d55",     # 7
+    medium.orchid = "#af52de",   # 8
+    red.orange = "#ff3b30",      # 9
+    maya.blue = "#5ac8fa",       # 10
+    tangerine = "#ffcc00")       # 11
 macos_light_palette <- unname(unlist(macos_light_cols))
 
-#' A color palette based on iOS Light Palette
-#' 
+macos_cols_order <- list(default = 1:11,
+                         contrast = c(1, 2, 4, 7, 8, 10, 6, 5, 3, 9, 11))
+
+#' A color palette based on macOS Light Palette
+#'
 #' @param accessible Returns accessible alternative of colors
 #' @param vibrant Returns vibrant alternative of colors
-#' 
+#'
 #' @rdname scale_macos_dark
 #'
 #' @export
@@ -131,26 +134,26 @@ macos_light_palette <- unname(unlist(macos_light_cols))
 #' library(scales)
 #' scales::show_col(macos_light_pal()(9), border = NA)
 #' }
-macos_light_pal <- function(accessible = FALSE, vibrant = FALSE) {
+macos_light_pal <- function(order = "contrast", accessible = FALSE, vibrant = FALSE) {
     if (accessible) {
         if (vibrant){
-            scales::manual_pal(macos_accessible_vibrant_light_palette)
+            scales::manual_pal(macos_accessible_vibrant_light_palette[macos_cols_order[[order]]])
         }else{
-            scales::manual_pal(macos_accessible_light_palette)
+            scales::manual_pal(macos_accessible_light_palette[macos_cols_order[[order]]])
         }
     }else{
         if (vibrant){
-            scales::manual_pal(macos_light_vibrant_palette)
+            scales::manual_pal(macos_light_vibrant_palette[macos_cols_order[[order]]])
         }else{
-            scales::manual_pal(macos_light_palette)
+            scales::manual_pal(macos_light_palette[macos_cols_order[[order]]])
         }
     }
 }
 
-#' Discrete color & fill scales based on the iOS Light Palette
+#' Discrete color & fill scales based on the macOS Light Palette
 #'
 #' See [macos_light_palette()].
-#' 
+#'
 #' @param accessible Returns accessible alternative of colors
 #' @param vibrant Returns vibrant alternative of colors
 #'
@@ -158,18 +161,18 @@ macos_light_pal <- function(accessible = FALSE, vibrant = FALSE) {
 #' @inheritDotParams ggplot2::discrete_scale -expand -position
 #' @rdname scale_macos_color
 #' @export
-scale_colour_macos_light <- function(accessible = FALSE, vibrant = FALSE, ...) {
+scale_colour_macos_light <- function(order = "contrast", accessible = FALSE, vibrant = FALSE, ...) {
     if (accessible){
         if (vibrant){
-            ggplot2::discrete_scale("colour", "macos_vibrant_light", macos_light_pal(accessible = TRUE, vibrant = TRUE), ...)
+            ggplot2::discrete_scale("colour", "macos_vibrant_light", macos_light_pal(order = order, accessible = TRUE, vibrant = TRUE), ...)
         }else{
-            ggplot2::discrete_scale("colour", "macos_light", macos_light_pal(accessible = TRUE, vibrant = FALSE), ...)
+            ggplot2::discrete_scale("colour", "macos_light", macos_light_pal(order = order, accessible = TRUE, vibrant = FALSE), ...)
         }
     }else{
         if (vibrant){
-            ggplot2::discrete_scale("colour", "macos_accessible_vibrant_light", macos_light_pal(accessible = FALSE, vibrant = TRUE), ...)
+            ggplot2::discrete_scale("colour", "macos_accessible_vibrant_light", macos_light_pal(order = order, accessible = FALSE, vibrant = TRUE), ...)
         }else{
-            ggplot2::discrete_scale("colour", "macos_accessible_light", macos_light_pal(accessible = FALSE, vibrant = FALSE), ...)
+            ggplot2::discrete_scale("colour", "macos_accessible_light", macos_light_pal(order = order, accessible = FALSE, vibrant = FALSE), ...)
 
         }
     }
@@ -179,7 +182,7 @@ scale_colour_macos_light <- function(accessible = FALSE, vibrant = FALSE, ...) {
 #' @rdname scale_macos_light
 scale_color_macos_light <- scale_colour_macos_light
 
-#' 
+#'
 #' @param accessible Returns accessible alternative of colors
 #' @param vibrant Returns vibrant alternative of colors
 #' @export
@@ -204,38 +207,38 @@ scale_fill_macos_light <- function(accessible = FALSE, vibrant = FALSE, ...) {
 
 # Dark
 
-#' A color palette based on iOS Light Palette
-#' 
+#' A color palette based on macOS Light Palette
+#'
 #' @param accessible Returns accessible alternative of colors
 #' @param vibrant Returns vibrant alternative of colors
-#' 
+#'
 #' @rdname scale_macos_dark
-#' 
+#'
 #' @export
 #' @examples \dontrun{
 #' library(scales)
 #' scales::show_col(macos_light_pal()(9), border = NA)
 #' }
-macos_dark_pal <- function(accessible = FALSE, vibrant = FALSE) {
+macos_dark_pal <- function(order = "contrast", accessible = FALSE, vibrant = FALSE) {
     if (accessible) {
         if (vibrant){
-            scales::manual_pal(macos_accessible_vibrant_dark_palette)
+            scales::manual_pal(macos_accessible_vibrant_dark_palette[macos_cols_order[[order]]])
         }else{
-            scales::manual_pal(macos_accessible_dark_palette)
+            scales::manual_pal(macos_accessible_dark_palette[macos_cols_order[[order]]])
         }
     }else{
         if (vibrant){
-            scales::manual_pal(macos_dark_vibrant_palette)
+            scales::manual_pal(macos_dark_vibrant_palette[macos_cols_order[[order]]])
         }else{
-            scales::manual_pal(macos_dark_palette)
+            scales::manual_pal(macos_dark_palette[macos_cols_order[[order]]])
         }
     }
 }
 
-#' Discrete color & fill scales based on the iOS dark Palette
+#' Discrete color & fill scales based on the macOS dark Palette
 #'
 #' See [macos_dark_palette()].
-#' 
+#'
 #' @param accessible Returns accessible alternative of colors
 #' @param vibrant Returns vibrant alternative of colors
 #'
@@ -243,18 +246,18 @@ macos_dark_pal <- function(accessible = FALSE, vibrant = FALSE) {
 #' @inheritDotParams ggplot2::discrete_scale -expand -position
 #' @rdname scale_macos_color
 #' @export
-scale_colour_macos_dark <- function(accessible = FALSE, vibrant = FALSE, ...) {
+scale_colour_macos_dark <- function(order = "contrast", accessible = FALSE, vibrant = FALSE, ...) {
     if (accessible){
         if (vibrant){
-            ggplot2::discrete_scale("colour", "macos_vibrant_dark", macos_dark_pal(accessible = TRUE, vibrant = TRUE), ...)
+            ggplot2::discrete_scale("colour", "macos_vibrant_dark", macos_dark_pal(order = order, accessible = TRUE, vibrant = TRUE), ...)
         }else{
-            ggplot2::discrete_scale("colour", "macos_dark", macos_dark_pal(accessible = TRUE, vibrant = FALSE), ...)
+            ggplot2::discrete_scale("colour", "macos_dark", macos_dark_pal(order = order, accessible = TRUE, vibrant = FALSE), ...)
         }
     }else{
         if (vibrant){
-            ggplot2::discrete_scale("colour", "macos_accessible_vibrant_dark", macos_dark_pal(accessible = FALSE, vibrant = TRUE), ...)
+            ggplot2::discrete_scale("colour", "macos_accessible_vibrant_dark", macos_dark_pal(order = order, accessible = FALSE, vibrant = TRUE), ...)
         }else{
-            ggplot2::discrete_scale("colour", "macos_accessible_dark", macos_dark_pal(accessible = FALSE, vibrant = FALSE), ...)
+            ggplot2::discrete_scale("colour", "macos_accessible_dark", macos_dark_pal(order = order, accessible = FALSE, vibrant = FALSE), ...)
 
         }
     }
@@ -264,10 +267,10 @@ scale_colour_macos_dark <- function(accessible = FALSE, vibrant = FALSE, ...) {
 #' @rdname scale_macos_dark
 scale_color_macos_dark <- scale_colour_macos_dark
 
-#' 
+#'
 #' @param accessible Returns accessible alternative of colors
 #' @param vibrant Returns vibrant alternative of colors
-#' 
+#'
 #' @export
 #' @rdname scale_macos_dark
 scale_fill_macos_dark <- function(accessible = FALSE, vibrant = FALSE, ...) {

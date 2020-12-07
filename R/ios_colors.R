@@ -30,8 +30,8 @@ ios_light_cols <- list(azure = "#007aff",           # 1
                        maya.blue = "#5ac8fa",       # 8
                        tangerine = "#ffcc00")       # 9
 
-ios_cols_order <- list("default" = 1:9,
-                       "contrast" = c(1, 2, 5, 6, 4, 8, 3, 7, 9 ))
+ios_cols_order <- list(default = 1:9,
+                       contrast = c(1, 2, 5, 6, 4, 8, 3, 7, 9 ))
 
 ios_light_palette <- unname(unlist(ios_light_cols))
 
