@@ -17,15 +17,15 @@
 #' @param axis_col axis color
 #' @param axis add x or y axes? `TRUE`, `FALSE`, "`xy`"
 #' @param ticks ticks if `TRUE` add ticks
-#' 
+#'
 #' @param font_size_scale Scaling fonts
 #' @param element_size_scale Scaling element sizes
 #' @param offset_x_ticks fancy x tick labels
 #' @param offset_x_ticks fancy y tick labels
 #' @param scale scale everything
-#' 
+#'
 #' @importFrom ggplot2 update_geom_defaults
-#' 
+#'
 #' @examples
 #' library(ggplot2)
 #' library(dplyr)
@@ -109,8 +109,8 @@ theme_sf_dark <- function(
         axis_title_size = axis_title_size,
         axis_title_face = "plain",
         axis_title_just = "rt",
-        plot_background_col = ios_background_cols[["dark_jungle_green"]],
-        panel_background_col = ios_background_cols[["dark_jungle_green"]],
+        plot_background_col = "#141414",
+        panel_background_col = "#141414",
         plot_margin = ggplot2::margin(30, 30, 30, 30),
         grid_col = grid_col, grid = TRUE,
         axis_col = axis_col, axis = TRUE, ticks = TRUE,

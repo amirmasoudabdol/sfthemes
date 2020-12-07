@@ -22,15 +22,15 @@
 #' @param axis_col axis color
 #' @param axis add x or y axes? `TRUE`, `FALSE`, "`xy`"
 #' @param ticks ticks if `TRUE` add ticks
-#' 
+#'
 #' @param font_size_scale Scaling fonts
 #' @param element_size_scale Scaling element sizes
 #' @param offset_x_ticks fancy x tick labels
 #' @param offset_x_ticks fancy y tick labels
 #' @param scale scale everything
-#' 
+#'
 #' @importFrom ggplot2 update_geom_defaults
-#' 
+#'
 #' @family themes sflight
 #' @examples
 #' library(ggplot2)
@@ -57,7 +57,7 @@
 #'        caption="Brought to you by the letter 'g'") +
 #'   theme_sf_light(grid="Y") +
 #'   theme(axis.text.y=element_blank())
-#' 
+#'
 #' @export
 theme_sf_light <- function(
     base_family="Inter", base_size = NULL,
@@ -107,6 +107,8 @@ theme_sf_light <- function(
         caption_family=if (.Platform$OS.type == "windows") "Inter" else "Inter Thin",
         caption_size = caption_size,
         caption_face = "plain", caption_margin = 10,
+        plot_background_col = "#fafafa",
+        panel_background_col = "#fafafa",
         axis_text_size = axis_text_size,
         axis_title_family = base_family,
         axis_title_size = axis_title_size,
