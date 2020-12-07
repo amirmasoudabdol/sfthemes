@@ -1,6 +1,7 @@
 #' Size classes for different scaling
 #' 
 
+#' Scaling sizes of the graphical elements
 sf_element_sizes <- list("xSmall" = .75,
                          "Small" = 1,
                          "Medium" = 1.25,

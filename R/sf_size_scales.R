@@ -1,40 +1,59 @@
 #' Size class scaling
 
+#' @rdname sf_text_size
 #' @export
 sf_xSmall_text <- function() {
 	return(sf_set_text_sizes("xSmall"))
 }
 
+#' @rdname sf_text_size
 #' @export
 sf_Small_text <- function() {
 	return(sf_set_text_sizes("Small"))
 }
 
+#' @rdname sf_text_size
 #' @export
 sf_Medium_text <- function() {
 	return(sf_set_text_sizes("Medium"))
 }
 
+#' @rdname sf_text_size
 #' @export
 sf_Large_text <- function() {
 	return(sf_set_text_sizes("Large"))
 }
 
+#' @rdname sf_text_size
 #' @export
 sf_xLarge_text <- function() {
 	return(sf_set_text_sizes("xLarge"))
 }
 
+#' @rdname sf_text_size
 #' @export
 sf_xxLarge_text <- function() {
 	return(sf_set_text_sizes("xxLarge"))
 }
 
+#' @rdname sf_text_size
 #' @export
 sf_xxxLarge_text <- function() {
 	return(sf_set_text_sizes("xxxLarge"))
 }
 
+#' Set text sizes of different elements of a plot
+#'
+#' @description
+#' SFthemes offers a set of scale sizes to adjust the overall
+#' size of different elements. This includes text as well as 
+#' graphical elements.
+#'
+#' - [ ] TODO: Make a link to Apple's HIG
+#'
+#' @param size	Indicates the size class of the elements
+#'
+#' @rdname sf_text_size
 #' @export
 #' @importFrom ggplot2 element_text
 sf_set_text_sizes <- function(size = "xSmall") {
@@ -47,6 +66,7 @@ sf_set_text_sizes <- function(size = "xSmall") {
 	axis_text_size <- font_scale[['sizes']][['caption_1']]
 	axis_title_size <- font_scale[['sizes']][['caption_1']]
 
+	# - [ ] TODO: Add the font-weight to eqxh items as well
 	ret <- theme()
 	ret <- ret + theme(axis.text.x = element_text(size = axis_text_size))
 	ret <- ret + theme(axis.text.y = element_text(size = axis_text_size))
