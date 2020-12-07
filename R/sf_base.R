@@ -17,11 +17,11 @@
 #' @param axis_col axis color
 #' @param axis add x or y axes? `TRUE`, `FALSE`, "`xy`"
 #' @param ticks ticks if `TRUE` add ticks
-#' 
+#'
 #' @param text_color_palette text color palette
 #' @param plot_background_col plot background color
 #' @param panel_background_col panel backgroun color
-#' 
+#'
 #' @param font_size_scale Scaling fonts
 #' @param element_size_scale Scaling element sizes
 #' @param offset_x_ticks fancy x tick labels
@@ -113,7 +113,8 @@ sf_base <- function(
     ret <- ret + theme(legend.key = element_blank())
 
     ret <- ret + theme(plot.background = element_rect(fill = plot_background_col, color = plot_background_col))
-    # ret <- ret + theme(panel.background = element_rect(fill = panel_background_col, color = text_color_palette[["label"]]))
+    # ret <- ret + theme(panel.background = element_rect(fill = panel_background_col, color = panel_background_col))
+    # ret <- ret + theme(panel.border = element_rect(fill = NA, color = panel_background_col))
     # ret <- ret + theme(panel.grid = )
 
     # Grids
@@ -218,7 +219,7 @@ sf_base <- function(
                                                     size = axis_title_size,
                                                     family=axis_title_family, face=axis_title_face))
 
-    ret <- ret + theme(axis.title.y = element_text(color = text_color_palette[["label"]], 
+    ret <- ret + theme(axis.title.y = element_text(color = text_color_palette[["label"]],
                                                     hjust = yj,
                                                     size = axis_title_size,
                                                     family=axis_title_family, face=axis_title_face))
@@ -228,8 +229,8 @@ sf_base <- function(
                                                     hjust = yj,
                                                     angle=90,
                                                     family=axis_title_family, face=axis_title_face))
-    
-    ret <- ret + theme(strip.text = element_text(color = text_color_palette[["label"]], 
+
+    ret <- ret + theme(strip.text = element_text(color = text_color_palette[["label"]],
                                                     hjust = 0,
                                                     size = strip_text_size,
                                                     face=strip_text_face, family=strip_text_family))
@@ -247,13 +248,13 @@ sf_base <- function(
                                                     size = subtitle_size,
                                                     margin = margin(b=subtitle_margin),
                                                     family=subtitle_family, face=subtitle_face))
-    
+
     ret <- ret + theme(plot.caption = element_text(color = text_color_palette[["label"]],
                                                     hjust = 1,
                                                     size = caption_size,
                                                     margin = margin(t=caption_margin),
                                                     family=caption_family, face=caption_face))
-    
+
     ret <- ret + theme(plot.margin =plot_margin)
     ret <- ret + theme(legend.title = element_text(color = text_color_palette[["label"]],
                                                     size = axis_text_size, face="bold"))

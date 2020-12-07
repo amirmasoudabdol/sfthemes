@@ -30,6 +30,11 @@ ios_light_cols <- list(azure = "#007aff",
                        red.orange = "#ff3b30",
                        tangerine = "#ffcc00")
 
+# ios_light_cols_order <- list("default" = c("azure", "ufo.green", "iris", "safety.orange",
+#                                            "radical.red", "medium.orchid", "red.orange",
+#                                            "maya.blue", "tangerine"),
+#                              "contrast" = c("azure", "ufo.green", ))
+
 ios_light_palette <- unname(unlist(ios_light_cols))
 
 ios_accessible_light_cols <- list(palatinate.blue = "#0040dd",
