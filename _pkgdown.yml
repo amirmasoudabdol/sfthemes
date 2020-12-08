@@ -10,26 +10,22 @@ reference:
   contents:
   - starts_with("theme_sf")
 
-- title: Typography
-  contents:
-  - ends_with("_sizes")
-
-- title: Palettes
-- subtitle: iOS
-  contents:
-  - ios_light_pal
-  - ios_dark_pal
-  - ios_gray_light_pal
-  - ios_gray_dark_pal
-
-- subtitle: macOS
-  contents:
-  - macos_light_pal
-  - macos_dark_pal
-
-- subtitle: watchOS
-  contents:
-  - watchos_dark_pal
+# - title: Palettes
+# - subtitle: iOS
+#   contents:
+#   - ios_light_pal
+#   - ios_dark_pal
+#   - ios_gray_light_pal
+#   - ios_gray_dark_pal
+#
+# - subtitle: macOS
+#   contents:
+#   - macos_light_pal
+#   - macos_dark_pal
+#
+# - subtitle: watchOS
+#   contents:
+#   - watchos_dark_pal
 
 - title: Scales
 

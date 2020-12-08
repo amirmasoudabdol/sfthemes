@@ -1,12 +1,12 @@
 library(tidyverse)
 library(sfthemes)
-library(hrbrthemes)
+# library(hrbrthemes)
 
 mtcars %>%
     ggplot(., aes(mpg, wt, color = factor(carb))) +
     geom_point() +
     labs(title = "San Francisco Text", subtitle = "Hello from Cali") +
-    theme_sf_dark(scale = "Medium", offset_x_ticks = F, offset_y_ticks = F) +
+    theme_sf_dark(scale = "xSmall", offset_x_ticks = F, offset_y_ticks = F) +
     scale_color_ios_dark(accessible = FALSE)
 
 mtcars %>%

@@ -1,3 +1,5 @@
+#' San Francisco Base Theme
+#'
 #' @param base_family,base_size base font family and size
 #' @param plot_title_family,plot_title_face,plot_title_size,plot_title_margin plot tilte family, face, size and margin
 #' @param subtitle_family,subtitle_face,subtitle_size plot subtitle family, face and size
@@ -21,7 +23,7 @@
 #' @param font_size_scale Scaling fonts
 #' @param element_size_scale Scaling element sizes
 #' @param offset_x_ticks fancy x tick labels
-#' @param offset_x_ticks fancy y tick labels
+#' @param offset_y_ticks fancy y tick labels
 #' @param scale scale everything
 #'
 #' @importFrom ggplot2 margin theme theme_minimal element_blank element_rect element_text element_line update_geom_defaults

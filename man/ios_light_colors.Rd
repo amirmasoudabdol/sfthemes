@@ -73,6 +73,3 @@ The default, \code{TRUE}, uses the levels that appear in the data;
 \strong{Note:} We recommend to not use the iOS Palette for more than 6 categories. This guarantee an
 acceptable level of contrast.
 }
-\details{
-
-}

@@ -57,7 +57,6 @@ ios_dark_cols <- list(cool.blue = "#0a84ff",
                       maya.blue = "#64d2ff",
                       gold = "#ffd60a")
 
-#' @export
 ios_dark_palette <- unname(unlist(ios_dark_cols))
 
 ios_accessible_dark_cols <- list(picton.blue = "#409cff",
@@ -108,8 +107,6 @@ ios_light_pal <- function(order = "contrast", accessible = FALSE) {
 #' @description
 #' **Note:** We recommend to not use the iOS Palette for more than 6 categories. This guarantee an
 #' acceptable level of contrast.
-#'
-#' @details
 #'
 #' @param accessible Indicates whether the accessible set of colors should be used
 #' @param order Indicates the order of colors in the palette
@@ -274,6 +271,7 @@ ios_gray_light_pal <- function(accessible = FALSE) {
     }
 }
 
+#'
 #' @param accessible Indicates whether the accessible set of colors should be used
 #'
 #' @md
@@ -289,10 +287,12 @@ scale_colour_ios_gray_light <- function(accessible = FALSE, ...) {
     }
 }
 
+#'
 #' @export
 #' @rdname ios_gray_colors
 scale_color_ios_gray_light <- scale_colour_ios_gray_light
 
+#'
 #' @param accessible Indicates whether the accessible set of colors should be used
 #' 
 #' @rdname ios_gray_colors
@@ -306,7 +306,7 @@ scale_fill_ios_gray_light <- function(accessible = FALSE, ...) {
     }
 }
 
-
+#'
 #' @rdname color_palettes
 #'
 #' @param accessible Indicates whether the accessible set of colors should be used
@@ -329,6 +329,7 @@ ios_gray_dark_pal <- function(accessible = FALSE) {
     }
 }
 
+#'
 #' @param accessible Indicates whether the accessible set of colors should be used
 #' @param order Indicates the order of colors in the palette
 #'

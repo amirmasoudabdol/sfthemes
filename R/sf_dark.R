@@ -19,7 +19,7 @@
 #' @param font_size_scale Scaling fonts
 #' @param element_size_scale Scaling element sizes
 #' @param offset_x_ticks fancy x tick labels
-#' @param offset_x_ticks fancy y tick labels
+#' @param offset_y_ticks fancy y tick labels
 #' @param scale scale everything
 #'
 #' @importFrom ggplot2 update_geom_defaults

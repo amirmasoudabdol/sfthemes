@@ -75,7 +75,9 @@ theme_sf_dark(
 
 \item{element_size_scale}{Scaling element sizes}
 
-\item{offset_x_ticks}{fancy y tick labels}
+\item{offset_x_ticks}{fancy x tick labels}
+
+\item{offset_y_ticks}{fancy y tick labels}
 
 \item{scale}{scale everything}
 }

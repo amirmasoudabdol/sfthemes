@@ -26,30 +26,16 @@ sf_xxxLarge_text <- function() {
 	return(sf_set_text_sizes("xxxLarge"))
 }
 
-#' Typography
-#'
-#' @description
-#' Set text sizes of different elements of a plot
-#'
-#' @details
-#' SFthemes offers a set of scale sizes to adjust the overall
-#' size of different elements. This includes text as well as 
-#' graphical elements.
-#'
-#' @param size	Indicates the size class of the elements
-#'
-#' @rdname sf_typography
-#' @export
-#' @importFrom ggplot2 element_text
+
 sf_set_text_sizes <- function(size = "xSmall") {
 	font_scale <- sf_scale(size);
 	# base_size <- font_scale[['sizes']][['body']]
 	plot_title_size <- font_scale[['sizes']][['headline']]
 	subtitle_size <- font_scale[['sizes']][['subhead']]
 	strip_text_size <- font_scale[['sizes']][['footnote']]
-	caption_size <- font_scale[['sizes']][['caption_1']]
-	axis_text_size <- font_scale[['sizes']][['caption_1']]
-	axis_title_size <- font_scale[['sizes']][['caption_1']]
+	caption_size <- font_scale[['sizes']][['caption']]
+	axis_text_size <- font_scale[['sizes']][['caption']]
+	axis_title_size <- font_scale[['sizes']][['caption']]
 
 	# - [ ] TODO: Add the font-weight to eqxh items as well
 	ret <- theme()
