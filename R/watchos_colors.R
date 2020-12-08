@@ -21,7 +21,7 @@ watchos_dark_palette <- unname(unlist(watchos_dark_cols))
 #'
 #' ![](watchOS_Dark.png "watchOS Dark Color Palette")
 #'
-#' @rdname watchos_colors
+#' @rdname color_palettes
 #' @export
 #' @examples \dontrun{
 #' library(scales)
@@ -31,6 +31,8 @@ watchos_dark_pal <- function() {
     scales::manual_pal(watchos_dark_palette)
 }
 
+#' watchOS Dark Color Scales
+#'
 #' @inheritDotParams ggplot2::discrete_scale -expand -position
 #' @rdname watchos_colors
 #' @export

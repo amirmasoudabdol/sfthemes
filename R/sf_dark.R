@@ -25,28 +25,27 @@
 #' @importFrom ggplot2 update_geom_defaults
 #'
 #' @examples
-#' library(tidyverse)
+#' library(ggplot2)
 #'
-#' # seminal scatterplot
-#'  ggplot(mpg, aes(x = displ, y = hwy, colour = class)) +
+#' ggplot(mpg, aes(x = displ, y = hwy, colour = class)) +
 #'   geom_point() +
 #'   labs(x="Displacement", y="Highway Miles per Gallon",
-#'        title="Seminal ggplot2 scatterplot example",
-#'        subtitle="A plot that is only useful for demonstration purposes",
-#'        caption="Brought to you by the letter 'g'") +
+#'        color = "Class",
+#'        title="San Francisco Dark Theme",
+#'        subtitle="Using iOS Dark Color Palette",
+#'        caption = "Fuel economy data from 1999 to 2008 for 38 popular models of cars.") +
 #'   theme_sf_dark() +
 #'   scale_color_ios_dark()
 #'
-#' # seminal bar chart
-#'
 #' ggplot(mpg, aes(class)) +
-#'   geom_bar(aes(fill = drv)) +
-#'   labs(x="Fuel efficiency (mpg)", y="Weight (tons)",
-#'        title="Seminal ggplot2 bar chart example",
-#'        subtitle="A plot that is only useful for demonstration purposes",
-#'        caption="Brought to you by the letter 'g'") +
-#'   theme_sf_dark(grid="Y") +
-#'   theme(axis.text.y=element_blank()) +
+#'   geom_bar(aes(fill = drv, color = NA)) +
+#'   labs(x="Class", y="Count",
+#'        fill = "Drive",
+#'        title="San Francisco Dark Theme",
+#'        subtitle="Using Accessible iOS Dark Palette",
+#'        caption = "Fuel economy data from 1999 to 2008 for 38 popular models of cars.") +
+#'   theme_sf_dark() +
+#'   scale_fill_ios_dark(accessible = TRUE) +
 #'   scale_color_ios_dark(accessible = TRUE)
 #'
 #' @export

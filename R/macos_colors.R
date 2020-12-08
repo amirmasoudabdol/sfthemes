@@ -126,14 +126,38 @@ macos_cols_order <- list(default = 1:11,
 #'
 #' @param accessible Returns accessible alternative of colors
 #' @param vibrant Returns vibrant alternative of colors
+#' @param order Indicates the order of colors in the palette
 #'
-#' @rdname macos_light_colors
+#' @rdname color_palettes
 #'
 #' @export
-#' @examples \dontrun{
+#' @examples 
 #' library(scales)
-#' scales::show_col(macos_light_pal()(9), border = NA)
-#' }
+#' scales::show_col(
+#'     macos_light_pal(order = "default", accessible = FALSE)(11),
+#'     border = NA, labels = FALSE)
+#' scales::show_col(
+#'     macos_light_pal(order = "default", accessible = FALSE, vibrant = TRUE)(11),
+#'     border = NA, labels = FALSE)
+#' scales::show_col(
+#'     macos_light_pal(order = "default", accessible = TRUE)(11),
+#'     border = NA, labels = FALSE)
+#' scales::show_col(
+#'     macos_light_pal(order = "default", accessible = TRUE, vibrant = TRUE)(11),
+#'     border = NA, labels = FALSE)
+#' 
+#' scales::show_col(
+#'     macos_light_pal(order = "contrast", accessible = FALSE)(11),
+#'     border = NA, labels = FALSE)
+#' scales::show_col(
+#'     macos_light_pal(order = "contrast", accessible = FALSE, vibrant = TRUE)(11),
+#'     border = NA, labels = FALSE)
+#' scales::show_col(
+#'     macos_light_pal(order = "contrast", accessible = TRUE)(11),
+#'     border = NA, labels = FALSE)
+#' scales::show_col(
+#'     macos_light_pal(order = "contrast", accessible = TRUE, vibrant = TRUE)(11),
+#'     border = NA, labels = FALSE)
 macos_light_pal <- function(order = "contrast", accessible = FALSE, vibrant = FALSE) {
     if (accessible) {
         if (vibrant){
@@ -150,8 +174,11 @@ macos_light_pal <- function(order = "contrast", accessible = FALSE, vibrant = FA
     }
 }
 
+#' macOS Light Color Scales
+#'
 #' @param accessible Returns accessible alternative of colors
 #' @param vibrant Returns vibrant alternative of colors
+#' @param order Indicates the order of colors in the palette
 #'
 #' @md
 #' @inheritDotParams ggplot2::discrete_scale -expand -position
@@ -181,20 +208,22 @@ scale_color_macos_light <- scale_colour_macos_light
 #'
 #' @param accessible Returns accessible alternative of colors
 #' @param vibrant Returns vibrant alternative of colors
+#' @param order Indicates the order of colors in the palette
+#'
 #' @export
 #' @rdname macos_light_colors
-scale_fill_macos_light <- function(accessible = FALSE, vibrant = FALSE, ...) {
+scale_fill_macos_light <- function(order = order, accessible = FALSE, vibrant = FALSE, ...) {
     if (accessible){
         if (vibrant){
-            ggplot2::discrete_scale("fill", "macos_vibrant_light", macos_light_pal(accessible = TRUE, vibrant = TRUE), ...)
+            ggplot2::discrete_scale("fill", "macos_vibrant_light", macos_light_pal(order = order, accessible = TRUE, vibrant = TRUE), ...)
         }else{
-            ggplot2::discrete_scale("fill", "macos_light", macos_light_pal(accessible = TRUE, vibrant = FALSE), ...)
+            ggplot2::discrete_scale("fill", "macos_light", macos_light_pal(order = order, accessible = TRUE, vibrant = FALSE), ...)
         }
     }else{
         if (vibrant){
-            ggplot2::discrete_scale("fill", "macos_accessible_vibrant_light", macos_light_pal(accessible = FALSE, vibrant = TRUE), ...)
+            ggplot2::discrete_scale("fill", "macos_accessible_vibrant_light", macos_light_pal(order = order, accessible = FALSE, vibrant = TRUE), ...)
         }else{
-            ggplot2::discrete_scale("fill", "macos_accessible_light", macos_light_pal(accessible = FALSE, vibrant = FALSE), ...)
+            ggplot2::discrete_scale("fill", "macos_accessible_light", macos_light_pal(order = order, accessible = FALSE, vibrant = FALSE), ...)
 
         }
     }
@@ -205,14 +234,38 @@ scale_fill_macos_light <- function(accessible = FALSE, vibrant = FALSE, ...) {
 #'
 #' @param accessible Returns accessible alternative of colors
 #' @param vibrant Returns vibrant alternative of colors
+#' @param order Indicates the order of colors in the palette
 #'
-#' @rdname macos_dark_colors
+#' @rdname color_palettes
 #'
 #' @export
-#' @examples \dontrun{
+#' @examples 
 #' library(scales)
-#' scales::show_col(macos_light_pal()(9), border = NA)
-#' }
+#' scales::show_col(
+#'     macos_dark_pal(order = "default", accessible = FALSE)(11),
+#'     border = NA, labels = FALSE)
+#' scales::show_col(
+#'     macos_dark_pal(order = "default", accessible = FALSE, vibrant = TRUE)(11),
+#'     border = NA, labels = FALSE)
+#' scales::show_col(
+#'     macos_dark_pal(order = "default", accessible = TRUE)(11),
+#'     border = NA, labels = FALSE)
+#' scales::show_col(
+#'     macos_dark_pal(order = "default", accessible = TRUE, vibrant = TRUE)(11),
+#'     border = NA, labels = FALSE)
+#' 
+#' scales::show_col(
+#'     macos_dark_pal(order = "contrast", accessible = FALSE)(11),
+#'     border = NA, labels = FALSE)
+#' scales::show_col(
+#'     macos_dark_pal(order = "contrast", accessible = FALSE, vibrant = TRUE)(11),
+#'     border = NA, labels = FALSE)
+#' scales::show_col(
+#'     macos_dark_pal(order = "contrast", accessible = TRUE)(11),
+#'     border = NA, labels = FALSE)
+#' scales::show_col(
+#'     macos_dark_pal(order = "contrast", accessible = TRUE, vibrant = TRUE)(11),
+#'     border = NA, labels = FALSE)
 macos_dark_pal <- function(order = "contrast", accessible = FALSE, vibrant = FALSE) {
     if (accessible) {
         if (vibrant){
@@ -229,12 +282,10 @@ macos_dark_pal <- function(order = "contrast", accessible = FALSE, vibrant = FAL
     }
 }
 
-#' Discrete color & fill scales based on the macOS dark Palette
-#'
-#' See [macos_dark_palette()].
-#'
+#' macOS Dark Color Scales
 #' @param accessible Returns accessible alternative of colors
 #' @param vibrant Returns vibrant alternative of colors
+#' @param order Indicates the order of colors in the palette
 #'
 #' @md
 #' @inheritDotParams ggplot2::discrete_scale -expand -position
@@ -261,24 +312,24 @@ scale_colour_macos_dark <- function(order = "contrast", accessible = FALSE, vibr
 #' @rdname macos_dark_colors
 scale_color_macos_dark <- scale_colour_macos_dark
 
-#'
 #' @param accessible Returns accessible alternative of colors
 #' @param vibrant Returns vibrant alternative of colors
+#' @param order Indicates the order of colors in the palette
 #'
 #' @export
 #' @rdname macos_dark_colors
-scale_fill_macos_dark <- function(accessible = FALSE, vibrant = FALSE, ...) {
+scale_fill_macos_dark <- function(order = "contrast", accessible = FALSE, vibrant = FALSE, ...) {
     if (accessible){
         if (vibrant){
-            ggplot2::discrete_scale("fill", "macos_vibrant_dark", macos_dark_pal(accessible = TRUE, vibrant = TRUE), ...)
+            ggplot2::discrete_scale("fill", "macos_vibrant_dark", macos_dark_pal(order = order, accessible = TRUE, vibrant = TRUE), ...)
         }else{
-            ggplot2::discrete_scale("fill", "macos_dark", macos_dark_pal(accessible = TRUE, vibrant = FALSE), ...)
+            ggplot2::discrete_scale("fill", "macos_dark", macos_dark_pal(order = order, accessible = TRUE, vibrant = FALSE), ...)
         }
     }else{
         if (vibrant){
-            ggplot2::discrete_scale("fill", "macos_accessible_vibrant_dark", macos_dark_pal(accessible = FALSE, vibrant = TRUE), ...)
+            ggplot2::discrete_scale("fill", "macos_accessible_vibrant_dark", macos_dark_pal(order = order, accessible = FALSE, vibrant = TRUE), ...)
         }else{
-            ggplot2::discrete_scale("fill", "macos_accessible_dark", macos_dark_pal(accessible = FALSE, vibrant = FALSE), ...)
+            ggplot2::discrete_scale("fill", "macos_accessible_dark", macos_dark_pal(order = order, accessible = FALSE, vibrant = FALSE), ...)
 
         }
     }
