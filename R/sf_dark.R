@@ -1,7 +1,5 @@
-#' A dark [ggplot2] theme inspired by Apple's HIG, and occasional appearance of charts in Apple's platforms, i.e.,
-#' Apple Health, Screen Time.
+#' San Francisco Dark Theme
 #'
-#' @md
 #' @param base_family,base_size base font family and size
 #' @param plot_title_family,plot_title_face,plot_title_size,plot_title_margin plot tilte family, face, size and margin
 #' @param subtitle_family,subtitle_face,subtitle_size plot subtitle family, face and size
@@ -27,14 +25,12 @@
 #' @importFrom ggplot2 update_geom_defaults
 #'
 #' @examples
-#' library(ggplot2)
-#' library(dplyr)
-#'
+#' library(tidyverse)
 #'
 #' # seminal scatterplot
-#' ggplot(mtcars, aes(mpg, wt)) +
+#'  ggplot(mpg, aes(x = displ, y = hwy, colour = class)) +
 #'   geom_point() +
-#'   labs(x="Fuel efficiency (mpg)", y="Weight (tons)",
+#'   labs(x="Displacement", y="Highway Miles per Gallon",
 #'        title="Seminal ggplot2 scatterplot example",
 #'        subtitle="A plot that is only useful for demonstration purposes",
 #'        caption="Brought to you by the letter 'g'") +
@@ -43,17 +39,15 @@
 #'
 #' # seminal bar chart
 #'
-#' count(mpg, class) %>%
-#'   ggplot(aes(class, n)) +
-#'   geom_col() +
-#'   geom_text(aes(label=n), nudge_y=3) +
+#' ggplot(mpg, aes(class)) +
+#'   geom_bar(aes(fill = drv)) +
 #'   labs(x="Fuel efficiency (mpg)", y="Weight (tons)",
 #'        title="Seminal ggplot2 bar chart example",
 #'        subtitle="A plot that is only useful for demonstration purposes",
 #'        caption="Brought to you by the letter 'g'") +
 #'   theme_sf_dark(grid="Y") +
 #'   theme(axis.text.y=element_blank()) +
-#'   scale_color_watchos_dark()
+#'   scale_color_ios_dark(accessible = TRUE)
 #'
 #' @export
 theme_sf_dark <- function(

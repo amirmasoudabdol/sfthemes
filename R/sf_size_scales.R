@@ -1,59 +1,44 @@
-#' Size class scaling
-
-#' @rdname sf_text_size
-#' @export
 sf_xSmall_text <- function() {
 	return(sf_set_text_sizes("xSmall"))
 }
 
-#' @rdname sf_text_size
-#' @export
 sf_Small_text <- function() {
 	return(sf_set_text_sizes("Small"))
 }
 
-#' @rdname sf_text_size
-#' @export
 sf_Medium_text <- function() {
 	return(sf_set_text_sizes("Medium"))
 }
 
-#' @rdname sf_text_size
-#' @export
 sf_Large_text <- function() {
 	return(sf_set_text_sizes("Large"))
 }
 
-#' @rdname sf_text_size
-#' @export
 sf_xLarge_text <- function() {
 	return(sf_set_text_sizes("xLarge"))
 }
 
-#' @rdname sf_text_size
-#' @export
 sf_xxLarge_text <- function() {
 	return(sf_set_text_sizes("xxLarge"))
 }
 
-#' @rdname sf_text_size
-#' @export
 sf_xxxLarge_text <- function() {
 	return(sf_set_text_sizes("xxxLarge"))
 }
 
-#' Set text sizes of different elements of a plot
+#' Typography
 #'
 #' @description
+#' Set text sizes of different elements of a plot
+#'
+#' @details
 #' SFthemes offers a set of scale sizes to adjust the overall
 #' size of different elements. This includes text as well as 
 #' graphical elements.
 #'
-#' - [ ] TODO: Make a link to Apple's HIG
-#'
 #' @param size	Indicates the size class of the elements
 #'
-#' @rdname sf_text_size
+#' @rdname sf_typography
 #' @export
 #' @importFrom ggplot2 element_text
 sf_set_text_sizes <- function(size = "xSmall") {

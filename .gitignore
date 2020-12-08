@@ -2,3 +2,10 @@
 .Rhistory
 .RData
 .Ruserdata
+
+# Folders
+docs/
+
+
+# macOS
+.DS_Store

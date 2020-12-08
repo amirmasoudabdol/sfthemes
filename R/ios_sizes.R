@@ -1,7 +1,3 @@
-#' Size classes for different scaling
-#' 
-
-#' Scaling sizes of the graphical elements
 sf_element_sizes <- list("xSmall" = .75,
                          "Small" = 1,
                          "Medium" = 1.25,
@@ -10,7 +6,6 @@ sf_element_sizes <- list("xSmall" = .75,
                          "xxLarge" = 4,
                          "xxxLarge" = 5);
 
-#' sf_xSmall
 sf_xSmall_font_sizes <- list(types = list("large_title" = "regular",
 				"title_1" = "regular",
 				"title_2" = "regular",
@@ -33,7 +28,6 @@ sf_xSmall_font_sizes <- list(types = list("large_title" = "regular",
 					"footnote" = 12,
 					"caption_1" = 11 - 2,
 					"caption_2" = 11 - 2))
-#' sf_Small
 sf_Small_font_sizes <- list(types = list("large_title" = "regular",
 				"title_1" = "regular",
 				"title_2" = "regular",
@@ -56,7 +50,6 @@ sf_Small_font_sizes <- list(types = list("large_title" = "regular",
 					"footnote" = 12,
 					"caption_1" = 11 - 2,
 					"caption_2" = 11 - 2))
-#' sf_Medium
 sf_Medium_font_sizes <- list(types = list("large_title" = "regular",
 				"title_1" = "regular",
 				"title_2" = "regular",
@@ -79,7 +72,6 @@ sf_Medium_font_sizes <- list(types = list("large_title" = "regular",
 					"footnote" = 16,
 					"caption_1" = 13 - 2,
 					"caption_2" = 13 - 2))
-#' sf_Large
 sf_Large_font_sizes <- list(types = list("large_title" = "regular",
 				"title_1" = "regular",
 				"title_2" = "regular",
@@ -103,7 +95,6 @@ sf_Large_font_sizes <- list(types = list("large_title" = "regular",
 					"caption_1" = 16 - 2,
 					"caption_2" = 13 - 2))
 
-#' sf_xLarge
 sf_xLarge_font_sizes <- list(types = list("large_title" = "regular",
 				"title_1" = "regular",
 				"title_2" = "regular",
@@ -127,7 +118,6 @@ sf_xLarge_font_sizes <- list(types = list("large_title" = "regular",
 					"caption_1" = 19 - 2,
 					"caption_2" = 18 - 2))
 
-#' sf_xxLarge
 sf_xxLarge_font_sizes <- list(types = list("large_title" = "regular",
 				"title_1" = "regular",
 				"title_2" = "regular",
@@ -150,7 +140,7 @@ sf_xxLarge_font_sizes <- list(types = list("large_title" = "regular",
 					"footnote" = 22,
 					"caption_1" = 21 - 2,
 					"caption_2" = 20 - 2))
-#' sf_xxxLarge
+
 sf_xxxLarge_font_sizes <- list(types = list("large_title" = "regular",
 				"title_1" = "regular",
 				"title_2" = "regular",
@@ -174,7 +164,8 @@ sf_xxxLarge_font_sizes <- list(types = list("large_title" = "regular",
 					"caption_1" = 23 - 2,
 					"caption_2" = 22 - 2))
 
-#'
+#' @rdname sf_typography
+#' Returns text sizes for the given size class
 #' @export
 sf_scale <- function(size = "Large") {
     if (size == "xSmall")

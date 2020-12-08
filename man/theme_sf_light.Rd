@@ -2,8 +2,7 @@
 % Please edit documentation in R/sf_light.R
 \name{theme_sf_light}
 \alias{theme_sf_light}
-\title{A light \link{ggplot2} theme inspired by Apple's HIG, and occasional appearance of charts in Apple's platforms, i.e.,
-Apple Health, Screen Time.}
+\title{San Francisco Light Theme}
 \usage{
 theme_sf_light(
   base_family = "Inter",
@@ -58,19 +57,19 @@ theme_sf_light(
 
 \item{axis_title_family, axis_title_face, axis_title_size}{axis title font family, face and size}
 
-\item{axis_title_just}{axis title font justificationk one of \verb{[blmcrt]}}
+\item{axis_title_just}{axis title font justificationk one of `[blmcrt]`}
 
-\item{plot_margin}{plot margin (specify with \link[ggplot2:element]{ggplot2::margin})}
+\item{plot_margin}{plot margin (specify with [ggplot2::margin])}
 
 \item{grid_col}{grid color}
 
-\item{grid}{panel grid (\code{TRUE}, \code{FALSE}, or a combination of \code{X}, \code{x}, \code{Y}, \code{y})}
+\item{grid}{panel grid (`TRUE`, `FALSE`, or a combination of `X`, `x`, `Y`, `y`)}
 
 \item{axis_col}{axis color}
 
-\item{axis}{add x or y axes? \code{TRUE}, \code{FALSE}, "\code{xy}"}
+\item{axis}{add x or y axes? `TRUE`, `FALSE`, "`xy`"}
 
-\item{ticks}{ticks if \code{TRUE} add ticks}
+\item{ticks}{ticks if `TRUE` add ticks}
 
 \item{font_size_scale}{Scaling fonts}
 
@@ -81,18 +80,10 @@ theme_sf_light(
 \item{scale}{scale everything}
 }
 \description{
-A light \link{ggplot2} theme inspired by Apple's HIG, and occasional appearance of charts in Apple's platforms, i.e.,
-Apple Health, Screen Time.
+San Francisco Light Theme
 }
-\section{Why IBM Plex Sans?}{
-
-It's free, has tolerable kerning pairs and multiple weights. It's also different
-"not Helvetica".
-}
-
 \examples{
 library(ggplot2)
-library(dplyr)
 
 # seminal scatterplot
 ggplot(mtcars, aes(mpg, wt)) +

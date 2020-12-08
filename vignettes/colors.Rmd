@@ -1,0 +1,49 @@
+---
+title: "Colors"
+output: rmarkdown::html_vignette
+vignette: >
+    %\VignetteIndexEntry{Colors}
+    %\VignetteEngine{knitr::rmarkdown}
+    %\VignetteEncoding{UTF-8}
+---
+
+Bla bla bla
+
+
+
+
+## Color Palettes
+
+Apple's system colors are distinguised by the OS that they have been designed for, although some systems sharing the same color palette, i.e., iOS and tvOS. SFThemes provides three categories of colors, iOS, macOS and watchOS. Both iOS and macOS offers two families of palettes, light and dark. Each palette offers an accessible set of colors that are color-blind optimized and have lower contrast. Additionally, macOS offers *Vibrant* sets of colors with their own set of accessible variants. As watchOS doesn’t offers a white background, it only offers a dark color palette. 
+
+In total, SFThemes offers the following list of palettes:
+
+**iOS Set**
+
+- iOS Light
+	- iOS Accessible Light
+- iOS Dark
+	- iOS Accessible Dark
+
+- iOS Gray Light
+	- iOS Accessible Gray Light
+- iOS Gray Dark
+	- iOS Accessible Gray Dark
+
+**macOS Set**
+
+- macOS Light 
+	- macOS Accessible Light
+- macOS Vibrant Light 
+	- macOS Accessible Vibrant Light
+- macOS Dark
+	- iOS Accessible Dark
+- macOS Vibrant Dark
+	- iOS Accessible Vibrant Dark
+	
+**watchOS Set**
+- watchOS Dark
+
+
+Color scales are available via set of ggplot modifiers and are distinguished by their corresponding platform. Every scale function accepts a Boolean parameters, `accessible = TRUE`, indicating whether the accessible color palette should be applied instead. Additionally, macOS color scales are accepting an extra parameters indicating whether the Vibrant variant should be returned, `vibrant = TRUE`. Following list showcases all possible combinations of scales. 
+

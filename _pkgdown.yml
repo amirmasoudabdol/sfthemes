@@ -1,0 +1,30 @@
+authors:
+    Amir M. Abdol:
+        href: https://amirmasoudabdol.name
+template:
+  params:
+    bootswatch: darkly
+
+reference:
+- title: Themes
+- contents:
+    - starts_with("theme_sf")
+- title: Palettes
+- subtitle: iOS Light
+- contents:
+    - ends_with("ios_light")
+- subtitle: iOS Dark
+- contents:
+    - ends_with("ios_dark")
+- subtitle: macOS Light
+- contents:
+    - ends_with("macos_light")
+- subtitle: macOS Dark
+- contents:
+    - ends_with("macos_dark")
+- subtitle: watchOS Dark
+- contents:
+    - ends_with("ios_dark")
+- title: Typography
+- contents:
+    - ends_with("_sizes")

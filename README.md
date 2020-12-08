@@ -1,82 +1,59 @@
 # sfthemes
-A colection of `ggplot2` scales, and themes inspired by Apple's system colors.
+A colection of `ggplot2` themes, scales and colors inspired by [Apple's Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/).
 
 ---
 
-sfthemes is a collection of `ggplot2` color and fill scales, and themes inspired by Apple's system colors, and occasional
-appearance of charts in Apple's platforms, i.e., Apple Health, Screen Time. When it comes to the typography of themes, 
-Inter is the default font of the package. This is due to a commercial license of the Apple's family of fonts; however, if you are using your plots in the context of Apple's disclosed license you can use either of their fonts, i.e., San Francisco, San Francisco Mono, and New York. Both themes are optimized to work smoothly despite your choice.
+sfthemes is a collection of `ggplot2` themes, scales, and colors inspired by [Apple's Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/), and based on occasional
+appearance of charts used by Apple within different contexts, and platforms, e.g., Apple Health app, Screen Time on iOS and macOS. In terms of typography, we optimized our themes to be compatible with [SF Pro](https://developer.apple.com/fonts/), and adhere to HIG's [dynamic type sizes](https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/typography/).
 
-### About Fonts
+## Install
 
-#### On Apple's SF Family
+Install from CRAN
+```R
+install.packages("sfthemes")
+```
 
-You can download the mentioned fonts from [Apple website](https://developer.apple.com/fonts/) for free, but be aware of 
-their commercial license. You can find the license after installing the font in your font previewer app. On macOS, 
-you can navigate to Font Book/Preview/Show Font Info for more information.
+Install the development version from GitHub
+```R
+install.packages("devtools")
+library(devtools)
+devtools::install_github("amirmasoudabdol/sfthemes")
+```
 
-#### Inter, The Alternative
+## Documentation
 
-[Inter](https://rsms.me/inter/) has a close resemblance with Apple's San Francisco fonts. It's similarly designed for use in
-user interface, and it's freely available.
+For full documentation, see [here](https://sfthemes.amirmasoudabdol.name)
 
-## Color Palettes
-
-Apple's system colors are distinguised by the OS that they’ve been designed for, although some systems sharing the same color palette, i.e., iOS and tvOS. SFThemes provides three categories of colors, iOS, macOS and watchOS. Both iOS and macOS offers two families of palettes, light and dark. Each palette offers an accessible set of colors that are color-blind optimized and have lower contrast. Additionally, macOS offers *Vibrant* sets of colors with their own set of accessible variants. As watchOS doesn’t offers a white background, it only offers a dark color palette. 
-
-In total, SFThemes offers the following list of palettes:
-
-**iOS Set**
-
-- iOS Light 
-	- iOS Accessible Light
-- iOS Dark
-	- iOS Accessible Dark
-
-- iOS Gray Light
-	- iOS Accessible Gray Light
-- iOS Gray Dark
-	- iOS Accessible Gray Dark
-
-**macOS Set**
-
-- macOS Light 
-	- macOS Accessible Light
-- macOS Vibrant Light 
-	- macOS Accessible Vibrant Light
-- macOS Dark
-	- iOS Accessible Dark
-- macOS Vibrant Dark
-	- iOS Accessible Vibrant Dark
-
-## Light and Dark Themes 
-
-SFThemes offers two base themes, SF Light and SF Dark. The Light theme uses white background and a range of black colors for text, while the dark theme uses dark background and a range of white colors for text. In general, you want to pair the light palettes with SF Light (or any other light themes) and dark palettes with SF Dark theme (or any other dark themes). 
-
-**Example of SF Light Theme**
-
-**Example of SF Dark Theme**
-
-## Usage 
+## Usage
 
 ### Themes
 
-You can apply SF Light by adding `theme_sf_light` to ggplot object:
+SFThemes offers two base themes, *San Francisco Light* and *San Francisco Dark*. The Light theme uses white background and a range of black colors for text, while the dark theme uses dark background and a range of white colors for text. In general, you want to pair the light palettes with *San Francisco Light* (or any other light themes) and dark palettes with *San Francisco Dark* theme (or any other dark themes). 
 
-and SF Dark can be applied by using `theme_sf_dark`. 
+##### Example of *San Francisco Light* Theme
+```R
 
-### Color Scales
+```
 
-Color scales are available via set of ggplot modifiers and are distinguished by their corresponding platform. Every scale function accepts a Boolean parameters, `accessible = TRUE`, indicating whether the accessible color palette should be applied instead. Additionally, macOS color scales are accepting an extra parameters indicating whether the Vibrant variant should be returned, `vibrant = TRUE`. Following list showcases all possible combinations of scales. 
+##### Example of *San Francisco Dark* Theme
+```R
 
+```
 
-#### Fill Scales
+### Palettes 
 
-Fill scales behaves similarly to color scales and with similar names and parameters. 
+```R
 
-make a list of all of them. 
+```
 
-### Continue Scales
+#### Accessible Colors
 
+```R
 
-### Gradients 
+```
+
+### Scaling
+
+```R
+
+```

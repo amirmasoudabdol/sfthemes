@@ -1,12 +1,5 @@
-#' A light [ggplot2] theme inspired by Apple's HIG, and occasional appearance of charts in Apple's platforms, i.e.,
-#' Apple Health, Screen Time.
+#' San Francisco Light Theme
 #'
-#' @md
-#' @section Why IBM Plex Sans?:
-#' It's free, has tolerable kerning pairs and multiple weights. It's also different
-#' "not Helvetica".
-#'
-#' @md
 #' @param base_family,base_size base font family and size
 #' @param plot_title_family,plot_title_face,plot_title_size,plot_title_margin plot tilte family, face, size and margin
 #' @param subtitle_family,subtitle_face,subtitle_size plot subtitle family, face and size
@@ -34,7 +27,6 @@
 #' @family themes sflight
 #' @examples
 #' library(ggplot2)
-#' library(dplyr)
 #'
 #' # seminal scatterplot
 #' ggplot(mtcars, aes(mpg, wt)) +

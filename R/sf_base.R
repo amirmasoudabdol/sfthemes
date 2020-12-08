@@ -1,7 +1,3 @@
-#' A base theme for both SF Light and SF Dark
-#'
-#'
-#' @md
 #' @param base_family,base_size base font family and size
 #' @param plot_title_family,plot_title_face,plot_title_size,plot_title_margin plot tilte family, face, size and margin
 #' @param subtitle_family,subtitle_face,subtitle_size plot subtitle family, face and size

@@ -1,0 +1,24 @@
+---
+title: "Typography and Scaling"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Typography and Scaling}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+### About Fonts
+
+#### On Apple's SF Family
+
+You can download the mentioned fonts from [Apple website](https://developer.apple.com/fonts/) for free, but be aware of 
+their commercial license. You can find the license after installing the font in your font previewer app. On macOS, 
+you can navigate to Font Book/Preview/Show Font Info for more information.
+
+#### Inter, The Alternative
+
+[Inter](https://rsms.me/inter/) has a close resemblance with Apple's San Francisco fonts. It's similarly designed for use in
+user interface, and it's freely available.
+
+## Scaling
+
