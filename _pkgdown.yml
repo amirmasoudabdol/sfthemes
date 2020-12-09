@@ -3,7 +3,15 @@ authors:
         href: https://amirmasoudabdol.name
 template:
   params:
-    bootswatch: darkly
+    bootswatch: readable
+
+repo:
+  url:
+    home: https://github.com/amirmasoudabdol/sfthemes/
+    source: https://github.com/amirmasoudabdol/sfthemes/blob/master/
+    issue: https://github.com/amirmasoudabdol/sfthemes/issues/
+    user: https://github.com/
+
 
 reference:
 - title: Themes

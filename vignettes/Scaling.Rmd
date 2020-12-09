@@ -1,0 +1,8 @@
+---
+title: "Scales"
+output: rmarkdown::html_vignette
+vignette: >
+    %\VignetteIndexEntry{Scales}
+    %\VignetteEngine{knitr::rmarkdown}
+    %\VignetteEncoding{UTF-8}
+---

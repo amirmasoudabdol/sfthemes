@@ -7,7 +7,7 @@ vignette: >
     %\VignetteEncoding{UTF-8}
 ---
 
-Bla bla bla
+[Apple's Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/) provides several color palette for each platform, e.g., iOS, macOS, watchOS.
 
 
 
