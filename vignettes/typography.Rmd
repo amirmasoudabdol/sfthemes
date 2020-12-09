@@ -24,9 +24,9 @@ As an alternative, sfthemes uses the [Inter](https://rsms.me/inter/) family. Int
 Inter is closely related to SF Pro. Like SF Pro, it is crafted and designed for computer screens, therefore sfthemes plots with Inter fonts will look a lot like their SF Pro variants.
 
 **Inter vs SF Pro**
-![](../../man/figures/sf_vs_inter_numbers.png)
+![](images/sf_vs_inter_numbers.png)
 
-![](../../man/figures/sf_vs_inter_name.png)
+![](images/sf_vs_inter_name.png)
 
 
 ## Dynamic Type Sizes

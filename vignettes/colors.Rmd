@@ -13,23 +13,23 @@ vignette: >
 On iOS, each palette is accompanied by an accessible variant as well where the temperature and transparency were adjusted to provide higher contrast. Both light and dark palettes can be used with `theme_sf_light` and `theme_sf_dark` themes. 
 
 **iOS Light Palette**
-![iOS Light](../../man/figures/ios_light.png)
+![iOS Light](images/ios_light.png)
 
 **iOS Accessible Light Palette**
-![iOS Light Accessible](../../man/figures/ios_light_accessible.png)
+![iOS Light Accessible](images/ios_light_accessible.png)
 
 On macOS, in addition to light and dark palettes and their accessible forms, each palette is accompanied with a **vibrant** variant where the contrast between colors is even higher.
 
 **macOS Light Palette**
-![macOS Light](../../man/figures/macos_light.png)
+![macOS Light](images/macos_light.png)
 
 **macOS Vibrant Light Palette**
-![macOS Light Accessible](../../man/figures/macos_light_vibrant.png)
+![macOS Light Accessible](images/macos_light_vibrant.png)
 
 On watchOS, only one color palette is provided. The watchOS color palette is specifically designed to provide higher level of contrast and brightness, and is best accompanied with dark themes.
 
 **watchOS Dark Palette**
-![watchOS Dark](../../man/figures/watchos_dark.png)
+![watchOS Dark](images/watchos_dark.png)
 
 In total, sfthemes offers the following list of palettes:
 
@@ -65,7 +65,7 @@ In total, sfthemes offers the following list of palettes:
 Each palette in sfthemes can be sorted in two ways. The *default* order returns colors of the palette according to their appearance in HIG document, and the *contrast* (default) order returns an optimized ordering of colors to maximize their in-between contrast. 
 
 **iOS palette ordered for more in-between contrast**
-![](../../man/figures/ios_light_contrast.png)
+![](images/ios_light_contrast.png)
 
 **macOS palette ordered for more in-between contrast**
-![](../../man/figures/macos_light_contrast.png)
+![](images/macos_light_contrast.png)
