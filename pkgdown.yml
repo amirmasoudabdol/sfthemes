@@ -1,0 +1,8 @@
+pandoc: 2.11.2
+pkgdown: 1.6.1
+pkgdown_sha: ~
+articles:
+  colors: colors.html
+  typography: typography.html
+last_built: 2020-12-09T10:23Z
+
