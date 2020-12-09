@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xl="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" xmlns:dc="http://purl.org/dc/elements/1.1/" version="1.1" viewBox="241 1027.6232 180.5 207.9785" width="180.5" height="207.9785">
+  <defs>
+    <font-face font-family="SF Pro Rounded" font-size="16" units-per-em="1000" underline-position="-136.71875" underline-thickness="92.77344" slope="0" x-height="523.4375" cap-height="704.58984" ascent="952.1484" descent="-241.21094" font-weight="700">
+      <font-face-src>
+        <font-face-name name="SFProRounded-Bold"/>
+      </font-face-src>
+    </font-face>
+  </defs>
+  <metadata> Produced by OmniGraffle 7.18.1\n2020-12-09 08:28:52 +0000</metadata>
+  <g id="Canvas_1" stroke-dasharray="none" stroke-opacity="1" fill-opacity="1" fill="none" stroke="none">
+    <title>Canvas 1</title>
+    <g id="Canvas_1_Layer_1">
+      <title>Layer 1</title>
+      <g id="Graphic_32">
+        <path d="M 391.63953 1062 L 333.25576 1028.1625 L 333.25576 1028.1625 C 332.01523 1027.4435 330.48477 1027.4435 329.24424 1028.1625 L 270.86047 1062 Z" fill="#2ba54a"/>
+      </g>
+      <g id="Graphic_64">
+        <path d="M 413.52874 1097 L 421.5 1097 L 421.5 1081.6112 C 421.5 1080.1845 420.7401 1078.8658 419.50576 1078.1504 L 391.63953 1062 L 270.86047 1062 L 242.99424 1078.1504 L 242.99424 1078.1504 L 242.99424 1078.1504 C 241.75988 1078.8658 241 1080.1845 241 1081.6112 L 241 1097 L 382.47126 1097 L 395.99424 1089.1625 C 397.23477 1088.4435 398.76523 1088.4435 400.00576 1089.1625 Z" fill="#e6b800"/>
+      </g>
+      <g id="Graphic_65">
+        <path d="M 421.5 1101.6199 L 421.5 1097 L 413.52874 1097 Z M 382.47126 1097 L 241 1097 L 241 1132 L 360 1132 L 360 1112.3287 C 360 1110.902 360.7599 1109.5833 361.99424 1108.8679 Z" fill="#ef8c00"/>
+      </g>
+      <g id="Graphic_66">
+        <path d="M 360 1132 L 241 1132 L 241 1167 L 382.3078 1167 L 361.99424 1155.2269 C 360.7599 1154.5115 360 1153.1928 360 1151.7661 Z M 413.6922 1167 L 421.5 1167 L 421.5 1162.4748 Z" fill="#df342a"/>
+      </g>
+      <g id="Graphic_67">
+        <path d="M 382.3078 1167 L 241 1167 L 241 1181.6138 C 241 1183.0405 241.75988 1184.3592 242.99424 1185.0746 L 272.19765 1202 L 390.30235 1202 L 419.50576 1185.0746 C 420.7401 1184.3592 421.5 1183.0405 421.5 1181.6138 L 421.5 1167 L 413.6922 1167 L 400.00576 1174.9323 C 398.76523 1175.6512 397.23477 1175.6512 395.99424 1174.9323 Z" fill="#a14ccc"/>
+      </g>
+      <g id="Graphic_37">
+        <path d="M 272.19765 1202 L 329.24424 1235.0625 C 330.48477 1235.7815 332.01523 1235.7815 333.25576 1235.0625 L 390.30235 1202 Z" fill="#4fb0dc"/>
+      </g>
+      <g id="Graphic_87">
+        <text transform="translate(257.06465 1105)" fill="black">
+          <tspan font-family="SF Pro Rounded" font-size="16" font-weight="700" fill="black" x="0" y="15">SF Themes</tspan>
+        </text>
+      </g>
+    </g>
+  </g>
+</svg>
