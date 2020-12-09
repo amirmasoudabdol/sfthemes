@@ -271,6 +271,7 @@ ios_gray_light_pal <- function(accessible = FALSE) {
     }
 }
 
+#' iOS Gray Color Scales
 #'
 #' @param accessible Indicates whether the accessible set of colors should be used
 #'
@@ -329,9 +330,7 @@ ios_gray_dark_pal <- function(accessible = FALSE) {
     }
 }
 
-#'
 #' @param accessible Indicates whether the accessible set of colors should be used
-#' @param order Indicates the order of colors in the palette
 #'
 #' @md
 #' @inheritDotParams ggplot2::discrete_scale -expand -position
@@ -352,7 +351,6 @@ scale_colour_ios_gray_dark <- function(accessible = FALSE, ...) {
 scale_color_ios_gray_dark <- scale_colour_ios_gray_dark
 
 #' @param accessible Indicates whether the accessible set of colors should be used
-#' @param order Indicates the order of colors in the palette
 #' @rdname ios_gray_colors
 #'
 #' @export

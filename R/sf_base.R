@@ -31,12 +31,12 @@ sf_base <- function(
     base_family="Inter", base_size = NULL,
     plot_title_family="Inter Bold", plot_title_size = NULL,
     plot_title_face="plain", plot_title_margin = 10,
-    subtitle_family=if (.Platform$OS.type == "windows") "Inter" else "Inter Light",
+    subtitle_family="Inter",
     subtitle_size = NULL,
     subtitle_face = "plain", subtitle_margin = 15,
     strip_text_family = "Inter Medium", strip_text_size = NULL,
     strip_text_face = "plain",
-    caption_family=if (.Platform$OS.type == "windows") "Inter" else "Inter Thin",
+    caption_family="Inter",
     caption_size = NULL,
     caption_face = "plain", caption_margin = 10,
     axis_text_size = NULL,
@@ -262,20 +262,3 @@ sf_base <- function(
     ret
 
 }
-
-#' @rdname SFPro
-#' @md
-#' @title SFPro font name R variable aliases
-#' @description `font_sf_pro_text` == "`SFProText`"
-#' @format length 1 character vector
-#' @export
-font_sf_pro_text <- "SFProText"
-
-#' @rdname SFPro
-#' @md
-#' @note `font_sf_pro_text_light` (a.k.a. "`SFProText-Light`") is not available on
-#'     Windows and will throw a warning if used in plots.
-#' @description `font_sf_pro_text_light` == "`SFProText-Light`"
-#' @export
-font_sf_pro_text_light <- "SFProText-Light"
-

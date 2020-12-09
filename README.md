@@ -1,4 +1,4 @@
-# sfthemes
+# sfthemes <img src="man/figures/logo.png" width="15%" align="right"/>
 A colection of `ggplot2` themes, scales and colors inspired by [Apple's Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/).
 
 ---
