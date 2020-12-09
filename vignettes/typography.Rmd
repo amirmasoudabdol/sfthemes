@@ -1,24 +1,34 @@
 ---
-title: "Typography and Scaling"
+title: "Typography"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Typography and Scaling}
+  %\VignetteIndexEntry{Typography}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
 
-### About Fonts
+## Typography
 
-#### On Apple's SF Family
+### San Francisco Family
 
-You can download the mentioned fonts from [Apple website](https://developer.apple.com/fonts/) for free, but be aware of 
-their commercial license. You can find the license after installing the font in your font previewer app. On macOS, 
-you can navigate to Font Book/Preview/Show Font Info for more information.
+[San Francisco typeface](https://en.wikipedia.org/wiki/San_Francisco_(sans-serif_typeface)) consists of three large family of typefaces, SF Pro, SF Compact, and SF Mono. They are degined to be used in different Apple platforms, e.g., iOS, macOS. Each family has its own characteristic and is optimized for certain screensize and resolution. sfthemes is optimized for SF Pro, the most general variant of the typeface designed for iOS, iPadOS, and macOS. 
 
-#### Inter, The Alternative
+Apple restricted the usage of the entire SF typeface family for developers who ar designing and developing applications for Apple's platforms. Please keep this resctriction in mind when using and sharing your plots, if you are using SF Pro as the main typeface of the plots.
 
-[Inter](https://rsms.me/inter/) has a close resemblance with Apple's San Francisco fonts. It's similarly designed for use in
-user interface, and it's freely available.
+Moreover, distirbution and repackaging of San Francisco family is prohibited, however, the fonts can be downloaded directly from Apple's website. [Download SF Pro](https://developer.apple.com/fonts/)
 
-## Scaling
+### Inter, The Alternative
 
+As an alternative, sfthemes uses the [Inter](https://rsms.me/inter/) family. Inter typeface is a [free and open source](https://github.com/rsms/inter), and you are free to use it in almost any way imaginable. 
+
+Inter is closely related to SF Pro. Like SF Pro, it is crafted and designed for computer screens, therefore sfthemes plots with Inter fonts will look a lot like their SF Pro variants.
+
+**Inter vs SF Pro**
+![](../../man/figures/sf_vs_inter_numbers.png)
+
+![](../../man/figures/sf_vs_inter_name.png)
+
+
+## Dynamic Type Sizes
+
+[](https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/typography#dynamic-type-sizes)

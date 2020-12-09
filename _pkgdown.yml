@@ -3,7 +3,7 @@ authors:
         href: https://amirmasoudabdol.name
 template:
   params:
-    bootswatch: readable
+    bootswatch: flatly
 
 repo:
   url:
