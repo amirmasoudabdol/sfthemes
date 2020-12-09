@@ -12,7 +12,7 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png">
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png">
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png">
-<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/simplex/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/flatly/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="../bootstrap-toc.css">
 <script src="../bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
@@ -68,7 +68,7 @@
       <a href="../articles/colors.html">Colors</a>
     </li>
     <li>
-      <a href="../articles/typography.html">Typography and Scaling</a>
+      <a href="../articles/typography.html">Typography</a>
     </li>
   </ul>
 </li>
@@ -104,12 +104,16 @@
 
     
     
-<p><a href="https://developer.apple.com/design/human-interface-guidelines/">Apple’s Human Interface Guidelines</a> provides several color palette for each platform, e.g., iOS, macOS, watchOS.</p>
-<div id="color-palettes" class="section level2">
-<h2 class="hasAnchor">
-<a href="#color-palettes" class="anchor"></a>Color Palettes</h2>
-<p>Apple’s system colors are distinguised by the OS that they have been designed for, although some systems sharing the same color palette, i.e., iOS and tvOS. SFThemes provides three categories of colors, iOS, macOS and watchOS. Both iOS and macOS offers two families of palettes, light and dark. Each palette offers an accessible set of colors that are color-blind optimized and have lower contrast. Additionally, macOS offers <em>Vibrant</em> sets of colors with their own set of accessible variants. As watchOS doesn’t offers a white background, it only offers a dark color palette.</p>
-<p>In total, SFThemes offers the following list of palettes:</p>
+<p><a href="https://developer.apple.com/design/human-interface-guidelines/">Apple’s Human Interface Guidelines</a> provides two primary color palettes for each platform, light and dark.</p>
+<p>On iOS, each palette is accompanied by an accessible variant as well where the temperature and transparency were adjusted to provide higher contrast. Both light and dark palettes can be used with <code>theme_sf_light</code> and <code>theme_sf_dark</code> themes.</p>
+<p><strong>iOS Light Palette</strong> <img src="../../man/figures/ios_light.png" alt="iOS Light"></p>
+<p><strong>iOS Accessible Light Palette</strong> <img src="../../man/figures/ios_light_accessible.png" alt="iOS Light Accessible"></p>
+<p>On macOS, in addition to light and dark palettes and their accessible forms, each palette is accompanied with a <strong>vibrant</strong> variant where the contrast between colors is even higher.</p>
+<p><strong>macOS Light Palette</strong> <img src="../../man/figures/macos_light.png" alt="macOS Light"></p>
+<p><strong>macOS Vibrant Light Palette</strong> <img src="../../man/figures/macos_light_vibrant.png" alt="macOS Light Accessible"></p>
+<p>On watchOS, only one color palette is provided. The watchOS color palette is specifically designed to provide higher level of contrast and brightness, and is best accompanied with dark themes.</p>
+<p><strong>watchOS Dark Palette</strong> <img src="../../man/figures/watchos_dark.png" alt="watchOS Dark"></p>
+<p>In total, sfthemes offers the following list of palettes:</p>
 <p><strong>iOS Set</strong></p>
 <ul>
 <li>iOS Light
@@ -156,8 +160,16 @@
 </ul>
 </li>
 </ul>
-<p><strong>watchOS Set</strong> - watchOS Dark</p>
-<p>Color scales are available via set of ggplot modifiers and are distinguished by their corresponding platform. Every scale function accepts a Boolean parameters, <code>accessible = TRUE</code>, indicating whether the accessible color palette should be applied instead. Additionally, macOS color scales are accepting an extra parameters indicating whether the Vibrant variant should be returned, <code>vibrant = TRUE</code>. Following list showcases all possible combinations of scales.</p>
+<p><strong>watchOS Set</strong></p>
+<ul>
+<li>watchOS Dark</li>
+</ul>
+<div id="palette-order" class="section level2">
+<h2 class="hasAnchor">
+<a href="#palette-order" class="anchor"></a>Palette Order</h2>
+<p>Each palette in sfthemes can be sorted in two ways. The <em>default</em> order returns colors of the palette according to their appearance in HIG document, and the <em>contrast</em> (default) order returns an optimized ordering of colors to maximize their in-between contrast.</p>
+<p><strong>iOS palette ordered for more in-between contrast</strong> <img src="../../man/figures/ios_light_contrast.png"></p>
+<p><strong>macOS palette ordered for more in-between contrast</strong> <img src="../../man/figures/macos_light_contrast.png"></p>
 </div>
   </div>
 

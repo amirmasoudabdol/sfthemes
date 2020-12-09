@@ -5,20 +5,20 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Typography and Scaling • sfthemes</title>
+<title>Typography • sfthemes</title>
 <!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
 <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png">
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png">
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png">
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png">
-<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/simplex/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/flatly/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="../bootstrap-toc.css">
 <script src="../bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
 <script src="../pkgdown.js"></script><link href="../extra.css" rel="stylesheet">
-<script src="../extra.js"></script><meta property="og:title" content="Typography and Scaling">
+<script src="../extra.js"></script><meta property="og:title" content="Typography">
 <meta property="og:description" content="sfthemes">
 <meta property="og:image" content="/logo.svg">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
@@ -68,7 +68,7 @@
       <a href="../articles/colors.html">Colors</a>
     </li>
     <li>
-      <a href="../articles/typography.html">Typography and Scaling</a>
+      <a href="../articles/typography.html">Typography</a>
     </li>
   </ul>
 </li>
@@ -94,7 +94,7 @@
 <script src="typography_files/anchor-sections-1.0/anchor-sections.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
-      <h1 data-toc-skip>Typography and Scaling</h1>
+      <h1 data-toc-skip>Typography</h1>
             
       
       <small class="dont-index">Source: <a href="https://github.com/amirmasoudabdol/sfthemes/blob/master/vignettes/typography.Rmd"><code>vignettes/typography.Rmd</code></a></small>
@@ -104,23 +104,29 @@
 
     
     
-<div id="about-fonts" class="section level3">
-<h3 class="hasAnchor">
-<a href="#about-fonts" class="anchor"></a>About Fonts</h3>
-<div id="on-apples-sf-family" class="section level4">
-<h4 class="hasAnchor">
-<a href="#on-apples-sf-family" class="anchor"></a>On Apple’s SF Family</h4>
-<p>You can download the mentioned fonts from <a href="https://developer.apple.com/fonts/">Apple website</a> for free, but be aware of their commercial license. You can find the license after installing the font in your font previewer app. On macOS, you can navigate to Font Book/Preview/Show Font Info for more information.</p>
-</div>
-<div id="inter-the-alternative" class="section level4">
-<h4 class="hasAnchor">
-<a href="#inter-the-alternative" class="anchor"></a>Inter, The Alternative</h4>
-<p><a href="https://rsms.me/inter/">Inter</a> has a close resemblance with Apple’s San Francisco fonts. It’s similarly designed for use in user interface, and it’s freely available.</p>
-</div>
-</div>
-<div id="scaling" class="section level2">
+<div id="typography" class="section level2">
 <h2 class="hasAnchor">
-<a href="#scaling" class="anchor"></a>Scaling</h2>
+<a href="#typography" class="anchor"></a>Typography</h2>
+<div id="san-francisco-family" class="section level3">
+<h3 class="hasAnchor">
+<a href="#san-francisco-family" class="anchor"></a>San Francisco Family</h3>
+<p><a href="https://en.wikipedia.org/wiki/San_Francisco_(sans-serif_typeface)">San Francisco typeface</a> consists of three large family of typefaces, SF Pro, SF Compact, and SF Mono. They are degined to be used in different Apple platforms, e.g., iOS, macOS. Each family has its own characteristic and is optimized for certain screensize and resolution. sfthemes is optimized for SF Pro, the most general variant of the typeface designed for iOS, iPadOS, and macOS.</p>
+<p>Apple restricted the usage of the entire SF typeface family for developers who ar designing and developing applications for Apple’s platforms. Please keep this resctriction in mind when using and sharing your plots, if you are using SF Pro as the main typeface of the plots.</p>
+<p>Moreover, distirbution and repackaging of San Francisco family is prohibited, however, the fonts can be downloaded directly from Apple’s website. <a href="https://developer.apple.com/fonts/">Download SF Pro</a></p>
+</div>
+<div id="inter-the-alternative" class="section level3">
+<h3 class="hasAnchor">
+<a href="#inter-the-alternative" class="anchor"></a>Inter, The Alternative</h3>
+<p>As an alternative, sfthemes uses the <a href="https://rsms.me/inter/">Inter</a> family. Inter typeface is a <a href="https://github.com/rsms/inter">free and open source</a>, and you are free to use it in almost any way imaginable.</p>
+<p>Inter is closely related to SF Pro. Like SF Pro, it is crafted and designed for computer screens, therefore sfthemes plots with Inter fonts will look a lot like their SF Pro variants.</p>
+<p><strong>Inter vs SF Pro</strong> <img src="../../man/figures/sf_vs_inter_numbers.png"></p>
+<p><img src="../../man/figures/sf_vs_inter_name.png"></p>
+</div>
+</div>
+<div id="dynamic-type-sizes" class="section level2">
+<h2 class="hasAnchor">
+<a href="#dynamic-type-sizes" class="anchor"></a>Dynamic Type Sizes</h2>
+<p><a href="https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/typography#dynamic-type-sizes"></a></p>
 </div>
   </div>
 
