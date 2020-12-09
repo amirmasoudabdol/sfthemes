@@ -6,3 +6,15 @@ vignette: >
     %\VignetteEngine{knitr::rmarkdown}
     %\VignetteEncoding{UTF-8}
 ---
+
+Besides dynamic type sizing, sfthemes can also scale all other elements of the plot. This is being done by multiplying all element sizes with a specific multiplier. Keep in mind that these values will scale the existing sizes of each elements; therefore, it is recommended that you do not try to scale your entire plot if you are using `size` or `lwd` as one of your `aes`.
+
+| class| multiplier |
+|------|-----|
+| xSmall | 0.75 |
+| Small | 1 |
+| Medium | 1.25 |
+| Large | 2 |
+| xLarge | 3 |
+| xxLarge | 4 |
+| xxxLarge | 5 |
