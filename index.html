@@ -12,7 +12,7 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="apple-touch-icon-120x120.png">
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="apple-touch-icon-76x76.png">
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="apple-touch-icon-60x60.png">
-<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/darkly/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/simplex/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="bootstrap-toc.css">
 <script src="bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
@@ -66,6 +66,9 @@
   </a>
   <ul class="dropdown-menu" role="menu">
 <li>
+      <a href="articles/Scaling.html">Scales</a>
+    </li>
+    <li>
       <a href="articles/colors.html">Colors</a>
     </li>
     <li>
@@ -95,27 +98,22 @@
   <div class="contents col-md-9">
 <div id="sfthemes-" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
-<a href="#sfthemes-" class="anchor"></a>sfthemes <img src="reference/figures/logo.png" width="15%" align="right">
+<a href="#sfthemes-" class="anchor"></a>sfthemes <img src="reference/figures/logo.png" width="20%" align="right">
 </h1></div>
 <p>A colection of <code>ggplot2</code> themes, scales and colors inspired by <a href="https://developer.apple.com/design/human-interface-guidelines/">Apple’s Human Interface Guidelines</a>.</p>
 <hr>
-<p>sfthemes is a collection of <code>ggplot2</code> themes, scales, and colors inspired by <a href="https://developer.apple.com/design/human-interface-guidelines/">Apple’s Human Interface Guidelines</a>, and based on occasional appearance of charts used by Apple within different contexts, and platforms, e.g., Apple Health app, Screen Time on iOS and macOS. In terms of typography, we optimized our themes to be compatible with <a href="https://developer.apple.com/fonts/">SF Pro</a>, and adhere to HIG’s <a href="https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/typography/">dynamic type sizes</a>.</p>
+<p>sfthemes is a collection of <a href="https://ggplot2.tidyverse.org"><code>ggplot2</code></a> themes, scales, and colors inspired by <a href="https://developer.apple.com/design/human-interface-guidelines/">Apple’s Human Interface Guidelines</a>, and based on occasional appearances of charts used by Apple within different contexts, e.g., Apple Health app, Screen Time on iOS and macOS. In terms of typography, we optimized our themes to be compatible with <a href="https://developer.apple.com/fonts/">SF Pro</a>. Additionally, we adhere to HIG’s <a href="https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/typography/">dynamic type sizes</a> in order to provide consistent and elegant overall rescaling.</p>
 <div id="install" class="section level2">
 <h2 class="hasAnchor">
 <a href="#install" class="anchor"></a>Install</h2>
-<p>Install from CRAN</p>
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"sfthemes"</span><span class="op">)</span></code></pre></div>
 <p>Install the development version from GitHub</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"devtools"</span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://devtools.r-lib.org/">devtools</a></span><span class="op">)</span>
 <span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org//reference/remote-reexports.html">install_github</a></span><span class="op">(</span><span class="st">"amirmasoudabdol/sfthemes"</span><span class="op">)</span></code></pre></div>
-</div>
-<div id="documentation" class="section level2">
-<h2 class="hasAnchor">
-<a href="#documentation" class="anchor"></a>Documentation</h2>
-<p>For full documentation, see <a href="https://sfthemes.amirmasoudabdol.name">here</a></p>
+<p>Install from CRAN [Not available yet!]</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"sfthemes"</span><span class="op">)</span></code></pre></div>
 </div>
 <div id="usage" class="section level2">
 <h2 class="hasAnchor">
@@ -123,37 +121,70 @@
 <div id="themes" class="section level3">
 <h3 class="hasAnchor">
 <a href="#themes" class="anchor"></a>Themes</h3>
-<p>SFThemes offers two base themes, <em>San Francisco Light</em> and <em>San Francisco Dark</em>. The Light theme uses white background and a range of black colors for text, while the dark theme uses dark background and a range of white colors for text. In general, you want to pair the light palettes with <em>San Francisco Light</em> (or any other light themes) and dark palettes with <em>San Francisco Dark</em> theme (or any other dark themes).</p>
-<div id="example-of-san-francisco-light-theme" class="section level5">
-<h5 class="hasAnchor">
-<a href="#example-of-san-francisco-light-theme" class="anchor"></a>Example of <em>San Francisco Light</em> Theme</h5>
+<p>sfthemes offers two base themes, <code>theme_sf_light</code> and <code>theme_sf_dark</code>. The Light theme uses off-white background, <code>#fafafa</code>, and a range of black colors for text. In contrast, the dark theme uses off-black background, <code>#141414</code>, and a range of white colors for text.</p>
+<p>In addition to themes, sfthemes provides a set of <code>scale_color/fill_*</code> objects based on various available color palettes in Apple’s HIG. Each color palette has a light and a dark variant, as well as accessible form of those. List of all available color palettes can be found [here].</p>
+<p>In general, we recommend pairing light scales with <code>theme_sf_light</code> (or any other third-party light themes) and dark scales with <code>theme_sf_dark</code> theme (or any other third-party dark themes).</p>
+<div id="example-of-theme_sf_light-theme" class="section level4">
+<h4 class="hasAnchor">
+<a href="#example-of-theme_sf_light-theme" class="anchor"></a>Example of <code>theme_sf_light</code> Theme</h4>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"></code></pre></div>
+<code class="sourceCode R"><span class="fu">ggplot</span><span class="op">(</span><span class="va">mtcars</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">vs</span><span class="op">)</span>, fill <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">cyl</span><span class="op">)</span>, y <span class="op">=</span> <span class="va">mpg</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
+    <span class="fu">geom_dotplot</span><span class="op">(</span>binaxis <span class="op">=</span> <span class="st">"y"</span>, stackdir <span class="op">=</span> <span class="st">"center"</span>, position <span class="op">=</span> <span class="st">"dodge"</span>, color <span class="op">=</span> <span class="cn">NA</span><span class="op">)</span> <span class="op">+</span>
+    <span class="fu">labs</span><span class="op">(</span>title <span class="op">=</span> <span class="st">"San Francisco Dark Theme"</span>, subtitle <span class="op">=</span> <span class="st">"using `scale_fill_ios_dark`"</span><span class="op">)</span> <span class="op">+</span>
+    <span class="fu"><a href="reference/theme_sf_dark.html">theme_sf_dark</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="reference/scale_colour_ios_dark.html">scale_fill_ios_dark</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
+<p><img src="reference/figures/theme_sf_light_readme_sample.png"></p>
 </div>
-<div id="example-of-san-francisco-dark-theme" class="section level5">
-<h5 class="hasAnchor">
-<a href="#example-of-san-francisco-dark-theme" class="anchor"></a>Example of <em>San Francisco Dark</em> Theme</h5>
+<div id="example-of-theme_sf_dark-theme" class="section level4">
+<h4 class="hasAnchor">
+<a href="#example-of-theme_sf_dark-theme" class="anchor"></a>Example of <code>theme_sf_dark</code> Theme</h4>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"></code></pre></div>
+<code class="sourceCode R"><span class="fu">ggplot</span><span class="op">(</span><span class="va">mtcars</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">vs</span><span class="op">)</span>, fill <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">cyl</span><span class="op">)</span>, y <span class="op">=</span> <span class="va">mpg</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
+    <span class="fu">geom_dotplot</span><span class="op">(</span>binaxis <span class="op">=</span> <span class="st">"y"</span>, stackdir <span class="op">=</span> <span class="st">"center"</span>, position <span class="op">=</span> <span class="st">"dodge"</span>, color <span class="op">=</span> <span class="cn">NA</span><span class="op">)</span> <span class="op">+</span>
+    <span class="fu">labs</span><span class="op">(</span>title <span class="op">=</span> <span class="st">"San Francisco Dark Theme"</span>, subtitle <span class="op">=</span> <span class="st">"using `scale_fill_ios_dark`"</span><span class="op">)</span> <span class="op">+</span>
+    <span class="fu"><a href="reference/theme_sf_dark.html">theme_sf_dark</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="reference/scale_colour_ios_dark.html">scale_fill_ios_dark</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
+<p><img src="reference/figures/theme_sf_dark_readme_sample.png"></p>
 </div>
-</div>
-<div id="palettes" class="section level3">
-<h3 class="hasAnchor">
-<a href="#palettes" class="anchor"></a>Palettes</h3>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"></code></pre></div>
 <div id="accessible-colors" class="section level4">
 <h4 class="hasAnchor">
 <a href="#accessible-colors" class="anchor"></a>Accessible Colors</h4>
+<p>Colors of every palette can be transformed to accessible colors by using setting the <code>accessible</code> parameters to <code>TRUE</code>. For instnace:</p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">ggplot</span><span class="op">(</span><span class="va">mtcars</span>, <span class="fu">aes</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">cyl</span><span class="op">)</span>, <span class="va">mpg</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
+    <span class="fu">geom_violin</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>fill <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">cyl</span><span class="op">)</span><span class="op">)</span>, color <span class="op">=</span> <span class="cn">NA</span><span class="op">)</span> <span class="op">+</span>
+    <span class="fu">labs</span><span class="op">(</span>title <span class="op">=</span> <span class="st">"San Francisco Dark Theme"</span>, subtitle <span class="op">=</span> <span class="st">"using normal `scale_fill_ios_dark`"</span><span class="op">)</span> <span class="op">+</span>
+    <span class="fu"><a href="reference/theme_sf_dark.html">theme_sf_dark</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="reference/scale_colour_ios_dark.html">scale_fill_ios_dark</a></span><span class="op">(</span>accessible <span class="op">=</span> <span class="cn">F</span><span class="op">)</span></code></pre></div>
+<p><img src="reference/figures/theme_sf_dark_readme_violin.png"></p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"></code></pre></div>
+<code class="sourceCode R"><span class="fu">ggplot</span><span class="op">(</span><span class="va">mtcars</span>, <span class="fu">aes</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">cyl</span><span class="op">)</span>, <span class="va">mpg</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
+    <span class="fu">geom_violin</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>fill <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">cyl</span><span class="op">)</span><span class="op">)</span>, color <span class="op">=</span> <span class="cn">NA</span><span class="op">)</span> <span class="op">+</span>
+    <span class="fu">labs</span><span class="op">(</span>title <span class="op">=</span> <span class="st">"San Francisco Dark Theme"</span>, subtitle <span class="op">=</span> <span class="st">"using *accessible* `scale_fill_ios_dark`"</span><span class="op">)</span> <span class="op">+</span>
+    <span class="fu"><a href="reference/theme_sf_dark.html">theme_sf_dark</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="reference/scale_colour_ios_dark.html">scale_fill_ios_dark</a></span><span class="op">(</span>accessible <span class="op">=</span> <span class="cn">F</span><span class="op">)</span></code></pre></div>
+<p><img src="reference/figures/theme_sf_dark_readme_violin_accessible.png"></p>
 </div>
-</div>
-<div id="scaling" class="section level3">
-<h3 class="hasAnchor">
-<a href="#scaling" class="anchor"></a>Scaling</h3>
+<div id="scaling" class="section level4">
+<h4 class="hasAnchor">
+<a href="#scaling" class="anchor"></a>Scaling</h4>
+<p>sfthemes provides 7 scaling factor. Scaling factors can be applied on text, elements, or both.</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
-<code class="sourceCode R"></code></pre></div>
+<code class="sourceCode R"><span class="fu">ggplot</span><span class="op">(</span><span class="va">diamonds</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op">(</span><span class="va">diamonds</span><span class="op">)</span>, <span class="fl">100</span><span class="op">)</span>, <span class="op">]</span>, <span class="fu">aes</span><span class="op">(</span><span class="va">carat</span>, <span class="va">price</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
+    <span class="fu">geom_point</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>shape <span class="op">=</span> <span class="va">cut</span>, color <span class="op">=</span> <span class="va">cut</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
+    <span class="fu">labs</span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Medium Overall Scaling"</span><span class="op">)</span> <span class="op">+</span>
+    <span class="fu"><a href="reference/theme_sf_light.html">theme_sf_light</a></span><span class="op">(</span>scale <span class="op">=</span> <span class="st">"Medium"</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="reference/scale_colour_ios_light.html">scale_color_ios_light</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
+<p><img src="reference/figures/theme_sf_light_readme_medium_overall.png"></p>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">ggplot</span><span class="op">(</span><span class="va">diamonds</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op">(</span><span class="va">diamonds</span><span class="op">)</span>, <span class="fl">100</span><span class="op">)</span>, <span class="op">]</span>, <span class="fu">aes</span><span class="op">(</span><span class="va">carat</span>, <span class="va">price</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
+    <span class="fu">geom_point</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>shape <span class="op">=</span> <span class="va">cut</span>, color <span class="op">=</span> <span class="va">cut</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
+    <span class="fu">labs</span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Large Overall Scaling"</span><span class="op">)</span> <span class="op">+</span>
+    <span class="fu"><a href="reference/theme_sf_light.html">theme_sf_light</a></span><span class="op">(</span>scale <span class="op">=</span> <span class="st">"Large"</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="reference/scale_colour_ios_light.html">scale_color_ios_light</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
+<p><img src="reference/figures/theme_sf_light_readme_large_overall.png"></p>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">ggplot</span><span class="op">(</span><span class="va">diamonds</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op">(</span><span class="va">diamonds</span><span class="op">)</span>, <span class="fl">100</span><span class="op">)</span>, <span class="op">]</span>, <span class="fu">aes</span><span class="op">(</span><span class="va">carat</span>, <span class="va">price</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
+    <span class="fu">geom_point</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>shape <span class="op">=</span> <span class="va">cut</span>, color <span class="op">=</span> <span class="va">cut</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
+    <span class="fu">labs</span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Medium Text Scaling, Large Element Scaling"</span><span class="op">)</span> <span class="op">+</span>
+    <span class="fu"><a href="reference/theme_sf_light.html">theme_sf_light</a></span><span class="op">(</span>font_size_scale <span class="op">=</span> <span class="st">"Medium"</span>, element_size_scale <span class="op">=</span> <span class="st">"xLarge"</span><span class="op">)</span> <span class="op">+</span> 
+<span class="fu"><a href="reference/scale_colour_ios_light.html">scale_color_ios_light</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
+<p><img src="reference/figures/theme_sf_light_readme_medium_text_large_element.png"></p>
+</div>
 </div>
 </div>
 </div>

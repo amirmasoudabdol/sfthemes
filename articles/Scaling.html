@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Colors • sfthemes</title>
+<title>Scales • sfthemes</title>
 <!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
 <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png">
@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
 <script src="../pkgdown.js"></script><link href="../extra.css" rel="stylesheet">
-<script src="../extra.js"></script><meta property="og:title" content="Colors">
+<script src="../extra.js"></script><meta property="og:title" content="Scales">
 <meta property="og:description" content="sfthemes">
 <meta property="og:image" content="/logo.svg">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
@@ -90,82 +90,26 @@
 
       
 
-      </header><script src="colors_files/header-attrs-2.5/header-attrs.js"></script><link href="colors_files/anchor-sections-1.0/anchor-sections.css" rel="stylesheet">
-<script src="colors_files/anchor-sections-1.0/anchor-sections.js"></script><div class="row">
+      </header><script src="Scaling_files/header-attrs-2.5/header-attrs.js"></script><link href="Scaling_files/anchor-sections-1.0/anchor-sections.css" rel="stylesheet">
+<script src="Scaling_files/anchor-sections-1.0/anchor-sections.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
-      <h1 data-toc-skip>Colors</h1>
+      <h1 data-toc-skip>Scales</h1>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/amirmasoudabdol/sfthemes/blob/master/vignettes/colors.Rmd"><code>vignettes/colors.Rmd</code></a></small>
-      <div class="hidden name"><code>colors.Rmd</code></div>
+      <small class="dont-index">Source: <a href="https://github.com/amirmasoudabdol/sfthemes/blob/master/vignettes/Scaling.Rmd"><code>vignettes/Scaling.Rmd</code></a></small>
+      <div class="hidden name"><code>Scaling.Rmd</code></div>
 
     </div>
 
     
     
-<p><a href="https://developer.apple.com/design/human-interface-guidelines/">Apple’s Human Interface Guidelines</a> provides several color palette for each platform, e.g., iOS, macOS, watchOS.</p>
-<div id="color-palettes" class="section level2">
-<h2 class="hasAnchor">
-<a href="#color-palettes" class="anchor"></a>Color Palettes</h2>
-<p>Apple’s system colors are distinguised by the OS that they have been designed for, although some systems sharing the same color palette, i.e., iOS and tvOS. SFThemes provides three categories of colors, iOS, macOS and watchOS. Both iOS and macOS offers two families of palettes, light and dark. Each palette offers an accessible set of colors that are color-blind optimized and have lower contrast. Additionally, macOS offers <em>Vibrant</em> sets of colors with their own set of accessible variants. As watchOS doesn’t offers a white background, it only offers a dark color palette.</p>
-<p>In total, SFThemes offers the following list of palettes:</p>
-<p><strong>iOS Set</strong></p>
-<ul>
-<li>iOS Light
-<ul>
-<li>iOS Accessible Light</li>
-</ul>
-</li>
-<li>iOS Dark
-<ul>
-<li>iOS Accessible Dark</li>
-</ul>
-</li>
-<li>iOS Gray Light
-<ul>
-<li>iOS Accessible Gray Light</li>
-</ul>
-</li>
-<li>iOS Gray Dark
-<ul>
-<li>iOS Accessible Gray Dark</li>
-</ul>
-</li>
-</ul>
-<p><strong>macOS Set</strong></p>
-<ul>
-<li>macOS Light
-<ul>
-<li>macOS Accessible Light</li>
-</ul>
-</li>
-<li>macOS Vibrant Light
-<ul>
-<li>macOS Accessible Vibrant Light</li>
-</ul>
-</li>
-<li>macOS Dark
-<ul>
-<li>iOS Accessible Dark</li>
-</ul>
-</li>
-<li>macOS Vibrant Dark
-<ul>
-<li>iOS Accessible Vibrant Dark</li>
-</ul>
-</li>
-</ul>
-<p><strong>watchOS Set</strong> - watchOS Dark</p>
-<p>Color scales are available via set of ggplot modifiers and are distinguished by their corresponding platform. Every scale function accepts a Boolean parameters, <code>accessible = TRUE</code>, indicating whether the accessible color palette should be applied instead. Additionally, macOS color scales are accepting an extra parameters indicating whether the Vibrant variant should be returned, <code>vibrant = TRUE</code>. Following list showcases all possible combinations of scales.</p>
-</div>
+
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
 
-        <nav id="toc" data-toggle="toc"><h2 data-toc-skip>Contents</h2>
-    </nav>
-</div>
+      </div>
 
 </div>
 
