@@ -2,8 +2,11 @@ pandoc: 2.11.2
 pkgdown: 1.6.1
 pkgdown_sha: ~
 articles:
-  Scaling: Scaling.html
   colors: colors.html
+  scales: scales.html
   typography: typography.html
-last_built: 2020-12-09T16:31Z
+last_built: 2020-12-10T10:05Z
+urls:
+  reference: https://sfthemes.amirmasoudabdol.name/reference
+  article: https://sfthemes.amirmasoudabdol.name/articles
 
