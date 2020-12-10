@@ -26,9 +26,35 @@ import_sf_pro <- function() {
 }
 
 
-font_sf_pro <- "SFPro"
+font_sf_pro <- "SFPro-Regular"
+font_sf_pro_text <- "SFProText"
+font_sf_pro_disply <- "SFProDisplay"
 
 font_sf_pro_bold <- "SFPro-Bold"
+font_sf_pro_text_bold <- "SFProText-Bold"
+font_sf_pro_disply_bold <- "SFProDisplay-Bold"
+
+#' @rdname sf_pro_font
+#' @export
+sf_set_sf_pro <- function() {
+
+  # Overwriting all families
+
+  ret <- theme()
+  ret <- ret + theme(axis.title = element_text(family=font_sf_pro))
+  ret <- ret + theme(axis.title.x = element_text(family=font_sf_pro))
+  ret <- ret + theme(axis.title.y = element_text(family=font_sf_pro))
+  ret <- ret + theme(axis.title.y.right = element_text(family=font_sf_pro))
+  ret <- ret + theme(strip.text = element_text(family=font_sf_pro))
+  ret <- ret + theme(plot.title = element_text(family=font_sf_pro))
+  ret <- ret + theme(plot.subtitle = element_text(family=font_sf_pro))
+  ret <- ret + theme(plot.caption = element_text(family=font_sf_pro))
+
+  ret <- ret + theme(legend.title = element_text(family=font_sf_pro))
+  ret <- ret + theme(legend.text = element_text(family=font_sf_pro))
+
+  ret
+}
 
 
 ## Inter Font
@@ -59,5 +85,27 @@ import_inter <- function() {
 
 
 font_inter <- "Inter"
+font_inter_bold <- "Inter Bold"
 
-font_inter_bold <- "Inter-Bold"
+
+#' @rdname inter_font
+#' @export
+sf_set_inter <- function() {
+
+  # Overwriting all families
+
+  ret <- theme()
+  ret <- ret + theme(axis.title = element_text(family=font_inter))
+  ret <- ret + theme(axis.title.x = element_text(family=font_inter))
+  ret <- ret + theme(axis.title.y = element_text(family=font_inter))
+  ret <- ret + theme(axis.title.y.right = element_text(family=font_inter))
+  ret <- ret + theme(strip.text = element_text(family=font_inter))
+  ret <- ret + theme(plot.title = element_text(family=font_inter))
+  ret <- ret + theme(plot.subtitle = element_text(family=font_inter))
+  ret <- ret + theme(plot.caption = element_text(family=font_inter))
+
+  ret <- ret + theme(legend.title = element_text(family=font_inter))
+  ret <- ret + theme(legend.text = element_text(family=font_inter))
+
+  ret
+}

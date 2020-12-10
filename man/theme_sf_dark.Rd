@@ -7,9 +7,9 @@
 theme_sf_dark(
   base_family = "Inter",
   base_size = NULL,
-  plot_title_family = "Inter Bold",
+  plot_title_family = "Inter",
   plot_title_size = NULL,
-  plot_title_face = "plain",
+  plot_title_face = "bold",
   plot_title_margin = 10,
   subtitle_family = "Inter",
   subtitle_size = NULL,

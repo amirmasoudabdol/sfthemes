@@ -52,8 +52,8 @@
 #' @export
 theme_sf_dark <- function(
     base_family="Inter", base_size = NULL,
-    plot_title_family="Inter Bold", plot_title_size = NULL,
-    plot_title_face="plain", plot_title_margin = 10,
+    plot_title_family="Inter", plot_title_size = NULL,
+    plot_title_face="bold", plot_title_margin = 10,
     subtitle_family="Inter",
     subtitle_size = NULL,
     subtitle_face = "plain", subtitle_margin = 15,

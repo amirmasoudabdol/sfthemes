@@ -2,10 +2,13 @@
 % Please edit documentation in R/fonts.R
 \name{import_sf_pro}
 \alias{import_sf_pro}
+\alias{sf_set_sf_pro}
 \title{SF Pro Font
 Import SF Pro font for use in charts}
 \usage{
 import_sf_pro()
+
+sf_set_sf_pro()
 }
 \description{
 SF Pro Font

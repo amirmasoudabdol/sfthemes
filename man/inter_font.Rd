@@ -2,9 +2,12 @@
 % Please edit documentation in R/fonts.R
 \name{import_inter}
 \alias{import_inter}
+\alias{sf_set_inter}
 \title{Import Inter font for use in charts}
 \usage{
 import_inter()
+
+sf_set_inter()
 }
 \description{
 Import Inter font for use in charts

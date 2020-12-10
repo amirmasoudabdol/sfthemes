@@ -29,8 +29,8 @@
 #' @importFrom ggplot2 margin theme theme_minimal element_blank element_rect element_text element_line update_geom_defaults
 sf_base <- function(
     base_family="Inter", base_size = NULL,
-    plot_title_family="Inter Bold", plot_title_size = NULL,
-    plot_title_face="plain", plot_title_margin = 10,
+    plot_title_family="Inter", plot_title_size = NULL,
+    plot_title_face="bold", plot_title_margin = 10,
     subtitle_family="Inter",
     subtitle_size = NULL,
     subtitle_face = "plain", subtitle_margin = 15,
@@ -255,9 +255,9 @@ sf_base <- function(
 
     ret <- ret + theme(plot.margin =plot_margin)
     ret <- ret + theme(legend.title = element_text(color = text_color_palette[["label"]],
-                                                    size = axis_text_size, face="bold"))
+                                                    size = axis_text_size, family=caption_family, face="bold"))
     ret <- ret + theme(legend.text = element_text(color = text_color_palette[["label"]],
-                                                    size = axis_text_size))
+                                                    size = axis_text_size, family=caption_family))
 
     ret
 
