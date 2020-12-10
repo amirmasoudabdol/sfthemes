@@ -26,20 +26,9 @@ import_sf_pro <- function() {
 }
 
 
-#' @title sf_pro_font font name R variable aliases
-#' @description `font_sf_pro` == "`SFPro`"
-#' @format length 1 character vector
 font_sf_pro <- "SFPro"
 
-#' @note `font_sf_pro_bold` (a.k.a. "`SFPro-Bold`") is not available on
-#'     Windows and will throw a warning if used in plots.
-#' @description `font_sf_pro_bold` == "`SFPro-Bold`"
 font_sf_pro_bold <- "SFPro-Bold"
-
-#' @note `font_sf_pro_light` (a.k.a. "`SFPro-Light`") is not available on
-#'     Windows and will throw a warning if used in plots.
-#' @description `font_sf_pro_light` == "`SFPro-Light`"
-font_sf_pro_light <- "SFPro-Light"
 
 
 ## Inter Font
@@ -69,18 +58,6 @@ import_inter <- function() {
 }
 
 
-#' @title Inter font name R variable aliases
-#' @description `font_inter` == "`Inter`"
-#' @format length 1 character vector
 font_inter <- "Inter"
 
-#' @note `font_inter_bold` (a.k.a. "`Inter-Bold`") is not available on
-#'     Windows and will throw a warning if used in plots.
-#' @description `font_inter_bold` == "`Inter-Bold`"
 font_inter_bold <- "Inter-Bold"
-
-#' @note `font_inter_light` (a.k.a. "`Inter-Light`") is not available on
-#'     Windows and will throw a warning if used in plots.
-#' @description `font_inter_light` == "`Inter-Light`"
-font_inter_light <- "Inter-Light"
-

@@ -10,7 +10,7 @@ watchos_dark_pal(order = "contrast")
 \item{order}{Indicates the order of colors in the palette}
 }
 \description{
-watchOS Color Palette
+Note: Use this color palette with dark or pure dark themes.
 }
 \examples{
 library(scales)

@@ -16,9 +16,7 @@ watchos_col_order <- list(default = 1:10,
 
 #' watchOS Color Palette
 #' 
-#' @md
-#' **Note**: Use this color palette with dark or pure dark themes.
-#'
+#' Note: Use this color palette with dark or pure dark themes.
 #'
 #' @param order Indicates the order of colors in the palette
 #'
