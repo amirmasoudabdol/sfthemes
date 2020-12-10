@@ -156,7 +156,7 @@
   subtitle_size <span class='op'>=</span> <span class='cn'>NULL</span>,
   subtitle_face <span class='op'>=</span> <span class='st'>"plain"</span>,
   subtitle_margin <span class='op'>=</span> <span class='fl'>15</span>,
-  strip_text_family <span class='op'>=</span> <span class='st'>"Inter Medium"</span>,
+  strip_text_family <span class='op'>=</span> <span class='st'>"Inter"</span>,
   strip_text_size <span class='op'>=</span> <span class='cn'>NULL</span>,
   strip_text_face <span class='op'>=</span> <span class='st'>"plain"</span>,
   caption_family <span class='op'>=</span> <span class='st'>"Inter"</span>,
@@ -268,7 +268,8 @@
 
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://ggplot2.tidyverse.org'>ggplot2</a></span><span class='op'>)</span>
+    <pre class="examples"><div class='input'><span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://ggplot2.tidyverse.org'>ggplot2</a></span><span class='op'>)</span>
 
 <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='va'>mpg</span>, <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>displ</span>, y <span class='op'>=</span> <span class='va'>hwy</span>, colour <span class='op'>=</span> <span class='va'>class</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
   <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span>
@@ -279,7 +280,7 @@
        caption <span class='op'>=</span> <span class='st'>"Fuel economy data from 1999 to 2008 for 38 popular models of cars."</span><span class='op'>)</span> <span class='op'>+</span>
   <span class='fu'>theme_sf_light</span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span>
   <span class='fu'><a href='scale_colour_ios_light.html'>scale_color_ios_light</a></span><span class='op'>(</span><span class='op'>)</span>
-</div><div class='img'><img src='theme_sf_light-1.png' alt='' width='700' height='433' /></div><div class='input'>
+
 <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='va'>mpg</span>, <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>y <span class='op'>=</span> <span class='va'>class</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
   <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_bar.html'>geom_bar</a></span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>fill <span class='op'>=</span> <span class='va'>drv</span><span class='op'>)</span>, color <span class='op'>=</span> <span class='cn'>NA</span><span class='op'>)</span> <span class='op'>+</span>
   <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span>x<span class='op'>=</span> <span class='st'>"Class"</span>, y<span class='op'>=</span> <span class='st'>"Count"</span>,
@@ -290,7 +291,7 @@
   <span class='fu'>theme_sf_light</span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span>
   <span class='fu'><a href='scale_colour_ios_light.html'>scale_fill_ios_light</a></span><span class='op'>(</span>accessible <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span> <span class='op'>+</span>
   <span class='fu'><a href='scale_colour_ios_light.html'>scale_color_ios_light</a></span><span class='op'>(</span>accessible <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>
-</div><div class='img'><img src='theme_sf_light-2.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='op'>}</span>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
