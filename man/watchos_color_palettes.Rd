@@ -6,13 +6,11 @@
 \usage{
 watchos_dark_pal(order = "contrast")
 }
-\description{
-Collection of color and fill scales based on watchOS color palette. watchOS uses
-[a very vibrant color palette](https://developer.apple.com/design/human-interface-guidelines/watchos/visual/color/)
-to highlight the information in a small screen with a black background.
+\arguments{
+\item{order}{Indicates the order of colors in the palette}
 }
-\details{
-Use this color palette with dark or pure dark themes.
+\description{
+watchOS Color Palette
 }
 \examples{
 library(scales)

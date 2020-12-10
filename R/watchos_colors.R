@@ -15,12 +15,12 @@ watchos_col_order <- list(default = 1:10,
                           contrast = c(1, 5, 6, 4, 10, 8, 3, 7, 9, 2))
 
 #' watchOS Color Palette
+#' 
+#' @md
+#' **Note**: Use this color palette with dark or pure dark themes.
 #'
-#' Collection of color and fill scales based on watchOS color palette. watchOS uses
-#' [a very vibrant color palette](https://developer.apple.com/design/human-interface-guidelines/watchos/visual/color/)
-#' to highlight the information in a small screen with a black background.
 #'
-#' Use this color palette with dark or pure dark themes.
+#' @param order Indicates the order of colors in the palette
 #'
 #' @rdname watchos_color_palettes
 #' @export
@@ -38,6 +38,8 @@ watchos_dark_pal <- function(order = "contrast") {
 
 #' watchOS Dark Color Scales
 #'
+#' @param order Indicates the order of colors in the palette
+#'
 #' @inheritDotParams ggplot2::discrete_scale -expand -position
 #' @rdname watchos_colors
 #' @export
@@ -49,6 +51,8 @@ scale_colour_watchos_dark <- function(order = "contrast", ...) {
 #' @rdname watchos_colors
 scale_color_watchos_dark <- scale_colour_watchos_dark
 
+#' @param order Indicates the order of colors in the palette
+#'
 #' @export
 #' @rdname watchos_colors
 scale_fill_watchos_dark <- function(order = "contrast", ...) {

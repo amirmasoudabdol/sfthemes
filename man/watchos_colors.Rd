@@ -13,6 +13,8 @@ scale_color_watchos_dark(order = "contrast", ...)
 scale_fill_watchos_dark(order = "contrast", ...)
 }
 \arguments{
+\item{order}{Indicates the order of colors in the palette}
+
 \item{...}{
   Arguments passed on to \code{\link[ggplot2:discrete_scale]{ggplot2::discrete_scale}}
   \describe{

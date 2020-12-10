@@ -24,7 +24,7 @@
 #'
 #' @importFrom ggplot2 update_geom_defaults
 #'
-#' @examples
+#' @examples \dontrun{
 #' library(ggplot2)
 #'
 #' ggplot(mpg, aes(x = displ, y = hwy, colour = class)) +
@@ -48,6 +48,7 @@
 #'   scale_fill_ios_dark(accessible = TRUE) +
 #'   scale_color_ios_dark(accessible = TRUE)
 #'
+#' }
 #' @export
 theme_sf_dark <- function(
     base_family="Inter", base_size = NULL,
@@ -56,7 +57,7 @@ theme_sf_dark <- function(
     subtitle_family="Inter",
     subtitle_size = NULL,
     subtitle_face = "plain", subtitle_margin = 15,
-    strip_text_family = "Inter Medium", strip_text_size = NULL,
+    strip_text_family = "Inter", strip_text_size = NULL,
     strip_text_face = "plain",
     caption_family="Inter",
     caption_size = NULL,

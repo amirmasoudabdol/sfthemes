@@ -25,7 +25,7 @@
 #' @importFrom ggplot2 update_geom_defaults
 #'
 #' @family themes sflight
-#' @examples
+#' @examples \dontrun{
 #' library(ggplot2)
 #'
 #' ggplot(mpg, aes(x = displ, y = hwy, colour = class)) +
@@ -48,7 +48,7 @@
 #'   theme_sf_light() +
 #'   scale_fill_ios_light(accessible = TRUE) +
 #'   scale_color_ios_light(accessible = TRUE)
-#'
+#' }
 #' @export
 theme_sf_light <- function(
     base_family="Inter", base_size = NULL,
@@ -57,7 +57,7 @@ theme_sf_light <- function(
     subtitle_family="Inter",
     subtitle_size = NULL,
     subtitle_face = "plain", subtitle_margin = 15,
-    strip_text_family = "Inter Medium", strip_text_size = NULL,
+    strip_text_family = "Inter", strip_text_size = NULL,
     strip_text_face = "plain",
     caption_family="Inter",
     caption_size = NULL,

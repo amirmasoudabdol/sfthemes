@@ -2,4 +2,9 @@
 ^\.Rproj\.user$
 ^_pkgdown\.yml$
 ^docs$
+^doc$
 ^pkgdown$
+^\.travis\.yml$
+^CNAME$
+^logo.*$
+^\.github

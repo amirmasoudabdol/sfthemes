@@ -12,7 +12,7 @@
 #' @export
 import_sf_pro <- function() {
 
-  extrafont::loadfonts()
+  extrafont::loadfonts(quiet = TRUE)
   fnt <- extrafont::fonttable()
   if (!any(grepl("SF[ ]Pro", fnt$FamilyName))) {
       message("SF Pro is NOT installed in your system!\nDownload and install the font, and run this command again!")
