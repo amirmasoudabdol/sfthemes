@@ -99,7 +99,7 @@ theme_sf_light <- function(
         caption_size = caption_size,
         caption_face = caption_face, caption_margin = 10,
         axis_text_size = axis_text_size,
-        text_color_palette = ios_text_on_dark_cols,
+        text_color_palette = ios_text_on_light_cols,
         axis_title_family = base_family,
         axis_title_size = axis_title_size,
         axis_title_face = axis_title_face,
