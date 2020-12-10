@@ -7,7 +7,7 @@ body, p, a, h1, h2, h3, h4, h5, h6 {
     font-weight: 500;
 }
 
-pre, code, pre.usage {
+pre, code, pre.usage, code.sourceCode.r, .sourceCode, .examples, .downlit, .sourceCode, .r {
     font-family: ui-monospace, SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
     font-weight: 500;
 }
