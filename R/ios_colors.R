@@ -75,7 +75,7 @@ ios_accessible_dark_palette <- unname(unlist(ios_accessible_dark_cols))
 #'
 #' @param accessible Indicates whether the accessible set of colors should be used
 #' @param order Indicates the order of colors in the palette
-#' @rdname color_palettes
+#' @rdname ios_color_palettes
 #'
 #' @examples
 #' library(scales)
@@ -147,7 +147,7 @@ scale_fill_ios_light <- function(order = "contrast", accessible = FALSE, ...) {
 #'
 #' @param accessible Indicates whether the accessible set of colors should be used
 #' @param order Indicates the order of colors in the palette
-#' @rdname color_palettes
+#' @rdname ios_color_palettes
 #'
 #' @examples 
 #' library(scales)
@@ -251,7 +251,7 @@ ios_accessible_gray_dark_palette <- unname(unlist(ios_accessible_gray_dark_cols)
 #'
 #' @param accessible Indicates whether the accessible set of colors should be used
 #'
-#' @rdname color_palettes
+#' @rdname ios_color_palettes
 #'
 #' @examples 
 #' library(scales)
@@ -308,7 +308,7 @@ scale_fill_ios_gray_light <- function(accessible = FALSE, ...) {
 }
 
 #'
-#' @rdname color_palettes
+#' @rdname ios_color_palettes
 #'
 #' @param accessible Indicates whether the accessible set of colors should be used
 #'

@@ -6,11 +6,11 @@
 \alias{scale_fill_watchos_dark}
 \title{watchOS Dark Color Scales}
 \usage{
-scale_colour_watchos_dark(...)
+scale_colour_watchos_dark(order = "contrast", ...)
 
-scale_color_watchos_dark(...)
+scale_color_watchos_dark(order = "contrast", ...)
 
-scale_fill_watchos_dark(...)
+scale_fill_watchos_dark(order = "contrast", ...)
 }
 \arguments{
 \item{...}{

@@ -1,39 +1,43 @@
+url: https://sfthemes.amirmasoudabdol.name
+
+home:
+  title: San Francisco Themes
+
 authors:
-    Amir M. Abdol:
-        href: https://amirmasoudabdol.name
-template:
-  params:
-    bootswatch: flatly
+  Amir Masoud Abdol:
+      href: https://amirmasoudabdol.name
 
 repo:
   url:
     home: https://github.com/amirmasoudabdol/sfthemes/
-    source: https://github.com/amirmasoudabdol/sfthemes/blob/master/
+    source: https://github.com/amirmasoudabdol/sfthemes/blob/main/
     issue: https://github.com/amirmasoudabdol/sfthemes/issues/
     user: https://github.com/
 
+template:
+  params:
+    bootswatch: flatly
+
+development:
+  mode: auto
 
 reference:
 - title: Themes
   contents:
   - starts_with("theme_sf")
 
-# - title: Palettes
-# - subtitle: iOS
-#   contents:
-#   - ios_light_pal
-#   - ios_dark_pal
-#   - ios_gray_light_pal
-#   - ios_gray_dark_pal
-#
-# - subtitle: macOS
-#   contents:
-#   - macos_light_pal
-#   - macos_dark_pal
-#
-# - subtitle: watchOS
-#   contents:
-#   - watchos_dark_pal
+- title: Palettes
+- subtitle: iOS
+  contents:
+    - starts_with("ios_")
+
+- subtitle: macOS
+  contents:
+    - starts_with("macos_")
+
+- subtitle: watchOS
+  contents:
+    - starts_with("watchos_")
 
 - title: Scales
 

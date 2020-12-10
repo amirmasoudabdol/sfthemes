@@ -12,14 +12,15 @@
 #' @export
 import_sf_pro <- function() {
 
-  sf_pro_dir <- system.file("fonts", "SF Pro", package="sfthemes")
-
-  suppressWarnings(suppressMessages(extrafont::font_import(sf_pro_dir, prompt=FALSE)))
+  extrafont::loadfonts()
+  fnt <- extrafont::fonttable()
+  if (!any(grepl("SF[ ]Pro", fnt$FamilyName))) {
+      message("SF Pro is NOT installed in your system!\nDownload and install the font, and run this command again!")
+      return();
+  }
 
   message(
-    sprintf(
-      "You will likely need to install these fonts on your system as well.\n\nYou can find them in [%s]",
-      sf_pro_dir)
+    "SF Pro is ready to use."
   )
 
 }

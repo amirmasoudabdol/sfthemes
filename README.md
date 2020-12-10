@@ -1,16 +1,12 @@
 # sfthemes <img src="man/figures/logo.png" width="20%" align="right"/>
-Collection of `ggplot2` themes, scales and colors inspired by [Apple's Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/).
 
----
-
-sfthemes is a collection of [`ggplot2`](https://ggplot2.tidyverse.org) themes, scales, and colors inspired by [Apple's Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/), and based on occasional appearances of charts used by Apple within different contexts, e.g., Apple Health app, Screen Time on iOS and macOS. In terms of typography, we optimized our themes to be compatible with [SF Pro](https://developer.apple.com/fonts/). Additionally, we adhere to HIG's [dynamic type sizes](https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/typography/) in order to provide consistent and elegant overall rescaling.
+sfthemes is a collection of [`ggplot2`](https://ggplot2.tidyverse.org) themes, scales, and colors based on [Apple's Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/), and inspired by occasional appearances of charts used by Apple within different contexts, e.g., Apple Health app, Screen Time on iOS and macOS. In terms of typography, we optimized our themes to be compatible with [SF Pro](https://developer.apple.com/fonts/) and [Inter](https://rsms.me/inter/) typefaces. Additionally, we are using [dynamic type sizes](https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/typography/) in order to provide consistent and elegant overall rescaling.
 
 ## Install
 
 Install the development version from GitHub
 ```R
-install.packages("devtools")
-library(devtools)
+install.packages("devtools"); library(devtools)
 devtools::install_github("amirmasoudabdol/sfthemes")
 ```
 
@@ -19,7 +15,17 @@ Install from CRAN [Not available yet!]
 install.packages("sfthemes")
 ```
 
-## Usage
+## Preperation / Usage
+
+You can load and configure sfthemes using the following commands. If you do not get any errors or warnings, sfthemes is fully configured and can access the required fonts.
+
+```R
+library(sfthemes)
+
+# You only need to run these commands once!
+import_inter()
+import_sf_pro()
+```
 
 ### Themes
 
@@ -31,6 +37,8 @@ In general, we recommend pairing light scales with `theme_sf_light` (or any othe
 
 #### Example of `theme_sf_light` Theme
 ```R
+library(sfthemes)
+
 ggplot(mtcars, aes(x = factor(vs), fill = factor(cyl), y = mpg)) +
     geom_dotplot(binaxis = "y", stackdir = "center", position = "dodge", color = NA) +
     labs(title = "San Francisco Dark Theme", subtitle = "using `scale_fill_ios_dark`") +
@@ -41,6 +49,8 @@ ggplot(mtcars, aes(x = factor(vs), fill = factor(cyl), y = mpg)) +
 
 #### Example of `theme_sf_dark` Theme
 ```R
+library(sfthemes)
+
 ggplot(mtcars, aes(x = factor(vs), fill = factor(cyl), y = mpg)) +
     geom_dotplot(binaxis = "y", stackdir = "center", position = "dodge", color = NA) +
     labs(title = "San Francisco Dark Theme", subtitle = "using `scale_fill_ios_dark`") +
@@ -55,6 +65,8 @@ ggplot(mtcars, aes(x = factor(vs), fill = factor(cyl), y = mpg)) +
 Colors of every palette can be transformed to accessible colors by using setting the `accessible` parameters to `TRUE`. For instnace:
 
 ```R
+library(sfthemes)
+
 ggplot(mtcars, aes(factor(cyl), mpg)) +
     geom_violin(aes(fill = factor(cyl)), color = NA) +
     labs(title = "San Francisco Dark Theme", subtitle = "using normal `scale_fill_ios_dark`") +
@@ -64,6 +76,8 @@ ggplot(mtcars, aes(factor(cyl), mpg)) +
 ![](man/figures/theme_sf_dark_readme_violin.png)
 
 ```R
+library(sfthemes)
+
 ggplot(mtcars, aes(factor(cyl), mpg)) +
     geom_violin(aes(fill = factor(cyl)), color = NA) +
     labs(title = "San Francisco Dark Theme", subtitle = "using *accessible* `scale_fill_ios_dark`") +
@@ -77,6 +91,8 @@ ggplot(mtcars, aes(factor(cyl), mpg)) +
 sfthemes provides 7 scaling factor. Scaling factors can be applied on text, elements, or both.
 
 ```R
+library(sfthemes)
+
 ggplot(diamonds[sample(nrow(diamonds), 100), ], aes(carat, price)) +
     geom_point(aes(shape = cut, color = cut)) +
     labs(title = "Medium Overall Scaling") +
@@ -86,6 +102,8 @@ ggplot(diamonds[sample(nrow(diamonds), 100), ], aes(carat, price)) +
 ![](man/figures/theme_sf_light_readme_medium_overall.png)
 
 ```R
+library(sfthemes)
+
 ggplot(diamonds[sample(nrow(diamonds), 100), ], aes(carat, price)) +
     geom_point(aes(shape = cut, color = cut)) +
     labs(title = "Large Overall Scaling") +
@@ -95,6 +113,8 @@ ggplot(diamonds[sample(nrow(diamonds), 100), ], aes(carat, price)) +
 ![](man/figures/theme_sf_light_readme_large_overall.png)
 
 ```R
+library(sfthemes)
+
 ggplot(diamonds[sample(nrow(diamonds), 100), ], aes(carat, price)) +
     geom_point(aes(shape = cut, color = cut)) +
     labs(title = "Medium Text Scaling, Large Element Scaling") +

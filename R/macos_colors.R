@@ -128,7 +128,7 @@ macos_cols_order <- list(default = 1:11,
 #' @param vibrant Returns vibrant alternative of colors
 #' @param order Indicates the order of colors in the palette
 #'
-#' @rdname color_palettes
+#' @rdname macos_color_palettes
 #'
 #' @export
 #' @examples 
@@ -236,7 +236,7 @@ scale_fill_macos_light <- function(order = order, accessible = FALSE, vibrant = 
 #' @param vibrant Returns vibrant alternative of colors
 #' @param order Indicates the order of colors in the palette
 #'
-#' @rdname color_palettes
+#' @rdname macos_color_palettes
 #'
 #' @export
 #' @examples 
