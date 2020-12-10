@@ -36,7 +36,9 @@ reference:
 
 - title: Themes
   contents:
-  - starts_with("theme_sf")
+  - sf_base
+  - theme_sf_light
+  - theme_sf_dark
 
 - title: Palettes
 - subtitle: iOS
