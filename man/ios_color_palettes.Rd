@@ -25,7 +25,7 @@ iOS Light Color Palettes
 
 iOS Dark Color Palettes
 
-iOS Grey Palette
+iOS Grey Color Palette
 }
 \examples{
 library(scales)

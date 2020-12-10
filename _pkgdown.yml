@@ -21,7 +21,19 @@ template:
 development:
   mode: auto
 
+articles:
+- title: San Francisco Themes
+  navbar: ~
+  contents:
+  - typography
+  - colors
+  - scales
+
 reference:
+- title: Typography
+  contents:
+  - starts_with("import_")
+
 - title: Themes
   contents:
   - starts_with("theme_sf")
@@ -48,6 +60,11 @@ reference:
 - subtitle: iOS Dark
   contents:
   - ends_with("ios_dark")
+
+- subtitle: iOS Gray
+  contents:
+  - ends_with("ios_gray_light")
+  - ends_with("ios_gray_dark")
 
 - subtitle: macOS Light
   contents:

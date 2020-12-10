@@ -13,12 +13,13 @@ to highlight the information in a small screen with a black background.
 }
 \details{
 Use this color palette with dark or pure dark themes.
-
-![](watchOS_Dark.png "watchOS Dark Color Palette")
 }
 \examples{
-\dontrun{
 library(scales)
-scales::show_col(watchos_dark_pal()(9), border = NA)
-}
+scales::show_col(
+    watchos_dark_pal(order = "default")(9),
+    border = NA, labels = FALSE)
+scales::show_col(
+    watchos_dark_pal(order = "contrast")(9),
+    border = NA, labels = FALSE)
 }

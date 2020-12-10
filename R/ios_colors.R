@@ -247,7 +247,7 @@ ios_accessible_gray_dark_cols <- list(bombay= "#aeaeb2",
 )
 ios_accessible_gray_dark_palette <- unname(unlist(ios_accessible_gray_dark_cols))
 
-#' iOS Grey Palette
+#' iOS Grey Color Palette
 #'
 #' @param accessible Indicates whether the accessible set of colors should be used
 #'

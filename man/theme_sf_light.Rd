@@ -91,18 +91,18 @@ ggplot(mpg, aes(x = displ, y = hwy, colour = class)) +
   geom_point() +
   labs(x="Displacement", y="Highway Miles per Gallon",
        color = "Class",
-       title="San Francisco Light Theme",
-       subtitle="Using iOS Light Color Palette",
+       title= "San Francisco Light Theme",
+       subtitle= "Using iOS Light Color Palette",
        caption = "Fuel economy data from 1999 to 2008 for 38 popular models of cars.") +
   theme_sf_light() +
   scale_color_ios_light()
 
-ggplot(mpg, aes(class)) +
-  geom_bar(aes(fill = drv, color = NA)) +
-  labs(x="Class", y="Count",
+ggplot(mpg, aes(y = class)) +
+  geom_bar(aes(fill = drv), color = NA) +
+  labs(x= "Class", y= "Count",
        fill = "Drive",
-       title="San Francisco Light Theme",
-       subtitle="Using Accessible iOS Light Palette",
+       title= "San Francisco Light Theme",
+       subtitle= "Using Accessible iOS Light Palette",
        caption = "Fuel economy data from 1999 to 2008 for 38 popular models of cars.") +
   theme_sf_light() +
   scale_fill_ios_light(accessible = TRUE) +

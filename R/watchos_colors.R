@@ -22,14 +22,16 @@ watchos_col_order <- list(default = 1:10,
 #'
 #' Use this color palette with dark or pure dark themes.
 #'
-#' ![](watchOS_Dark.png "watchOS Dark Color Palette")
-#'
 #' @rdname watchos_color_palettes
 #' @export
-#' @examples \dontrun{
+#' @examples 
 #' library(scales)
-#' scales::show_col(watchos_dark_pal()(9), border = NA)
-#' }
+#' scales::show_col(
+#'     watchos_dark_pal(order = "default")(9),
+#'     border = NA, labels = FALSE)
+#' scales::show_col(
+#'     watchos_dark_pal(order = "contrast")(9),
+#'     border = NA, labels = FALSE)
 watchos_dark_pal <- function(order = "contrast") {
     scales::manual_pal(watchos_dark_palette[watchos_col_order[[order]]])
 }
