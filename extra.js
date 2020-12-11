@@ -1,3 +1,3 @@
 // Plausible
 
-import('https://plausible.io/js/plausible.js');
+import('https://stats.sfthemes.amirmasoudabdol.name/js/index.js');
