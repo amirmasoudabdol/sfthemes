@@ -10,7 +10,7 @@ vignette: >
 [Apple's Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/) provides two primary color palettes for each platform, light and dark. 
 
 
-On iOS, each palette is accompanied by an accessible variant as well where the temperature and transparency were adjusted to provide higher contrast. Both light and dark palettes can be used with [sfthemes::theme_sf_light] and `theme_sf_dark` themes. 
+On iOS, each palette is accompanied by an accessible variant as well where the temperature and transparency were adjusted to provide higher contrast. Both light and dark palettes can be used with `theme_sf_light()` and `theme_sf_dark()` themes. 
 
 **iOS Light Palette**
 ![iOS Light](images/ios_light.png)
