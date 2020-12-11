@@ -14,12 +14,15 @@ repo:
     issue: https://github.com/amirmasoudabdol/sfthemes/issues/
     user: https://github.com/
 
+development:
+  mode: auto
+
 template:
   params:
     bootswatch: flatly
-
-development:
-  mode: auto
+  path: inst/templates
+  assets: inst/assets
+  default_assets: false
 
 articles:
 - title: San Francisco Themes
