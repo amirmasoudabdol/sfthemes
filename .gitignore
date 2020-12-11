@@ -6,8 +6,6 @@
 # Folders
 docs/
 
-*.html
-
 # macOS
 .DS_Store
 docs
