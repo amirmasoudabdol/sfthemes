@@ -113,7 +113,7 @@ ios_light_pal <- function(order = "contrast", accessible = FALSE) {
 #'
 #' @md
 #' @inheritDotParams ggplot2::discrete_scale -expand -position
-#' @rdname ios_light_colors
+#' @rdname scale_colour_ios_light
 #' @family colour scales
 #' @export
 scale_colour_ios_light <- function(order = "contrast", accessible = FALSE, ...) {
@@ -125,12 +125,12 @@ scale_colour_ios_light <- function(order = "contrast", accessible = FALSE, ...) 
 }
 
 #' @export
-#' @rdname ios_light_colors
+#' @rdname scale_colour_ios_light
 scale_color_ios_light <- scale_colour_ios_light
 
 #' @param accessible Indicates whether the accessible set of colors should be used
 #' @param order Indicates the order of colors in the palette
-#' @rdname ios_light_colors
+#' @rdname scale_colour_ios_light
 #' @export
 scale_fill_ios_light <- function(order = "contrast", accessible = FALSE, ...) {
     if (accessible){
@@ -180,7 +180,7 @@ ios_dark_pal <- function(order = "contrast", accessible = FALSE) {
 #'
 #' @md
 #' @inheritDotParams ggplot2::discrete_scale -expand -position
-#' @rdname ios_dark_colors
+#' @rdname scale_colour_ios_dark
 #' @family colour scales
 #' @export
 scale_colour_ios_dark <- function(order = "contrast", accessible = FALSE, ...) {
@@ -192,12 +192,12 @@ scale_colour_ios_dark <- function(order = "contrast", accessible = FALSE, ...) {
 }
 
 #' @export
-#' @rdname ios_dark_colors
+#' @rdname scale_colour_ios_dark
 scale_color_ios_dark <- scale_colour_ios_dark
 
 #' @param accessible Indicates whether the accessible set of colors should be used
 #' @param order Indicates the order of colors in the palette
-#' @rdname ios_dark_colors
+#' @rdname scale_colour_ios_dark
 #' @export
 scale_fill_ios_dark <- function(order = "contrast", accessible = FALSE, ...) {
     if (accessible){
@@ -277,7 +277,7 @@ ios_gray_light_pal <- function(accessible = FALSE) {
 #'
 #' @md
 #' @inheritDotParams ggplot2::discrete_scale -expand -position
-#' @rdname ios_gray_colors
+#' @rdname scale_colour_ios_gray_light
 #' @family colour scales
 #' @export
 scale_colour_ios_gray_light <- function(accessible = FALSE, ...) {
@@ -290,13 +290,13 @@ scale_colour_ios_gray_light <- function(accessible = FALSE, ...) {
 
 #'
 #' @export
-#' @rdname ios_gray_colors
+#' @rdname scale_colour_ios_gray_light
 scale_color_ios_gray_light <- scale_colour_ios_gray_light
 
 #'
 #' @param accessible Indicates whether the accessible set of colors should be used
 #'
-#' @rdname ios_gray_colors
+#' @rdname scale_colour_ios_gray_light
 #'
 #' @export
 scale_fill_ios_gray_light <- function(accessible = FALSE, ...) {
@@ -334,7 +334,7 @@ ios_gray_dark_pal <- function(accessible = FALSE) {
 #'
 #' @md
 #' @inheritDotParams ggplot2::discrete_scale -expand -position
-#' @rdname ios_gray_colors
+#' @rdname scale_colour_ios_gray_dark
 #' @family colour scales
 #' @export
 scale_colour_ios_gray_dark <- function(accessible = FALSE, ...) {
@@ -345,13 +345,13 @@ scale_colour_ios_gray_dark <- function(accessible = FALSE, ...) {
     }
 }
 
-#' @rdname ios_gray_colors
+#' @rdname scale_colour_ios_gray_dark
 #'
 #' @export
 scale_color_ios_gray_dark <- scale_colour_ios_gray_dark
 
 #' @param accessible Indicates whether the accessible set of colors should be used
-#' @rdname ios_gray_colors
+#' @rdname scale_colour_ios_gray_dark
 #'
 #' @export
 scale_fill_ios_gray_dark <- function(accessible = FALSE, ...) {

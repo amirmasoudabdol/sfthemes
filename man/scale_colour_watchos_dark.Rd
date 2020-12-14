@@ -73,6 +73,7 @@ watchOS Dark Color Scales
 \seealso{
 Other colour scales: 
 \code{\link{scale_colour_ios_dark}()},
+\code{\link{scale_colour_ios_gray_dark}()},
 \code{\link{scale_colour_ios_gray_light}()},
 \code{\link{scale_colour_ios_light}()},
 \code{\link{scale_colour_macos_dark}()},

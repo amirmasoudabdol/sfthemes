@@ -182,7 +182,7 @@ macos_light_pal <- function(order = "contrast", accessible = FALSE, vibrant = FA
 #'
 #' @md
 #' @inheritDotParams ggplot2::discrete_scale -expand -position
-#' @rdname macos_light_colors
+#' @rdname scale_colour_macos_light
 #' @family colour scales
 #' @export
 scale_colour_macos_light <- function(order = "contrast", accessible = FALSE, vibrant = FALSE, ...) {
@@ -203,7 +203,7 @@ scale_colour_macos_light <- function(order = "contrast", accessible = FALSE, vib
 }
 
 #' @export
-#' @rdname macos_light_colors
+#' @rdname scale_colour_macos_light
 scale_color_macos_light <- scale_colour_macos_light
 
 #'
@@ -212,7 +212,7 @@ scale_color_macos_light <- scale_colour_macos_light
 #' @param order Indicates the order of colors in the palette
 #'
 #' @export
-#' @rdname macos_light_colors
+#' @rdname scale_colour_macos_light
 scale_fill_macos_light <- function(order = order, accessible = FALSE, vibrant = FALSE, ...) {
     if (accessible){
         if (vibrant){
@@ -290,7 +290,7 @@ macos_dark_pal <- function(order = "contrast", accessible = FALSE, vibrant = FAL
 #'
 #' @md
 #' @inheritDotParams ggplot2::discrete_scale -expand -position
-#' @rdname macos_dark_colors
+#' @rdname scale_colour_macos_dark
 #' @family colour scales
 #' @export
 scale_colour_macos_dark <- function(order = "contrast", accessible = FALSE, vibrant = FALSE, ...) {
@@ -311,7 +311,7 @@ scale_colour_macos_dark <- function(order = "contrast", accessible = FALSE, vibr
 }
 
 #' @export
-#' @rdname macos_dark_colors
+#' @rdname scale_colour_macos_dark
 scale_color_macos_dark <- scale_colour_macos_dark
 
 #' @param accessible Returns accessible alternative of colors
@@ -319,7 +319,7 @@ scale_color_macos_dark <- scale_colour_macos_dark
 #' @param order Indicates the order of colors in the palette
 #'
 #' @export
-#' @rdname macos_dark_colors
+#' @rdname scale_colour_macos_dark
 scale_fill_macos_dark <- function(order = "contrast", accessible = FALSE, vibrant = FALSE, ...) {
     if (accessible){
         if (vibrant){

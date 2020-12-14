@@ -39,7 +39,7 @@ watchos_dark_pal <- function(order = "contrast") {
 #' @param order Indicates the order of colors in the palette
 #'
 #' @inheritDotParams ggplot2::discrete_scale -expand -position
-#' @rdname watchos_colors
+#' @rdname scale_colour_watchos_dark
 #' @family colour scales
 #' @export
 scale_colour_watchos_dark <- function(order = "contrast", ...) {
@@ -47,13 +47,13 @@ scale_colour_watchos_dark <- function(order = "contrast", ...) {
 }
 
 #' @export
-#' @rdname watchos_colors
+#' @rdname scale_colour_watchos_dark
 scale_color_watchos_dark <- scale_colour_watchos_dark
 
 #' @param order Indicates the order of colors in the palette
 #'
 #' @export
-#' @rdname watchos_colors
+#' @rdname scale_colour_watchos_dark
 scale_fill_watchos_dark <- function(order = "contrast", ...) {
     ggplot2::discrete_scale("fill", "watchos_dark", watchos_dark_pal(), ...)
 }
