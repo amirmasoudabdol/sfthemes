@@ -1,4 +1,4 @@
-url: https://sfthemes.amirmasoudabdol.name
+# url: https://sfthemes.amirmasoudabdol.name
 
 home:
   title: San Francisco Themes
@@ -12,7 +12,7 @@ repo:
     home: https://github.com/amirmasoudabdol/sfthemes/
     source: https://github.com/amirmasoudabdol/sfthemes/blob/main/
     issue: https://github.com/amirmasoudabdol/sfthemes/issues/
-    user: https://github.com/
+    user: https://github.com/amirmasoudabdol/
 
 development:
   mode: auto
