@@ -2,7 +2,9 @@
 % Please edit documentation in R/watchos_colors.R
 \name{watchos_dark_pal}
 \alias{watchos_dark_pal}
-\title{watchOS Color Palette}
+\title{watchOS Color Palette
+
+Note: Use this color palette with dark or pure dark themes.}
 \usage{
 watchos_dark_pal(order = "contrast")
 }
@@ -10,6 +12,8 @@ watchos_dark_pal(order = "contrast")
 \item{order}{Indicates the order of colors in the palette}
 }
 \description{
+watchOS Color Palette
+
 Note: Use this color palette with dark or pure dark themes.
 }
 \examples{

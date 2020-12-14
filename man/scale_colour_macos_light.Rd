@@ -4,7 +4,7 @@
 \alias{scale_colour_macos_light}
 \alias{scale_color_macos_light}
 \alias{scale_fill_macos_light}
-\title{macOS Light Color Scales}
+\title{macOS Color Scales}
 \usage{
 scale_colour_macos_light(
   order = "contrast",
@@ -82,7 +82,7 @@ The default, \code{TRUE}, uses the levels that appear in the data;
   }}
 }
 \description{
-macOS Light Color Scales
+macOS Color Scales
 }
 \seealso{
 Other colour scales: 

@@ -33,7 +33,7 @@ On watchOS, only one color palette is provided. The watchOS color palette is spe
 
 In total, sfthemes offers the following list of palettes:
 
-**iOS Set**
+[**iOS Set**](../reference/ios_color_palettes.html)
 
 - iOS Light
 	- iOS Accessible Light
@@ -44,7 +44,7 @@ In total, sfthemes offers the following list of palettes:
 - iOS Gray Dark
 	- iOS Accessible Gray Dark
 
-**macOS Set**
+[**macOS Set**](../reference/macos_color_palettes.html)
 
 - macOS Light 
 	- macOS Accessible Light
@@ -55,7 +55,7 @@ In total, sfthemes offers the following list of palettes:
 - macOS Vibrant Dark
 	- iOS Accessible Vibrant Dark
 	
-**watchOS Set**
+[**watchOS Set**](../reference/watchos_color_palettes.html)
 
 - watchOS Dark
 

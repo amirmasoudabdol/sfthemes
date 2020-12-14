@@ -122,7 +122,11 @@ macos_light_palette <- unname(unlist(macos_light_cols))
 macos_cols_order <- list(default = 1:11,
                          contrast = c(1, 2, 4, 7, 8, 10, 6, 5, 3, 9, 11))
 
-#' macOS Light Color Palettes
+#' @title
+#' macOS Color Palettes
+#'
+#' @description
+#' Describe them
 #'
 #' @param accessible Returns accessible alternative of colors
 #' @param vibrant Returns vibrant alternative of colors
@@ -131,7 +135,7 @@ macos_cols_order <- list(default = 1:11,
 #' @rdname macos_color_palettes
 #'
 #' @export
-#' @examples 
+#' @examples
 #' library(scales)
 #' scales::show_col(
 #'     macos_light_pal(order = "default", accessible = FALSE)(11),
@@ -145,7 +149,7 @@ macos_cols_order <- list(default = 1:11,
 #' scales::show_col(
 #'     macos_light_pal(order = "default", accessible = TRUE, vibrant = TRUE)(11),
 #'     border = NA, labels = FALSE)
-#' 
+#'
 #' scales::show_col(
 #'     macos_light_pal(order = "contrast", accessible = FALSE)(11),
 #'     border = NA, labels = FALSE)
@@ -174,7 +178,7 @@ macos_light_pal <- function(order = "contrast", accessible = FALSE, vibrant = FA
     }
 }
 
-#' macOS Light Color Scales
+#' macOS Color Scales
 #'
 #' @param accessible Returns accessible alternative of colors
 #' @param vibrant Returns vibrant alternative of colors
@@ -231,8 +235,6 @@ scale_fill_macos_light <- function(order = order, accessible = FALSE, vibrant = 
 }
 
 
-#' macOS Dark Color Palettes
-#'
 #' @param accessible Returns accessible alternative of colors
 #' @param vibrant Returns vibrant alternative of colors
 #' @param order Indicates the order of colors in the palette
@@ -240,7 +242,7 @@ scale_fill_macos_light <- function(order = order, accessible = FALSE, vibrant = 
 #' @rdname macos_color_palettes
 #'
 #' @export
-#' @examples 
+#' @examples
 #' library(scales)
 #' scales::show_col(
 #'     macos_dark_pal(order = "default", accessible = FALSE)(11),
@@ -254,7 +256,7 @@ scale_fill_macos_light <- function(order = order, accessible = FALSE, vibrant = 
 #' scales::show_col(
 #'     macos_dark_pal(order = "default", accessible = TRUE, vibrant = TRUE)(11),
 #'     border = NA, labels = FALSE)
-#' 
+#'
 #' scales::show_col(
 #'     macos_dark_pal(order = "contrast", accessible = FALSE)(11),
 #'     border = NA, labels = FALSE)

@@ -4,7 +4,7 @@
 \alias{scale_colour_watchos_dark}
 \alias{scale_color_watchos_dark}
 \alias{scale_fill_watchos_dark}
-\title{watchOS Dark Color Scales}
+\title{watchOS Color Scales}
 \usage{
 scale_colour_watchos_dark(order = "contrast", ...)
 
@@ -68,7 +68,7 @@ The default, \code{TRUE}, uses the levels that appear in the data;
   }}
 }
 \description{
-watchOS Dark Color Scales
+Description of the colors
 }
 \seealso{
 Other colour scales: 

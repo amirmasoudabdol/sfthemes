@@ -3,7 +3,7 @@
 \name{macos_light_pal}
 \alias{macos_light_pal}
 \alias{macos_dark_pal}
-\title{macOS Light Color Palettes}
+\title{macOS Color Palettes}
 \usage{
 macos_light_pal(order = "contrast", accessible = FALSE, vibrant = FALSE)
 
@@ -17,9 +17,7 @@ macos_dark_pal(order = "contrast", accessible = FALSE, vibrant = FALSE)
 \item{vibrant}{Returns vibrant alternative of colors}
 }
 \description{
-macOS Light Color Palettes
-
-macOS Dark Color Palettes
+Describe them
 }
 \examples{
 library(scales)

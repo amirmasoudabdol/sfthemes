@@ -20,6 +20,8 @@ Besides dynamic type sizing, sfthemes can also scale all other elements of the p
 | xxxLarge | 5 |
 
 ```R
+library(ggplot2); library(sfthemes)
+
 x <- seq(0.01, .99, length.out = 100)
 df <- data.frame(
     x = rep(x, 2),

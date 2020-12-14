@@ -71,7 +71,11 @@ ios_accessible_dark_cols <- list(picton.blue = "#409cff",
 
 ios_accessible_dark_palette <- unname(unlist(ios_accessible_dark_cols))
 
-#' iOS Light Color Palettes
+#' @title
+#' iOS Color Palettes
+#'
+#' @description
+#' iOS Color Palettes are good
 #'
 #' @param accessible Indicates whether the accessible set of colors should be used
 #' @param order Indicates the order of colors in the palette
@@ -142,8 +146,6 @@ scale_fill_ios_light <- function(order = "contrast", accessible = FALSE, ...) {
 
 
 
-#' iOS Dark Color Palettes
-#'
 #' @param accessible Indicates whether the accessible set of colors should be used
 #' @param order Indicates the order of colors in the palette
 #' @rdname ios_color_palettes
@@ -247,8 +249,6 @@ ios_accessible_gray_dark_cols <- list(bombay= "#aeaeb2",
 )
 ios_accessible_gray_dark_palette <- unname(unlist(ios_accessible_gray_dark_cols))
 
-#' iOS Grey Color Palette
-#'
 #' @param accessible Indicates whether the accessible set of colors should be used
 #'
 #' @rdname ios_color_palettes
@@ -256,10 +256,10 @@ ios_accessible_gray_dark_palette <- unname(unlist(ios_accessible_gray_dark_cols)
 #' @examples
 #' library(scales)
 #' scales::show_col(
-#'     ios_gray_light_pal(accessible = FALSE)(9),
+#'     ios_gray_light_pal(accessible = FALSE)(6),
 #'     border = NA, labels = FALSE)
 #' scales::show_col(
-#'     ios_gray_light_pal(accessible = TRUE)(9),
+#'     ios_gray_light_pal(accessible = TRUE)(6),
 #'     border = NA, labels = FALSE)
 #'
 #' @export
@@ -307,18 +307,18 @@ scale_fill_ios_gray_light <- function(accessible = FALSE, ...) {
     }
 }
 
+
+#' @param accessible Indicates whether the accessible set of colors should be used
 #'
 #' @rdname ios_color_palettes
-#'
-#' @param accessible Indicates whether the accessible set of colors should be used
 #'
 #' @examples
 #' library(scales)
 #' scales::show_col(
-#'     ios_gray_dark_pal(accessible = FALSE)(9),
+#'     ios_gray_dark_pal(accessible = FALSE)(6),
 #'     border = NA, labels = FALSE)
 #' scales::show_col(
-#'     ios_gray_dark_pal(accessible = TRUE)(9),
+#'     ios_gray_dark_pal(accessible = TRUE)(6),
 #'     border = NA, labels = FALSE)
 #'
 #' @export
@@ -330,6 +330,7 @@ ios_gray_dark_pal <- function(accessible = FALSE) {
     }
 }
 
+#'
 #' @param accessible Indicates whether the accessible set of colors should be used
 #'
 #' @md

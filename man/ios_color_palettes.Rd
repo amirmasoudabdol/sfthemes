@@ -5,7 +5,7 @@
 \alias{ios_dark_pal}
 \alias{ios_gray_light_pal}
 \alias{ios_gray_dark_pal}
-\title{iOS Light Color Palettes}
+\title{iOS Color Palettes}
 \usage{
 ios_light_pal(order = "contrast", accessible = FALSE)
 
@@ -21,11 +21,7 @@ ios_gray_dark_pal(accessible = FALSE)
 \item{accessible}{Indicates whether the accessible set of colors should be used}
 }
 \description{
-iOS Light Color Palettes
-
-iOS Dark Color Palettes
-
-iOS Grey Color Palette
+iOS Color Palettes are good
 }
 \examples{
 library(scales)
@@ -60,18 +56,18 @@ scales::show_col(
 
 library(scales)
 scales::show_col(
-    ios_gray_light_pal(accessible = FALSE)(9),
+    ios_gray_light_pal(accessible = FALSE)(6),
     border = NA, labels = FALSE)
 scales::show_col(
-    ios_gray_light_pal(accessible = TRUE)(9),
+    ios_gray_light_pal(accessible = TRUE)(6),
     border = NA, labels = FALSE)
 
 library(scales)
 scales::show_col(
-    ios_gray_dark_pal(accessible = FALSE)(9),
+    ios_gray_dark_pal(accessible = FALSE)(6),
     border = NA, labels = FALSE)
 scales::show_col(
-    ios_gray_dark_pal(accessible = TRUE)(9),
+    ios_gray_dark_pal(accessible = TRUE)(6),
     border = NA, labels = FALSE)
 
 }

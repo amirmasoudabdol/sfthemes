@@ -14,15 +14,15 @@ watchos_dark_palette <- unname(unlist(watchos_dark_cols))
 watchos_col_order <- list(default = 1:10,
                           contrast = c(1, 5, 6, 4, 10, 8, 3, 7, 9, 2))
 
-#' watchOS Color Palette
-#' 
+#' @title watchOS Color Palette
+#'
 #' Note: Use this color palette with dark or pure dark themes.
 #'
 #' @param order Indicates the order of colors in the palette
 #'
 #' @rdname watchos_color_palettes
 #' @export
-#' @examples 
+#' @examples
 #' library(scales)
 #' scales::show_col(
 #'     watchos_dark_pal(order = "default")(9),
@@ -34,7 +34,11 @@ watchos_dark_pal <- function(order = "contrast") {
     scales::manual_pal(watchos_dark_palette[watchos_col_order[[order]]])
 }
 
-#' watchOS Dark Color Scales
+#' @title
+#' watchOS Color Scales
+#'
+#' @description
+#' Description of the colors
 #'
 #' @param order Indicates the order of colors in the palette
 #'
