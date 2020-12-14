@@ -42,8 +42,8 @@ library(sfthemes)
 
 ggplot(mtcars, aes(x = factor(vs), fill = factor(cyl), y = mpg)) +
     geom_dotplot(binaxis = "y", stackdir = "center", position = "dodge", color = NA) +
-    labs(title = "San Francisco Dark Theme", subtitle = "using `scale_fill_ios_dark`") +
-    theme_sf_dark() + scale_fill_ios_dark()
+    labs(title = "San Francisco Dark Theme", subtitle = "using `scale_fill_ios_light`") +
+    theme_sf_light() + scale_fill_ios_light()
 ```
 
 ![](man/figures/theme_sf_light_readme_sample.png)
