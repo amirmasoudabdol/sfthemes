@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>San Francisco Base Theme — sf_base • sfthemes</title>
+<title>macOS Dark Color Scales — scale_colour_macos_dark • sfthemes</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -48,8 +48,8 @@
   <link href="../extra.css" rel="stylesheet">
   <script src="../extra.js"></script>
 
-<meta property="og:title" content="San Francisco Base Theme — sf_base" />
-<meta property="og:description" content="San Francisco Base Theme" />
+<meta property="og:title" content="macOS Dark Color Scales — scale_colour_macos_dark" />
+<meta property="og:description" content="macOS Dark Color Scales" />
 <meta property="og:image" content="/logo.svg" />
 
 
@@ -133,151 +133,115 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>San Francisco Base Theme</h1>
-    <small class="dont-index">Source: <a href='https://github.com/amirmasoudabdol/sfthemes/blob/main/R/sf_base.R'><code>R/sf_base.R</code></a></small>
-    <div class="hidden name"><code>sf_base.Rd</code></div>
+    <h1>macOS Dark Color Scales</h1>
+    <small class="dont-index">Source: <a href='https://github.com/amirmasoudabdol/sfthemes/blob/main/R/macos_colors.R'><code>R/macos_colors.R</code></a></small>
+    <div class="hidden name"><code>scale_colour_macos_dark.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>San Francisco Base Theme</p>
+    <p>macOS Dark Color Scales</p>
     </div>
 
-    <pre class="usage"><span class='fu'>sf_base</span><span class='op'>(</span>
-  base_family <span class='op'>=</span> <span class='st'>"Inter"</span>,
-  base_size <span class='op'>=</span> <span class='cn'>NULL</span>,
-  plot_title_family <span class='op'>=</span> <span class='st'>"Inter"</span>,
-  plot_title_size <span class='op'>=</span> <span class='cn'>NULL</span>,
-  plot_title_face <span class='op'>=</span> <span class='st'>"bold"</span>,
-  plot_title_margin <span class='op'>=</span> <span class='fl'>10</span>,
-  subtitle_family <span class='op'>=</span> <span class='st'>"Inter"</span>,
-  subtitle_size <span class='op'>=</span> <span class='cn'>NULL</span>,
-  subtitle_face <span class='op'>=</span> <span class='st'>"plain"</span>,
-  subtitle_margin <span class='op'>=</span> <span class='fl'>15</span>,
-  strip_text_family <span class='op'>=</span> <span class='st'>"Inter"</span>,
-  strip_text_size <span class='op'>=</span> <span class='cn'>NULL</span>,
-  strip_text_face <span class='op'>=</span> <span class='st'>"plain"</span>,
-  caption_family <span class='op'>=</span> <span class='st'>"Inter"</span>,
-  caption_size <span class='op'>=</span> <span class='cn'>NULL</span>,
-  caption_face <span class='op'>=</span> <span class='st'>"plain"</span>,
-  caption_margin <span class='op'>=</span> <span class='fl'>10</span>,
-  axis_text_size <span class='op'>=</span> <span class='cn'>NULL</span>,
-  text_color_palette <span class='op'>=</span> <span class='va'>ios_text_on_light_cols</span>,
-  axis_title_family <span class='op'>=</span> <span class='va'>base_family</span>,
-  axis_title_size <span class='op'>=</span> <span class='cn'>NULL</span>,
-  axis_title_face <span class='op'>=</span> <span class='st'>"plain"</span>,
-  axis_title_just <span class='op'>=</span> <span class='st'>"rt"</span>,
-  plot_background_col <span class='op'>=</span> <span class='st'>"white"</span>,
-  panel_background_col <span class='op'>=</span> <span class='st'>"white"</span>,
-  plot_margin <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>margin</a></span><span class='op'>(</span><span class='fl'>30</span>, <span class='fl'>30</span>, <span class='fl'>30</span>, <span class='fl'>30</span><span class='op'>)</span>,
-  grid_col <span class='op'>=</span> <span class='st'>"#cccccc"</span>,
-  grid <span class='op'>=</span> <span class='cn'>TRUE</span>,
-  axis_col <span class='op'>=</span> <span class='st'>"#cccccc"</span>,
-  axis <span class='op'>=</span> <span class='cn'>TRUE</span>,
-  ticks <span class='op'>=</span> <span class='cn'>TRUE</span>,
-  font_size_scale <span class='op'>=</span> <span class='st'>"xSmall"</span>,
-  element_size_scale <span class='op'>=</span> <span class='st'>"xSmall"</span>,
-  offset_x_ticks <span class='op'>=</span> <span class='cn'>FALSE</span>,
-  offset_y_ticks <span class='op'>=</span> <span class='cn'>FALSE</span>,
-  scale <span class='op'>=</span> <span class='cn'>NULL</span>
+    <pre class="usage"><span class='fu'>scale_colour_macos_dark</span><span class='op'>(</span>
+  order <span class='op'>=</span> <span class='st'>"contrast"</span>,
+  accessible <span class='op'>=</span> <span class='cn'>FALSE</span>,
+  vibrant <span class='op'>=</span> <span class='cn'>FALSE</span>,
+  <span class='va'>...</span>
+<span class='op'>)</span>
+
+<span class='fu'>scale_color_macos_dark</span><span class='op'>(</span>
+  order <span class='op'>=</span> <span class='st'>"contrast"</span>,
+  accessible <span class='op'>=</span> <span class='cn'>FALSE</span>,
+  vibrant <span class='op'>=</span> <span class='cn'>FALSE</span>,
+  <span class='va'>...</span>
+<span class='op'>)</span>
+
+<span class='fu'>scale_fill_macos_dark</span><span class='op'>(</span>
+  order <span class='op'>=</span> <span class='st'>"contrast"</span>,
+  accessible <span class='op'>=</span> <span class='cn'>FALSE</span>,
+  vibrant <span class='op'>=</span> <span class='cn'>FALSE</span>,
+  <span class='va'>...</span>
 <span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>base_family, base_size</th>
-      <td><p>base font family and size</p></td>
+      <th>order</th>
+      <td><p>Indicates the order of colors in the palette</p></td>
     </tr>
     <tr>
-      <th>plot_title_family, plot_title_face, plot_title_size, plot_title_margin</th>
-      <td><p>plot tilte family, face, size and margin</p></td>
+      <th>accessible</th>
+      <td><p>Returns accessible alternative of colors</p></td>
     </tr>
     <tr>
-      <th>subtitle_family, subtitle_face, subtitle_size</th>
-      <td><p>plot subtitle family, face and size</p></td>
+      <th>vibrant</th>
+      <td><p>Returns vibrant alternative of colors</p></td>
     </tr>
     <tr>
-      <th>subtitle_margin</th>
-      <td><p>plot subtitle margin bottom (single numeric value)</p></td>
-    </tr>
-    <tr>
-      <th>strip_text_family, strip_text_face, strip_text_size</th>
-      <td><p>facet label font family, face and size</p></td>
-    </tr>
-    <tr>
-      <th>caption_family, caption_face, caption_size, caption_margin</th>
-      <td><p>plot caption family, face, size and margin</p></td>
-    </tr>
-    <tr>
-      <th>axis_text_size</th>
-      <td><p>font size of axis text</p></td>
-    </tr>
-    <tr>
-      <th>text_color_palette</th>
-      <td><p>text color palette</p></td>
-    </tr>
-    <tr>
-      <th>axis_title_family, axis_title_face, axis_title_size</th>
-      <td><p>axis title font family, face and size</p></td>
-    </tr>
-    <tr>
-      <th>axis_title_just</th>
-      <td><p>axis title font justificationk one of `[blmcrt]`</p></td>
-    </tr>
-    <tr>
-      <th>plot_background_col</th>
-      <td><p>plot background color</p></td>
-    </tr>
-    <tr>
-      <th>panel_background_col</th>
-      <td><p>panel backgroun color</p></td>
-    </tr>
-    <tr>
-      <th>plot_margin</th>
-      <td><p>plot margin (specify with [ggplot2::margin])</p></td>
-    </tr>
-    <tr>
-      <th>grid_col</th>
-      <td><p>grid color</p></td>
-    </tr>
-    <tr>
-      <th>grid</th>
-      <td><p>panel grid (`TRUE`, `FALSE`, or a combination of `X`, `x`, `Y`, `y`)</p></td>
-    </tr>
-    <tr>
-      <th>axis_col</th>
-      <td><p>axis color</p></td>
-    </tr>
-    <tr>
-      <th>axis</th>
-      <td><p>add x or y axes? `TRUE`, `FALSE`, "`xy`"</p></td>
-    </tr>
-    <tr>
-      <th>ticks</th>
-      <td><p>ticks if `TRUE` add ticks</p></td>
-    </tr>
-    <tr>
-      <th>font_size_scale</th>
-      <td><p>Scaling fonts</p></td>
-    </tr>
-    <tr>
-      <th>element_size_scale</th>
-      <td><p>Scaling element sizes</p></td>
-    </tr>
-    <tr>
-      <th>offset_x_ticks</th>
-      <td><p>fancy x tick labels</p></td>
-    </tr>
-    <tr>
-      <th>offset_y_ticks</th>
-      <td><p>fancy y tick labels</p></td>
-    </tr>
-    <tr>
-      <th>scale</th>
-      <td><p>scale everything</p></td>
+      <th>...</th>
+      <td><p>Arguments passed on to <code><a href='https://ggplot2.tidyverse.org/reference/discrete_scale.html'>ggplot2::discrete_scale</a></code></p><dl>
+    <dt><code>aesthetics</code></dt><dd><p>The names of the aesthetics that this scale works with.</p></dd>
+    <dt><code>scale_name</code></dt><dd><p>The name of the scale that should be used for error messages
+associated with this scale.</p></dd>
+    <dt><code>palette</code></dt><dd><p>A palette function that when called with a single integer
+argument (the number of levels in the scale) returns the values that
+they should take (e.g., <code><a href='https://scales.r-lib.org//reference/hue_pal.html'>scales::hue_pal()</a></code>).</p></dd>
+    <dt><code>name</code></dt><dd><p>The name of the scale. Used as the axis or legend title. If
+<code><a href='https://ggplot2.tidyverse.org/reference/waiver.html'>waiver()</a></code>, the default, the name of the scale is taken from the first
+mapping used for that aesthetic. If <code>NULL</code>, the legend title will be
+omitted.</p></dd>
+    <dt><code>breaks</code></dt><dd><p>One of:
+<ul>
+<li><p><code>NULL</code> for no breaks</p></li>
+<li><p><code><a href='https://ggplot2.tidyverse.org/reference/waiver.html'>waiver()</a></code> for the default breaks (the scale limits)</p></li>
+<li><p>A character vector of breaks</p></li>
+<li><p>A function that takes the limits as input and returns breaks
+as output</p></li>
+</ul></p></dd>
+    <dt><code>labels</code></dt><dd><p>One of:
+<ul>
+<li><p><code>NULL</code> for no labels</p></li>
+<li><p><code><a href='https://ggplot2.tidyverse.org/reference/waiver.html'>waiver()</a></code> for the default labels computed by the
+transformation object</p></li>
+<li><p>A character vector giving labels (must be same length as <code>breaks</code>)</p></li>
+<li><p>A function that takes the breaks as input and returns labels
+as output</p></li>
+</ul></p></dd>
+    <dt><code>limits</code></dt><dd><p>One of:
+<ul>
+<li><p><code>NULL</code> to use the default scale values</p></li>
+<li><p>A character vector that defines possible values of the scale and their
+order</p></li>
+<li><p>A function that accepts the existing (automatic) values and returns
+new ones</p></li>
+</ul></p></dd>
+    <dt><code>na.translate</code></dt><dd><p>Unlike continuous scales, discrete scales can easily show
+missing values, and do so by default. If you want to remove missing values
+from a discrete scale, specify <code>na.translate = FALSE</code>.</p></dd>
+    <dt><code>na.value</code></dt><dd><p>If <code>na.translate = TRUE</code>, what aesthetic value should the
+missing values be displayed as? Does not apply to position scales
+where <code>NA</code> is always placed at the far right.</p></dd>
+    <dt><code>drop</code></dt><dd><p>Should unused factor levels be omitted from the scale?
+The default, <code>TRUE</code>, uses the levels that appear in the data;
+<code>FALSE</code> uses all the levels in the factor.</p></dd>
+    <dt><code>guide</code></dt><dd><p>A function used to create a guide or its name. See
+<code><a href='https://ggplot2.tidyverse.org/reference/guides.html'>guides()</a></code> for more information.</p></dd>
+    <dt><code>super</code></dt><dd><p>The super class to use for the constructed scale</p></dd>
+  
+</dl></td>
     </tr>
     </table>
 
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+
+    <div class='dont-index'><p>Other colour scales: 
+<code><a href='scale_colour_ios_dark.html'>scale_colour_ios_dark</a>()</code>,
+<code><a href='https://sfthemes.amirmasoudabdol.name/reference/ios_gray_colors.html'>scale_colour_ios_gray_dark</a>()</code>,
+<code><a href='scale_colour_ios_gray_light.html'>scale_colour_ios_gray_light</a>()</code>,
+<code><a href='scale_colour_ios_light.html'>scale_colour_ios_light</a>()</code>,
+<code><a href='scale_colour_macos_light.html'>scale_colour_macos_light</a>()</code>,
+<code><a href='scale_colour_watchos_dark.html'>scale_colour_watchos_dark</a>()</code></p></div>
 
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
