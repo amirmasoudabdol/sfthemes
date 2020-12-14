@@ -40,6 +40,7 @@ watchos_dark_pal <- function(order = "contrast") {
 #'
 #' @inheritDotParams ggplot2::discrete_scale -expand -position
 #' @rdname watchos_colors
+#' @family colour scales
 #' @export
 scale_colour_watchos_dark <- function(order = "contrast", ...) {
     ggplot2::discrete_scale("colour", "watchos_dark", watchos_dark_pal(), ...)

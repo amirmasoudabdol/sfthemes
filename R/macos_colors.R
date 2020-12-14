@@ -183,6 +183,7 @@ macos_light_pal <- function(order = "contrast", accessible = FALSE, vibrant = FA
 #' @md
 #' @inheritDotParams ggplot2::discrete_scale -expand -position
 #' @rdname macos_light_colors
+#' @family colour scales
 #' @export
 scale_colour_macos_light <- function(order = "contrast", accessible = FALSE, vibrant = FALSE, ...) {
     if (accessible){
@@ -290,6 +291,7 @@ macos_dark_pal <- function(order = "contrast", accessible = FALSE, vibrant = FAL
 #' @md
 #' @inheritDotParams ggplot2::discrete_scale -expand -position
 #' @rdname macos_dark_colors
+#' @family colour scales
 #' @export
 scale_colour_macos_dark <- function(order = "contrast", accessible = FALSE, vibrant = FALSE, ...) {
     if (accessible){

@@ -20,7 +20,7 @@ install.packages("sfthemes")
 You can load and configure sfthemes using the following commands. If you do not get any errors or warnings, sfthemes is fully configured and can access the required fonts.
 
 ```R
-library(sfthemes)
+library(ggplot2); library(sfthemes)
 
 # You only need to run these commands once!
 import_inter()
@@ -38,7 +38,7 @@ In general, we recommend pairing light scales with `theme_sf_light` (or any othe
 **Example of `theme_sf_light` Theme**
 
 ```R
-library(sfthemes)
+library(ggplot2); library(sfthemes)
 
 ggplot(mtcars, aes(x = factor(vs), fill = factor(cyl), y = mpg)) +
     geom_dotplot(binaxis = "y", stackdir = "center", position = "dodge", color = NA) +
@@ -51,7 +51,7 @@ ggplot(mtcars, aes(x = factor(vs), fill = factor(cyl), y = mpg)) +
 **Example of `theme_sf_dark` Theme**
 
 ```R
-library(sfthemes)
+library(ggplot2); library(sfthemes)
 
 ggplot(mtcars, aes(x = factor(vs), fill = factor(cyl), y = mpg)) +
     geom_dotplot(binaxis = "y", stackdir = "center", position = "dodge", color = NA) +
@@ -67,7 +67,7 @@ ggplot(mtcars, aes(x = factor(vs), fill = factor(cyl), y = mpg)) +
 Colors of every palette can be transformed to accessible colors by setting the `accessible` parameter to `TRUE`. For instnace:
 
 ```R
-library(sfthemes)
+library(ggplot2); library(sfthemes)
 
 ggplot(mtcars, aes(factor(cyl), mpg)) +
     geom_violin(aes(fill = factor(cyl)), color = NA) +
@@ -78,7 +78,7 @@ ggplot(mtcars, aes(factor(cyl), mpg)) +
 ![](man/figures/theme_sf_dark_readme_violin.png)
 
 ```R
-library(sfthemes)
+library(ggplot2); library(sfthemes)
 
 ggplot(mtcars, aes(factor(cyl), mpg)) +
     geom_violin(aes(fill = factor(cyl)), color = NA) +
@@ -93,7 +93,7 @@ ggplot(mtcars, aes(factor(cyl), mpg)) +
 sfthemes provides 7 scaling factor. Scaling factors can be applied to text, elements, or both.
 
 ```R
-library(sfthemes)
+library(ggplot2); library(sfthemes)
 
 ggplot(diamonds[sample(nrow(diamonds), 100), ], aes(carat, price)) +
     geom_point(aes(shape = cut, color = cut)) +
@@ -104,7 +104,7 @@ ggplot(diamonds[sample(nrow(diamonds), 100), ], aes(carat, price)) +
 ![](man/figures/theme_sf_light_readme_medium_overall.png)
 
 ```R
-library(sfthemes)
+library(ggplot2); library(sfthemes)
 
 ggplot(diamonds[sample(nrow(diamonds), 100), ], aes(carat, price)) +
     geom_point(aes(shape = cut, color = cut)) +
@@ -115,7 +115,7 @@ ggplot(diamonds[sample(nrow(diamonds), 100), ], aes(carat, price)) +
 ![](man/figures/theme_sf_light_readme_large_overall.png)
 
 ```R
-library(sfthemes)
+library(ggplot2); library(sfthemes)
 
 ggplot(diamonds[sample(nrow(diamonds), 100), ], aes(carat, price)) +
     geom_point(aes(shape = cut, color = cut)) +

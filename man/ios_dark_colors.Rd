@@ -72,3 +72,12 @@ The default, \code{TRUE}, uses the levels that appear in the data;
 \description{
 iOS Dark Color Scales
 }
+\seealso{
+Other colour scales: 
+\code{\link{scale_colour_ios_gray_light}()},
+\code{\link{scale_colour_ios_light}()},
+\code{\link{scale_colour_macos_dark}()},
+\code{\link{scale_colour_macos_light}()},
+\code{\link{scale_colour_watchos_dark}()}
+}
+\concept{colour scales}

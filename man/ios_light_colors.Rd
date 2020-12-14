@@ -73,3 +73,12 @@ The default, \code{TRUE}, uses the levels that appear in the data;
 \strong{Note:} We recommend to not use the iOS Palette for more than 6 categories. This guarantee an
 acceptable level of contrast.
 }
+\seealso{
+Other colour scales: 
+\code{\link{scale_colour_ios_dark}()},
+\code{\link{scale_colour_ios_gray_light}()},
+\code{\link{scale_colour_macos_dark}()},
+\code{\link{scale_colour_macos_light}()},
+\code{\link{scale_colour_watchos_dark}()}
+}
+\concept{colour scales}

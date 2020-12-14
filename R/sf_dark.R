@@ -25,7 +25,7 @@
 #' @importFrom ggplot2 update_geom_defaults
 #'
 #' @examples \dontrun{
-#' library(ggplot2)
+#' library(ggplot2); library(sfthemes)
 #'
 #' ggplot(mpg, aes(x = displ, y = hwy, colour = class)) +
 #'   geom_point() +

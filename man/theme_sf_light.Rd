@@ -86,7 +86,7 @@ San Francisco Light Theme
 }
 \examples{
 \dontrun{
-library(ggplot2)
+library(ggplot2); library(sfthemes)
 
 ggplot(mpg, aes(x = displ, y = hwy, colour = class)) +
   geom_point() +
