@@ -125,8 +125,19 @@ macos_cols_order <- list(default = 1:11,
 #' @title
 #' macOS Color Palettes
 #'
+#' @md
 #' @description
-#' Describe them
+#' Set of color palettes based on
+#' [macOS System Colors](https://developer.apple.com/design/human-interface-guidelines/macos/visual-design/color/).
+#' General information about each palette can be found in the [colors](../articles/colors.html) vignette.
+#'
+#' @details
+#' These functions are ideal for accessing the raw color values, and can be used within
+#' functions where raw color values are needed, e.g., [plot]. In order to use them with `ggplot`
+#' functions, you must utilize one of the followings:
+#'
+#' - [scale_colour_macos_light]
+#' - [scale_colour_macos_dark]
 #'
 #' @param accessible Returns accessible alternative of colors
 #' @param vibrant Returns vibrant alternative of colors

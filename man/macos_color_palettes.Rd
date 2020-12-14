@@ -17,7 +17,18 @@ macos_dark_pal(order = "contrast", accessible = FALSE, vibrant = FALSE)
 \item{vibrant}{Returns vibrant alternative of colors}
 }
 \description{
-Describe them
+Set of color palettes based on
+\href{https://developer.apple.com/design/human-interface-guidelines/macos/visual-design/color/}{macOS System Colors}.
+General information about each palette can be found in the \href{../articles/colors.html}{colors} vignette.
+}
+\details{
+These functions are ideal for accessing the raw color values, and can be used within
+functions where raw color values are needed, e.g., \link{plot}. In order to use them with \code{ggplot}
+functions, you must utilize one of the followings:
+\itemize{
+\item \link{scale_colour_macos_light}
+\item \link{scale_colour_macos_dark}
+}
 }
 \examples{
 library(scales)

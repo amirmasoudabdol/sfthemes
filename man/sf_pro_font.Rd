@@ -3,20 +3,20 @@
 \name{import_sf_pro}
 \alias{import_sf_pro}
 \alias{sf_set_sf_pro}
-\title{SF Pro Font
-Import SF Pro font for use in charts}
+\title{San Francisco Pro Typeface}
 \usage{
 import_sf_pro()
 
 sf_set_sf_pro()
 }
 \description{
+SF Pro font for use in charts
+}
+\details{
 SF Pro Font
-Import SF Pro font for use in charts
 }
 \note{
-This will take care of ensuring PDF/PostScript usage. The location of the
-font directory is displayed after the base import is complete. It is highly
-recommended that you install them on your system the same way you would any
-other font you wish to use in other programs.
+\itemize{
+\item Due to the limitation of \code{extrafont} and format of SF Pro, these functions might not working as expected.
+}
 }

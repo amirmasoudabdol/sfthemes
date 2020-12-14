@@ -1,14 +1,17 @@
 #' SF Pro Font
 
-#' Import SF Pro font for use in charts
+#' @title
+#' San Francisco Pro Typeface
+#'
+#' @description
+#' SF Pro font for use in charts
+#'
+#' @md
+#' @note
+#' - ⚠️ Due to limitation of `extrafont` and format of SF Pro, these functions might not working as expected.
 #'
 #' @rdname sf_pro_font
 #'
-#' @md
-#' @note This will take care of ensuring PDF/PostScript usage. The location of the
-#'   font directory is displayed after the base import is complete. It is highly
-#'   recommended that you install them on your system the same way you would any
-#'   other font you wish to use in other programs.
 #' @export
 import_sf_pro <- function() {
 
@@ -56,18 +59,21 @@ sf_set_sf_pro <- function() {
   ret
 }
 
-
-## Inter Font
-
-#' Import Inter font for use in charts
+#' @title
+#' Inter Typeface
 #'
-#' @rdname inter_font
+#' @description
+#' sfthemes package includes 4 faces of Inter typeface, Regular, Italic, Bold, and Bold Italic.
+#' The `import_inter` function makes sure that these fonts are correctly installed and can be accessed by R.
+#' The `sf_set_inter` can be used to set Inter as the primary font of any other themes.
 #'
 #' @md
-#' @note This will take care of ensuring PDF/PostScript usage. The location of the
-#'   font directory is displayed after the base import is complete. It is highly
-#'   recommended that you install them on your system the same way you would any
-#'   other font you wish to use in other programs.
+#' @note
+#' - Make sure to run this command once after installing sfthemes, otherwise, you will encounter some warning
+#' messages regarding a missing font.
+#' - If you have already installed Inter in your system, you do not need to run this command.
+#'
+#' @rdname inter_font
 #' @export
 import_inter <- function() {
 

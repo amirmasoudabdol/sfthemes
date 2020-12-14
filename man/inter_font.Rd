@@ -3,18 +3,21 @@
 \name{import_inter}
 \alias{import_inter}
 \alias{sf_set_inter}
-\title{Import Inter font for use in charts}
+\title{Inter Typeface}
 \usage{
 import_inter()
 
 sf_set_inter()
 }
 \description{
-Import Inter font for use in charts
+sfthemes package includes 4 faces of Inter typeface, Regular, Italic, Bold, and Bold Italic.
+The \code{import_inter} function makes sure that these fonts are correctly installed and can be accessed by R.
+The \code{sf_set_inter} can be used to set Inter as the primary font of any other themes.
 }
 \note{
-This will take care of ensuring PDF/PostScript usage. The location of the
-font directory is displayed after the base import is complete. It is highly
-recommended that you install them on your system the same way you would any
-other font you wish to use in other programs.
+\itemize{
+\item Make sure to run this command once after installing sfthemes, otherwise, you will encounter some warning
+messages regarding a missing font.
+\item If you have already installed Inter in your system, you do not need to run this command.
+}
 }

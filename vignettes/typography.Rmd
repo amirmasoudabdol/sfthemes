@@ -13,11 +13,20 @@ vignette: >
 
 Apple restricted the usage of the entire SF typeface family for developers who ar designing and developing applications for Apple's platforms. Please keep this resctriction in mind when using and sharing your plots, if you are using SF Pro as the main typeface of the plots.
 
-Moreover, distirbution and repackaging of San Francisco family is prohibited, however, the fonts can be downloaded directly from Apple's website. [Download SF Pro](https://developer.apple.com/fonts/)
+Moreover, distribution and repackaging of San Francisco family is prohibited, however, the fonts can be downloaded directly from Apple's website. [Download SF Pro](https://developer.apple.com/fonts/)
 
 ### Usage
 
-that's how you use it
+In order to use SF Pro, you can apply the [sf_set_sf_pro](../reference/sf_pro_font.html) function to the end of your ggplot customization commands. Keep in mind that if you have not installed and imported SF Pro correctly, this command will fail, or `ggplot2` will ignore your font choice. See [import_sf_pro](../reference/sf_pro_font.html) for the instalation process of SF Pro.
+
+```R
+library(ggplot2); library(sfthemes)
+
+ggplot(diamonds, aes(carat)) +
+  geom_histogram() +
+  theme_sf_dark() + scale_colour_watchos_dark() +
+  sf_set_sf_pro()
+```
 
 ## Inter, The Alternative
 
@@ -32,7 +41,16 @@ Inter is closely related to SF Pro. Like SF Pro, it is crafted and designed for 
 
 ### Usage
 
-that's how you use it
+Inter is the default typeface of the sfthemes, and can be used without setting any special commands. However, [sf_set_inter](../reference/sf_pro_font.html) is available and can be used to change other themes' font.
+
+```R
+library(ggplot2); library(sfthemes)
+
+# Changing 
+ggplot(diamonds, aes(carat)) +
+  geom_histogram() +
+  sf_set_inter()
+```
 
 ## Dynamic Type Sizes
 

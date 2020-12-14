@@ -43,42 +43,26 @@ reference:
   - theme_sf_light
   - theme_sf_dark
 
-- title: Palettes
-- subtitle: iOS
-  contents:
-    - starts_with("ios_")
-
-- subtitle: macOS
-  contents:
-    - starts_with("macos_")
-
-- subtitle: watchOS
-  contents:
-    - starts_with("watchos_")
-
 - title: Scales
 
-- subtitle: iOS Light
+- subtitle: iOS
   contents:
   - ends_with("ios_light")
-
-- subtitle: iOS Dark
-  contents:
   - ends_with("ios_dark")
-
-- subtitle: iOS Gray
-  contents:
-  - ends_with("ios_gray_light")
-  - ends_with("ios_gray_dark")
+  # - ends_with("ios_gray_light")
+  # - ends_with("ios_gray_dark")
 
 - subtitle: macOS Light
   contents:
   - ends_with("macos_light")
-
-- subtitle: macOS Dark
-  contents:
   - ends_with("macos_dark")
 
 - subtitle: watchOS Dark
   contents:
   - ends_with("watchos_dark")
+
+- title: Palettes
+  contents:
+  - starts_with("ios_")
+  - starts_with("macos_")
+  - starts_with("watchos_")

@@ -2,9 +2,7 @@
 % Please edit documentation in R/watchos_colors.R
 \name{watchos_dark_pal}
 \alias{watchos_dark_pal}
-\title{watchOS Color Palette
-
-Note: Use this color palette with dark or pure dark themes.}
+\title{watchOS Color Palette}
 \usage{
 watchos_dark_pal(order = "contrast")
 }
@@ -12,9 +10,20 @@ watchos_dark_pal(order = "contrast")
 \item{order}{Indicates the order of colors in the palette}
 }
 \description{
-watchOS Color Palette
+Set of color palettes based on
+\href{https://developer.apple.com/design/human-interface-guidelines/watchos/visual/color/}{macOS System Colors}.
+General information about each palette can be found in the \href{../articles/colors.html}{colors} vignette.
+}
+\details{
+These functions are ideal for accessing the raw color values, and can be used within
+functions where raw color values are needed, e.g., \link{plot}. In order to use them with \code{ggplot}
+functions, you must utilize one of the followings:
+\itemize{
+\item \link{scale_colour_watchos_dark}
+}
 
-Note: Use this color palette with dark or pure dark themes.
+\strong{Note}: We recommend paining this palette with dark themes, as the high base brightness of colors
+may make them hard to distinguish in light themes
 }
 \examples{
 library(scales)

@@ -74,8 +74,21 @@ ios_accessible_dark_palette <- unname(unlist(ios_accessible_dark_cols))
 #' @title
 #' iOS Color Palettes
 #'
+#' @md
 #' @description
-#' iOS Color Palettes are good
+#' Set of color palettes based on
+#' [iOS System Colors](https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/color/).
+#' General information about each palette can be found in the [colors](../articles/colors.html) vignette.
+#'
+#' @details
+#' These functions are ideal for accessing the raw color values, and can be used within
+#' functions where raw color values are needed, e.g., [plot]. In order to use them with `ggplot`
+#' functions, you must utilize one of the followings:
+#'
+#' - [scale_colour_ios_light]
+#' - [scale_colour_ios_dark]
+#' - [scale_colour_ios_gray_light]
+#' - [scale_colour_ios_gray_dark]
 #'
 #' @param accessible Indicates whether the accessible set of colors should be used
 #' @param order Indicates the order of colors in the palette
@@ -271,7 +284,7 @@ ios_gray_light_pal <- function(accessible = FALSE) {
     }
 }
 
-#' iOS Gray Color Scales
+#' iOS Gray Light Color Scales
 #'
 #' @param accessible Indicates whether the accessible set of colors should be used
 #'
@@ -330,6 +343,7 @@ ios_gray_dark_pal <- function(accessible = FALSE) {
     }
 }
 
+#' iOS Gray Dark Color Palette
 #'
 #' @param accessible Indicates whether the accessible set of colors should be used
 #'

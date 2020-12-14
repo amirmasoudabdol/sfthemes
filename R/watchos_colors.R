@@ -14,9 +14,24 @@ watchos_dark_palette <- unname(unlist(watchos_dark_cols))
 watchos_col_order <- list(default = 1:10,
                           contrast = c(1, 5, 6, 4, 10, 8, 3, 7, 9, 2))
 
-#' @title watchOS Color Palette
+#' @title
+#' watchOS Color Palette
 #'
-#' Note: Use this color palette with dark or pure dark themes.
+#' @md
+#' @description
+#' Set of color palettes based on
+#' [macOS System Colors](https://developer.apple.com/design/human-interface-guidelines/watchos/visual/color/).
+#' General information about each palette can be found in the [colors](../articles/colors.html) vignette.
+#'
+#' @details
+#' These functions are ideal for accessing the raw color values, and can be used within
+#' functions where raw color values are needed, e.g., [plot]. In order to use them with `ggplot`
+#' functions, you must utilize one of the followings:
+#'
+#' - [scale_colour_watchos_dark]
+#'
+#' **Note**: We recommend paining this palette with dark themes, as the high base brightness of colors
+#' may make them hard to distinguish in light themes
 #'
 #' @param order Indicates the order of colors in the palette
 #'
