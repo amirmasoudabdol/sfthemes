@@ -49,8 +49,8 @@ reference:
   contents:
   - ends_with("ios_light")
   - ends_with("ios_dark")
-  # - ends_with("ios_gray_light")
-  # - ends_with("ios_gray_dark")
+  - ends_with("ios_gray_light")
+  - ends_with("ios_gray_dark")
 
 - subtitle: macOS Light
   contents:
