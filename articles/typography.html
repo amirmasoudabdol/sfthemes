@@ -66,6 +66,9 @@
     </li>
   </ul>
 </li>
+<li>
+  <a href="../news/index.html">Changelog</a>
+</li>
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
@@ -97,23 +100,43 @@
 
     
     
-<div id="typography" class="section level2">
+<div id="san-francisco-family" class="section level2">
 <h2 class="hasAnchor">
-<a href="#typography" class="anchor"></a>Typography</h2>
-<div id="san-francisco-family" class="section level3">
-<h3 class="hasAnchor">
-<a href="#san-francisco-family" class="anchor"></a>San Francisco Family</h3>
+<a href="#san-francisco-family" class="anchor"></a>San Francisco Family</h2>
 <p><a href="https://en.wikipedia.org/wiki/San_Francisco_(sans-serif_typeface)">San Francisco typeface</a> consists of three large family of typefaces, SF Pro, SF Compact, and SF Mono. They are degined to be used in different Apple platforms, e.g., iOS, macOS. Each family has its own characteristic and is optimized for certain screensize and resolution. sfthemes is optimized for SF Pro, the most general variant of the typeface designed for iOS, iPadOS, and macOS.</p>
 <p>Apple restricted the usage of the entire SF typeface family for developers who ar designing and developing applications for Apple’s platforms. Please keep this resctriction in mind when using and sharing your plots, if you are using SF Pro as the main typeface of the plots.</p>
-<p>Moreover, distirbution and repackaging of San Francisco family is prohibited, however, the fonts can be downloaded directly from Apple’s website. <a href="https://developer.apple.com/fonts/">Download SF Pro</a></p>
-</div>
-<div id="inter-the-alternative" class="section level3">
+<p>Moreover, distribution and repackaging of San Francisco family is prohibited, however, the fonts can be downloaded directly from Apple’s website. <a href="https://developer.apple.com/fonts/">Download SF Pro</a></p>
+<div id="usage" class="section level3">
 <h3 class="hasAnchor">
-<a href="#inter-the-alternative" class="anchor"></a>Inter, The Alternative</h3>
+<a href="#usage" class="anchor"></a>Usage</h3>
+<p>In order to use SF Pro, you can apply the <a href="../reference/sf_pro_font.html">sf_set_sf_pro</a> function to the end of your ggplot customization commands. Keep in mind that if you have not installed and imported SF Pro correctly, this command will fail, or <code>ggplot2</code> will ignore your font choice. See <a href="../reference/sf_pro_font.html">import_sf_pro</a> for the instalation process of SF Pro.</p>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span>; <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://sfthemes.amirmasoudabdol.name">sfthemes</a></span><span class="op">)</span>
+
+<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">diamonds</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">carat</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_histogram.html">geom_histogram</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu"><a href="../reference/theme_sf_dark.html">theme_sf_dark</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="../reference/scale_colour_watchos_dark.html">scale_colour_watchos_dark</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu"><a href="../reference/import_sf_pro.html">sf_set_sf_pro</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
+</div>
+</div>
+<div id="inter-the-alternative" class="section level2">
+<h2 class="hasAnchor">
+<a href="#inter-the-alternative" class="anchor"></a>Inter, The Alternative</h2>
 <p>As an alternative, sfthemes uses the <a href="https://rsms.me/inter/">Inter</a> family. Inter typeface is a <a href="https://github.com/rsms/inter">free and open source</a>, and you are free to use it in almost any way imaginable.</p>
 <p>Inter is closely related to SF Pro. Like SF Pro, it is crafted and designed for computer screens, therefore sfthemes plots with Inter fonts will look a lot like their SF Pro variants.</p>
 <p><strong>Inter vs SF Pro</strong> <img src="images/sf_vs_inter_numbers.png"></p>
 <p><img src="images/sf_vs_inter_name.png"></p>
+<div id="usage-1" class="section level3">
+<h3 class="hasAnchor">
+<a href="#usage-1" class="anchor"></a>Usage</h3>
+<p>Inter is the default typeface of the sfthemes, and can be used without setting any special commands. However, <a href="../reference/sf_pro_font.html">sf_set_inter</a> is available and can be used to change other themes’ font.</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span>; <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://sfthemes.amirmasoudabdol.name">sfthemes</a></span><span class="op">)</span>
+
+<span class="co"># Changing </span>
+<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">diamonds</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">carat</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_histogram.html">geom_histogram</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu"><a href="../reference/import_inter.html">sf_set_inter</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
 </div>
 </div>
 <div id="dynamic-type-sizes" class="section level2">
@@ -180,6 +203,11 @@
 </tr>
 </tbody>
 </table>
+<div id="usage-2" class="section level3">
+<h3 class="hasAnchor">
+<a href="#usage-2" class="anchor"></a>Usage</h3>
+<p>You can use this via</p>
+</div>
 </div>
   </div>
 

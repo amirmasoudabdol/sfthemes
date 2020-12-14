@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Import Inter font for use in charts — import_inter • sfthemes</title>
+<title>Inter Typeface — import_inter • sfthemes</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -48,8 +48,10 @@
   <link href="../extra.css" rel="stylesheet">
   <script src="../extra.js"></script>
 
-<meta property="og:title" content="Import Inter font for use in charts — import_inter" />
-<meta property="og:description" content="Import Inter font for use in charts" />
+<meta property="og:title" content="Inter Typeface — import_inter" />
+<meta property="og:description" content="sfthemes package includes 4 faces of Inter typeface, Regular, Italic, Bold, and Bold Italic.
+The import_inter function makes sure that these fonts are correctly installed and can be accessed by R.
+The sf_set_inter can be used to set Inter as the primary font of any other themes." />
 <meta property="og:image" content="https://sfthemes.amirmasoudabdol.name/logo.svg" />
 
 
@@ -112,6 +114,9 @@
     </li>
   </ul>
 </li>
+<li>
+  <a href="../news/index.html">Changelog</a>
+</li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
@@ -133,13 +138,15 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Import Inter font for use in charts</h1>
+    <h1>Inter Typeface</h1>
     <small class="dont-index">Source: <a href='https://github.com/amirmasoudabdol/sfthemes/blob/main/R/fonts.R'><code>R/fonts.R</code></a></small>
     <div class="hidden name"><code>inter_font.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Import Inter font for use in charts</p>
+    <p>sfthemes package includes 4 faces of Inter typeface, Regular, Italic, Bold, and Bold Italic.
+The <code>import_inter</code> function makes sure that these fonts are correctly installed and can be accessed by R.
+The <code>sf_set_inter</code> can be used to set Inter as the primary font of any other themes.</p>
     </div>
 
     <pre class="usage"><span class='fu'>import_inter</span><span class='op'>(</span><span class='op'>)</span>
@@ -149,10 +156,13 @@
 
     <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
 
-    <p>This will take care of ensuring PDF/PostScript usage. The location of the
-font directory is displayed after the base import is complete. It is highly
-recommended that you install them on your system the same way you would any
-other font you wish to use in other programs.</p>
+    
+<ul>
+<li><p>Make sure to run this command once after installing sfthemes, otherwise, you will encounter some warning
+messages regarding a missing font.</p></li>
+<li><p>If you have already installed Inter in your system, you do not need to run this command.</p></li>
+</ul>
+
 
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
