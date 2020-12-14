@@ -85,14 +85,14 @@ ios_accessible_dark_palette <- unname(unlist(ios_accessible_dark_cols))
 #' scales::show_col(
 #'     ios_light_pal(order = "default", accessible = TRUE)(9),
 #'     border = NA, labels = FALSE)
-#' 
+#'
 #' scales::show_col(
 #'     ios_light_pal(order = "contrast", accessible = FALSE)(9),
 #'     border = NA, labels = FALSE)
 #' scales::show_col(
 #'     ios_light_pal(order = "contrast", accessible = TRUE)(9),
 #'     border = NA, labels = FALSE)
-#' 
+#'
 #' @export
 ios_light_pal <- function(order = "contrast", accessible = FALSE) {
     if (accessible) {
@@ -114,7 +114,7 @@ ios_light_pal <- function(order = "contrast", accessible = FALSE) {
 #' @md
 #' @inheritDotParams ggplot2::discrete_scale -expand -position
 #' @rdname ios_light_colors
-#' @aliases scale_color_ios_light scale_colour_ios_light
+#' @aliases scale_color_ios_light scale_colour_ios_light ios_light_colors
 #' @export
 scale_colour_ios_light <- function(order = "contrast", accessible = FALSE, ...) {
     if (accessible){
@@ -149,7 +149,7 @@ scale_fill_ios_light <- function(order = "contrast", accessible = FALSE, ...) {
 #' @param order Indicates the order of colors in the palette
 #' @rdname ios_color_palettes
 #'
-#' @examples 
+#' @examples
 #' library(scales)
 #' scales::show_col(
 #'     ios_dark_pal(order = "default", accessible = FALSE)(9),
@@ -157,7 +157,7 @@ scale_fill_ios_light <- function(order = "contrast", accessible = FALSE, ...) {
 #' scales::show_col(
 #'     ios_dark_pal(order = "default", accessible = TRUE)(9),
 #'     border = NA, labels = FALSE)
-#' 
+#'
 #' scales::show_col(
 #'     ios_dark_pal(order = "contrast", accessible = FALSE)(9),
 #'     border = NA, labels = FALSE)
@@ -253,7 +253,7 @@ ios_accessible_gray_dark_palette <- unname(unlist(ios_accessible_gray_dark_cols)
 #'
 #' @rdname ios_color_palettes
 #'
-#' @examples 
+#' @examples
 #' library(scales)
 #' scales::show_col(
 #'     ios_gray_light_pal(accessible = FALSE)(9),
@@ -295,7 +295,7 @@ scale_color_ios_gray_light <- scale_colour_ios_gray_light
 
 #'
 #' @param accessible Indicates whether the accessible set of colors should be used
-#' 
+#'
 #' @rdname ios_gray_colors
 #'
 #' @export
@@ -312,7 +312,7 @@ scale_fill_ios_gray_light <- function(accessible = FALSE, ...) {
 #'
 #' @param accessible Indicates whether the accessible set of colors should be used
 #'
-#' @examples 
+#' @examples
 #' library(scales)
 #' scales::show_col(
 #'     ios_gray_dark_pal(accessible = FALSE)(9),
