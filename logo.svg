@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xl="http://www.w3.org/1999/xlink" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="239 1027.6232 182.5 207.9785" width="182.5" height="207.9785">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xl="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="241 1027.6232 180.5 207.9785" width="180.5" height="207.9785">
   <defs>
-    <font-face font-family="SF Pro" font-size="22" units-per-em="1000" underline-position="-136.71875" underline-thickness="92.77344" slope="0" x-height="530.27344" cap-height="704.58984" ascent="952.1484" descent="-241.21094" font-weight="700">
+    <font-face font-family="SF Pro" font-size="28" units-per-em="1000" underline-position="-136.71875" underline-thickness="92.77344" slope="0" x-height="523.4375" cap-height="704.58984" ascent="952.1484" descent="-241.21094" font-weight="700">
       <font-face-src>
         <font-face-name name="SFPro-Bold"/>
       </font-face-src>
     </font-face>
   </defs>
-  <metadata> Produced by OmniGraffle 7.18.1\n2020-12-10 07:11:17 +0000</metadata>
-  <g id="Canvas_1" stroke-opacity="1" fill="none" fill-opacity="1" stroke-dasharray="none" stroke="none">
+  <metadata> Produced by OmniGraffle 7.18.1\n2020-12-15 08:36:43 +0000</metadata>
+  <g id="Canvas_1" stroke-opacity="1" fill="none" stroke-dasharray="none" fill-opacity="1" stroke="none">
     <title>Canvas 1</title>
     <g id="Canvas_1_Layer_1">
       <title>Layer 1</title>
@@ -32,8 +32,9 @@
         <path d="M 272.19765 1202 L 329.24424 1235.0625 C 330.48477 1235.7815 332.01523 1235.7815 333.25576 1235.0625 L 390.30235 1202 Z" fill="#4fb0dc"/>
       </g>
       <g id="Graphic_87">
-        <text transform="translate(244 1101)" fill="black">
-          <tspan font-family="SF Pro" font-size="22" font-weight="700" fill="black" x="0" y="21">SF Themes</tspan>
+        <text transform="translate(247 1098)" fill="black">
+          <tspan font-family="SF Pro" font-size="28" font-weight="700" fill="black" x="0" y="27">SF</tspan>
+          <tspan font-family="SF Pro" font-size="28" font-weight="700" fill="black" x="0" y="61">Themes</tspan>
         </text>
       </g>
     </g>
