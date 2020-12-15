@@ -355,7 +355,7 @@ a.sourceLine:hover {
 
   .fl      {color: #ae81ff;}
   .fu      {color: #ade837;} /* function */
-  .ch,.st  {color: #e6db74;} /* string */
+  .ch,.st  {color: #e7db74;} /* string */
   .kw      {color: #f92672;} /* keyword */
   .co      {color: #696d70;} /* comment */
   .va      {color: #fd971f;} /* values */
