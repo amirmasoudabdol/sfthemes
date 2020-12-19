@@ -18,11 +18,12 @@ development:
   mode: auto
 
 template:
+  package: preferably
   params:
-    bootswatch: flatly
-  path: inst/templates
-  assets: inst/assets
-  default_assets: false
+    canalytics:
+      domain: sfthemes.amirmasoudabdol.name
+      src: https://stats.sfthemes.amirmasoudabdol.name/js/index.js
+    toggle: manual
 
 articles:
 - title: San Francisco Themes
