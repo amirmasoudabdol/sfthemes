@@ -105,21 +105,21 @@ sf_base <- function(
         to font sizes may cause disproportionate text sizes.")
 
   if (is.null(caption_size))
-    caption_size <- font_scale[["sizes"]][["caption"]]
+    caption_size <- font_scale[["sizes"]][["subhead"]]
   else
     warning("The `caption_size` variable is set manually.\n
         Since SFThemes scales font sizes automatically, manual changes
         to font sizes may cause disproportionate text sizes.")
 
   if (is.null(axis_text_size))
-    axis_text_size <- font_scale[["sizes"]][["caption"]]
+    axis_text_size <- font_scale[["sizes"]][["footnote"]]
   else
     warning("The `axis_text_size` variable is set manually.\n
         Since SFThemes scales font sizes automatically, manual changes
         to font sizes may cause disproportionate text sizes.")
 
   if (is.null(axis_title_size))
-    axis_title_size <- font_scale[["sizes"]][["caption"]]
+    axis_title_size <- font_scale[["sizes"]][["footnote"]]
   else
     warning("The `axis_title_size` variable is set manually.\n
         Since SFThemes scales font sizes automatically, manual changes

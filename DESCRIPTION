@@ -7,8 +7,8 @@ Authors@R:
     person(given = "Amir Masoud",
            family = "Abdol",
            role = c("aut", "cre"),
-           email = "amirmasoudabdol@icloud.com")
-Maintainer: Amir Masoud Abdol <amirmasoudabdol@icloud.com>
+           email = "i@amirmasoudabdol.name")
+Maintainer: Amir Masoud Abdol <i@amirmasoudabdol.name>
 Description: This is a collection of ggplot2 themes,
     scales, and colors inspired by Apple’s Human Interface Guidelines, and
     based on occasional appearances of charts used by Apple within
