@@ -75,9 +75,10 @@
   <script src="../extra.js"></script>
 
 <meta property="og:title" content="watchOS Color Palette — watchos_dark_pal" />
-<meta property="og:description" content="Set of color palettes based on
-macOS System Colors.
-General information about each palette can be found in the colors vignette." />
+<meta property="og:description" content="Set of color palettes based on macOS System Colors
+(https://developer.apple.com/design/human-interface-guidelines/watchos/visual/color/).
+General information about each palette can be found in the colors
+(../articles/colors.html) vignette." />
 <meta property="og:image" content="https://sfthemes.amirmasoudabdol.name/logo.svg" />
 
 
@@ -180,9 +181,10 @@ General information about each palette can be found in the colors vignette." />
     </div>
 
     <div class="ref-description">
-    <p>Set of color palettes based on
-<a href='https://developer.apple.com/design/human-interface-guidelines/watchos/visual/color/'>macOS System Colors</a>.
-General information about each palette can be found in the <a href='../articles/colors.html'>colors</a> vignette.</p>
+    <p>Set of color palettes based on macOS System Colors
+(https://developer.apple.com/design/human-interface-guidelines/watchos/visual/color/).
+General information about each palette can be found in the <a href='https://rdrr.io/r/grDevices/colors.html'>colors</a>
+(../articles/colors.html) vignette.</p>
     </div>
 
     <pre class="usage"><span class='fu'>watchos_dark_pal</span><span class='op'>(</span>order <span class='op'>=</span> <span class='st'>"contrast"</span><span class='op'>)</span></pre>
@@ -198,24 +200,19 @@ General information about each palette can be found in the <a href='../articles/
 
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <p>These functions are ideal for accessing the raw color values, and can be used within
-functions where raw color values are needed, e.g., <a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a>. In order to use them with <code>ggplot</code>
-functions, you must utilize one of the followings:</p><ul>
+    <p>These functions are ideal for accessing the raw color values, and
+can be used within functions where raw color values are needed, e.g.,
+<a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a>. In order to use them with <code>ggplot</code> functions, you must utilize one
+of the followings:</p><ul>
 <li><p><a href='scale_colour_watchos_dark.html'>scale_colour_watchos_dark</a></p></li>
 </ul>
 
-<p><strong>Note</strong>: We recommend paining this palette with dark themes, as the high base brightness of colors
-may make them hard to distinguish in light themes</p>
+<p><strong>Note</strong>: We recommend paining this palette with dark themes, as the high
+base brightness of colors may make them hard to distinguish in light
+themes</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://scales.r-lib.org'>scales</a></span><span class='op'>)</span>
-<span class='fu'>scales</span><span class='fu'>::</span><span class='fu'><a href='https://scales.r-lib.org//reference/show_col.html'>show_col</a></span><span class='op'>(</span>
-    <span class='fu'>watchos_dark_pal</span><span class='op'>(</span>order <span class='op'>=</span> <span class='st'>"default"</span><span class='op'>)</span><span class='op'>(</span><span class='fl'>9</span><span class='op'>)</span>,
-    border <span class='op'>=</span> <span class='cn'>NA</span>, labels <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span>
-</div><div class='img'><img src='watchos_color_palettes-1.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'>scales</span><span class='fu'>::</span><span class='fu'><a href='https://scales.r-lib.org//reference/show_col.html'>show_col</a></span><span class='op'>(</span>
-    <span class='fu'>watchos_dark_pal</span><span class='op'>(</span>order <span class='op'>=</span> <span class='st'>"contrast"</span><span class='op'>)</span><span class='op'>(</span><span class='fl'>9</span><span class='op'>)</span>,
-    border <span class='op'>=</span> <span class='cn'>NA</span>, labels <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span>
-</div><div class='img'><img src='watchos_color_palettes-2.png' alt='' width='700' height='433' /></div></pre>
+    <pre class="examples"></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
