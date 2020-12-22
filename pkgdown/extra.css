@@ -1,3 +1,7 @@
 img {
 	border-radius: 4px; !important;
 }
+
+.center-block {
+	margin-top: 20px;
+}
