@@ -41,29 +41,35 @@ theme_sf_dark(
 )
 }
 \arguments{
-\item{base_family, base_size}{base font family and size}
+\item{base_family}{base_size base font family and size}
 
-\item{plot_title_family, plot_title_face, plot_title_size, plot_title_margin}{plot tilte family, face, size and margin}
+\item{plot_title_family}{plot_title_face,plot_title_size,plot_title_margin
+plot tilte family, face, size and margin}
 
-\item{subtitle_family, subtitle_face, subtitle_size}{plot subtitle family, face and size}
+\item{subtitle_family}{subtitle_face,subtitle_size plot subtitle family,
+face and size}
 
 \item{subtitle_margin}{plot subtitle margin bottom (single numeric value)}
 
-\item{strip_text_family, strip_text_face, strip_text_size}{facet label font family, face and size}
+\item{strip_text_family}{strip_text_face,strip_text_size facet label font
+family, face and size}
 
-\item{caption_family, caption_face, caption_size, caption_margin}{plot caption family, face, size and margin}
+\item{caption_family}{caption_face,caption_size,caption_margin plot caption
+family, face, size and margin}
 
 \item{axis_text_size}{font size of axis text}
 
-\item{axis_title_family, axis_title_face, axis_title_size}{axis title font family, face and size}
+\item{axis_title_family}{axis_title_face,axis_title_size axis title font
+family, face and size}
 
-\item{axis_title_just}{axis title font justificationk one of `[blmcrt]`}
+\item{axis_title_just}{axis title font justification one of `[blmcrt]`}
 
 \item{plot_margin}{plot margin (specify with [ggplot2::margin])}
 
 \item{grid_col}{grid color}
 
-\item{grid}{panel grid (`TRUE`, `FALSE`, or a combination of `X`, `x`, `Y`, `y`)}
+\item{grid}{panel grid (`TRUE`, `FALSE`, or a combination of 
+`X`, `x`, `Y`, `y`)}
 
 \item{axis_col}{axis color}
 
@@ -94,7 +100,8 @@ ggplot(mpg, aes(x = displ, y = hwy, colour = class)) +
        color = "Class",
        title= "San Francisco Dark Theme",
        subtitle= "Using iOS Dark Color Palette",
-       caption = "Fuel economy data from 1999 to 2008 for 38 popular models of cars.") +
+       caption = "Fuel economy data from 1999 to 2008 for 38 
+                     popular models of cars.") +
   theme_sf_dark() +
   scale_color_ios_dark()
 
@@ -104,7 +111,8 @@ ggplot(mpg, aes(y = class)) +
        fill = "Drive",
        title= "San Francisco Dark Theme",
        subtitle= "Using Accessible iOS Dark Palette",
-       caption = "Fuel economy data from 1999 to 2008 for 38 popular models of cars.") +
+       caption = "Fuel economy data from 1999 to 2008 for 38
+                      popular models of cars.") +
   theme_sf_dark() +
   scale_fill_ios_dark(accessible = TRUE) +
   scale_color_ios_dark(accessible = TRUE)

@@ -13,7 +13,8 @@ scale_color_ios_gray_light(accessible = FALSE, ...)
 scale_fill_ios_gray_light(accessible = FALSE, ...)
 }
 \arguments{
-\item{accessible}{Indicates whether the accessible set of colors should be used}
+\item{accessible}{Indicates whether the accessible set of colors should be
+used}
 
 \item{...}{
   Arguments passed on to \code{\link[ggplot2:discrete_scale]{ggplot2::discrete_scale}}

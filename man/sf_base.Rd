@@ -48,19 +48,23 @@ sf_base(
 
 \item{plot_title_family, plot_title_face, plot_title_size, plot_title_margin}{plot tilte family, face, size and margin}
 
-\item{subtitle_family, subtitle_face, subtitle_size}{plot subtitle family, face and size}
+\item{subtitle_family, subtitle_face, subtitle_size}{plot subtitle family,
+face and size}
 
 \item{subtitle_margin}{plot subtitle margin bottom (single numeric value)}
 
-\item{strip_text_family, strip_text_face, strip_text_size}{facet label font family, face and size}
+\item{strip_text_family, strip_text_face, strip_text_size}{facet label font
+family, face and size}
 
-\item{caption_family, caption_face, caption_size, caption_margin}{plot caption family, face, size and margin}
+\item{caption_family, caption_face, caption_size, caption_margin}{plot caption
+family, face, size and margin}
 
 \item{axis_text_size}{font size of axis text}
 
 \item{text_color_palette}{text color palette}
 
-\item{axis_title_family, axis_title_face, axis_title_size}{axis title font family, face and size}
+\item{axis_title_family, axis_title_face, axis_title_size}{axis title font
+family, face and size}
 
 \item{axis_title_just}{axis title font justificationk one of `[blmcrt]`}
 
@@ -72,7 +76,8 @@ sf_base(
 
 \item{grid_col}{grid color}
 
-\item{grid}{panel grid (`TRUE`, `FALSE`, or a combination of `X`, `x`, `Y`, `y`)}
+\item{grid}{panel grid (`TRUE`, `FALSE`, or a
+combination of `X`, `x`, `Y`, `y`)}
 
 \item{axis_col}{axis color}
 

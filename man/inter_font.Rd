@@ -10,14 +10,16 @@ import_inter()
 sf_set_inter()
 }
 \description{
-sfthemes package includes 4 faces of Inter typeface, Regular, Italic, Bold, and Bold Italic.
-The \code{import_inter} function makes sure that these fonts are correctly installed and can be accessed by R.
-The \code{sf_set_inter} can be used to set Inter as the primary font of any other themes.
+sfthemes package includes 4 faces of Inter typeface, Regular, Italic, Bold,
+and Bold Italic. The \code{import_inter} function makes sure that these fonts are
+correctly installed and can be accessed by R. The \code{sf_set_inter} can be used
+to set Inter as the primary font of any other themes.
 }
 \note{
 \itemize{
-\item Make sure to run this command once after installing sfthemes, otherwise, you will encounter some warning
-messages regarding a missing font.
-\item If you have already installed Inter in your system, you do not need to run this command.
+\item Make sure to run this command once after installing sfthemes, otherwise,
+you will encounter some warning messages regarding a missing font.
+\item If you have already installed Inter in your system, you do not need to run
+this command.
 }
 }

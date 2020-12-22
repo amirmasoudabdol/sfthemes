@@ -17,6 +17,7 @@ SF Pro Font
 }
 \note{
 \itemize{
-\item ⚠️ Due to limitation of \code{extrafont} and format of SF Pro, these functions might not working as expected.
+\item Due to limitation of \code{extrafont} and format of SF Pro, these functions
+might not working as expected.
 }
 }

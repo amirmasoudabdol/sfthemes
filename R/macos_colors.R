@@ -47,7 +47,8 @@ macos_accessible_vibrant_dark_cols <- list(
     red.orange = "#ff4136",
     maya.blue = "#70d7ff",
     tangerine = "#ffcc00")
-macos_accessible_vibrant_dark_palette <- unname(unlist(macos_accessible_vibrant_dark_cols))
+macos_accessible_vibrant_dark_palette <-
+    unname(unlist(macos_accessible_vibrant_dark_cols))
 
 macos_accessible_vibrant_light_cols <- list(
     palatinate.blue = "#0040dd",
@@ -61,7 +62,8 @@ macos_accessible_vibrant_light_cols <- list(
     venetian.red = "#c20618",
     sea.blue = "#006796",
     tree.brown = "#925100")
-macos_accessible_vibrant_light_palette <- unname(unlist(macos_accessible_vibrant_light_cols))
+macos_accessible_vibrant_light_palette <-
+    unname(unlist(macos_accessible_vibrant_light_cols))
 
 macos_dark_vibrant_cols <- list(
     dodger.blue = "#148eff",
@@ -129,12 +131,14 @@ macos_cols_order <- list(default = 1:11,
 #' @description
 #' Set of color palettes based on
 #' [macOS System Colors](https://developer.apple.com/design/human-interface-guidelines/macos/visual-design/color/).
-#' General information about each palette can be found in the [colors](../articles/colors.html) vignette.
+#' General information about each palette can be found in the
+#' [colors](../articles/colors.html) vignette.
 #'
 #' @details
-#' These functions are ideal for accessing the raw color values, and can be used within
-#' functions where raw color values are needed, e.g., [plot]. In order to use them with `ggplot`
-#' functions, you must utilize one of the followings:
+#' These functions are ideal for accessing the raw color values, and can be used
+#'  within functions where raw color values are needed, e.g., [plot].
+#' In order to use them with `ggplot` functions, you must utilize one of the
+#' followings:
 #'
 #' - [scale_colour_macos_light]
 #' - [scale_colour_macos_dark]
@@ -152,39 +156,47 @@ macos_cols_order <- list(default = 1:11,
 #'     macos_light_pal(order = "default", accessible = FALSE)(11),
 #'     border = NA, labels = FALSE)
 #' scales::show_col(
-#'     macos_light_pal(order = "default", accessible = FALSE, vibrant = TRUE)(11),
+#'     macos_light_pal(order = "default", accessible = FALSE,
+#'     vibrant = TRUE)(11),
 #'     border = NA, labels = FALSE)
 #' scales::show_col(
 #'     macos_light_pal(order = "default", accessible = TRUE)(11),
 #'     border = NA, labels = FALSE)
 #' scales::show_col(
-#'     macos_light_pal(order = "default", accessible = TRUE, vibrant = TRUE)(11),
+#'     macos_light_pal(order = "default", accessible = TRUE,
+#'     vibrant = TRUE)(11),
 #'     border = NA, labels = FALSE)
 #'
 #' scales::show_col(
 #'     macos_light_pal(order = "contrast", accessible = FALSE)(11),
 #'     border = NA, labels = FALSE)
 #' scales::show_col(
-#'     macos_light_pal(order = "contrast", accessible = FALSE, vibrant = TRUE)(11),
+#'     macos_light_pal(order = "contrast", accessible = FALSE,
+#'     vibrant = TRUE)(11),
 #'     border = NA, labels = FALSE)
 #' scales::show_col(
 #'     macos_light_pal(order = "contrast", accessible = TRUE)(11),
 #'     border = NA, labels = FALSE)
 #' scales::show_col(
-#'     macos_light_pal(order = "contrast", accessible = TRUE, vibrant = TRUE)(11),
+#'     macos_light_pal(order = "contrast", accessible = TRUE,
+#'     vibrant = TRUE)(11),
 #'     border = NA, labels = FALSE)
 macos_light_pal <- function(order = "contrast", accessible = FALSE, vibrant = FALSE) {
     if (accessible) {
-        if (vibrant){
-            scales::manual_pal(macos_accessible_vibrant_light_palette[macos_cols_order[[order]]])
+        if (vibrant) {
+            scales::manual_pal(macos_accessible_vibrant_light_palette[
+                macos_cols_order[[order]]])
         }else{
-            scales::manual_pal(macos_accessible_light_palette[macos_cols_order[[order]]])
+            scales::manual_pal(macos_accessible_light_palette[
+                macos_cols_order[[order]]])
         }
     }else{
-        if (vibrant){
-            scales::manual_pal(macos_light_vibrant_palette[macos_cols_order[[order]]])
+        if (vibrant) {
+            scales::manual_pal(macos_light_vibrant_palette[
+                macos_cols_order[[order]]])
         }else{
-            scales::manual_pal(macos_light_palette[macos_cols_order[[order]]])
+            scales::manual_pal(macos_light_palette[
+                macos_cols_order[[order]]])
         }
     }
 }
@@ -201,17 +213,29 @@ macos_light_pal <- function(order = "contrast", accessible = FALSE, vibrant = FA
 #' @family colour scales
 #' @export
 scale_colour_macos_light <- function(order = "contrast", accessible = FALSE, vibrant = FALSE, ...) {
-    if (accessible){
-        if (vibrant){
-            ggplot2::discrete_scale("colour", "macos_vibrant_light", macos_light_pal(order = order, accessible = TRUE, vibrant = TRUE), ...)
+    if (accessible) {
+        if (vibrant) {
+            ggplot2::discrete_scale("colour", "macos_vibrant_light",
+                                    macos_light_pal(order = order,
+                                                    accessible = TRUE,
+                                                    vibrant = TRUE), ...)
         }else{
-            ggplot2::discrete_scale("colour", "macos_light", macos_light_pal(order = order, accessible = TRUE, vibrant = FALSE), ...)
+            ggplot2::discrete_scale("colour", "macos_light",
+                                    macos_light_pal(order = order,
+                                                    accessible = TRUE,
+                                                    vibrant = FALSE), ...)
         }
     }else{
-        if (vibrant){
-            ggplot2::discrete_scale("colour", "macos_accessible_vibrant_light", macos_light_pal(order = order, accessible = FALSE, vibrant = TRUE), ...)
+        if (vibrant) {
+            ggplot2::discrete_scale("colour", "macos_accessible_vibrant_light",
+                                    macos_light_pal(order = order,
+                                                    accessible = FALSE,
+                                                    vibrant = TRUE), ...)
         }else{
-            ggplot2::discrete_scale("colour", "macos_accessible_light", macos_light_pal(order = order, accessible = FALSE, vibrant = FALSE), ...)
+            ggplot2::discrete_scale("colour", "macos_accessible_light",
+                                    macos_light_pal(order = order,
+                                                    accessible = FALSE,
+                                                    vibrant = FALSE), ...)
 
         }
     }
@@ -228,18 +252,31 @@ scale_color_macos_light <- scale_colour_macos_light
 #'
 #' @export
 #' @rdname scale_colour_macos_light
-scale_fill_macos_light <- function(order = order, accessible = FALSE, vibrant = FALSE, ...) {
-    if (accessible){
-        if (vibrant){
-            ggplot2::discrete_scale("fill", "macos_vibrant_light", macos_light_pal(order = order, accessible = TRUE, vibrant = TRUE), ...)
+scale_fill_macos_light <- function(order = order, accessible = FALSE,
+                                   vibrant = FALSE, ...) {
+    if (accessible) {
+        if (vibrant) {
+            ggplot2::discrete_scale("fill", "macos_vibrant_light",
+                                    macos_light_pal(order = order,
+                                                    accessible = TRUE,
+                                                    vibrant = TRUE), ...)
         }else{
-            ggplot2::discrete_scale("fill", "macos_light", macos_light_pal(order = order, accessible = TRUE, vibrant = FALSE), ...)
+            ggplot2::discrete_scale("fill", "macos_light",
+                                    macos_light_pal(order = order,
+                                                    accessible = TRUE,
+                                                    vibrant = FALSE), ...)
         }
     }else{
-        if (vibrant){
-            ggplot2::discrete_scale("fill", "macos_accessible_vibrant_light", macos_light_pal(order = order, accessible = FALSE, vibrant = TRUE), ...)
+        if (vibrant) {
+            ggplot2::discrete_scale("fill", "macos_accessible_vibrant_light",
+                                    macos_light_pal(order = order,
+                                                    accessible = FALSE,
+                                                    vibrant = TRUE), ...)
         }else{
-            ggplot2::discrete_scale("fill", "macos_accessible_light", macos_light_pal(order = order, accessible = FALSE, vibrant = FALSE), ...)
+            ggplot2::discrete_scale("fill", "macos_accessible_light",
+                                    macos_light_pal(order = order,
+                                                    accessible = FALSE,
+                                                    vibrant = FALSE), ...)
 
         }
     }
@@ -259,39 +296,47 @@ scale_fill_macos_light <- function(order = order, accessible = FALSE, vibrant = 
 #'     macos_dark_pal(order = "default", accessible = FALSE)(11),
 #'     border = NA, labels = FALSE)
 #' scales::show_col(
-#'     macos_dark_pal(order = "default", accessible = FALSE, vibrant = TRUE)(11),
+#'     macos_dark_pal(order = "default", accessible = FALSE,
+#'     vibrant = TRUE)(11),
 #'     border = NA, labels = FALSE)
 #' scales::show_col(
 #'     macos_dark_pal(order = "default", accessible = TRUE)(11),
 #'     border = NA, labels = FALSE)
 #' scales::show_col(
-#'     macos_dark_pal(order = "default", accessible = TRUE, vibrant = TRUE)(11),
+#'     macos_dark_pal(order = "default", accessible = TRUE,
+#'     vibrant = TRUE)(11),
 #'     border = NA, labels = FALSE)
 #'
 #' scales::show_col(
 #'     macos_dark_pal(order = "contrast", accessible = FALSE)(11),
 #'     border = NA, labels = FALSE)
 #' scales::show_col(
-#'     macos_dark_pal(order = "contrast", accessible = FALSE, vibrant = TRUE)(11),
+#'     macos_dark_pal(order = "contrast", accessible = FALSE,
+#'     vibrant = TRUE)(11),
 #'     border = NA, labels = FALSE)
 #' scales::show_col(
 #'     macos_dark_pal(order = "contrast", accessible = TRUE)(11),
 #'     border = NA, labels = FALSE)
 #' scales::show_col(
-#'     macos_dark_pal(order = "contrast", accessible = TRUE, vibrant = TRUE)(11),
+#'     macos_dark_pal(order = "contrast", accessible = TRUE,
+#'     vibrant = TRUE)(11),
 #'     border = NA, labels = FALSE)
 macos_dark_pal <- function(order = "contrast", accessible = FALSE, vibrant = FALSE) {
     if (accessible) {
-        if (vibrant){
-            scales::manual_pal(macos_accessible_vibrant_dark_palette[macos_cols_order[[order]]])
+        if (vibrant) {
+            scales::manual_pal(macos_accessible_vibrant_dark_palette[
+                macos_cols_order[[order]]])
         }else{
-            scales::manual_pal(macos_accessible_dark_palette[macos_cols_order[[order]]])
+            scales::manual_pal(macos_accessible_dark_palette[
+                macos_cols_order[[order]]])
         }
     }else{
-        if (vibrant){
-            scales::manual_pal(macos_dark_vibrant_palette[macos_cols_order[[order]]])
+        if (vibrant) {
+            scales::manual_pal(macos_dark_vibrant_palette[
+                macos_cols_order[[order]]])
         }else{
-            scales::manual_pal(macos_dark_palette[macos_cols_order[[order]]])
+            scales::manual_pal(macos_dark_palette[
+                macos_cols_order[[order]]])
         }
     }
 }
@@ -306,18 +351,31 @@ macos_dark_pal <- function(order = "contrast", accessible = FALSE, vibrant = FAL
 #' @rdname scale_colour_macos_dark
 #' @family colour scales
 #' @export
-scale_colour_macos_dark <- function(order = "contrast", accessible = FALSE, vibrant = FALSE, ...) {
-    if (accessible){
-        if (vibrant){
-            ggplot2::discrete_scale("colour", "macos_vibrant_dark", macos_dark_pal(order = order, accessible = TRUE, vibrant = TRUE), ...)
+scale_colour_macos_dark <- function(order = "contrast", accessible = FALSE,
+                                    vibrant = FALSE, ...) {
+    if (accessible) {
+        if (vibrant) {
+            ggplot2::discrete_scale("colour", "macos_vibrant_dark",
+                                    macos_dark_pal(order = order,
+                                                   accessible = TRUE,
+                                                   vibrant = TRUE), ...)
         }else{
-            ggplot2::discrete_scale("colour", "macos_dark", macos_dark_pal(order = order, accessible = TRUE, vibrant = FALSE), ...)
+            ggplot2::discrete_scale("colour", "macos_dark",
+                                    macos_dark_pal(order = order,
+                                                   accessible = TRUE,
+                                                   vibrant = FALSE), ...)
         }
     }else{
-        if (vibrant){
-            ggplot2::discrete_scale("colour", "macos_accessible_vibrant_dark", macos_dark_pal(order = order, accessible = FALSE, vibrant = TRUE), ...)
+        if (vibrant) {
+            ggplot2::discrete_scale("colour", "macos_accessible_vibrant_dark",
+                                    macos_dark_pal(order = order,
+                                                   accessible = FALSE,
+                                                   vibrant = TRUE), ...)
         }else{
-            ggplot2::discrete_scale("colour", "macos_accessible_dark", macos_dark_pal(order = order, accessible = FALSE, vibrant = FALSE), ...)
+            ggplot2::discrete_scale("colour", "macos_accessible_dark",
+                                    macos_dark_pal(order = order,
+                                                   accessible = FALSE,
+                                                   vibrant = FALSE), ...)
 
         }
     }
@@ -333,18 +391,31 @@ scale_color_macos_dark <- scale_colour_macos_dark
 #'
 #' @export
 #' @rdname scale_colour_macos_dark
-scale_fill_macos_dark <- function(order = "contrast", accessible = FALSE, vibrant = FALSE, ...) {
-    if (accessible){
-        if (vibrant){
-            ggplot2::discrete_scale("fill", "macos_vibrant_dark", macos_dark_pal(order = order, accessible = TRUE, vibrant = TRUE), ...)
+scale_fill_macos_dark <- function(order = "contrast", accessible = FALSE,
+                                  vibrant = FALSE, ...) {
+    if (accessible) {
+        if (vibrant) {
+            ggplot2::discrete_scale("fill", "macos_vibrant_dark",
+                                    macos_dark_pal(order = order,
+                                                   accessible = TRUE,
+                                                   vibrant = TRUE), ...)
         }else{
-            ggplot2::discrete_scale("fill", "macos_dark", macos_dark_pal(order = order, accessible = TRUE, vibrant = FALSE), ...)
+            ggplot2::discrete_scale("fill", "macos_dark",
+                                    macos_dark_pal(order = order,
+                                                   accessible = TRUE,
+                                                   vibrant = FALSE), ...)
         }
     }else{
-        if (vibrant){
-            ggplot2::discrete_scale("fill", "macos_accessible_vibrant_dark", macos_dark_pal(order = order, accessible = FALSE, vibrant = TRUE), ...)
+        if (vibrant) {
+            ggplot2::discrete_scale("fill", "macos_accessible_vibrant_dark",
+                                    macos_dark_pal(order = order,
+                                                   accessible = FALSE,
+                                                   vibrant = TRUE), ...)
         }else{
-            ggplot2::discrete_scale("fill", "macos_accessible_dark", macos_dark_pal(order = order, accessible = FALSE, vibrant = FALSE), ...)
+            ggplot2::discrete_scale("fill", "macos_accessible_dark",
+                                    macos_dark_pal(order = order,
+                                                   accessible = FALSE,
+                                                   vibrant = FALSE), ...)
 
         }
     }

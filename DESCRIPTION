@@ -9,7 +9,7 @@ Authors@R:
            role = c("aut", "cre"),
            email = "amirmasoudabdol@icloud.com")
 Maintainer: Amir Masoud Abdol <amirmasoudabdol@icloud.com>
-Description: sfthemes is a collection of ggplot2 themes,
+Description: This is a collection of ggplot2 themes,
     scales, and colors inspired by Apple’s Human Interface Guidelines, and
     based on occasional appearances of charts used by Apple within
     different contexts, e.g., Apple Health app, Screen Time on iOS and
@@ -32,8 +32,6 @@ Suggests:
     gridExtra,
     svglite,
     testthat
-VignetteBuilder: 
-    knitr
 Encoding: UTF-8
 Language: en-US
 LazyData: true

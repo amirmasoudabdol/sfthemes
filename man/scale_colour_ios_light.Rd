@@ -15,7 +15,8 @@ scale_fill_ios_light(order = "contrast", accessible = FALSE, ...)
 \arguments{
 \item{order}{Indicates the order of colors in the palette}
 
-\item{accessible}{Indicates whether the accessible set of colors should be used}
+\item{accessible}{Indicates whether the accessible set of colors should be
+used}
 
 \item{...}{
   Arguments passed on to \code{\link[ggplot2:discrete_scale]{ggplot2::discrete_scale}}
@@ -70,8 +71,8 @@ The default, \code{TRUE}, uses the levels that appear in the data;
   }}
 }
 \description{
-\strong{Note:} We recommend to not use the iOS Palette for more than 6 categories. This guarantee an
-acceptable level of contrast.
+\strong{Note:} We recommend to not use the iOS Palette for more than 6 categories.
+This guarantee an acceptable level of contrast.
 }
 \seealso{
 Other colour scales: 

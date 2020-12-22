@@ -1,17 +1,23 @@
 #' San Francisco Base Theme
 #'
 #' @param base_family,base_size base font family and size
-#' @param plot_title_family,plot_title_face,plot_title_size,plot_title_margin plot tilte family, face, size and margin
-#' @param subtitle_family,subtitle_face,subtitle_size plot subtitle family, face and size
+#' @param plot_title_family,plot_title_face,plot_title_size,plot_title_margin
+#' plot tilte family, face, size and margin
+#' @param subtitle_family,subtitle_face,subtitle_size plot subtitle family,
+#' face and size
 #' @param subtitle_margin plot subtitle margin bottom (single numeric value)
-#' @param strip_text_family,strip_text_face,strip_text_size facet label font family, face and size
-#' @param caption_family,caption_face,caption_size,caption_margin plot caption family, face, size and margin
-#' @param axis_title_family,axis_title_face,axis_title_size axis title font family, face and size
+#' @param strip_text_family,strip_text_face,strip_text_size facet label font
+#' family, face and size
+#' @param caption_family,caption_face,caption_size,caption_margin plot caption
+#' family, face, size and margin
+#' @param axis_title_family,axis_title_face,axis_title_size axis title font
+#' family, face and size
 #' @param axis_title_just axis title font justificationk one of `[blmcrt]`
 #' @param axis_text_size font size of axis text
 #' @param plot_margin plot margin (specify with [ggplot2::margin])
 #' @param grid_col grid color
-#' @param grid panel grid (`TRUE`, `FALSE`, or a combination of `X`, `x`, `Y`, `y`)
+#' @param grid panel grid (`TRUE`, `FALSE`, or a
+#' combination of `X`, `x`, `Y`, `y`)
 #' @param axis_col axis color
 #' @param axis add x or y axes? `TRUE`, `FALSE`, "`xy`"
 #' @param ticks ticks if `TRUE` add ticks
@@ -28,15 +34,15 @@
 #'
 #' @importFrom ggplot2 margin theme theme_minimal element_blank element_rect element_text element_line update_geom_defaults
 sf_base <- function(
-    base_family="Inter", base_size = NULL,
-    plot_title_family="Inter", plot_title_size = NULL,
+    base_family = "Inter", base_size = NULL,
+    plot_title_family = "Inter", plot_title_size = NULL,
     plot_title_face="bold", plot_title_margin = 10,
-    subtitle_family="Inter",
+    subtitle_family = "Inter",
     subtitle_size = NULL,
     subtitle_face = "plain", subtitle_margin = 15,
     strip_text_family = "Inter", strip_text_size = NULL,
     strip_text_face = "plain",
-    caption_family="Inter",
+    caption_family = "Inter",
     caption_size = NULL,
     caption_face = "plain", caption_margin = 10,
     axis_text_size = NULL,
@@ -57,46 +63,60 @@ sf_base <- function(
     scale = NULL) {
 
     if (!is.null(scale)) {
-        font_size_scale = scale;
-        element_size_scale = scale;
+        font_size_scale <- scale
+        element_size_scale <- scale
     }
 
-    font_scale <- sf_scale(font_size_scale);
+    font_scale <- sf_scale(font_size_scale)
 
     if (is.null(base_size))
         base_size <- font_scale[['sizes']][['body']]
     else
-        warning("The `base_size` variable is set manually.\nSince SFThemes scales font sizes automatically, manual changes to font sizes may cause disproportionate text sizes.")
+        warning("The `base_size` variable is set manually.\n
+                Since SFThemes scales font sizes automatically, manual changes
+                to font sizes may cause disproportionate text sizes.")
 
     if (is.null(plot_title_size))
         plot_title_size <- font_scale[['sizes']][['headline']]
     else
-        warning("The `plot_title_size` variable is set manually.\nSince SFThemes scales font sizes automatically, manual changes to font sizes may cause disproportionate text sizes.")
+        warning("The `plot_title_size` variable is set manually.\n
+                Since SFThemes scales font sizes automatically, manual changes
+                to font sizes may cause disproportionate text sizes.")
 
     if (is.null(subtitle_size))
         subtitle_size <- font_scale[['sizes']][['subhead']]
     else
-        warning("The `subtitle_size` variable is set manually.\nSince SFThemes scales font sizes automatically, manual changes to font sizes may cause disproportionate text sizes.")
+        warning("The `subtitle_size` variable is set manually.\n
+                Since SFThemes scales font sizes automatically, manual changes
+                to font sizes may cause disproportionate text sizes.")
 
     if (is.null(strip_text_size))
         strip_text_size <- font_scale[['sizes']][['footnote']]
     else
-        warning("The `strip_text_size` variable is set manually.\nSince SFThemes scales font sizes automatically, manual changes to font sizes may cause disproportionate text sizes.")
+        warning("The `strip_text_size` variable is set manually.\n
+                Since SFThemes scales font sizes automatically, manual changes
+                to font sizes may cause disproportionate text sizes.")
 
     if (is.null(caption_size))
         caption_size <- font_scale[['sizes']][['caption_1']]
     else
-        warning("The `caption_size` variable is set manually.\nSince SFThemes scales font sizes automatically, manual changes to font sizes may cause disproportionate text sizes.")
+        warning("The `caption_size` variable is set manually.\n
+                Since SFThemes scales font sizes automatically, manual changes
+                to font sizes may cause disproportionate text sizes.")
 
     if (is.null(axis_text_size))
         axis_text_size <- font_scale[['sizes']][['caption_1']]
     else
-        warning("The `axis_text_size` variable is set manually.\nSince SFThemes scales font sizes automatically, manual changes to font sizes may cause disproportionate text sizes.")
+        warning("The `axis_text_size` variable is set manually.\n
+                Since SFThemes scales font sizes automatically, manual changes
+                to font sizes may cause disproportionate text sizes.")
 
     if (is.null(axis_title_size))
         axis_title_size <- font_scale[['sizes']][['caption_1']]
     else
-        warning("The `axis_title_size` variable is set manually.\nSince SFThemes scales font sizes automatically, manual changes to font sizes may cause disproportionate text sizes.")
+        warning("The `axis_title_size` variable is set manually.\n
+                Since SFThemes scales font sizes automatically, manual changes
+                to font sizes may cause disproportionate text sizes.")
 
 
     if (!is.null(element_size_scale)){
@@ -181,21 +201,21 @@ sf_base <- function(
             ret <- ret + theme(axis.ticks.length.y = grid::unit(20, "pt"))
     }
 
-    xj <- switch(tolower(substr(axis_title_just, 1, 1)), b=0, l=0, m=0.5, c=0.5, r=1, t=1)
-    yj <- switch(tolower(substr(axis_title_just, 2, 2)), b=0, l=0, m=0.5, c=0.5, r=1, t=1)
+    xj <- switch(tolower(substr(axis_title_just, 1, 1)), b = 0, l = 0, m = 0.5, c = 0.5, r = 1, t = 1)
+    yj <- switch(tolower(substr(axis_title_just, 2, 2)), b = 0, l = 0, m = 0.5, c = 0.5, r = 1, t = 1)
 
-    x_axis_ticks_text_offset = 0;
-    x_ticks_margin = margin(t = 5)
+    x_axis_ticks_text_offset <- 0
+    x_ticks_margin <- margin(t = 5)
     if (offset_x_ticks){
-        x_axis_ticks_text_offset = -0.3;
-        x_ticks_margin = margin(b = -5)
+        x_axis_ticks_text_offset <- -0.3
+        x_ticks_margin <- margin(b = -5)
     }
 
-    y_axis_ticks_text_offset = 0;
-    y_ticks_margin = margin(r = 5)
+    y_axis_ticks_text_offset <- 0
+    y_ticks_margin <- margin(r = 5)
     if (offset_y_ticks) {
-        y_axis_ticks_text_offset = -0.3;
-        y_ticks_margin = margin(r = -5)
+        y_axis_ticks_text_offset <- -0.3
+        y_ticks_margin <- margin(r = -5)
     }
 
     ret <- ret + theme(axis.text.x = element_text(color = text_color_palette[["label"]],
@@ -210,28 +230,28 @@ sf_base <- function(
 
     ret <- ret + theme(axis.title = element_text(color = text_color_palette[["label"]],
                                                     size = axis_title_size,
-                                                    family=axis_title_family))
+                                                    family = axis_title_family))
 
     ret <- ret + theme(axis.title.x = element_text(color = text_color_palette[["label"]],
                                                     hjust = xj,
                                                     size = axis_title_size,
-                                                    family=axis_title_family, face=axis_title_face))
+                                                    family = axis_title_family, face=axis_title_face))
 
     ret <- ret + theme(axis.title.y = element_text(color = text_color_palette[["label"]],
                                                     hjust = yj,
                                                     size = axis_title_size,
-                                                    family=axis_title_family, face=axis_title_face))
+                                                    family = axis_title_family, face=axis_title_face))
 
     ret <- ret + theme(axis.title.y.right = element_text(color = text_color_palette[["label"]],
                                                     size = axis_title_size,
                                                     hjust = yj,
-                                                    angle=90,
-                                                    family=axis_title_family, face=axis_title_face))
+                                                    angle = 90,
+                                                    family = axis_title_family, face=axis_title_face))
 
     ret <- ret + theme(strip.text = element_text(color = text_color_palette[["label"]],
                                                     hjust = 0,
                                                     size = strip_text_size,
-                                                    face=strip_text_face, family=strip_text_family))
+                                                    face=strip_text_face, family = strip_text_family))
 
     ret <- ret + theme(panel.spacing = grid::unit(2, "lines"))
 
@@ -239,25 +259,25 @@ sf_base <- function(
                                                     hjust = 0,
                                                     size = plot_title_size,
                                                     margin = margin(b=plot_title_margin),
-                                                    family=plot_title_family, face=plot_title_face))
+                                                    family = plot_title_family, face=plot_title_face))
 
     ret <- ret + theme(plot.subtitle = element_text(color = text_color_palette[["label"]],
                                                     hjust = 0,
                                                     size = subtitle_size,
                                                     margin = margin(b=subtitle_margin),
-                                                    family=subtitle_family, face=subtitle_face))
+                                                    family = subtitle_family, face=subtitle_face))
 
     ret <- ret + theme(plot.caption = element_text(color = text_color_palette[["label"]],
                                                     hjust = 1,
                                                     size = caption_size,
                                                     margin = margin(t=caption_margin),
-                                                    family=caption_family, face=caption_face))
+                                                    family = caption_family, face=caption_face))
 
     ret <- ret + theme(plot.margin =plot_margin)
     ret <- ret + theme(legend.title = element_text(color = text_color_palette[["label"]],
-                                                    size = axis_text_size, family=caption_family, face="bold"))
+                                                    size = axis_text_size, family = caption_family, face="bold"))
     ret <- ret + theme(legend.text = element_text(color = text_color_palette[["label"]],
-                                                    size = axis_text_size, family=caption_family))
+                                                    size = axis_text_size, family = caption_family))
 
     ret
 

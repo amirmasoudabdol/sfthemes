@@ -18,17 +18,20 @@ ios_gray_dark_pal(accessible = FALSE)
 \arguments{
 \item{order}{Indicates the order of colors in the palette}
 
-\item{accessible}{Indicates whether the accessible set of colors should be used}
+\item{accessible}{Indicates whether the accessible set of colors should be
+used}
 }
 \description{
 Set of color palettes based on
 \href{https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/color/}{iOS System Colors}.
-General information about each palette can be found in the \href{../articles/colors.html}{colors} vignette.
+General information about each palette can be found in the
+\href{../articles/colors.html}{colors} vignette.
 }
 \details{
-These functions are ideal for accessing the raw color values, and can be used within
-functions where raw color values are needed, e.g., \link{plot}. In order to use them with \code{ggplot}
-functions, you must utilize one of the followings:
+These functions are ideal for accessing the raw color values, and can be
+used within functions where raw color values are needed, e.g., \link{plot}.
+In order to use them with \code{ggplot} functions, you must utilize one of
+the followings:
 \itemize{
 \item \link{scale_colour_ios_light}
 \item \link{scale_colour_ios_dark}

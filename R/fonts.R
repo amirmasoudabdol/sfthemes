@@ -8,7 +8,8 @@
 #'
 #' @md
 #' @note
-#' - ⚠️ Due to limitation of `extrafont` and format of SF Pro, these functions might not working as expected.
+#' - Due to limitation of `extrafont` and format of SF Pro, these functions
+#' might not working as expected.
 #'
 #' @rdname sf_pro_font
 #'
@@ -18,8 +19,9 @@ import_sf_pro <- function() {
   extrafont::loadfonts(quiet = TRUE)
   fnt <- extrafont::fonttable()
   if (!any(grepl("SF[ ]Pro", fnt$FamilyName))) {
-      message("SF Pro is NOT installed in your system!\nDownload and install the font, and run this command again!")
-      return();
+      message("SF Pro is NOT installed in your system!\n
+              Download and install the font, and run this command again!")
+      return()
   }
 
   message(
@@ -63,15 +65,17 @@ sf_set_sf_pro <- function() {
 #' Inter Typeface
 #'
 #' @description
-#' sfthemes package includes 4 faces of Inter typeface, Regular, Italic, Bold, and Bold Italic.
-#' The `import_inter` function makes sure that these fonts are correctly installed and can be accessed by R.
-#' The `sf_set_inter` can be used to set Inter as the primary font of any other themes.
+#' sfthemes package includes 4 faces of Inter typeface, Regular, Italic, Bold,
+#' and Bold Italic. The `import_inter` function makes sure that these fonts are
+#' correctly installed and can be accessed by R. The `sf_set_inter` can be used
+#' to set Inter as the primary font of any other themes.
 #'
 #' @md
 #' @note
-#' - Make sure to run this command once after installing sfthemes, otherwise, you will encounter some warning
-#' messages regarding a missing font.
-#' - If you have already installed Inter in your system, you do not need to run this command.
+#' - Make sure to run this command once after installing sfthemes, otherwise,
+#' you will encounter some warning messages regarding a missing font.
+#' - If you have already installed Inter in your system, you do not need to run
+#' this command.
 #'
 #' @rdname inter_font
 #' @export
@@ -79,11 +83,13 @@ import_inter <- function() {
 
   inter_font_dir <- system.file("fonts", "Inter", package="sfthemes")
 
-  suppressWarnings(suppressMessages(extrafont::font_import(inter_font_dir, prompt=FALSE)))
+  suppressWarnings(suppressMessages(extrafont::font_import(inter_font_dir,
+                                                           prompt=FALSE)))
 
   message(
     sprintf(
-      "You will likely need to install these fonts on your system as well.\n\nYou can find them in [%s]",
+      "You will likely need to install these fonts on your system as well.\n\n
+      You can find them in [%s]",
       inter_font_dir)
   )
 
