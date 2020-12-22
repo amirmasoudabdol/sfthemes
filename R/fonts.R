@@ -19,13 +19,13 @@ import_sf_pro <- function() {
   extrafont::loadfonts(quiet = TRUE)
   fnt <- extrafont::fonttable()
   if (!any(grepl("SF[ ]Pro", fnt$FamilyName))) {
-      message("SF Pro is NOT installed in your system!\n
-              Download and install the font, and run this command again!")
-      return()
+    message("SF Pro is NOT installed in your system!\n
+        Download and install the font, and run this command again!")
+    return()
   }
 
   message(
-    "SF Pro is ready to use."
+  "SF Pro is ready to use."
   )
 
 }
@@ -84,13 +84,13 @@ import_inter <- function() {
   inter_font_dir <- system.file("fonts", "Inter", package="sfthemes")
 
   suppressWarnings(suppressMessages(extrafont::font_import(inter_font_dir,
-                                                           prompt=FALSE)))
+                               prompt=FALSE)))
 
   message(
-    sprintf(
-      "You will likely need to install these fonts on your system as well.\n\n
-      You can find them in [%s]",
-      inter_font_dir)
+  sprintf(
+    "You will likely need to install these fonts on your system as well.\n\n
+    You can find them in [%s]",
+    inter_font_dir)
   )
 
 }
