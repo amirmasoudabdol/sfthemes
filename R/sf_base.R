@@ -34,24 +34,30 @@
 #'
 #' @importFrom ggplot2 margin theme theme_minimal element_blank element_rect element_text element_line update_geom_defaults
 sf_base <- function(
-  base_family = "Inter", base_size = NULL,
-  plot_title_family = "Inter", plot_title_size = NULL,
-  plot_title_face = "bold", plot_title_margin = 10,
+  base_family = "Inter", 
+  base_size = NULL,
+  plot_title_family = "Inter", 
+  plot_title_size = NULL,
+  plot_title_face = "bold", 
+  plot_title_margin = 10,
   subtitle_family = "Inter",
   subtitle_size = NULL,
-  subtitle_face = "plain", subtitle_margin = 15,
-  strip_text_family = "Inter", strip_text_size = NULL,
+  subtitle_face = "plain", 
   subtitle_margin = 25,
+  strip_text_family = "Inter", 
+  strip_text_size = NULL,
   strip_text_face = "plain",
   caption_family = "Inter",
   caption_size = NULL,
-  caption_face = "plain", caption_margin = 10,
+  caption_face = "plain", 
+  caption_margin = 10,
   axis_text_size = NULL,
   text_color_palette = ios_text_on_light_cols,
   axis_title_family = base_family,
   axis_title_size = NULL,
   axis_title_face = "plain",
   axis_title_just = "rt",
+  legend_title_size = NULL,
   plot_background_col = "white",
   panel_background_col = "white",
   plot_margin = margin(30, 30, 30, 30),
@@ -71,51 +77,58 @@ sf_base <- function(
   font_scale <- sf_scale(font_size_scale)
 
   if (is.null(base_size))
-    base_size <- font_scale[['sizes']][['body']]
+    base_size <- font_scale[["sizes"]][["body"]]
   else
     warning("The `base_size` variable is set manually.\n
         Since SFThemes scales font sizes automatically, manual changes
         to font sizes may cause disproportionate text sizes.")
 
   if (is.null(plot_title_size))
-    plot_title_size <- font_scale[['sizes']][['headline']]
+    plot_title_size <- font_scale[["sizes"]][["title_1"]]
   else
     warning("The `plot_title_size` variable is set manually.\n
         Since SFThemes scales font sizes automatically, manual changes
         to font sizes may cause disproportionate text sizes.")
 
   if (is.null(subtitle_size))
-    subtitle_size <- font_scale[['sizes']][['subhead']]
+    subtitle_size <- font_scale[["sizes"]][["headline"]]
   else
     warning("The `subtitle_size` variable is set manually.\n
         Since SFThemes scales font sizes automatically, manual changes
         to font sizes may cause disproportionate text sizes.")
 
   if (is.null(strip_text_size))
-    strip_text_size <- font_scale[['sizes']][['footnote']]
+    strip_text_size <- font_scale[["sizes"]][["footnote"]]
   else
     warning("The `strip_text_size` variable is set manually.\n
         Since SFThemes scales font sizes automatically, manual changes
         to font sizes may cause disproportionate text sizes.")
 
   if (is.null(caption_size))
-    caption_size <- font_scale[['sizes']][['caption_1']]
+    caption_size <- font_scale[["sizes"]][["caption"]]
   else
     warning("The `caption_size` variable is set manually.\n
         Since SFThemes scales font sizes automatically, manual changes
         to font sizes may cause disproportionate text sizes.")
 
   if (is.null(axis_text_size))
-    axis_text_size <- font_scale[['sizes']][['caption_1']]
+    axis_text_size <- font_scale[["sizes"]][["caption"]]
   else
     warning("The `axis_text_size` variable is set manually.\n
         Since SFThemes scales font sizes automatically, manual changes
         to font sizes may cause disproportionate text sizes.")
 
   if (is.null(axis_title_size))
-    axis_title_size <- font_scale[['sizes']][['caption_1']]
+    axis_title_size <- font_scale[["sizes"]][["caption"]]
   else
     warning("The `axis_title_size` variable is set manually.\n
+        Since SFThemes scales font sizes automatically, manual changes
+        to font sizes may cause disproportionate text sizes.")
+
+  if (is.null(legend_title_size))
+    legend_title_size <- font_scale[["sizes"]][["subhead"]]
+  else
+    warning("The `legend_title_size` variable is set manually.\n
         Since SFThemes scales font sizes automatically, manual changes
         to font sizes may cause disproportionate text sizes.")
 
@@ -335,15 +348,14 @@ sf_base <- function(
 
   ret <- ret + theme(legend.title =
             element_text(color = text_color_palette[["label"]],
-                   size = axis_text_size,
+                   size = legend_title_size,
                    family = caption_family,
                    face = "bold"))
 
   ret <- ret + theme(legend.text =
             element_text(color = text_color_palette[["label"]],
                    size = axis_text_size,
-                   family = caption_family,
-                   face = "bold"))
+                   family = caption_family))
 
   ret
 

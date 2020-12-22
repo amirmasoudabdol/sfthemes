@@ -1,31 +1,32 @@
-sf_xSmall_text <- function() {
+sf_xsmall_text <- function() {
   return(sf_set_text_sizes("xSmall"))
 }
 
-sf_Small_text <- function() {
+sf_small_text <- function() {
   return(sf_set_text_sizes("Small"))
 }
 
-sf_Medium_text <- function() {
+sf_medium_text <- function() {
   return(sf_set_text_sizes("Medium"))
 }
 
-sf_Large_text <- function() {
+sf_large_text <- function() {
   return(sf_set_text_sizes("Large"))
 }
 
-sf_xLarge_text <- function() {
+sf_xlarge_text <- function() {
   return(sf_set_text_sizes("xLarge"))
 }
 
-sf_xxLarge_text <- function() {
+sf_xxlarge_text <- function() {
   return(sf_set_text_sizes("xxLarge"))
 }
 
-sf_xxxLarge_text <- function() {
+sf_xxxlarge_text <- function() {
   return(sf_set_text_sizes("xxxLarge"))
 }
 
+# THIS DOESN'T WORK FOR NOW!
 sf_set_text_sizes <- function(size = "xSmall") {
   font_scale <- sf_scale(size)
 
