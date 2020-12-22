@@ -41,6 +41,7 @@ sf_base <- function(
   subtitle_size = NULL,
   subtitle_face = "plain", subtitle_margin = 15,
   strip_text_family = "Inter", strip_text_size = NULL,
+  subtitle_margin = 25,
   strip_text_face = "plain",
   caption_family = "Inter",
   caption_size = NULL,
