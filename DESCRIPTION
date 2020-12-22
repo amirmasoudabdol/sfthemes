@@ -1,35 +1,40 @@
-Package: sfthemes
 Type: Package
-Title: Collection of ggplot2 themes, scales and colors inspired by Apple’s Human Interface Guidelines
+Package: sfthemes
+Title: Collection of ggplot2 themes, scales and colors inspired
+    by Apple’s Human Interface Guidelines
 Version: 0.1.0
-Authors@R: person(given = "Amir Masoud", family = "Abdol", role = c("aut","cre"), email = "amirmasoudabdol@icloud.com")
+Authors@R: 
+    person(given = "Amir Masoud",
+           family = "Abdol",
+           role = c("aut", "cre"),
+           email = "amirmasoudabdol@icloud.com")
 Maintainer: Amir Masoud Abdol <amirmasoudabdol@icloud.com>
-Description: sfthemes is a collection of ggplot2 themes, scales, and colors inspired by
-             Apple’s Human Interface Guidelines, and based on occasional appearances of charts used by
-             Apple within different contexts, e.g., Apple Health app, Screen Time on iOS and macOS.
-             In terms of typography, we optimized our themes to be compatible with SF Pro.
-             Additionally, we adhere to HIG’s dynamic type sizes in order to provide consistent
-             and elegant overall rescaling.
+Description: sfthemes is a collection of ggplot2 themes,
+    scales, and colors inspired by Apple’s Human Interface Guidelines, and
+    based on occasional appearances of charts used by Apple within
+    different contexts, e.g., Apple Health app, Screen Time on iOS and
+    macOS.  In terms of typography, we optimized our themes to be
+    compatible with SF Pro.  Additionally, we adhere to HIG’s dynamic type
+    sizes in order to provide consistent and elegant overall
+    rescaling.
 License: MIT + file LICENSE
+URL: https://sfthemes.amirmasoudabdol.name
+BugReports: https://github.com/amirmasoudabdol/sfthemes/issues
+Depends:
+    R (>= 3.4.0)
+Imports:
+    extrafont,
+    ggplot2 (>= 3.3.0),
+    grid,
+    scales
+Suggests:
+    dplyr,
+    gridExtra,
+    svglite,
+    testthat
+VignetteBuilder: 
+    knitr
 Encoding: UTF-8
 Language: en-US
 LazyData: true
-Depends:
-    R (>= 3.4.0)
-Suggests:
-    testthat,
-    dplyr,
-    gridExtra,
-    svglite
-Imports:
-    ggplot2 (>= 3.3.0),
-    grDevices,
-    grid,
-    scales,
-    extrafont,
-    knitr,
-    rmarkdown
-VignetteBuilder: knitr
-URL: https://sfthemes.amirmasoudabdol.name
-BugReports: https://github.com/amirmasoudabdol/sfthemes/issues
 RoxygenNote: 7.1.1
