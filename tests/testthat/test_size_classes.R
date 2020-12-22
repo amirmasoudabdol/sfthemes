@@ -13,11 +13,10 @@ test_that("size classes are correct", {
     ggplot(data=iris, aes(x=Sepal.Length, y=Sepal.Width, color=Species)) +
         geom_point(aes(shape=Species)) + 
         xlab("Sepal Length") + ylab("Sepal Width") +
-        labs(title = "Linear Fit", subtitle = classes[[i]]) +
+        labs(title = "Linear Fit", subtitle = classes[[i]], caption = "Lorem ipsum platea aliquam pharetra porttitor dictum orci quisque et suspendisse convallis") +
         geom_smooth(method="lm") +
         theme_sf_light(scale = classes[[i]], subtitle_margin = 25) +
-        scale_color_ios_light(accessible = T) +
-        theme(legend.position = "bottom")
+        scale_color_ios_light(accessible = T)
     
     ggsave(paste0("figures/size_classes/iris_linear_fit_light_", i, "_", 
                     classes[[i]], "_.png"),
@@ -26,11 +25,10 @@ test_that("size classes are correct", {
         ggplot(data=iris, aes(x=Sepal.Length, y=Sepal.Width, color=Species)) +
         geom_point(aes(shape=Species)) + 
         xlab("Sepal Length") + ylab("Sepal Width") +
-        labs(title = "Linear Fit", subtitle = classes[[i]]) +
+        labs(title = "Linear Fit", subtitle = classes[[i]], caption = "Lorem ipsum platea aliquam pharetra porttitor dictum orci quisque et suspendisse convallis") +
         geom_smooth(method="lm") +
         theme_sf_dark(scale = classes[[i]], subtitle_margin = 25) +
-        scale_color_ios_dark(accessible = T) +
-        theme(legend.position = "bottom")
+        scale_color_ios_dark(accessible = T)
     
     ggsave(paste0("figures/size_classes/iris_linear_fit_dark_", i, "_", 
                     classes[[i]], "_.png"),

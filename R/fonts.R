@@ -98,6 +98,7 @@ import_inter <- function() {
 
 font_inter <- "Inter"
 font_inter_bold <- "Inter Bold"
+font_inter_extra_bold <- "Inter Extra Bold"
 
 
 #' @rdname inter_font

@@ -5,23 +5,23 @@
 \title{San Francisco Dark Theme}
 \usage{
 theme_sf_dark(
-  base_family = "Inter",
+  base_family = font_inter,
   base_size = NULL,
-  plot_title_family = "Inter",
+  plot_title_family = font_inter_extra_bold,
   plot_title_size = NULL,
-  plot_title_face = "bold",
+  plot_title_face = NULL,
   plot_title_margin = 10,
-  subtitle_family = "Inter",
+  subtitle_family = font_inter,
   subtitle_size = NULL,
-  subtitle_face = "plain",
+  subtitle_face = NULL,
   subtitle_margin = 15,
-  strip_text_family = "Inter",
+  strip_text_family = font_inter,
   strip_text_size = NULL,
-  strip_text_face = "plain",
-  caption_family = "Inter",
+  strip_text_face = NULL,
+  caption_family = font_inter,
   caption_size = NULL,
-  caption_face = "plain",
-  caption_margin = 10,
+  caption_face = NULL,
+  caption_margin = 25,
   axis_text_size = NULL,
   axis_title_family = base_family,
   axis_title_size = NULL,
@@ -68,7 +68,7 @@ family, face and size}
 
 \item{grid_col}{grid color}
 
-\item{grid}{panel grid (`TRUE`, `FALSE`, or a combination of 
+\item{grid}{panel grid (`TRUE`, `FALSE`, or a combination of
 `X`, `x`, `Y`, `y`)}
 
 \item{axis_col}{axis color}
@@ -96,11 +96,11 @@ library(ggplot2); library(sfthemes)
 
 ggplot(mpg, aes(x = displ, y = hwy, colour = class)) +
   geom_point() +
-  labs(x= "Displacement", y= "Highway Miles per Gallon",
+  labs(x= "Displacement", y = "Highway Miles per Gallon",
        color = "Class",
-       title= "San Francisco Dark Theme",
-       subtitle= "Using iOS Dark Color Palette",
-       caption = "Fuel economy data from 1999 to 2008 for 38 
+       title = "San Francisco Dark Theme",
+       subtitle = "Using iOS Dark Color Palette",
+       caption = "Fuel economy data from 1999 to 2008 for 38
                      popular models of cars.") +
   theme_sf_dark() +
   scale_color_ios_dark()
@@ -109,8 +109,8 @@ ggplot(mpg, aes(y = class)) +
   geom_bar(aes(fill = drv), color = NA) +
   labs(x= "Class", y= "Count",
        fill = "Drive",
-       title= "San Francisco Dark Theme",
-       subtitle= "Using Accessible iOS Dark Palette",
+       title = "San Francisco Dark Theme",
+       subtitle = "Using Accessible iOS Dark Palette",
        caption = "Fuel economy data from 1999 to 2008 for 38
                       popular models of cars.") +
   theme_sf_dark() +

@@ -34,23 +34,23 @@
 #'
 #' @importFrom ggplot2 margin theme theme_minimal element_blank element_rect element_text element_line update_geom_defaults
 sf_base <- function(
-  base_family = "Inter", 
+  base_family = font_inter, 
   base_size = NULL,
-  plot_title_family = "Inter", 
+  plot_title_family = font_inter_extra_bold, 
   plot_title_size = NULL,
-  plot_title_face = "bold", 
+  plot_title_face = NULL, 
   plot_title_margin = 10,
-  subtitle_family = "Inter",
+  subtitle_family = font_inter,
   subtitle_size = NULL,
   subtitle_face = "plain", 
   subtitle_margin = 25,
-  strip_text_family = "Inter", 
+  strip_text_family = font_inter, 
   strip_text_size = NULL,
   strip_text_face = "plain",
-  caption_family = "Inter",
+  caption_family = font_inter,
   caption_size = NULL,
   caption_face = "plain", 
-  caption_margin = 10,
+  caption_margin = 25,
   axis_text_size = NULL,
   text_color_palette = ios_text_on_light_cols,
   axis_title_family = base_family,
@@ -58,6 +58,7 @@ sf_base <- function(
   axis_title_face = "plain",
   axis_title_just = "rt",
   legend_title_size = NULL,
+  legend_title_face = "bold",
   plot_background_col = "white",
   panel_background_col = "white",
   plot_margin = margin(30, 30, 30, 30),
@@ -105,7 +106,7 @@ sf_base <- function(
         to font sizes may cause disproportionate text sizes.")
 
   if (is.null(caption_size))
-    caption_size <- font_scale[["sizes"]][["subhead"]]
+    caption_size <- font_scale[["sizes"]][["footnote"]]
   else
     warning("The `caption_size` variable is set manually.\n
         Since SFThemes scales font sizes automatically, manual changes
@@ -340,7 +341,7 @@ sf_base <- function(
 
   ret <- ret + theme(plot.caption =
             element_text(color = text_color_palette[["label"]],
-                   hjust = 1,
+                   hjust = 0,
                    size = caption_size,
                    margin = margin(t = caption_margin),
                    family = caption_family,
@@ -350,7 +351,7 @@ sf_base <- function(
             element_text(color = text_color_palette[["label"]],
                    size = legend_title_size,
                    family = caption_family,
-                   face = "bold"))
+                   face = legend_title_face))
 
   ret <- ret + theme(legend.text =
             element_text(color = text_color_palette[["label"]],
