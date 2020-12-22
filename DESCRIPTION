@@ -12,6 +12,7 @@ Description: sfthemes is a collection of ggplot2 themes, scales, and colors insp
              and elegant overall rescaling.
 License: MIT + file LICENSE
 Encoding: UTF-8
+Language: en-US
 LazyData: true
 Depends:
     R (>= 3.4.0)

@@ -1,4 +1,4 @@
-# San Francisco Themes <img src="man/figures/logo.png" width="20%" align="right"/>
+# San Francisco Themes <picture><source srcset="reference/figures/logo-dark.png" media="(prefers-color-scheme: dark)"><img src="man/figures/logo-light.png" width="120" align="right"/></picture>
 
 sfthemes is a collection of [`ggplot2`](https://ggplot2.tidyverse.org) themes, scales, and colors based on [Apple's Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/), and inspired by occasional appearances of charts used by Apple within different contexts, e.g., Apple Health app, Screen Time on iOS and macOS. In terms of typography, we optimized our themes to be compatible with [SF Pro](https://developer.apple.com/fonts/) and [Inter](https://rsms.me/inter/) typefaces. Additionally, we are using [dynamic type sizes](https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/typography/) in order to provide consistent and elegant overall rescaling.
 

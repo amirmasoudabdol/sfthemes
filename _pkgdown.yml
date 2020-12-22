@@ -2,6 +2,7 @@ url: https://sfthemes.amirmasoudabdol.name
 
 home:
   title: San Francisco Themes
+  description: Collection of ggplot2 themes, scales and colors inspired by Apple’s Human Interface Guidelines
 
 authors:
   Amir Masoud Abdol:
@@ -23,7 +24,6 @@ template:
     canalytics:
       domain: sfthemes.amirmasoudabdol.name
       src: https://stats.sfthemes.amirmasoudabdol.name/js/index.js
-    toggle: manual
 
 articles:
 - title: San Francisco Themes
