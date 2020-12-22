@@ -71,6 +71,8 @@
 
 
 
+  <link href="../extra.css" rel="stylesheet">
+  
 
 <meta property="og:title" content="San Francisco Dark Theme — theme_sf_dark" />
 <meta property="og:description" content="San Francisco Dark Theme" />
@@ -180,23 +182,23 @@
     </div>
 
     <pre class="usage"><span class='fu'>theme_sf_dark</span><span class='op'>(</span>
-  base_family <span class='op'>=</span> <span class='st'>"Inter"</span>,
+  base_family <span class='op'>=</span> <span class='va'>font_inter</span>,
   base_size <span class='op'>=</span> <span class='cn'>NULL</span>,
-  plot_title_family <span class='op'>=</span> <span class='st'>"Inter"</span>,
+  plot_title_family <span class='op'>=</span> <span class='va'>font_inter_extra_bold</span>,
   plot_title_size <span class='op'>=</span> <span class='cn'>NULL</span>,
-  plot_title_face <span class='op'>=</span> <span class='st'>"bold"</span>,
+  plot_title_face <span class='op'>=</span> <span class='cn'>NULL</span>,
   plot_title_margin <span class='op'>=</span> <span class='fl'>10</span>,
-  subtitle_family <span class='op'>=</span> <span class='st'>"Inter"</span>,
+  subtitle_family <span class='op'>=</span> <span class='va'>font_inter</span>,
   subtitle_size <span class='op'>=</span> <span class='cn'>NULL</span>,
-  subtitle_face <span class='op'>=</span> <span class='st'>"plain"</span>,
+  subtitle_face <span class='op'>=</span> <span class='cn'>NULL</span>,
   subtitle_margin <span class='op'>=</span> <span class='fl'>15</span>,
-  strip_text_family <span class='op'>=</span> <span class='st'>"Inter"</span>,
+  strip_text_family <span class='op'>=</span> <span class='va'>font_inter</span>,
   strip_text_size <span class='op'>=</span> <span class='cn'>NULL</span>,
-  strip_text_face <span class='op'>=</span> <span class='st'>"plain"</span>,
-  caption_family <span class='op'>=</span> <span class='st'>"Inter"</span>,
+  strip_text_face <span class='op'>=</span> <span class='cn'>NULL</span>,
+  caption_family <span class='op'>=</span> <span class='va'>font_inter</span>,
   caption_size <span class='op'>=</span> <span class='cn'>NULL</span>,
-  caption_face <span class='op'>=</span> <span class='st'>"plain"</span>,
-  caption_margin <span class='op'>=</span> <span class='fl'>10</span>,
+  caption_face <span class='op'>=</span> <span class='cn'>NULL</span>,
+  caption_margin <span class='op'>=</span> <span class='fl'>25</span>,
   axis_text_size <span class='op'>=</span> <span class='cn'>NULL</span>,
   axis_title_family <span class='op'>=</span> <span class='va'>base_family</span>,
   axis_title_size <span class='op'>=</span> <span class='cn'>NULL</span>,
@@ -269,7 +271,7 @@ family, face and size</p></td>
     </tr>
     <tr>
       <th>grid</th>
-      <td><p>panel grid (`TRUE`, `FALSE`, or a combination of 
+      <td><p>panel grid (`TRUE`, `FALSE`, or a combination of
 `X`, `x`, `Y`, `y`)</p></td>
     </tr>
     <tr>
@@ -313,11 +315,11 @@ family, face and size</p></td>
 
 <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='va'>mpg</span>, <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>displ</span>, y <span class='op'>=</span> <span class='va'>hwy</span>, colour <span class='op'>=</span> <span class='va'>class</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
   <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span>
-  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span>x<span class='op'>=</span> <span class='st'>"Displacement"</span>, y<span class='op'>=</span> <span class='st'>"Highway Miles per Gallon"</span>,
+  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span>x<span class='op'>=</span> <span class='st'>"Displacement"</span>, y <span class='op'>=</span> <span class='st'>"Highway Miles per Gallon"</span>,
        color <span class='op'>=</span> <span class='st'>"Class"</span>,
-       title<span class='op'>=</span> <span class='st'>"San Francisco Dark Theme"</span>,
-       subtitle<span class='op'>=</span> <span class='st'>"Using iOS Dark Color Palette"</span>,
-       caption <span class='op'>=</span> <span class='st'>"Fuel economy data from 1999 to 2008 for 38 
+       title <span class='op'>=</span> <span class='st'>"San Francisco Dark Theme"</span>,
+       subtitle <span class='op'>=</span> <span class='st'>"Using iOS Dark Color Palette"</span>,
+       caption <span class='op'>=</span> <span class='st'>"Fuel economy data from 1999 to 2008 for 38
                      popular models of cars."</span><span class='op'>)</span> <span class='op'>+</span>
   <span class='fu'>theme_sf_dark</span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span>
   <span class='fu'><a href='scale_colour_ios_dark.html'>scale_color_ios_dark</a></span><span class='op'>(</span><span class='op'>)</span>
@@ -326,8 +328,8 @@ family, face and size</p></td>
   <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_bar.html'>geom_bar</a></span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>fill <span class='op'>=</span> <span class='va'>drv</span><span class='op'>)</span>, color <span class='op'>=</span> <span class='cn'>NA</span><span class='op'>)</span> <span class='op'>+</span>
   <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span>x<span class='op'>=</span> <span class='st'>"Class"</span>, y<span class='op'>=</span> <span class='st'>"Count"</span>,
        fill <span class='op'>=</span> <span class='st'>"Drive"</span>,
-       title<span class='op'>=</span> <span class='st'>"San Francisco Dark Theme"</span>,
-       subtitle<span class='op'>=</span> <span class='st'>"Using Accessible iOS Dark Palette"</span>,
+       title <span class='op'>=</span> <span class='st'>"San Francisco Dark Theme"</span>,
+       subtitle <span class='op'>=</span> <span class='st'>"Using Accessible iOS Dark Palette"</span>,
        caption <span class='op'>=</span> <span class='st'>"Fuel economy data from 1999 to 2008 for 38
                       popular models of cars."</span><span class='op'>)</span> <span class='op'>+</span>
   <span class='fu'>theme_sf_dark</span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span>
