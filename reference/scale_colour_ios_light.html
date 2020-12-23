@@ -75,8 +75,13 @@
   
 
 <meta property="og:title" content="iOS Light Color Scales — scale_colour_ios_light" />
-<meta property="og:description" content="Note: We recommend to not use the iOS Palette for more than 6 categories.
-This guarantee an acceptable level of contrast." />
+<meta property="og:description" content="These scales meant to be used with light themes, e.g, theme_sf_light().
+While they can be used with dark themes, in general, we recommend pairing
+scale_colour_*_lights with light themes for better clarity and contrast.
+→ Note: While iOS color palettes provide a total of 9 colors, we do not
+recommend using them for more than 6 groups. The last three colors often
+collide with other colors in the palette and may affect the clarity of your
+visualization." />
 <meta property="og:image" content="https://sfthemes.amirmasoudabdol.name/reference/figures/twitter-summary-card.png" />
 <meta property="og:image:alt" content="TO BE ADDED LATER" />
 <meta name="twitter:card" content="summary_large_image" />
@@ -189,8 +194,13 @@ This guarantee an acceptable level of contrast." />
     </div>
 
     <div class="ref-description">
-    <p><strong>Note:</strong> We recommend to not use the iOS Palette for more than 6 categories.
-This guarantee an acceptable level of contrast.</p>
+    <p>These scales meant to be used with light themes, e.g, <code><a href='theme_sf_light.html'>theme_sf_light()</a></code>.
+While they can be used with dark themes, in general, we recommend pairing
+<code>scale_colour_*_light</code>s with light themes for better clarity and contrast.</p>
+<p>→ <strong>Note</strong>: <em>While iOS color palettes provide a total of 9 colors, we do not
+recommend using them for more than 6 groups. The last three colors often
+collide with other colors in the palette and may affect the clarity of your
+visualization.</em></p>
     </div>
 
     <pre class="usage"><span class='fu'>scale_colour_ios_light</span><span class='op'>(</span>order <span class='op'>=</span> <span class='st'>"contrast"</span>, accessible <span class='op'>=</span> <span class='cn'>FALSE</span>, <span class='va'>...</span><span class='op'>)</span>

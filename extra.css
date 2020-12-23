@@ -1,6 +1,6 @@
 img {
 	border-radius: 4px; !important;
-	background-color: transparent;
+	background-color: transparent !important;
 }
 
 .center-block {
