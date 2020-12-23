@@ -10,10 +10,8 @@ watchos_dark_pal(order = "contrast")
 \item{order}{Indicates the order of colors in the palette}
 }
 \description{
-Set of color palettes based on \link{macOS System Colors}
-(https://developer.apple.com/design/human-interface-guidelines/watchos/visual/color/).
-General information about each palette can be found in the \link{colors}
-(../articles/colors.html) vignette.
+Set of color palettes based on \href{https://developer.apple.com/design/human-interface-guidelines/watchos/visual/color/}{watchOS System Colors}.
+General information about each palette can be found in the \href{../articles/colors.html}{colors} vignette.
 }
 \details{
 These functions are ideal for accessing the raw color values, and
@@ -24,7 +22,7 @@ of the followings:
 \item \link{scale_colour_watchos_dark}
 }
 
-\strong{Note}: We recommend paining this palette with dark themes, as the high
+→ \strong{Note}: We recommend paining this palette with dark themes, as the high
 base brightness of colors may make them hard to distinguish in light
 themes
 }

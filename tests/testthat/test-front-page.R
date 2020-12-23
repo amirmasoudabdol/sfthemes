@@ -55,7 +55,7 @@ test_that("front page figures are generated", {
                 \\( +clone -flop \\) -compose Multiply -composite \\
              \\) -alpha off -compose CopyOpacity -composite ../../man/figures/front-page-main-alt.png")
 
-    system("convert ../../man/figures/front-page-main-alt.png \\( +clone  -background black -shadow 40x40+0+0 \\) +swap \\
+    system("convert ../../man/figures/front-page-main-alt.png \\( +clone  -background white -shadow 40x40+0+0 \\) +swap \\
                 -background none   -layers merge  +repage   ../../man/figures/front-page-main-alt.png")
 
 

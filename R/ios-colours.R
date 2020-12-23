@@ -124,8 +124,15 @@ ios_light_pal <- function(order = "contrast", accessible = FALSE) {
 #' iOS Light Color Scales
 #' @md
 #' @description
-#' **Note:** We recommend to not use the iOS Palette for more than 6 categories.
-#'  This guarantee an acceptable level of contrast.
+#'
+#' These scales meant to be used with light themes, e.g, `theme_sf_light()`.
+#' While they can be used with dark themes, in general, we recommend pairing 
+#' `scale_colour_*_light`s with light themes for better clarity and contrast.
+#' 
+#' → **Note**: *While iOS color palettes provide a total of 9 colors, we do not
+#' recommend using them for more than 6 groups. The last three colors often
+#' collide with other colors in the palette and may affect the clarity of your
+#' visualization.*
 #'
 #' @param accessible Indicates whether the accessible set of colors should be
 #' used
@@ -190,6 +197,17 @@ ios_dark_pal <- function(order = "contrast", accessible = FALSE) {
 }
 
 #' iOS Dark Color Scales
+#'
+#' @md
+#' @description
+#' These scales meant to be used with dark themes, e.g, `theme_sf_dark()`.
+#' While they can be used with light themes, in general, we recommend pairing 
+#' `scale_colour_*_dark`s with dark themes for better clarity and contrast.
+#' 
+#' → **Note**: *While iOS color palettes provide a total of 9 colors, we do not
+#' recommend using them for more than 6 groups. The last three colors often
+#' collide with other colors in the palette and may affect the clarity of your
+#' visualization.*
 #'
 #' @param accessible Indicates whether the accessible set of colors should be
 #' used
@@ -292,6 +310,16 @@ ios_gray_light_pal <- function(accessible = FALSE) {
 
 #' iOS Gray Light Color Scales
 #'
+#' @md
+#' @description
+#' These scales are based on light gray palette of iOS system colors. They have
+#' only been implemented in sfthemes because I wanted to bring all the color 
+#' palettes mentioned in the Apple's HIG.
+#' 
+#' **Warning**: *iOS gray colors are not necessary suitable for general 
+#' plotting; so consider your use-case carefully before adapting them. You can
+#' loosely compare them to `ggplot2::scale_alpha()`.*
+#'
 #' @param accessible Indicates whether the accessible set of colors should be
 #' used
 #'
@@ -352,6 +380,16 @@ ios_gray_dark_pal <- function(accessible = FALSE) {
 }
 
 #' iOS Gray Dark Color Palette
+#' 
+#' @md
+#' @description
+#' These scales are based on dark gray palette of iOS system colors. They have
+#' only been implemented in sfthemes because I wanted to bring all the color 
+#' palettes mentioned in the Apple's HIG.
+#' 
+#' **Warning**: *iOS gray colors are not necessary suitable for general 
+#' plotting; so consider your use-case carefully before adapting them. You can
+#' loosely compare them to `ggplot2::scale_alpha()`.*
 #'
 #' @param accessible Indicates whether the accessible set of colors should be
 #'  used

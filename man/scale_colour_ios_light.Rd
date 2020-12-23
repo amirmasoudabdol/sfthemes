@@ -68,8 +68,14 @@ The default, \code{TRUE}, uses the levels that appear in the data;
   }}
 }
 \description{
-\strong{Note:} We recommend to not use the iOS Palette for more than 6 categories.
-This guarantee an acceptable level of contrast.
+These scales meant to be used with light themes, e.g, \code{theme_sf_light()}.
+While they can be used with dark themes, in general, we recommend pairing
+\verb{scale_colour_*_light}s with light themes for better clarity and contrast.
+
+→ \strong{Note}: \emph{While iOS color palettes provide a total of 9 colors, we do not
+recommend using them for more than 6 groups. The last three colors often
+collide with other colors in the palette and may affect the clarity of your
+visualization.}
 }
 \seealso{
 Other colour scales: 

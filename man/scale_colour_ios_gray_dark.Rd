@@ -66,7 +66,13 @@ The default, \code{TRUE}, uses the levels that appear in the data;
   }}
 }
 \description{
-iOS Gray Dark Color Palette
+These scales are based on dark gray palette of iOS system colors. They have
+only been implemented in sfthemes because I wanted to bring all the color
+palettes mentioned in the Apple's HIG.
+
+\strong{Warning}: \emph{iOS gray colors are not necessary suitable for general
+plotting; so consider your use-case carefully before adapting them. You can
+loosely compare them to \code{ggplot2::scale_alpha()}.}
 }
 \seealso{
 Other colour scales: 

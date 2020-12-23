@@ -59,7 +59,6 @@ reference:
 - title: Themes
   desc:
   contents:
-  - sf_base
   - theme_sf_light
   - theme_sf_dark
 

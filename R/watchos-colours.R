@@ -21,10 +21,8 @@ watchos_col_order <-
 #' @title watchOS Color Palette
 #'
 #' @md
-#' @description Set of color palettes based on [macOS System Colors]
-#'  (https://developer.apple.com/design/human-interface-guidelines/watchos/visual/color/).
-#'  General information about each palette can be found in the [colors]
-#'  (../articles/colors.html) vignette.
+#' @description Set of color palettes based on [watchOS System Colors](https://developer.apple.com/design/human-interface-guidelines/watchos/visual/color/).
+#'  General information about each palette can be found in the [colors](../articles/colors.html) vignette.
 #'
 #' @details These functions are ideal for accessing the raw color values, and
 #'  can be used within functions where raw color values are needed, e.g.,
@@ -33,7 +31,7 @@ watchos_col_order <-
 #'
 #' - [scale_colour_watchos_dark]
 #'
-#' **Note**: We recommend paining this palette with dark themes, as the high
+#' → **Note**: We recommend paining this palette with dark themes, as the high
 #'   base brightness of colors may make them hard to distinguish in light
 #'   themes
 #'
@@ -53,9 +51,16 @@ watchos_dark_pal <- function(order = "contrast") {
     scales::manual_pal(watchos_dark_palette[watchos_col_order[[order]]])
 }
 
-#' @title watchOS Color Scales
+#' @title watchOS Dark Color Scales
 #'
-#' @description Description of the colors
+#' @description 
+#' watchOS colors are very bright but do not necessary have a lot of contrast.
+#' We strictly recommend to pair them with dark themes, e.g., `theme_sf_dark()`.
+#' 
+#' → **Note**: *While watchOS color palettes provide a total of 10 colors, we do not
+#' recommend using them for more than 7 groups. The last three colors often
+#' collide with other colors in the palette and may affect the clarity of your
+#' visualization.*
 #'
 #' @param order Indicates the order of colors in the palette
 #'

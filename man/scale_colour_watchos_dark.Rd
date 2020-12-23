@@ -3,7 +3,7 @@
 \name{scale_colour_watchos_dark}
 \alias{scale_colour_watchos_dark}
 \alias{scale_fill_watchos_dark}
-\title{watchOS Color Scales}
+\title{watchOS Dark Color Scales}
 \usage{
 scale_colour_watchos_dark(order = "contrast", ...)
 
@@ -65,7 +65,13 @@ The default, \code{TRUE}, uses the levels that appear in the data;
   }}
 }
 \description{
-Description of the colors
+watchOS colors are very bright but do not necessary have a lot of contrast.
+We strictly recommend to pair them with dark themes, e.g., `theme_sf_dark()`.
+
+→ **Note**: *While watchOS color palettes provide a total of 10 colors, we do not
+recommend using them for more than 7 groups. The last three colors often
+collide with other colors in the palette and may affect the clarity of your
+visualization.*
 }
 \seealso{
 Other colour scales: 

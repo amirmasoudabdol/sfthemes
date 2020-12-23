@@ -201,7 +201,18 @@ macos_light_pal <- function(order = "contrast", accessible = FALSE, vibrant = FA
     }
 }
 
-#' macOS Color Scales
+#' macOS Light Color Scales
+#'
+#' @md
+#' @description
+#' These scales meant to be used with light themes, e.g, `theme_sf_light()`.
+#' While they can be used with dark themes, in general, we recommend pairing 
+#' `scale_colour_*_light`s with light themes for better clarity and contrast.
+#' 
+#' → **Note**: *While macOS color palettes provide a total of 11 colors, we do not
+#' recommend using them for more than 8 groups. The last three colors often
+#' collide with other colors in the palette and may affect the clarity of your
+#' visualization.*
 #'
 #' @param accessible Returns accessible alternative of colors
 #' @param vibrant Returns vibrant alternative of colors
@@ -338,6 +349,18 @@ macos_dark_pal <- function(order = "contrast", accessible = FALSE, vibrant = FAL
 }
 
 #' macOS Dark Color Scales
+#'
+#' @md
+#' @description
+#' These scales meant to be used with dark themes, e.g, `theme_sf_dark()`.
+#' While they can be used with light themes, in general, we recommend pairing 
+#' `scale_colour_*_dark`s with dark themes for better clarity and contrast.
+#' 
+#' → **Note**: *While macOS color palettes provide a total of 11 colors, we do not
+#' recommend using them for more than 8 groups. The last three colors often
+#' collide with other colors in the palette and may affect the clarity of your
+#' visualization.*
+#'
 #' @param accessible Returns accessible alternative of colors
 #' @param vibrant Returns vibrant alternative of colors
 #' @param order Indicates the order of colors in the palette
