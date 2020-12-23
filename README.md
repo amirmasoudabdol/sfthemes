@@ -50,7 +50,7 @@ In general, we recommend pairing light scales with `theme_sf_light` and dark sca
 
 | | |
 |--|--|
-|![](man/figures/front-page-main-light.png) | ![](man/figures/front-page-main-dark.png) |
+|![](man/figures/front-page-sample-light.png) | ![](man/figures/front-page-sample-dark.png) |
 
 #### Accessible Colors
 
