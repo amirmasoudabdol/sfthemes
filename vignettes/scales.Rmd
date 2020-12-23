@@ -19,24 +19,3 @@ Besides dynamic type sizing, sfthemes can also scale all other elements of the p
 | xxLarge | 4 |
 | xxxLarge | 5 |
 
-```R
-library(ggplot2); library(sfthemes)
-
-x <- seq(0.01, .99, length.out = 100)
-df <- data.frame(
-    x = rep(x, 2),
-    y = c(qlogis(x), 2 * qlogis(x)),
-    group = rep(c("a","b"),
-                each = 100)
-)
-
-scale = "Medium" # <-- Adjust the scaling factor here!
-
-ggplot(df, aes(x=x, y=y)) +
-    geom_line(aes(colour = group), linetype = 2, show.legend = TRUE) +
-    labs(title = "xSmall Scale", subtitle = "xSmall subtitle", x = "X", y = "Y", color = "Group") +
-    theme_sf_dark(scale = scale) + scale_color_watchos_dark() +
-    theme(legend.position = "bottom") 
-```
-
-![](images/plot_scaling.png)

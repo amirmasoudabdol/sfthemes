@@ -11,7 +11,7 @@ Both themes are compatible with [SF Pro](https://developer.apple.com/fonts/) and
 
 ## Inter, The Alternative
 
-As an alternative, sfthemes uses the [Inter](https://rsms.me/inter/) family. Inter typeface is a [free and open source](https://github.com/rsms/inter), and you are free to use it in almost any way imaginable. 
+Inter is a [free and open source](https://github.com/rsms/inter) typeface, and you are free to use it in almost any way imaginable. 
 
 Inter is closely related to SF Pro. Like SF Pro, it is crafted and designed for computer screens, therefore sfthemes plots with Inter fonts will look a lot like their SF Pro variants.
 
@@ -22,41 +22,23 @@ Inter is closely related to SF Pro. Like SF Pro, it is crafted and designed for 
 
 ### Usage
 
-Inter is the default typeface of the sfthemes, and can be used without setting any special commands. However, [sf_set_inter](../reference/sf_pro_font.html) is available and can be used to change other themes' font.
-
-```R
-library(ggplot2); library(sfthemes)
-
-# Changing 
-ggplot(diamonds, aes(carat)) +
-  geom_histogram() +
-  sf_set_inter()
-```
+Inter is the **default** typeface of the sfthemes, and it can be used without setting any special commands.
 
 ## San Francisco Family
 
-[San Francisco typeface](https://en.wikipedia.org/wiki/San_Francisco_(sans-serif_typeface)) consists of three large family of typefaces, SF Pro, SF Compact, and SF Mono. They are degined to be used in different Apple platforms, e.g., iOS, macOS. Each family has its own characteristic and is optimized for certain screensize and resolution. sfthemes is optimized for SF Pro, the most general variant of the typeface designed for iOS, iPadOS, and macOS. 
+[San Francisco typeface](https://en.wikipedia.org/wiki/San_Francisco_(sans-serif_typeface)) consists of three large family of typefaces, SF Pro, SF Compact, and SF Mono. They are degined to be used in different Apple platforms, e.g., iOS, macOS. Each family has its own characteristic and is optimized for certain screen size and resolution. sfthemes is optimized for SF Pro, the most general variant of the typeface designed for iOS, iPadOS, and macOS. 
 
-Apple restricted the usage of the entire SF typeface family for developers who ar designing and developing applications for Apple's platforms. Please keep this resctriction in mind when using and sharing your plots, if you are using SF Pro as the main typeface of the plots.
+Apple restricted the usage of the entire SF typeface family for developers who are designing and developing applications or material for Apple's platforms. Please keep this resctriction in mind when using and sharing your plots, if you are using SF Pro as the main typeface of the plots. 
 
-Moreover, distribution and repackaging of San Francisco family is prohibited, however, the fonts can be downloaded directly from Apple's website. [Download SF Pro](https://developer.apple.com/fonts/)
+Distribution and repackaging of the San Francisco family is prohibited, however, the fonts can be downloaded directly from Apple's website. [Download SF Pro](https://developer.apple.com/fonts/)
 
 ### Usage
 
-In order to use SF Pro, you can apply the [sf_set_sf_pro](../reference/sf_pro_font.html) function to the end of your ggplot customization commands. Keep in mind that if you have not installed and imported SF Pro correctly, this command will fail, or `ggplot2` will ignore your font choice. See [import_sf_pro](../reference/sf_pro_font.html) for the instalation process of SF Pro.
-
-```R
-library(ggplot2); library(sfthemes)
-
-ggplot(diamonds, aes(carat)) +
-  geom_histogram() +
-  theme_sf_dark() + scale_colour_watchos_dark() +
-  sf_set_sf_pro()
-```
+TODO: This needs to be rewritten...
 
 ## Dynamic Type Sizes
 
-sfthemes has adjsuted and adapted all available [dynamic type sizes](https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/typography#dynamic-type-sizes) as presented in Apple's HIG. sfthems size classes are based on iOS font sizes with minor compatibility modifications. In total, there are 7 size classes available — i.e., `xSmall`, `Small`, `Medium`, `Large`, `xLarge`, `xxLarge`, `xxxLarge` — with `Medium` being the default class. With both `theme_sf_light` and `theme_sf_dark`, The `font_size_scale` parameter can be used to change the overall text sizes of a plot. 
+sfthemes has adjsuted and adapted all available [dynamic type sizes](https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/typography#dynamic-type-sizes) as presented in Apple's HIG. sfthemes size classes are based on iOS font sizes with minor compatibility modifications. In total, there are 7 size classes available — i.e., `xSmall`, `Small`, `Medium`, `Large`, `xLarge`, `xxLarge`, `xxxLarge` — with `Medium` being the default class.
 
 | class| Title | Subtitle | Body | Ticks |
 |------|-----|-----|-----|-----|

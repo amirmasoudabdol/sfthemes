@@ -9,8 +9,7 @@ vignette: >
 
 [Apple's Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/) provides two primary color palettes for each platform, light and dark. 
 
-
-On iOS, each palette is accompanied by an accessible variant as well where the temperature and transparency were adjusted to provide higher contrast. Both light and dark palettes can be used with `theme_sf_light()` and `theme_sf_dark()` themes. 
+On iOS, each palette is accompanied by an accessible variant where the temperature and transparency of colors are adjusted to provide higher contrast and brightness. Both light and dark palettes can be used with `theme_sf_light()` and `theme_sf_dark()` themes. However, we recommend using light palettes with light themes, and dark palettes with dark themes. 
 
 **iOS Light Palette**
 ![iOS Light](images/ios_light.png)
@@ -26,12 +25,12 @@ On macOS, in addition to light and dark palettes and their accessible forms, eac
 **macOS Vibrant Light Palette**
 ![macOS Light Accessible](images/macos_light_vibrant.png)
 
-On watchOS, only one color palette is provided. The watchOS color palette is specifically designed to provide higher level of contrast and brightness, and is best accompanied with dark themes.
+On watchOS, only one color palette is provided. The watchOS color palette is specifically designed to provide higher level of contrast and brightness, and it is best accompanied by dark themes.
 
 **watchOS Dark Palette**
 ![watchOS Dark](images/watchos_dark.png)
 
-In total, sfthemes offers the following list of palettes:
+Collectively, sfthemes offers 17 color palettes:
 
 [**iOS Set**](../reference/ios_color_palettes.html)
 
@@ -60,9 +59,9 @@ In total, sfthemes offers the following list of palettes:
 - watchOS Dark
 
 
-## Palette Order
+## Color’s Order
 
-Each palette in sfthemes can be sorted in two ways. The *default* order returns colors of the palette according to their appearance in HIG document, and the *contrast* (default) order returns an optimized ordering of colors to maximize their in-between contrast. 
+Each palette in sfthemes can be sorted in two ways. The *`default`* order returns colors of the palette according to their appearance in Apple’s HIG document, and the *`contrast`* (default) order returns an optimized ordering of colors to maximize their in-between contrast. 
 
 **iOS palette ordered for more in-between contrast**
 ![](images/ios_light_contrast.png)
