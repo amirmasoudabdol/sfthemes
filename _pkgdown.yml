@@ -14,9 +14,18 @@ repo:
     source: https://github.com/amirmasoudabdol/sfthemes/blob/main/
     issue: https://github.com/amirmasoudabdol/sfthemes/issues/
     user: https://github.com/amirmasoudabdol/
+  branch: main
 
 development:
   mode: auto
+
+navbar:
+  structure:
+    right: [github, kofi]
+  components:
+    kofi:
+      icon: "fas fa-coffee fa-lg"
+      href: https://ko-fi.com/C0C47DMK
 
 template:
   package: preferably
@@ -24,28 +33,37 @@ template:
     canalytics:
       domain: sfthemes.amirmasoudabdol.name
       src: https://stats.sfthemes.amirmasoudabdol.name/js/index.js
+  opengraph:
+    image:
+      src: man/figures/twitter-summary-card.png
+      alt: TO BE ADDED LATER
+    twitter:
+      creator: "@amirmasoudabdol"
+      site: https://amirmasoudabdol.name
+      card: summary_large_image
 
 articles:
 - title: San Francisco Themes
   navbar: ~
   contents:
   - typography
-  - colors
+  - colours
   - scales
 
 reference:
 - title: Typography
+  desc: This is about typography
   contents:
   - starts_with("import_")
 
 - title: Themes
+  desc:
   contents:
   - sf_base
   - theme_sf_light
   - theme_sf_dark
 
 - title: Scales
-
 - subtitle: iOS
   contents:
   - ends_with("ios_light")

@@ -16,7 +16,9 @@ test_that("front page figures are generated", {
         scale_colour_ios_light(accessible = F) +
         theme(legend.position = "bottom")
 
+    ggsave("../../man/figures/front-page-main-light.png", width = 20, height = 15, bg = "transparent", dpi = 72)
     ggsave("figures/front_page/front_page_light.png", width = 20, height = 15, bg = "transparent", dpi = 72)
+    ggsave("figures/front_page/front_page_light_alt.png", width = 20, height = 15, bg = "transparent", dpi = 72)
 
     ggplot(data=iris, aes(x=Sepal.Length, y=Sepal.Width, color=Species)) +
         geom_point(aes(shape=Species)) + xlab("Sepal Length") + ylab("Sepal Width") +
@@ -26,7 +28,10 @@ test_that("front page figures are generated", {
         scale_colour_ios_dark(accessible = F) +
         theme(legend.position = "bottom")
 
+    ggsave("../../man/figures/front-page-main-dark.png", width = 20, height = 15, bg = "transparent", dpi = 72)
     ggsave("figures/front_page/front_page_dark.png", width = 20, height = 15, bg = "transparent", dpi = 72)
+    ggsave("figures/front_page/front_page_dark_alt.png", width = 20, height = 15, bg = "transparent", dpi = 72)
 
     system("../../misc/stitch_two.sh figures/front_page/front_page_light.png figures/front_page/front_page_dark.png ../../man/figures/front-page-main.png")
+    system("../../misc/stitch_two.sh figures/front_page/front_page_dark_alt.png figures/front_page/front_page_light_alt.png ../../man/figures/front-page-main-alt.png")
 })
