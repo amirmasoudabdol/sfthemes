@@ -37,7 +37,11 @@
 <script src="pkgdown.js"></script><link href="extra.css" rel="stylesheet">
 <meta property="og:title" content="San Francisco Themes">
 <meta property="og:description" content="Collection of ggplot2 themes, scales and colors inspired by Apple’s Human Interface Guidelines">
-<meta property="og:image" content="https://sfthemes.amirmasoudabdol.name/logo.svg">
+<meta property="og:image" content="https://sfthemes.amirmasoudabdol.name/reference/figures/twitter-summary-card.png">
+<meta property="og:image:alt" content="TO BE ADDED LATER">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:creator" content="@amirmasoudabdol">
+<meta name="twitter:site" content="https://amirmasoudabdol.name">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!-- Custom Analytics --><script async defer data-domain="sfthemes.amirmasoudabdol.name" src="https://stats.sfthemes.amirmasoudabdol.name/js/index.js"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -71,6 +75,9 @@
 <li>
   <a href="reference/index.html">Reference</a>
 </li>
+<li>
+  <a href="news/index.html">Changelog</a>
+</li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     Articles
@@ -82,21 +89,24 @@
       <a href="articles/typography.html">Typography</a>
     </li>
     <li>
-      <a href="articles/colors.html">Colors</a>
+      <a href="articles/colours.html">Colours</a>
     </li>
     <li>
       <a href="articles/scales.html">Scales</a>
     </li>
   </ul>
 </li>
-<li>
-  <a href="news/index.html">Changelog</a>
-</li>
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
   <a href="https://github.com/amirmasoudabdol/sfthemes/">
     <span class="fab fa-github fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://ko-fi.com/C0C47DMK">
+    <span class="fas fa-coffee fa-lg"></span>
      
   </a>
 </li>
@@ -116,8 +126,10 @@
 <div class="page-header"><h1 class="hasAnchor">
 <a href="#san-francisco-themes-" class="anchor"></a>San Francisco Themes <picture><source srcset="reference/figures/logo-dark.png" media="(prefers-color-scheme: dark)"><img src="reference/figures/logo-light.png" width="120" align="right"></source></picture>
 </h1></div>
-<p>sfthemes is a collection of <a href="https://ggplot2.tidyverse.org"><code>ggplot2</code></a> themes, scales, and colors based on <a href="https://developer.apple.com/design/human-interface-guidelines/">Apple’s Human Interface Guidelines</a>, and inspired by occasional appearances of charts used by Apple within different contexts, e.g., Apple Health app, Screen Time on iOS and macOS. In terms of typography, we optimized our themes to be compatible with <a href="https://developer.apple.com/fonts/">SF Pro</a> and <a href="https://rsms.me/inter/">Inter</a> typefaces. Additionally, we are using <a href="https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/typography/">dynamic type sizes</a> in order to provide consistent and elegant overall rescaling.</p>
-<p><img src="reference/figures/iris.png" class="img-responsive center-block d-block mx-auto"></p>
+<p>sfthemes is a pair of <a href="https://ggplot2.tidyverse.org"><code>ggplot2</code></a> themes, <code><a href="reference/theme_sf_light.html">theme_sf_light()</a></code>, <code><a href="reference/theme_sf_dark.html">theme_sf_dark()</a></code>, and a collection of color scales based on <a href="https://developer.apple.com/design/human-interface-guidelines/">Apple’s Human Interface Guidelines</a>. Themes are inspired by the occasional appearances of charts used by Apple within different contexts, e.g., Apple Health app, Screen Time on iOS and macOS. And colors are adapted from iOS, macOS, and watchOS system colors. Each color scale has a light and dark variant as well that compliments the light/dark themes, <code><a href="reference/scale_colour_ios_light.html">scale_colour_ios_light()</a></code> and <code><a href="reference/scale_colour_ios_dark.html">scale_colour_ios_dark()</a></code> respectively.</p>
+<p>When bond together, sfthemes offers a unique opportunity to generate two version of your plot, i.e., light/dark, with two <em>similar</em> but <em>individually</em> optimized color scales for each variant of your plot.</p>
+<p><picture><source srcset="reference/figures/front-page-main-alt.png" media="(prefers-color-scheme: dark)" class="img-responsive center-block d-block mx-auto"></source><img src="reference/figures/front-page-main.png" class="img-responsive center-block d-block mx-auto"></picture></p>
+<p>In addition, sfthemes uses <a href="https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/typography/">dynamic type sizing</a> in order to provide a consistent and elegant overall resizing and re-scaling of plot elements. <strong>Read more <a href="articles/typography.html">here</a>.</strong></p>
 <div id="install" class="section level2">
 <h2 class="hasAnchor">
 <a href="#install" class="anchor"></a>Install</h2>
@@ -129,9 +141,9 @@
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"sfthemes"</span><span class="op">)</span></code></pre></div>
 </div>
-<div id="preperation--usage" class="section level2">
+<div id="preparation--usage" class="section level2">
 <h2 class="hasAnchor">
-<a href="#preperation--usage" class="anchor"></a>Preperation / Usage</h2>
+<a href="#preparation--usage" class="anchor"></a>Preparation / Usage</h2>
 <p>You can load and configure sfthemes using the following commands. If you do not get any errors or warnings, sfthemes is fully configured and can access the required fonts.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span>; <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://sfthemes.amirmasoudabdol.name">sfthemes</a></span><span class="op">)</span>
@@ -139,82 +151,51 @@
 <span class="co"># You only need to run these commands once!</span>
 <span class="fu"><a href="reference/import_inter.html">import_inter</a></span><span class="op">(</span><span class="op">)</span>
 <span class="fu"><a href="reference/import_sf_pro.html">import_sf_pro</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
-<div id="themes" class="section level3">
+<div id="quick-start" class="section level3">
 <h3 class="hasAnchor">
-<a href="#themes" class="anchor"></a>Themes</h3>
-<p>sfthemes offers two base themes, <code><a href="reference/theme_sf_light.html">theme_sf_light()</a></code> and <code><a href="reference/theme_sf_dark.html">theme_sf_dark()</a></code>. The Light theme uses an off-white background, <code>#fafafa</code>, and a range of black colors for text. In contrast, the dark theme uses an off-black background, <code>#141414</code>, and a range of white colors for text.</p>
-<p>In addition to themes, sfthemes provides a set of <code>scale_color/fill_*</code> objects based on various available color palettes in Apple’s HIG. Each color palette has a light and a dark variant, as well as accessible form of those. Accessible color palettes are adjusted to have higher contrast and less brightness. List of all available color palettes can be found [here].</p>
-<p>In general, we recommend pairing light scales with <code>theme_sf_light</code> (or any other third-party light themes) and dark scales with <code>theme_sf_dark</code> theme (or any other third-party dark themes).</p>
-<p><strong>Example of <code>theme_sf_light</code> Theme</strong></p>
+<a href="#quick-start" class="anchor"></a>Quick Start</h3>
+<p>sfthemes offers two base themes, <code><a href="reference/theme_sf_light.html">theme_sf_light()</a></code> and <code><a href="reference/theme_sf_dark.html">theme_sf_dark()</a></code>. The Light theme uses an off-white background, <code>#fafafa</code>, and a range of black colors for text. In contrast, the dark theme uses an off-black background, <code>#141414</code>, and a range of white colors for text. In addition to themes, sfthemes provides a set of <code>scale_colour/fill_*</code> objects based on various available color palettes in Apple’s HIG. Each color palette has a light and a dark variant, as well as accessible form of those. Accessible color palettes are adjusted to have higher contrast and less brightness. List of all available color palettes can be found <a href="reference/index.html#section-palettes">here</a>.</p>
+<div id="light-and-dark-themes" class="section level4">
+<h4 class="hasAnchor">
+<a href="#light-and-dark-themes" class="anchor"></a>Light and Dark Themes</h4>
+<p>In general, we recommend pairing light scales with <code>theme_sf_light</code> and dark scales with <code>theme_sf_dark</code> theme. Here we use <code><a href="reference/scale_colour_ios_light.html">scale_colour_ios_light()</a></code>, and <code><a href="reference/scale_colour_ios_dark.html">scale_colour_ios_dark()</a></code> to recreate the figure above.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span>; <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://sfthemes.amirmasoudabdol.name">sfthemes</a></span><span class="op">)</span>
-
-<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">mtcars</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">vs</span><span class="op">)</span>, fill <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">cyl</span><span class="op">)</span>, y <span class="op">=</span> <span class="va">mpg</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
-    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_dotplot.html">geom_dotplot</a></span><span class="op">(</span>binaxis <span class="op">=</span> <span class="st">"y"</span>, stackdir <span class="op">=</span> <span class="st">"center"</span>, position <span class="op">=</span> <span class="st">"dodge"</span>, color <span class="op">=</span> <span class="cn">NA</span><span class="op">)</span> <span class="op">+</span>
-    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"San Francisco Dark Theme"</span>, subtitle <span class="op">=</span> <span class="st">"using `scale_fill_ios_light`"</span><span class="op">)</span> <span class="op">+</span>
-    <span class="fu"><a href="reference/theme_sf_light.html">theme_sf_light</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="reference/scale_colour_ios_light.html">scale_fill_ios_light</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
-<p><img src="reference/figures/theme_sf_light_readme_sample.png"></p>
-<p><strong>Example of <code>theme_sf_dark</code> Theme</strong></p>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span>; <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://sfthemes.amirmasoudabdol.name">sfthemes</a></span><span class="op">)</span>
-
-<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">mtcars</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">vs</span><span class="op">)</span>, fill <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">cyl</span><span class="op">)</span>, y <span class="op">=</span> <span class="va">mpg</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
-    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_dotplot.html">geom_dotplot</a></span><span class="op">(</span>binaxis <span class="op">=</span> <span class="st">"y"</span>, stackdir <span class="op">=</span> <span class="st">"center"</span>, position <span class="op">=</span> <span class="st">"dodge"</span>, color <span class="op">=</span> <span class="cn">NA</span><span class="op">)</span> <span class="op">+</span>
-    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"San Francisco Dark Theme"</span>, subtitle <span class="op">=</span> <span class="st">"using `scale_fill_ios_dark`"</span><span class="op">)</span> <span class="op">+</span>
-    <span class="fu"><a href="reference/theme_sf_dark.html">theme_sf_dark</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="reference/scale_colour_ios_dark.html">scale_fill_ios_dark</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
-<p><img src="reference/figures/theme_sf_dark_readme_sample.png"></p>
+<code class="sourceCode R"><span class="co"># TODO: Update the code when the plot is finalized</span></code></pre></div>
+<table class="table"><tbody><tr class="odd">
+<td><img src="reference/figures/front-page-main-light.png"></td>
+<td><img src="reference/figures/front-page-main-dark.png"></td>
+</tr></tbody></table>
+</div>
 <div id="accessible-colors" class="section level4">
 <h4 class="hasAnchor">
 <a href="#accessible-colors" class="anchor"></a>Accessible Colors</h4>
-<p>Colors of every palette can be transformed to accessible colors by setting the <code>accessible</code> parameter to <code>TRUE</code>. For instnace:</p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span>; <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://sfthemes.amirmasoudabdol.name">sfthemes</a></span><span class="op">)</span>
-
-<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">mtcars</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">cyl</span><span class="op">)</span>, <span class="va">mpg</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
-    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_violin.html">geom_violin</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>fill <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">cyl</span><span class="op">)</span><span class="op">)</span>, color <span class="op">=</span> <span class="cn">NA</span><span class="op">)</span> <span class="op">+</span>
-    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"San Francisco Dark Theme"</span>, subtitle <span class="op">=</span> <span class="st">"using normal `scale_fill_ios_dark`"</span><span class="op">)</span> <span class="op">+</span>
-    <span class="fu"><a href="reference/theme_sf_dark.html">theme_sf_dark</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="reference/scale_colour_ios_dark.html">scale_fill_ios_dark</a></span><span class="op">(</span>accessible <span class="op">=</span> <span class="cn">F</span><span class="op">)</span></code></pre></div>
-<p><img src="reference/figures/theme_sf_dark_readme_violin.png"></p>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span>; <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://sfthemes.amirmasoudabdol.name">sfthemes</a></span><span class="op">)</span>
-
-<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">mtcars</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">cyl</span><span class="op">)</span>, <span class="va">mpg</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
-    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_violin.html">geom_violin</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>fill <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">cyl</span><span class="op">)</span><span class="op">)</span>, color <span class="op">=</span> <span class="cn">NA</span><span class="op">)</span> <span class="op">+</span>
-    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"San Francisco Dark Theme"</span>, subtitle <span class="op">=</span> <span class="st">"using *accessible* `scale_fill_ios_dark`"</span><span class="op">)</span> <span class="op">+</span>
-    <span class="fu"><a href="reference/theme_sf_dark.html">theme_sf_dark</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="reference/scale_colour_ios_dark.html">scale_fill_ios_dark</a></span><span class="op">(</span>accessible <span class="op">=</span> <span class="cn">F</span><span class="op">)</span></code></pre></div>
-<p><img src="reference/figures/theme_sf_dark_readme_violin_accessible.png"></p>
+<p>Each color palette is accompanied with an accessible variant of itself. In order to access the accessible color palettes, we use <code>accessible</code> as follow:</p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># TODO: Update the code when the plot is finalized</span></code></pre></div>
+<table class="table"><tbody><tr class="odd">
+<td><img src="reference/figures/front-page-accessible-on-off-light.png"></td>
+<td><img src="reference/figures/front-page-accessible-on-off-dark.png"></td>
+</tr></tbody></table>
+<blockquote>
+<p>The <a href="articles/colours.html">Colors</a> article elaborates on the availability, differences, and features of each system color palette.</p>
+</blockquote>
 </div>
 <div id="scaling" class="section level4">
 <h4 class="hasAnchor">
 <a href="#scaling" class="anchor"></a>Scaling</h4>
-<p>sfthemes provides 7 scaling factor. Scaling factors can be applied to text, elements, or both.</p>
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span>; <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://sfthemes.amirmasoudabdol.name">sfthemes</a></span><span class="op">)</span>
-
-<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">diamonds</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op">(</span><span class="va">diamonds</span><span class="op">)</span>, <span class="fl">100</span><span class="op">)</span>, <span class="op">]</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">carat</span>, <span class="va">price</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
-    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>shape <span class="op">=</span> <span class="va">cut</span>, color <span class="op">=</span> <span class="va">cut</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
-    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Medium Overall Scaling"</span><span class="op">)</span> <span class="op">+</span>
-    <span class="fu"><a href="reference/theme_sf_light.html">theme_sf_light</a></span><span class="op">(</span>scale <span class="op">=</span> <span class="st">"Medium"</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="reference/scale_colour_ios_light.html">scale_color_ios_light</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
-<p><img src="reference/figures/theme_sf_light_readme_medium_overall.png"></p>
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span>; <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://sfthemes.amirmasoudabdol.name">sfthemes</a></span><span class="op">)</span>
-
-<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">diamonds</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op">(</span><span class="va">diamonds</span><span class="op">)</span>, <span class="fl">100</span><span class="op">)</span>, <span class="op">]</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">carat</span>, <span class="va">price</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
-    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>shape <span class="op">=</span> <span class="va">cut</span>, color <span class="op">=</span> <span class="va">cut</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
-    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Large Overall Scaling"</span><span class="op">)</span> <span class="op">+</span>
-    <span class="fu"><a href="reference/theme_sf_light.html">theme_sf_light</a></span><span class="op">(</span>scale <span class="op">=</span> <span class="st">"Large"</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="reference/scale_colour_ios_light.html">scale_color_ios_light</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
-<p><img src="reference/figures/theme_sf_light_readme_large_overall.png"></p>
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span>; <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://sfthemes.amirmasoudabdol.name">sfthemes</a></span><span class="op">)</span>
-
-<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">diamonds</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op">(</span><span class="va">diamonds</span><span class="op">)</span>, <span class="fl">100</span><span class="op">)</span>, <span class="op">]</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">carat</span>, <span class="va">price</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
-    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>shape <span class="op">=</span> <span class="va">cut</span>, color <span class="op">=</span> <span class="va">cut</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
-    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Medium Text Scaling, Large Element Scaling"</span><span class="op">)</span> <span class="op">+</span>
-    <span class="fu"><a href="reference/theme_sf_light.html">theme_sf_light</a></span><span class="op">(</span>font_size_scale <span class="op">=</span> <span class="st">"Medium"</span>, element_size_scale <span class="op">=</span> <span class="st">"xLarge"</span><span class="op">)</span> <span class="op">+</span> 
-<span class="fu"><a href="reference/scale_colour_ios_light.html">scale_color_ios_light</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
-<p><img src="reference/figures/theme_sf_light_readme_medium_text_large_element.png"></p>
+<p>sfthemes provides 7 scaling factor. Scaling factors can be applied to text, elements, or both. Figure below is generated from combination of light/dark plots in all available scaling factors. <em>Notice that that all elements are resizing at the same time.</em></p>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># TODO: Update the code when the plot is finalized</span></code></pre></div>
+<p><img src="reference/figures/front-page-scaling-animation-light-dark.gif"></p>
+<blockquote>
+<p>The <a href="articles/colours.html">Scales</a> article elaborates on the dynamic type sizing.</p>
+</blockquote>
 </div>
 </div>
+</div>
+<div id="credits" class="section level2">
+<h2 class="hasAnchor">
+<a href="#credits" class="anchor"></a>Credits</h2>
 </div>
 </div>
   </div>
