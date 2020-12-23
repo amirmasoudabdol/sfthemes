@@ -12,23 +12,28 @@ vignette: >
 On iOS, each palette is accompanied by an accessible variant where the temperature and transparency of colors are adjusted to provide higher contrast and brightness. Both light and dark palettes can be used with `theme_sf_light()` and `theme_sf_dark()` themes. However, we recommend using light palettes with light themes, and dark palettes with dark themes. 
 
 **iOS Light Palette**
-![iOS Light](images/ios_light.png)
+
+![](images/ios-light.png)
 
 **iOS Accessible Light Palette**
-![iOS Light Accessible](images/ios_light_accessible.png)
+
+![](images/ios-light-accessible.png)
 
 On macOS, in addition to light and dark palettes and their accessible forms, each palette is accompanied with a **vibrant** variant where the contrast between colors is even higher.
 
 **macOS Light Palette**
-![macOS Light](images/macos_light.png)
+
+![](images/macos-light.png)
 
 **macOS Vibrant Light Palette**
-![macOS Light Accessible](images/macos_light_vibrant.png)
+
+![](images/macos-light-vibrant.png)
 
 On watchOS, only one color palette is provided. The watchOS color palette is specifically designed to provide higher level of contrast and brightness, and it is best accompanied by dark themes.
 
 **watchOS Dark Palette**
-![watchOS Dark](images/watchos_dark.png)
+
+![](images/watchos-dark.png)
 
 Collectively, sfthemes offers 17 color palettes:
 
@@ -64,7 +69,9 @@ Collectively, sfthemes offers 17 color palettes:
 Each palette in sfthemes can be sorted in two ways. The *`default`* order returns colors of the palette according to their appearance in Apple’s HIG document, and the *`contrast`* (default) order returns an optimized ordering of colors to maximize their in-between contrast. 
 
 **iOS palette ordered for more in-between contrast**
-![](images/ios_light_contrast.png)
 
-**macOS palette ordered for more in-between contrast**
-![](images/macos_light_contrast.png)
+![](images/ios-light.png)
+
+**iOS palette ordered for more in-between contrast**
+
+![](images/ios-light-contrast.png)

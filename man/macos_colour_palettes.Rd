@@ -36,61 +36,61 @@ followings:
 library(scales)
 scales::show_col(
     macos_light_pal(order = "default", accessible = FALSE)(11),
-    border = NA, labels = FALSE)
+    borders = NA, labels = FALSE)
 scales::show_col(
     macos_light_pal(order = "default", accessible = FALSE,
     vibrant = TRUE)(11),
-    border = NA, labels = FALSE)
+    borders = NA, labels = FALSE)
 scales::show_col(
     macos_light_pal(order = "default", accessible = TRUE)(11),
-    border = NA, labels = FALSE)
+    borders = NA, labels = FALSE)
 scales::show_col(
     macos_light_pal(order = "default", accessible = TRUE,
     vibrant = TRUE)(11),
-    border = NA, labels = FALSE)
+    borders = NA, labels = FALSE)
 
 scales::show_col(
     macos_light_pal(order = "contrast", accessible = FALSE)(11),
-    border = NA, labels = FALSE)
+    borders = NA, labels = FALSE)
 scales::show_col(
     macos_light_pal(order = "contrast", accessible = FALSE,
     vibrant = TRUE)(11),
-    border = NA, labels = FALSE)
+    borders = NA, labels = FALSE)
 scales::show_col(
     macos_light_pal(order = "contrast", accessible = TRUE)(11),
-    border = NA, labels = FALSE)
+    borders = NA, labels = FALSE)
 scales::show_col(
     macos_light_pal(order = "contrast", accessible = TRUE,
     vibrant = TRUE)(11),
-    border = NA, labels = FALSE)
+    borders = NA, labels = FALSE)
 library(scales)
 scales::show_col(
     macos_dark_pal(order = "default", accessible = FALSE)(11),
-    border = NA, labels = FALSE)
+    borders = NA, labels = FALSE)
 scales::show_col(
     macos_dark_pal(order = "default", accessible = FALSE,
     vibrant = TRUE)(11),
-    border = NA, labels = FALSE)
+    borders = NA, labels = FALSE)
 scales::show_col(
     macos_dark_pal(order = "default", accessible = TRUE)(11),
-    border = NA, labels = FALSE)
+    borders = NA, labels = FALSE)
 scales::show_col(
     macos_dark_pal(order = "default", accessible = TRUE,
     vibrant = TRUE)(11),
-    border = NA, labels = FALSE)
+    borders = NA, labels = FALSE)
 
 scales::show_col(
     macos_dark_pal(order = "contrast", accessible = FALSE)(11),
-    border = NA, labels = FALSE)
+    borders = NA, labels = FALSE)
 scales::show_col(
     macos_dark_pal(order = "contrast", accessible = FALSE,
     vibrant = TRUE)(11),
-    border = NA, labels = FALSE)
+    borders = NA, labels = FALSE)
 scales::show_col(
     macos_dark_pal(order = "contrast", accessible = TRUE)(11),
-    border = NA, labels = FALSE)
+    borders = NA, labels = FALSE)
 scales::show_col(
     macos_dark_pal(order = "contrast", accessible = TRUE,
     vibrant = TRUE)(11),
-    border = NA, labels = FALSE)
+    borders = NA, labels = FALSE)
 }

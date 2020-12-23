@@ -100,17 +100,17 @@ ios_accessible_dark_palette <- unname(unlist(ios_accessible_dark_cols))
 #' library(scales)
 #' scales::show_col(
 #'     ios_light_pal(order = "default", accessible = FALSE)(9),
-#'     border = NA, labels = FALSE)
+#'     borders = NA, labels = FALSE)
 #' scales::show_col(
 #'     ios_light_pal(order = "default", accessible = TRUE)(9),
-#'     border = NA, labels = FALSE)
+#'     borders = NA, labels = FALSE)
 #'
 #' scales::show_col(
 #'     ios_light_pal(order = "contrast", accessible = FALSE)(9),
-#'     border = NA, labels = FALSE)
+#'     borders = NA, labels = FALSE)
 #' scales::show_col(
 #'     ios_light_pal(order = "contrast", accessible = TRUE)(9),
-#'     border = NA, labels = FALSE)
+#'     borders = NA, labels = FALSE)
 #'
 #' @export
 ios_light_pal <- function(order = "contrast", accessible = FALSE) {
@@ -168,17 +168,17 @@ scale_fill_ios_light <- function(order = "contrast", accessible = FALSE, ...) {
 #' library(scales)
 #' scales::show_col(
 #'     ios_dark_pal(order = "default", accessible = FALSE)(9),
-#'     border = NA, labels = FALSE)
+#'     borders = NA, labels = FALSE)
 #' scales::show_col(
 #'     ios_dark_pal(order = "default", accessible = TRUE)(9),
-#'     border = NA, labels = FALSE)
+#'     borders = NA, labels = FALSE)
 #'
 #' scales::show_col(
 #'     ios_dark_pal(order = "contrast", accessible = FALSE)(9),
-#'     border = NA, labels = FALSE)
+#'     borders = NA, labels = FALSE)
 #' scales::show_col(
 #'     ios_dark_pal(order = "contrast", accessible = TRUE)(9),
-#'     border = NA, labels = FALSE)
+#'     borders = NA, labels = FALSE)
 #'
 #' @export
 ios_dark_pal <- function(order = "contrast", accessible = FALSE) {
@@ -276,10 +276,10 @@ ios_accessible_gray_dark_palette <-
 #' library(scales)
 #' scales::show_col(
 #'     ios_gray_light_pal(accessible = FALSE)(6),
-#'     border = NA, labels = FALSE)
+#'     borders = NA, labels = FALSE)
 #' scales::show_col(
 #'     ios_gray_light_pal(accessible = TRUE)(6),
-#'     border = NA, labels = FALSE)
+#'     borders = NA, labels = FALSE)
 #'
 #' @export
 ios_gray_light_pal <- function(accessible = FALSE) {
@@ -337,10 +337,10 @@ scale_fill_ios_gray_light <- function(accessible = FALSE, ...) {
 #' library(scales)
 #' scales::show_col(
 #'     ios_gray_dark_pal(accessible = FALSE)(6),
-#'     border = NA, labels = FALSE)
+#'     borders = NA, labels = FALSE)
 #' scales::show_col(
 #'     ios_gray_dark_pal(accessible = TRUE)(6),
-#'     border = NA, labels = FALSE)
+#'     borders = NA, labels = FALSE)
 #'
 #' @export
 ios_gray_dark_pal <- function(accessible = FALSE) {

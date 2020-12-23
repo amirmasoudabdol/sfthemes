@@ -43,47 +43,47 @@ the followings:
 library(scales)
 scales::show_col(
     ios_light_pal(order = "default", accessible = FALSE)(9),
-    border = NA, labels = FALSE)
+    borders = NA, labels = FALSE)
 scales::show_col(
     ios_light_pal(order = "default", accessible = TRUE)(9),
-    border = NA, labels = FALSE)
+    borders = NA, labels = FALSE)
 
 scales::show_col(
     ios_light_pal(order = "contrast", accessible = FALSE)(9),
-    border = NA, labels = FALSE)
+    borders = NA, labels = FALSE)
 scales::show_col(
     ios_light_pal(order = "contrast", accessible = TRUE)(9),
-    border = NA, labels = FALSE)
+    borders = NA, labels = FALSE)
 
 library(scales)
 scales::show_col(
     ios_dark_pal(order = "default", accessible = FALSE)(9),
-    border = NA, labels = FALSE)
+    borders = NA, labels = FALSE)
 scales::show_col(
     ios_dark_pal(order = "default", accessible = TRUE)(9),
-    border = NA, labels = FALSE)
+    borders = NA, labels = FALSE)
 
 scales::show_col(
     ios_dark_pal(order = "contrast", accessible = FALSE)(9),
-    border = NA, labels = FALSE)
+    borders = NA, labels = FALSE)
 scales::show_col(
     ios_dark_pal(order = "contrast", accessible = TRUE)(9),
-    border = NA, labels = FALSE)
+    borders = NA, labels = FALSE)
 
 library(scales)
 scales::show_col(
     ios_gray_light_pal(accessible = FALSE)(6),
-    border = NA, labels = FALSE)
+    borders = NA, labels = FALSE)
 scales::show_col(
     ios_gray_light_pal(accessible = TRUE)(6),
-    border = NA, labels = FALSE)
+    borders = NA, labels = FALSE)
 
 library(scales)
 scales::show_col(
     ios_gray_dark_pal(accessible = FALSE)(6),
-    border = NA, labels = FALSE)
+    borders = NA, labels = FALSE)
 scales::show_col(
     ios_gray_dark_pal(accessible = TRUE)(6),
-    border = NA, labels = FALSE)
+    borders = NA, labels = FALSE)
 
 }

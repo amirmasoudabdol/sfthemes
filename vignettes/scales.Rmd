@@ -19,3 +19,6 @@ Besides dynamic type sizing, sfthemes can also scale all other elements of the p
 | xxLarge | 4 |
 | xxxLarge | 5 |
 
+<img src="images/size-classes-font-scaling-animation-light-dark.gif"/>
+
+<img src="images/size-classes-element-scaling-animation-light-dark.gif"/>

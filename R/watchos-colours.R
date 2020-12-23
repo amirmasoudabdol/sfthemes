@@ -41,12 +41,16 @@ watchos_col_order <-
 #'
 #' @rdname watchos_colour_palettes
 #' @export
-#' @examples library(scales) scales::show_col( watchos_dark_pal
-#'  (order = "default")(9), border = NA, labels = FALSE) scales::show_col
-#'  ( watchos_dark_pal(order = "contrast")(9), border = NA, labels = FALSE)
+#' @examples 
+#' 
+#' library(scales)
+#' 
+#'  scales::show_col(watchos_dark_pal(order = "default")(10),
+#'                   borders = NA, labels = FALSE)
+#'  scales::show_col(watchos_dark_pal(order = "contrast")(10),
+#'                   borders = NA, labels = FALSE)
 watchos_dark_pal <- function(order = "contrast") {
-    scales::manual_pal
-    (watchos_dark_palette[watchos_col_order[[order]]])
+    scales::manual_pal(watchos_dark_palette[watchos_col_order[[order]]])
 }
 
 #' @title watchOS Color Scales
