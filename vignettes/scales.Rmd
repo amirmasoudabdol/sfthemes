@@ -9,16 +9,31 @@ vignette: >
 
 Besides dynamic type sizing, sfthemes can also scale all other elements of the plot. This is being done by multiplying all element sizes with a specific multiplier. Keep in mind that these values will scale the existing sizes of each elements; therefore, it is recommended that you do not try to scale your entire plot if you are using `size` or `lwd` as one of your `aes`.
 
-| class| multiplier |
-|------|-----|
-| xSmall | 0.75 |
-| Small | 1 |
-| Medium | 1.25 |
-| Large | 2 |
-| xLarge | 3 |
-| xxLarge | 4 |
-| xxxLarge | 5 |
+| class      | `xSmall` | `Small` | `Medium` | `Large` | `xLarge` | `xxLarge` | `xxxLarge` |
+| ---        | ---    | ---   | ---    | ---   | ---    | ---     | ---      |
+| multiplier | `0.75`   | `1`     | `1.25`   | `2`    | `3`      | `4`       | `5`        |
+
+## Scaling element sizes
+
+```R
+# TODO: Update the code when the plot is finalized
+```
+
+<img src="images/size-classes-element-scaling-animation-light-dark.gif"/>
+
+## Scaling font sizes
+
+```R
+# TODO: Update the code when the plot is finalized
+```
 
 <img src="images/size-classes-font-scaling-animation-light-dark.gif"/>
 
-<img src="images/size-classes-element-scaling-animation-light-dark.gif"/>
+
+## Scaling everything together
+
+```R
+# TODO: Update the code when the plot is finalized
+```
+
+<img src="../reference/figures/front-page-scaling-animation-light-dark.gif"/>

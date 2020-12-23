@@ -40,16 +40,6 @@ TODO: This needs to be rewritten...
 
 sfthemes has adjsuted and adapted all available [dynamic type sizes](https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/typography#dynamic-type-sizes) as presented in Apple's HIG. sfthemes size classes are based on iOS font sizes with minor compatibility modifications. In total, there are 7 size classes available — i.e., `xSmall`, `Small`, `Medium`, `Large`, `xLarge`, `xxLarge`, `xxxLarge` — with `Medium` being the default class.
 
-| class| Title | Subtitle | Body | Ticks |
-|------|-----|-----|-----|-----|
-| xSmall | 14 | 12 | 10 | 9 |
-| Small | 15 | 13 | 11 | 10 |
-| Medium | 16 | 14 | 12 | 11 |
-| Large | 17 | 15 | 14 | 12 |
-| xLarge | 19 | 17 | 15 | 14 |
-| xxLarge | 21 | 19 | 17 | 16 |
-| xxxLarge | 23 | 21 | 19 | 18 |
-
 ### Usage
 
 You can use this via
