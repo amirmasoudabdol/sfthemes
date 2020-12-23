@@ -6,5 +6,6 @@
 ^\.travis\.yml$
 ^CNAME$
 ^logo.*$
-^\.github
 ^\.github$
+^misc$
+^tests/testthat/figures$

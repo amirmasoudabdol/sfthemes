@@ -6,6 +6,7 @@
 # Folders
 docs/
 tests/testthat/figures/
+misc/
 
 # macOS
 .DS_Store
