@@ -16,7 +16,7 @@ test_that("scaling light sample figures are generated", {
             labs(title = "Linear Fit", subtitle = classes[[i]]) +
             geom_smooth(method="lm") +
             theme_sf_light(scale = classes[[i]]) +
-            scale_color_ios_light(accessible = F) +
+            scale_colour_ios_light(accessible = F) +
             theme(legend.position = "bottom")
 
         ggsave(paste0("figures/front_page/iris_linear_fit_light_", i, "_",
@@ -28,7 +28,7 @@ test_that("scaling light sample figures are generated", {
             labs(title = "Linear Fit", subtitle = classes[[i]]) +
             geom_smooth(method="lm") +
             theme_sf_dark(scale = classes[[i]]) +
-            scale_color_ios_dark(accessible = F) +
+            scale_colour_ios_dark(accessible = F) +
             theme(legend.position = "bottom")
 
         ggsave(paste0("figures/front_page/iris_linear_fit_dark_", i, "_",

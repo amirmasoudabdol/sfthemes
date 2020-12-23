@@ -2,18 +2,10 @@
 % Please edit documentation in R/macos-colors.R
 \name{scale_colour_macos_dark}
 \alias{scale_colour_macos_dark}
-\alias{scale_color_macos_dark}
 \alias{scale_fill_macos_dark}
 \title{macOS Dark Color Scales}
 \usage{
 scale_colour_macos_dark(
-  order = "contrast",
-  accessible = FALSE,
-  vibrant = FALSE,
-  ...
-)
-
-scale_color_macos_dark(
   order = "contrast",
   accessible = FALSE,
   vibrant = FALSE,

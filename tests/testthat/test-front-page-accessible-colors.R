@@ -14,7 +14,7 @@ test_that("accessible light sample figures are generated", {
         labs(title = "Histogram of Sepal Width") +
         theme_sf_light(scale = "xxxLarge") +
         facet_grid(Species ~ .) +
-        scale_color_ios_light(accessible = F) +
+        scale_colour_ios_light(accessible = F) +
         scale_fill_ios_light(accessible = F) +
         theme(legend.position = "bottom")
 
@@ -26,7 +26,7 @@ test_that("accessible light sample figures are generated", {
         labs(title = "Histogram of Sepal Width") +
         theme_sf_light(scale = "xxxLarge") +
         facet_grid(Species ~ .) +
-        scale_color_ios_light(accessible = T) +
+        scale_colour_ios_light(accessible = T) +
         scale_fill_ios_light(accessible = T) +
         theme(legend.position = "bottom")
 
@@ -49,7 +49,7 @@ test_that("accessible dark sample figures are generated", {
         labs(title = "Histogram of Sepal Width") +
         theme_sf_dark(scale = "xxxLarge") +
         facet_grid(Species ~ .) +
-        scale_color_ios_dark(accessible = F) +
+        scale_colour_ios_dark(accessible = F) +
         scale_fill_ios_dark(accessible = F) +
         theme(legend.position = "bottom")
 
@@ -61,7 +61,7 @@ test_that("accessible dark sample figures are generated", {
         labs(title = "Histogram of Sepal Width") +
         theme_sf_dark(scale = "xxxLarge") +
         facet_grid(Species ~ .) +
-        scale_color_ios_dark(accessible = T) +
+        scale_colour_ios_dark(accessible = T) +
         scale_fill_ios_dark(accessible = T) +
         theme(legend.position = "bottom")
 

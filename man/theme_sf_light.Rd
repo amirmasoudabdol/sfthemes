@@ -103,7 +103,7 @@ ggplot(mpg, aes(x = displ, y = hwy, colour = class)) +
        caption = "Fuel economy data from 1999 to 2008 for 38
         popular models of cars.") +
   theme_sf_light() +
-  scale_color_ios_light()
+  scale_colour_ios_light()
 
 ggplot(mpg, aes(y = class)) +
   geom_bar(aes(fill = drv), color = NA) +
@@ -115,6 +115,6 @@ ggplot(mpg, aes(y = class)) +
         popular models of cars.") +
   theme_sf_light() +
   scale_fill_ios_light(accessible = TRUE) +
-  scale_color_ios_light(accessible = TRUE)
+  scale_colour_ios_light(accessible = TRUE)
 }
 }

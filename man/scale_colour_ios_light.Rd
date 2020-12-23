@@ -2,13 +2,10 @@
 % Please edit documentation in R/ios-colors.R
 \name{scale_colour_ios_light}
 \alias{scale_colour_ios_light}
-\alias{scale_color_ios_light}
 \alias{scale_fill_ios_light}
 \title{iOS Light Color Scales}
 \usage{
 scale_colour_ios_light(order = "contrast", accessible = FALSE, ...)
-
-scale_color_ios_light(order = "contrast", accessible = FALSE, ...)
 
 scale_fill_ios_light(order = "contrast", accessible = FALSE, ...)
 }

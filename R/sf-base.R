@@ -22,7 +22,7 @@
 #' @param axis add x or y axes? `TRUE`, `FALSE`, "`xy`"
 #' @param ticks ticks if `TRUE` add ticks
 #'
-#' @param text_color_palette text color palette
+#' @param text_colour_palette text color palette
 #' @param plot_background_col plot background color
 #' @param panel_background_col panel backgroun color
 #'
@@ -52,7 +52,7 @@ sf_base <- function(
   caption_face = "plain", 
   caption_margin = 25,
   axis_text_size = NULL,
-  text_color_palette = ios_text_on_light_cols,
+  text_colour_palette = ios_text_on_light_cols,
   axis_title_family = base_family,
   axis_title_size = NULL,
   axis_title_face = "plain",
@@ -158,23 +158,23 @@ sf_base <- function(
   if (inherits(grid, "character") | grid == TRUE) {
 
     ret <- ret + theme(panel.grid =
-           element_line(color = text_color_palette[["secondaryLabel"]],
+           element_line(color = text_colour_palette[["secondaryLabel"]],
                 size = 0.2))
 
     ret <- ret + theme(panel.grid.major.x =
-          element_line(color = text_color_palette[["secondaryLabel"]],
+          element_line(color = text_colour_palette[["secondaryLabel"]],
                  linetype = "dotted", size = 0.3))
 
     ret <- ret + theme(panel.grid.minor.x =
-          element_line(color = text_color_palette[["tertiaryLabel"]],
+          element_line(color = text_colour_palette[["tertiaryLabel"]],
                  linetype = "dotted", size = 0.3))
 
     ret <- ret + theme(panel.grid.major.y =
-          element_line(color = text_color_palette[["secondaryLabel"]],
+          element_line(color = text_colour_palette[["secondaryLabel"]],
                  linetype = "solid", size = 0.175))
 
     ret <- ret + theme(panel.grid.minor.y =
-          element_line(color = text_color_palette[["tertiaryLabel"]],
+          element_line(color = text_colour_palette[["tertiaryLabel"]],
                  linetype = "solid", size = 0.1))
 
     if (inherits(grid, "character")) {
@@ -195,7 +195,7 @@ sf_base <- function(
   # Axes
   if (inherits(axis, "character") | axis == TRUE) {
     ret <- ret + theme(axis.line =
-               element_line(color = text_color_palette[["label"]],
+               element_line(color = text_colour_palette[["label"]],
                     size = 0.2))
 
     if (inherits(axis, "character")) {
@@ -204,22 +204,22 @@ sf_base <- function(
         ret <- ret + theme(axis.line.x = element_blank())
       } else {
         ret <- ret + theme(axis.line.x =
-               element_line(color = text_color_palette[["label"]],
+               element_line(color = text_colour_palette[["label"]],
                     size = 0.2))
       }
       if (regexpr("y", axis)[1] < 0) {
         ret <- ret + theme(axis.line.y = element_blank())
       } else {
         ret <- ret + theme(axis.line.y =
-               element_line(color = text_color_palette[["label"]],
+               element_line(color = text_colour_palette[["label"]],
                     size = 0.2))
       }
     } else {
       ret <- ret + theme(axis.line.x =
-               element_line(color = text_color_palette[["label"]],
+               element_line(color = text_colour_palette[["label"]],
                     size = 0.2))
       ret <- ret + theme(axis.line.y =
-               element_line(color = text_color_palette[["label"]],
+               element_line(color = text_colour_palette[["label"]],
                     size = 0.2))
     }
   } else {
@@ -232,12 +232,12 @@ sf_base <- function(
     ret <- ret + theme(axis.ticks.x = element_blank())
     ret <- ret + theme(axis.ticks.y = element_blank())
   } else {
-    # ret <- ret + theme(axis.ticks = element_line(linetype = "dotted", color = text_color_palette[["secondaryLabel"]], size = 0.3))
+    # ret <- ret + theme(axis.ticks = element_line(linetype = "dotted", color = text_colour_palette[["secondaryLabel"]], size = 0.3))
 
     # X
     ret <- ret + theme(axis.ticks.x =
            element_line(linetype = "dotted",
-                color = text_color_palette[["secondaryLabel"]],
+                color = text_colour_palette[["secondaryLabel"]],
                 size = 0.3))
 
     ret <- ret + theme(axis.ticks.length.x = grid::unit(2.5, "pt"))
@@ -247,7 +247,7 @@ sf_base <- function(
     # Y
     ret <- ret + theme(axis.ticks.y =
            element_line(linetype = "solid",
-                color = text_color_palette[["secondaryLabel"]],
+                color = text_colour_palette[["secondaryLabel"]],
                 size = 0.175))
 
     ret <- ret + theme(axis.ticks.length.y = grid::unit(2.5, "pt"))
@@ -278,38 +278,38 @@ sf_base <- function(
   ret <- ret + theme(panel.spacing = grid::unit(2, "lines"))
 
   ret <- ret + theme(axis.text.x =
-            element_text(color = text_color_palette[["label"]],
+            element_text(color = text_colour_palette[["label"]],
                   size = axis_text_size,
                   margin = x_ticks_margin,
                   hjust = x_axis_ticks_text_offset))
 
   ret <- ret + theme(axis.text.y =
-            element_text(color = text_color_palette[["label"]],
+            element_text(color = text_colour_palette[["label"]],
                    size = axis_text_size,
                    margin = y_ticks_margin,
                    vjust = y_axis_ticks_text_offset))
 
   ret <- ret + theme(axis.title =
-            element_text(color = text_color_palette[["label"]],
+            element_text(color = text_colour_palette[["label"]],
                    size = axis_title_size,
                    family = axis_title_family))
 
   ret <- ret + theme(axis.title.x =
-            element_text(color = text_color_palette[["label"]],
+            element_text(color = text_colour_palette[["label"]],
                    hjust = xj,
                    size = axis_title_size,
                    family = axis_title_family,
                    face = axis_title_face))
 
   ret <- ret + theme(axis.title.y =
-            element_text(color = text_color_palette[["label"]],
+            element_text(color = text_colour_palette[["label"]],
                    hjust = yj,
                    size = axis_title_size,
                    family = axis_title_family,
                    face = axis_title_face))
 
   ret <- ret + theme(axis.title.y.right =
-            element_text(color = text_color_palette[["label"]],
+            element_text(color = text_colour_palette[["label"]],
                    size = axis_title_size,
                    hjust = yj,
                    angle = 90,
@@ -317,14 +317,14 @@ sf_base <- function(
                    face = axis_title_face))
 
   ret <- ret + theme(strip.text =
-            element_text(color = text_color_palette[["label"]],
+            element_text(color = text_colour_palette[["label"]],
                    hjust = 0,
                    size = strip_text_size,
                    family = strip_text_family,
                    face = strip_text_face))
 
   ret <- ret + theme(plot.title =
-            element_text(color = text_color_palette[["label"]],
+            element_text(color = text_colour_palette[["label"]],
                    hjust = 0,
                    size = plot_title_size,
                    margin = margin(b = plot_title_margin),
@@ -332,7 +332,7 @@ sf_base <- function(
                    face = plot_title_face))
 
   ret <- ret + theme(plot.subtitle =
-            element_text(color = text_color_palette[["label"]],
+            element_text(color = text_colour_palette[["label"]],
                    hjust = 0,
                    size = subtitle_size,
                    margin = margin(b = subtitle_margin),
@@ -340,7 +340,7 @@ sf_base <- function(
                    face = subtitle_face))
 
   ret <- ret + theme(plot.caption =
-            element_text(color = text_color_palette[["label"]],
+            element_text(color = text_colour_palette[["label"]],
                    hjust = 0,
                    size = caption_size,
                    margin = margin(t = caption_margin),
@@ -348,13 +348,13 @@ sf_base <- function(
                    face = caption_face))
 
   ret <- ret + theme(legend.title =
-            element_text(color = text_color_palette[["label"]],
+            element_text(color = text_colour_palette[["label"]],
                    size = legend_title_size,
                    family = caption_family,
                    face = legend_title_face))
 
   ret <- ret + theme(legend.text =
-            element_text(color = text_color_palette[["label"]],
+            element_text(color = text_colour_palette[["label"]],
                    size = axis_text_size,
                    family = caption_family))
 

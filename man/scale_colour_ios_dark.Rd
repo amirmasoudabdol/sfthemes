@@ -2,13 +2,10 @@
 % Please edit documentation in R/ios-colors.R
 \name{scale_colour_ios_dark}
 \alias{scale_colour_ios_dark}
-\alias{scale_color_ios_dark}
 \alias{scale_fill_ios_dark}
 \title{iOS Dark Color Scales}
 \usage{
 scale_colour_ios_dark(order = "contrast", accessible = FALSE, ...)
-
-scale_color_ios_dark(order = "contrast", accessible = FALSE, ...)
 
 scale_fill_ios_dark(order = "contrast", accessible = FALSE, ...)
 }

@@ -23,7 +23,7 @@ sf_base(
   caption_face = "plain",
   caption_margin = 25,
   axis_text_size = NULL,
-  text_color_palette = ios_text_on_light_cols,
+  text_colour_palette = ios_text_on_light_cols,
   axis_title_family = base_family,
   axis_title_size = NULL,
   axis_title_face = "plain",
@@ -63,7 +63,7 @@ family, face, size and margin}
 
 \item{axis_text_size}{font size of axis text}
 
-\item{text_color_palette}{text color palette}
+\item{text_colour_palette}{text color palette}
 
 \item{axis_title_family, axis_title_face, axis_title_size}{axis title font
 family, face and size}

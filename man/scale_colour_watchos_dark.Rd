@@ -2,13 +2,10 @@
 % Please edit documentation in R/watchos-colors.R
 \name{scale_colour_watchos_dark}
 \alias{scale_colour_watchos_dark}
-\alias{scale_color_watchos_dark}
 \alias{scale_fill_watchos_dark}
 \title{watchOS Color Scales}
 \usage{
 scale_colour_watchos_dark(order = "contrast", ...)
-
-scale_color_watchos_dark(order = "contrast", ...)
 
 scale_fill_watchos_dark(order = "contrast", ...)
 }

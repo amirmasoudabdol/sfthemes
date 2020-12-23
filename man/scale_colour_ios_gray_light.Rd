@@ -2,13 +2,10 @@
 % Please edit documentation in R/ios-colors.R
 \name{scale_colour_ios_gray_light}
 \alias{scale_colour_ios_gray_light}
-\alias{scale_color_ios_gray_light}
 \alias{scale_fill_ios_gray_light}
 \title{iOS Gray Light Color Scales}
 \usage{
 scale_colour_ios_gray_light(accessible = FALSE, ...)
-
-scale_color_ios_gray_light(accessible = FALSE, ...)
 
 scale_fill_ios_gray_light(accessible = FALSE, ...)
 }

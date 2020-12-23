@@ -39,7 +39,7 @@ watchos_col_order <-
 #'
 #' @param order Indicates the order of colors in the palette
 #'
-#' @rdname watchos_color_palettes
+#' @rdname watchos_colour_palettes
 #' @export
 #' @examples library(scales) scales::show_col( watchos_dark_pal
 #'  (order = "default")(9), border = NA, labels = FALSE) scales::show_col
@@ -62,10 +62,6 @@ watchos_dark_pal <- function(order = "contrast") {
 scale_colour_watchos_dark <- function(order = "contrast", ...) {
     ggplot2::discrete_scale("colour", "watchos_dark", watchos_dark_pal(), ...)
 }
-
-#' @export
-#' @rdname scale_colour_watchos_dark
-scale_color_watchos_dark <- scale_colour_watchos_dark
 
 #' @param order Indicates the order of colors in the palette
 #'

@@ -42,7 +42,7 @@
 #'        caption = "Fuel economy data from 1999 to 2008 for 38
 #'         popular models of cars.") +
 #'   theme_sf_light() +
-#'   scale_color_ios_light()
+#'   scale_colour_ios_light()
 #'
 #' ggplot(mpg, aes(y = class)) +
 #'   geom_bar(aes(fill = drv), color = NA) +
@@ -54,7 +54,7 @@
 #'         popular models of cars.") +
 #'   theme_sf_light() +
 #'   scale_fill_ios_light(accessible = TRUE) +
-#'   scale_color_ios_light(accessible = TRUE)
+#'   scale_colour_ios_light(accessible = TRUE)
 #' }
 #' @export
 theme_sf_light <- function(
@@ -124,7 +124,7 @@ theme_sf_light <- function(
     caption_face = caption_face,
     caption_margin = caption_margin,
     axis_text_size = axis_text_size,
-    text_color_palette = ios_text_on_light_cols,
+    text_colour_palette = ios_text_on_light_cols,
     axis_title_family = base_family,
     axis_title_size = axis_title_size,
     axis_title_face = axis_title_face,

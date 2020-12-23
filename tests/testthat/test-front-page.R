@@ -13,7 +13,7 @@ test_that("front page figures are generated", {
         labs(title = "Linear Fit", subtitle = "Length ~ Width") +
         geom_smooth(method="lm") +
         theme_sf_light(scale = "xxxLarge") +
-        scale_color_ios_light(accessible = F) +
+        scale_colour_ios_light(accessible = F) +
         theme(legend.position = "bottom")
 
     ggsave("figures/front_page/front_page_light.png", width = 20, height = 15, bg = "transparent", dpi = 72)
@@ -23,7 +23,7 @@ test_that("front page figures are generated", {
         labs(title = "Linear Fit", subtitle = "Length ~ Width") +
         geom_smooth(method="lm") +
         theme_sf_dark(scale = "xxxLarge") +
-        scale_color_ios_dark(accessible = F) +
+        scale_colour_ios_dark(accessible = F) +
         theme(legend.position = "bottom")
 
     ggsave("figures/front_page/front_page_dark.png", width = 20, height = 15, bg = "transparent", dpi = 72)

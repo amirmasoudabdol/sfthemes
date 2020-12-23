@@ -1,8 +1,8 @@
 ---
-title: "Colors"
+title: "Colours"
 output: rmarkdown::html_vignette
 vignette: >
-    %\VignetteIndexEntry{Colors}
+    %\VignetteIndexEntry{Colours}
     %\VignetteEngine{knitr::rmarkdown}
     %\VignetteEncoding{UTF-8}
 ---

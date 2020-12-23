@@ -147,7 +147,7 @@ macos_cols_order <- list(default = 1:11,
 #' @param vibrant Returns vibrant alternative of colors
 #' @param order Indicates the order of colors in the palette
 #'
-#' @rdname macos_color_palettes
+#' @rdname macos_colour_palettes
 #'
 #' @export
 #' @examples
@@ -241,10 +241,6 @@ scale_colour_macos_light <- function(order = "contrast", accessible = FALSE, vib
     }
 }
 
-#' @export
-#' @rdname scale_colour_macos_light
-scale_color_macos_light <- scale_colour_macos_light
-
 #'
 #' @param accessible Returns accessible alternative of colors
 #' @param vibrant Returns vibrant alternative of colors
@@ -287,7 +283,7 @@ scale_fill_macos_light <- function(order = order, accessible = FALSE,
 #' @param vibrant Returns vibrant alternative of colors
 #' @param order Indicates the order of colors in the palette
 #'
-#' @rdname macos_color_palettes
+#' @rdname macos_colour_palettes
 #'
 #' @export
 #' @examples
@@ -380,10 +376,6 @@ scale_colour_macos_dark <- function(order = "contrast", accessible = FALSE,
         }
     }
 }
-
-#' @export
-#' @rdname scale_colour_macos_dark
-scale_color_macos_dark <- scale_colour_macos_dark
 
 #' @param accessible Returns accessible alternative of colors
 #' @param vibrant Returns vibrant alternative of colors
