@@ -137,46 +137,32 @@
 <div id="inter-the-alternative" class="section level2">
 <h2 class="hasAnchor">
 <a href="#inter-the-alternative" class="anchor"></a>Inter, The Alternative</h2>
-<p>As an alternative, sfthemes uses the <a href="https://rsms.me/inter/">Inter</a> family. Inter typeface is a <a href="https://github.com/rsms/inter">free and open source</a>, and you are free to use it in almost any way imaginable.</p>
+<p>Inter is a <a href="https://github.com/rsms/inter">free and open source</a> typeface, and you are free to use it in almost any way imaginable.</p>
 <p>Inter is closely related to SF Pro. Like SF Pro, it is crafted and designed for computer screens, therefore sfthemes plots with Inter fonts will look a lot like their SF Pro variants.</p>
 <p><strong>Inter vs SF Pro</strong> <img src="images/sf_vs_inter_numbers.png"></p>
 <p><img src="images/sf_vs_inter_name.png"></p>
 <div id="usage" class="section level3">
 <h3 class="hasAnchor">
 <a href="#usage" class="anchor"></a>Usage</h3>
-<p>Inter is the default typeface of the sfthemes, and can be used without setting any special commands. However, <a href="../reference/sf_pro_font.html">sf_set_inter</a> is available and can be used to change other themes’ font.</p>
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span>; <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://sfthemes.amirmasoudabdol.name">sfthemes</a></span><span class="op">)</span>
-
-<span class="co"># Changing </span>
-<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">diamonds</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">carat</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_histogram.html">geom_histogram</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="../reference/import_inter.html">sf_set_inter</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
+<p>Inter is the <strong>default</strong> typeface of the sfthemes, and it can be used without setting any special commands.</p>
 </div>
 </div>
 <div id="san-francisco-family" class="section level2">
 <h2 class="hasAnchor">
 <a href="#san-francisco-family" class="anchor"></a>San Francisco Family</h2>
-<p><a href="https://en.wikipedia.org/wiki/San_Francisco_(sans-serif_typeface)">San Francisco typeface</a> consists of three large family of typefaces, SF Pro, SF Compact, and SF Mono. They are degined to be used in different Apple platforms, e.g., iOS, macOS. Each family has its own characteristic and is optimized for certain screensize and resolution. sfthemes is optimized for SF Pro, the most general variant of the typeface designed for iOS, iPadOS, and macOS.</p>
-<p>Apple restricted the usage of the entire SF typeface family for developers who ar designing and developing applications for Apple’s platforms. Please keep this resctriction in mind when using and sharing your plots, if you are using SF Pro as the main typeface of the plots.</p>
-<p>Moreover, distribution and repackaging of San Francisco family is prohibited, however, the fonts can be downloaded directly from Apple’s website. <a href="https://developer.apple.com/fonts/">Download SF Pro</a></p>
+<p><a href="https://en.wikipedia.org/wiki/San_Francisco_(sans-serif_typeface)">San Francisco typeface</a> consists of three large family of typefaces, SF Pro, SF Compact, and SF Mono. They are degined to be used in different Apple platforms, e.g., iOS, macOS. Each family has its own characteristic and is optimized for certain screen size and resolution. sfthemes is optimized for SF Pro, the most general variant of the typeface designed for iOS, iPadOS, and macOS.</p>
+<p>Apple restricted the usage of the entire SF typeface family for developers who are designing and developing applications or material for Apple’s platforms. Please keep this resctriction in mind when using and sharing your plots, if you are using SF Pro as the main typeface of the plots.</p>
+<p>Distribution and repackaging of the San Francisco family is prohibited, however, the fonts can be downloaded directly from Apple’s website. <a href="https://developer.apple.com/fonts/">Download SF Pro</a></p>
 <div id="usage-1" class="section level3">
 <h3 class="hasAnchor">
 <a href="#usage-1" class="anchor"></a>Usage</h3>
-<p>In order to use SF Pro, you can apply the <a href="../reference/sf_pro_font.html">sf_set_sf_pro</a> function to the end of your ggplot customization commands. Keep in mind that if you have not installed and imported SF Pro correctly, this command will fail, or <code>ggplot2</code> will ignore your font choice. See <a href="../reference/sf_pro_font.html">import_sf_pro</a> for the instalation process of SF Pro.</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span>; <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://sfthemes.amirmasoudabdol.name">sfthemes</a></span><span class="op">)</span>
-
-<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">diamonds</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">carat</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_histogram.html">geom_histogram</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="../reference/theme_sf_dark.html">theme_sf_dark</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="../reference/scale_colour_watchos_dark.html">scale_colour_watchos_dark</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="../reference/import_sf_pro.html">sf_set_sf_pro</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
+<p>TODO: This needs to be rewritten…</p>
 </div>
 </div>
 <div id="dynamic-type-sizes" class="section level2">
 <h2 class="hasAnchor">
 <a href="#dynamic-type-sizes" class="anchor"></a>Dynamic Type Sizes</h2>
-<p>sfthemes has adjsuted and adapted all available <a href="https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/typography#dynamic-type-sizes">dynamic type sizes</a> as presented in Apple’s HIG. sfthems size classes are based on iOS font sizes with minor compatibility modifications. In total, there are 7 size classes available — i.e., <code>xSmall</code>, <code>Small</code>, <code>Medium</code>, <code>Large</code>, <code>xLarge</code>, <code>xxLarge</code>, <code>xxxLarge</code> — with <code>Medium</code> being the default class. With both <code>theme_sf_light</code> and <code>theme_sf_dark</code>, The <code>font_size_scale</code> parameter can be used to change the overall text sizes of a plot.</p>
+<p>sfthemes has adjsuted and adapted all available <a href="https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/typography#dynamic-type-sizes">dynamic type sizes</a> as presented in Apple’s HIG. sfthemes size classes are based on iOS font sizes with minor compatibility modifications. In total, there are 7 size classes available — i.e., <code>xSmall</code>, <code>Small</code>, <code>Medium</code>, <code>Large</code>, <code>xLarge</code>, <code>xxLarge</code>, <code>xxxLarge</code> — with <code>Medium</code> being the default class.</p>
 <table class="table">
 <thead><tr class="header">
 <th>class</th>
