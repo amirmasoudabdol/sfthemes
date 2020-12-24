@@ -7,13 +7,21 @@
 \usage{
 import_inter()
 
-sf_set_inter()
+sf_set_inter(ret)
+}
+\arguments{
+\item{ret}{An input theme object that is going to be patched}
 }
 \description{
 sfthemes package includes 4 faces of Inter typeface, Regular, Italic, Bold,
 and Bold Italic. The \code{import_inter} function makes sure that these fonts are
 correctly installed and can be accessed by R. The \code{sf_set_inter} can be used
 to set Inter as the primary font of any other themes.
+
+\code{sf_set_inter()} accepts a \code{\link[ggplot2:theme]{ggplot2::theme()}} object as input, and replace
+all its fonts with Inter family fonts. For instance, you can pass
+\code{\link[ggplot2:ggtheme]{ggplot2::theme_linedraw()}}, and all its font will be
+replaced with Inter.
 }
 \note{
 \itemize{
@@ -21,5 +29,22 @@ to set Inter as the primary font of any other themes.
 you will encounter some warning messages regarding a missing font.
 \item If you have already installed Inter in your system, you do not need to run
 this command.
+}
+}
+\examples{
+\dontrun{
+library(ggplot2)
+
+ggplot(mtcars) +
+ geom_point(aes(x = wt, y = mpg, colour = factor(gear))) +
+ labs(title = "Fuel economy declines as weight increases",
+      subtitle = "(1973-74)",
+      caption = "Data from the 1974 Motor Trend US magazine.",
+      x = "Weight (1000 lbs)",
+      y = "Fuel economy (mpg)",
+      colour = "Gears") +
+ facet_grid(vs ~ am) +
+ sf_set_inter(theme_linedraw()) +
+ scale_colour_ios_light()
 }
 }

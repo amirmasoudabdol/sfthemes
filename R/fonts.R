@@ -13,7 +13,6 @@
 #'
 #' @rdname sf_pro_font
 #'
-#' @export
 import_sf_pro <- function() {
 
   extrafont::loadfonts(quiet = TRUE)
@@ -40,7 +39,7 @@ font_sf_pro_text_bold <- "SFProText-Bold"
 font_sf_pro_disply_bold <- "SFProDisplay-Bold"
 
 #' @rdname sf_pro_font
-#' @export
+#'
 sf_set_sf_pro <- function() {
 
   # Overwriting all families
@@ -97,17 +96,39 @@ import_inter <- function() {
 
 
 font_inter <- "Inter"
+font_inter_light <- "Inter Light"
 font_inter_bold <- "Inter Bold"
 font_inter_extra_bold <- "Inter Extra Bold"
 
 
 #' @rdname inter_font
+#' @md
+#' @description
+#' `sf_set_inter()` accepts a [ggplot2::theme()] object as input, and replace
+#' all its fonts with Inter family fonts. For instance, you can pass
+#' [ggplot2::theme_linedraw()], and all its font will be
+#' replaced with Inter.
+#'
+#' @param ret An input theme object that is going to be patched
+#'
+#' @examples \dontrun{
+#' library(ggplot2)
+#'
+#'ggplot(mtcars) +
+#'  geom_point(aes(x = wt, y = mpg, colour = factor(gear))) +
+#'  labs(title = "Fuel economy declines as weight increases",
+#'       subtitle = "(1973-74)",
+#'       caption = "Data from the 1974 Motor Trend US magazine.",
+#'       x = "Weight (1000 lbs)",
+#'       y = "Fuel economy (mpg)",
+#'       colour = "Gears") +
+#'  facet_grid(vs ~ am) +
+#'  sf_set_inter(theme_linedraw()) +
+#'  scale_colour_ios_light()
+#' }
 #' @export
-sf_set_inter <- function() {
+sf_set_inter <- function(ret) {
 
-  # Overwriting all families
-
-  ret <- theme()
   ret <- ret + theme(axis.title = element_text(family=font_inter))
   ret <- ret + theme(axis.title.x = element_text(family=font_inter))
   ret <- ret + theme(axis.title.y = element_text(family=font_inter))

@@ -47,15 +47,15 @@ articles:
 - title: San Francisco Themes
   navbar: ~
   contents:
-  - typography
   - colours
+  - typography
   - size_classes
 
 reference:
 - title: Typography
   desc: This is about typography
   contents:
-  - starts_with("import_")
+  - import_inter
 
 - title: Themes
   desc:
