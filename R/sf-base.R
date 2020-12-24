@@ -1,16 +1,7 @@
 #'
-#' @param base_family,base_size base font family and size
-#' @param plot_title_family,plot_title_face,plot_title_size,plot_title_margin
-#' plot tilte family, face, size and margin
-#' @param subtitle_family,subtitle_face,subtitle_size plot subtitle family,
-#' face and size
+#'
+#' @param font_family primary font family of the plot
 #' @param subtitle_margin plot subtitle margin bottom (single numeric value)
-#' @param strip_text_family,strip_text_face,strip_text_size facet label font
-#' family, face and size
-#' @param caption_family,caption_face,caption_size,caption_margin plot caption
-#' family, face, size and margin
-#' @param axis_title_family,axis_title_face,axis_title_size axis title font
-#' family, face and size
 #' @param axis_title_just axis title font justificationk one of `[blmcrt]`
 #' @param axis_text_size font size of axis text
 #' @param plot_margin plot margin (specify with [ggplot2::margin])
@@ -33,36 +24,31 @@
 #'
 #' @importFrom ggplot2 margin theme theme_minimal element_blank element_rect element_text element_line update_geom_defaults
 sf_base <- function(
-  base_family = font_inter, 
+  font_family = "Inter",
   base_size = NULL,
-  plot_title_family = font_inter_extra_bold, 
   plot_title_size = NULL,
   plot_title_face = NULL, 
   plot_title_margin = 10,
-  subtitle_family = font_inter,
   subtitle_size = NULL,
   subtitle_face = "plain", 
   subtitle_margin = 25,
-  strip_text_family = font_inter, 
   strip_text_size = NULL,
   strip_text_face = "plain",
-  caption_family = font_inter,
   caption_size = NULL,
   caption_face = "plain", 
   caption_margin = 25,
   axis_text_size = NULL,
-  text_colour_palette = ios_text_on_light_cols,
-  axis_title_family = base_family,
+  text_colour_palette = NULL,
   axis_title_size = NULL,
   axis_title_face = "plain",
   axis_title_just = "rt",
   legend_title_size = NULL,
   legend_title_face = "bold",
-  plot_background_col = "white",
-  panel_background_col = "white",
+  plot_background_col = NULL,
+  panel_background_col = NULL,
   plot_margin = margin(30, 30, 30, 30),
-  grid_col = "#cccccc", grid = TRUE,
-  axis_col = "#cccccc", axis = TRUE, ticks = TRUE,
+  grid_col = NULL, grid = TRUE,
+  axis_col = NULL, axis = TRUE, ticks = TRUE,
   font_size_scale = "xSmall",
   element_size_scale = "xSmall",
   offset_x_ticks = FALSE,
@@ -72,6 +58,25 @@ sf_base <- function(
   if (!is.null(scale)) {
     font_size_scale <- scale
     element_size_scale <- scale
+  }
+
+  # Setting the fonts
+  if (font_family == "Inter") {
+    base_family <- font_inter 
+    plot_title_family <- font_inter_extra_bold 
+    subtitle_family <- font_inter
+    strip_text_family <- font_inter 
+    caption_family <- font_inter
+    axis_title_family <- font_inter
+  } else if (font_family == "SF Pro") {
+    base_family <- font_sf_pro 
+    plot_title_family <- font_sf_pro_extra_bold 
+    subtitle_family <- font_sf_pro
+    strip_text_family <- font_sf_pro 
+    caption_family <- font_sf_pro
+    axis_title_family <- font_sf_pro
+  } else {
+    # Do something else ...
   }
 
   font_scale <- sf_scale(font_size_scale)
