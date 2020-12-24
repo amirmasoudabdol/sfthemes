@@ -1,5 +1,22 @@
 #' San Francisco Dark Theme
-#'
+#' 
+#' @md
+#' @description
+#' A minimal theme with dark background inspired by — and adapted from — the
+#' occasional appearances of charts used by Apple within different 
+#' contexts, e.g., [Apple Health](https://www.apple.com/ios/health/) app, 
+#' [Screen Time on iOS](https://support.apple.com/en-us/HT208982) and macOS. 
+#' 
+#' @details
+#' Recommended color and fill scales to be used with:
+#' 
+#' - [scale_colour_ios_dark]
+#' - [scale_fill_ios_dark]
+#' - [scale_colour_macos_dark]
+#' - [scale_fill_macos_dark]
+#' - [scale_colour_watchos_dark]
+#' - [scale_fill_watchos_dark]
+#' 
 #' @inheritParams sf_base
 #'
 #' @importFrom ggplot2 update_geom_defaults

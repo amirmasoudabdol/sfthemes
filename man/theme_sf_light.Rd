@@ -71,7 +71,19 @@ combination of \code{X}, \code{x}, \code{Y}, \code{y})}
 \item{offset_y_ticks}{Fancy y tick labels}
 }
 \description{
-San Francisco Light Theme
+A minimal theme with light background inspired by — and adapted from — the
+occasional appearances of charts used by Apple within different
+contexts, e.g., \href{https://www.apple.com/ios/health/}{Apple Health} app,
+\href{https://support.apple.com/en-us/HT208982}{Screen Time on iOS} and macOS.
+}
+\details{
+Recommended color and fill scales to be used with:
+\itemize{
+\item \link{scale_colour_ios_light}
+\item \link{scale_fill_ios_light}
+\item \link{scale_colour_macos_light}
+\item \link{scale_fill_macos_light}
+}
 }
 \examples{
 \dontrun{

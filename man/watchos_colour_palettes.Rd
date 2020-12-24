@@ -22,9 +22,12 @@ of the followings:
 \item \link{scale_colour_watchos_dark}
 }
 
-→ \strong{Note}: We recommend paining this palette with dark themes, as the high
+\strong{Note}:
+\itemize{
+\item We recommend paining this palette with dark themes, as the high
 base brightness of colors may make them hard to distinguish in light
 themes
+}
 }
 \examples{
 

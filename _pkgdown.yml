@@ -21,6 +21,7 @@ development:
 
 navbar:
   structure:
+    left:  [home, reference, articles, news]
     right: [github, kofi]
   components:
     kofi:

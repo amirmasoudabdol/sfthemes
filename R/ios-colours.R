@@ -129,7 +129,8 @@ ios_light_pal <- function(order = "contrast", accessible = FALSE) {
 #' While they can be used with dark themes, in general, we recommend pairing 
 #' `scale_colour_*_light`s with light themes for better clarity and contrast.
 #' 
-#' → **Note**: *While iOS color palettes provide a total of 9 colors, we do not
+#' **Note**: 
+#' - *While iOS color palettes provide a total of 9 colors, we do not
 #' recommend using them for more than 6 groups. The last three colors often
 #' collide with other colors in the palette and may affect the clarity of your
 #' visualization.*
@@ -204,7 +205,8 @@ ios_dark_pal <- function(order = "contrast", accessible = FALSE) {
 #' While they can be used with light themes, in general, we recommend pairing 
 #' `scale_colour_*_dark`s with dark themes for better clarity and contrast.
 #' 
-#' → **Note**: *While iOS color palettes provide a total of 9 colors, we do not
+#' **Note**: 
+#' - *While iOS color palettes provide a total of 9 colors, we do not
 #' recommend using them for more than 6 groups. The last three colors often
 #' collide with other colors in the palette and may affect the clarity of your
 #' visualization.*
@@ -316,7 +318,8 @@ ios_gray_light_pal <- function(accessible = FALSE) {
 #' only been implemented in sfthemes because I wanted to bring all the color 
 #' palettes mentioned in the Apple's HIG.
 #' 
-#' **Warning**: *iOS gray colors are not necessary suitable for general 
+#' **Warning**: 
+#' - *iOS gray colors are not necessary suitable for general 
 #' plotting; so consider your use-case carefully before adapting them. You can
 #' loosely compare them to `ggplot2::scale_alpha()`.*
 #'
@@ -387,7 +390,8 @@ ios_gray_dark_pal <- function(accessible = FALSE) {
 #' only been implemented in sfthemes because I wanted to bring all the color 
 #' palettes mentioned in the Apple's HIG.
 #' 
-#' **Warning**: *iOS gray colors are not necessary suitable for general 
+#' **Warning**:
+#' - *iOS gray colors are not necessary suitable for general 
 #' plotting; so consider your use-case carefully before adapting them. You can
 #' loosely compare them to `ggplot2::scale_alpha()`.*
 #'
