@@ -15,7 +15,7 @@ test_that("scaling light sample figures are generated", {
             geom_point(aes(shape=Species)) + xlab("Sepal Length") + ylab("Sepal Width") +
             labs(title = "Linear Fit", subtitle = classes[[i]]) +
             geom_smooth(method="lm") +
-            theme_sf_light(font_size_scale = classes[[i]], element_size_scale = "xLarge") +
+            theme_sf_light(font_size_class = classes[[i]], element_size_class = "xLarge") +
             scale_colour_ios_light(accessible = F) +
             theme(legend.position = "bottom")
 
@@ -27,7 +27,7 @@ test_that("scaling light sample figures are generated", {
             geom_point(aes(shape=Species)) + xlab("Sepal Length") + ylab("Sepal Width") +
             labs(title = "Linear Fit", subtitle = classes[[i]]) +
             geom_smooth(method="lm") +
-            theme_sf_dark(font_size_scale = classes[[i]], element_size_scale = "xLarge") +
+            theme_sf_dark(font_size_class = classes[[i]], element_size_class = "xLarge") +
             scale_colour_ios_dark(accessible = F) +
             theme(legend.position = "bottom")
 
@@ -64,7 +64,7 @@ test_that("scaling light sample figures are generated", {
             geom_point(aes(shape=Species)) + xlab("Sepal Length") + ylab("Sepal Width") +
             labs(title = "Linear Fit", subtitle = classes[[i]]) +
             geom_smooth(method="lm") +
-            theme_sf_light(font_size_scale = "xLarge", element_size_scale = classes[[i]]) +
+            theme_sf_light(font_size_class = "xLarge", element_size_class = classes[[i]]) +
             scale_colour_ios_light(accessible = F) +
             theme(legend.position = "bottom")
 
@@ -76,7 +76,7 @@ test_that("scaling light sample figures are generated", {
             geom_point(aes(shape=Species)) + xlab("Sepal Length") + ylab("Sepal Width") +
             labs(title = "Linear Fit", subtitle = classes[[i]]) +
             geom_smooth(method="lm") +
-            theme_sf_dark(font_size_scale = "xLarge", element_size_scale = classes[[i]]) +
+            theme_sf_dark(font_size_class = "xLarge", element_size_class = classes[[i]]) +
             scale_colour_ios_dark(accessible = F) +
             theme(legend.position = "bottom")
 

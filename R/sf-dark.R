@@ -12,11 +12,11 @@
 #' @param axis add x or y axes? `TRUE`, `FALSE`, "`xy`"
 #' @param ticks ticks if `TRUE` add ticks
 #'
-#' @param font_size_scale Scaling fonts
-#' @param element_size_scale Scaling element sizes
+#' @param scale scale everything
+#' @param font_size_class Scaling fonts
+#' @param element_size_class Scaling element sizes
 #' @param offset_x_ticks fancy x tick labels
 #' @param offset_y_ticks fancy y tick labels
-#' @param scale scale everything
 #'
 #' @importFrom ggplot2 update_geom_defaults
 #'
@@ -72,11 +72,12 @@ theme_sf_dark <- function(
   axis_col = ios_text_on_dark_cols[["label"]],
   axis = TRUE,
   ticks = TRUE,
-  font_size_scale = "xSmall",
-  element_size_scale = "xSmall",
+  scale = NULL,
+  font_size_class = "xSmall",
+  element_size_class = "xSmall",
   offset_x_ticks = FALSE,
-  offset_y_ticks = FALSE,
-  scale = NULL) {
+  offset_y_ticks = FALSE
+  ) {
 
 
   # Momentary hack for setting the defaults
@@ -120,8 +121,8 @@ theme_sf_dark <- function(
     axis_col = axis_col,
     axis = TRUE,
     ticks = TRUE,
-    font_size_scale = font_size_scale,
-    element_size_scale = element_size_scale,
+    font_size_class = font_size_class,
+    element_size_class = element_size_class,
     offset_x_ticks = offset_x_ticks,
     offset_y_ticks = offset_y_ticks,
     scale = scale

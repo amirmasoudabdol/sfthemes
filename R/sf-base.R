@@ -16,11 +16,11 @@
 #' @param plot_background_col plot background color
 #' @param panel_background_col panel backgroun color
 #'
-#' @param font_size_scale Scaling fonts
-#' @param element_size_scale Scaling element sizes
+#' @param scale scale everything
+#' @param font_size_class Scaling fonts
+#' @param element_size_class Scaling element sizes
 #' @param offset_x_ticks fancy x tick labels
 #' @param offset_y_ticks fancy y tick labels
-#' @param scale scale everything
 #'
 #' @importFrom ggplot2 margin theme theme_minimal element_blank element_rect element_text element_line update_geom_defaults
 sf_base <- function(
@@ -49,15 +49,16 @@ sf_base <- function(
   plot_margin = margin(30, 30, 30, 30),
   grid_col = NULL, grid = TRUE,
   axis_col = NULL, axis = TRUE, ticks = TRUE,
-  font_size_scale = "xSmall",
-  element_size_scale = "xSmall",
+  scale = NULL,
+  font_size_class = "xSmall",
+  element_size_class = "xSmall",
   offset_x_ticks = FALSE,
-  offset_y_ticks = FALSE,
-  scale = NULL) {
+  offset_y_ticks = FALSE
+  ) {
 
   if (!is.null(scale)) {
-    font_size_scale <- scale
-    element_size_scale <- scale
+    font_size_class <- scale
+    element_size_class <- scale
   }
 
   # Setting the fonts
@@ -79,7 +80,7 @@ sf_base <- function(
     # Do something else ...
   }
 
-  font_scale <- sf_scale(font_size_scale)
+  font_scale <- sf_scale(font_size_class)
 
   if (is.null(base_size))
     base_size <- font_scale[["sizes"]][["body"]]
@@ -138,11 +139,11 @@ sf_base <- function(
         to font sizes may cause disproportionate text sizes.")
 
 
-  if (!is.null(element_size_scale)) {
+  if (!is.null(element_size_class)) {
     update_geom_defaults("point",
-               list(size = sf_element_sizes[[element_size_scale]]))
+               list(size = sf_element_sizes[[element_size_class]]))
     update_geom_defaults("line",
-               list(lwd = sf_element_sizes[[element_size_scale]]))
+               list(lwd = sf_element_sizes[[element_size_class]]))
   }
 
 
