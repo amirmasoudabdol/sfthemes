@@ -18,7 +18,7 @@
       "<link id=\"css\" rel=\"stylesheet\" href=\"https://bootswatch.com/3/flatly/bootstrap.css\" onload=\"document.documentElement.style.display = ''\">"
     );
   }
-</script><title>Colours • sfthemes</title>
+</script><title>Size Classes • sfthemes</title>
 <!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
 <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png">
@@ -35,7 +35,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
 <script src="../pkgdown.js"></script><link href="../extra.css" rel="stylesheet">
-<meta property="og:title" content="Colours">
+<meta property="og:title" content="Size Classes">
 <meta property="og:description" content="sfthemes">
 <meta property="og:image" content="https://sfthemes.amirmasoudabdol.name/reference/figures/twitter-summary-card.png">
 <meta property="og:image:alt" content="TO BE ADDED LATER">
@@ -120,92 +120,62 @@
 
       
 
-      </header><script src="colours_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
+      </header><script src="size_classes_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
-      <h1 data-toc-skip>Colours</h1>
+      <h1 data-toc-skip>Size Classes</h1>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/amirmasoudabdol/sfthemes/blob/main/vignettes/colours.Rmd"><code>vignettes/colours.Rmd</code></a></small>
-      <div class="hidden name"><code>colours.Rmd</code></div>
+      <small class="dont-index">Source: <a href="https://github.com/amirmasoudabdol/sfthemes/blob/main/vignettes/size_classes.Rmd"><code>vignettes/size_classes.Rmd</code></a></small>
+      <div class="hidden name"><code>size_classes.Rmd</code></div>
 
     </div>
 
     
     
-<p><a href="https://developer.apple.com/design/human-interface-guidelines/">Apple’s Human Interface Guidelines</a> provides two primary color palettes for each platform, light and dark.</p>
-<p>On iOS, each palette is accompanied by an accessible variant where the temperature and transparency of colors are adjusted to provide higher contrast and brightness. Both light and dark palettes can be used with <code><a href="../reference/theme_sf_light.html">theme_sf_light()</a></code> and <code><a href="../reference/theme_sf_dark.html">theme_sf_dark()</a></code> themes. However, we recommend using light palettes with light themes, and dark palettes with dark themes.</p>
-<p><strong>iOS Light Palette</strong></p>
-<p><img src="images/ios-light.png"></p>
-<p><strong>iOS Accessible Light Palette</strong></p>
-<p><img src="images/ios-light-accessible.png"></p>
-<p>On macOS, in addition to light and dark palettes and their accessible forms, each palette is accompanied with a <strong>vibrant</strong> variant where the contrast between colors is even higher.</p>
-<p><strong>macOS Light Palette</strong></p>
-<p><img src="images/macos-light.png"></p>
-<p><strong>macOS Vibrant Light Palette</strong></p>
-<p><img src="images/macos-light-vibrant.png"></p>
-<p>On watchOS, only one color palette is provided. The watchOS color palette is specifically designed to provide higher level of contrast and brightness, and it is best accompanied by dark themes.</p>
-<p><strong>watchOS Dark Palette</strong></p>
-<p><img src="images/watchos-dark.png"></p>
-<p>Collectively, sfthemes offers 17 color palettes:</p>
-<p><a href="../reference/ios_color_palettes.html"><strong>iOS Set</strong></a></p>
-<ul>
-<li>iOS Light
-<ul>
-<li>iOS Accessible Light</li>
-</ul>
-</li>
-<li>iOS Dark
-<ul>
-<li>iOS Accessible Dark</li>
-</ul>
-</li>
-<li>iOS Gray Light
-<ul>
-<li>iOS Accessible Gray Light</li>
-</ul>
-</li>
-<li>iOS Gray Dark
-<ul>
-<li>iOS Accessible Gray Dark</li>
-</ul>
-</li>
-</ul>
-<p><a href="../reference/macos_color_palettes.html"><strong>macOS Set</strong></a></p>
-<ul>
-<li>macOS Light
-<ul>
-<li>macOS Accessible Light</li>
-</ul>
-</li>
-<li>macOS Vibrant Light
-<ul>
-<li>macOS Accessible Vibrant Light</li>
-</ul>
-</li>
-<li>macOS Dark
-<ul>
-<li>iOS Accessible Dark</li>
-</ul>
-</li>
-<li>macOS Vibrant Dark
-<ul>
-<li>iOS Accessible Vibrant Dark</li>
-</ul>
-</li>
-</ul>
-<p><a href="../reference/watchos_color_palettes.html"><strong>watchOS Set</strong></a></p>
-<ul>
-<li>watchOS Dark</li>
-</ul>
-<div id="colors-order" class="section level2">
+<p>Besides dynamic type sizing, sfthemes can also scale all other elements of the plot. This is being done by multiplying all element sizes with a specific multiplier. Keep in mind that these values will scale the existing sizes of each elements; therefore, it is recommended that you do not try to scale your entire plot if you are using <code>size</code> or <code>lwd</code> as one of your <code>aes</code>.</p>
+<table class="table">
+<thead><tr class="header">
+<th>class</th>
+<th><code>xSmall</code></th>
+<th><code>Small</code></th>
+<th><code>Medium</code></th>
+<th><code>Large</code></th>
+<th><code>xLarge</code></th>
+<th><code>xxLarge</code></th>
+<th><code>xxxLarge</code></th>
+</tr></thead>
+<tbody><tr class="odd">
+<td>multiplier</td>
+<td><code>0.75</code></td>
+<td><code>1</code></td>
+<td><code>1.25</code></td>
+<td><code>2</code></td>
+<td><code>3</code></td>
+<td><code>4</code></td>
+<td><code>5</code></td>
+</tr></tbody>
+</table>
+<div id="scaling-element-sizes" class="section level2">
 <h2 class="hasAnchor">
-<a href="#colors-order" class="anchor"></a>Color’s Order</h2>
-<p>Each palette in sfthemes can be sorted in two ways. The <em><code>default</code></em> order returns colors of the palette according to their appearance in Apple’s HIG document, and the <em><code>contrast</code></em> (default) order returns an optimized ordering of colors to maximize their in-between contrast.</p>
-<p><strong>iOS palette ordered for more in-between contrast</strong></p>
-<p><img src="images/ios-light.png"></p>
-<p><strong>iOS palette ordered for more in-between contrast</strong></p>
-<p><img src="images/ios-light-contrast.png"></p>
+<a href="#scaling-element-sizes" class="anchor"></a>Scaling element sizes</h2>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># TODO: Update the code when the plot is finalized</span></code></pre></div>
+<p><img src="images/size-classes-element-scaling-animation-light-dark.gif"></p>
+</div>
+<div id="scaling-font-sizes" class="section level2">
+<h2 class="hasAnchor">
+<a href="#scaling-font-sizes" class="anchor"></a>Scaling font sizes</h2>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># TODO: Update the code when the plot is finalized</span></code></pre></div>
+<p><img src="images/size-classes-font-scaling-animation-light-dark.gif"></p>
+</div>
+<div id="scaling-everything-together" class="section level2">
+<h2 class="hasAnchor">
+<a href="#scaling-everything-together" class="anchor"></a>Scaling everything together</h2>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># TODO: Update the code when the plot is finalized</span></code></pre></div>
+<p><img src="../reference/figures/front-page-scaling-animation-light-dark.gif"></p>
 </div>
   </div>
 

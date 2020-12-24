@@ -75,7 +75,10 @@
   
 
 <meta property="og:title" content="San Francisco Dark Theme — theme_sf_dark" />
-<meta property="og:description" content="San Francisco Dark Theme" />
+<meta property="og:description" content="A minimal theme with dark background inspired by — and adapted from — the
+occasional appearances of charts used by Apple within different
+contexts, e.g., Apple Health app,
+Screen Time on iOS and macOS." />
 <meta property="og:image" content="https://sfthemes.amirmasoudabdol.name/reference/figures/twitter-summary-card.png" />
 <meta property="og:image:alt" content="TO BE ADDED LATER" />
 <meta name="twitter:card" content="summary_large_image" />
@@ -133,9 +136,6 @@
 <li>
   <a href="../reference/index.html">Reference</a>
 </li>
-<li>
-  <a href="../news/index.html">Changelog</a>
-</li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     Articles
@@ -144,15 +144,18 @@
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="../articles/typography.html">Typography</a>
-    </li>
-    <li>
       <a href="../articles/colours.html">Colours</a>
     </li>
     <li>
-      <a href="../articles/scales.html">Scales</a>
+      <a href="../articles/typography.html">Typography</a>
+    </li>
+    <li>
+      <a href="../articles/size_classes.html">Size Classes</a>
     </li>
   </ul>
+</li>
+<li>
+  <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -188,135 +191,121 @@
     </div>
 
     <div class="ref-description">
-    <p>San Francisco Dark Theme</p>
+    <p>A minimal theme with dark background inspired by — and adapted from — the
+occasional appearances of charts used by Apple within different
+contexts, e.g., <a href='https://www.apple.com/ios/health/'>Apple Health</a> app,
+<a href='https://support.apple.com/en-us/HT208982'>Screen Time on iOS</a> and macOS.</p>
     </div>
 
     <pre class="usage"><span class='fu'>theme_sf_dark</span><span class='op'>(</span>
-  base_family <span class='op'>=</span> <span class='va'>font_inter</span>,
+  font_family <span class='op'>=</span> <span class='st'>"Inter"</span>,
   base_size <span class='op'>=</span> <span class='cn'>NULL</span>,
-  plot_title_family <span class='op'>=</span> <span class='va'>font_inter_extra_bold</span>,
   plot_title_size <span class='op'>=</span> <span class='cn'>NULL</span>,
   plot_title_face <span class='op'>=</span> <span class='cn'>NULL</span>,
   plot_title_margin <span class='op'>=</span> <span class='fl'>10</span>,
-  subtitle_family <span class='op'>=</span> <span class='va'>font_inter</span>,
   subtitle_size <span class='op'>=</span> <span class='cn'>NULL</span>,
   subtitle_face <span class='op'>=</span> <span class='cn'>NULL</span>,
   subtitle_margin <span class='op'>=</span> <span class='fl'>15</span>,
-  strip_text_family <span class='op'>=</span> <span class='va'>font_inter</span>,
   strip_text_size <span class='op'>=</span> <span class='cn'>NULL</span>,
   strip_text_face <span class='op'>=</span> <span class='cn'>NULL</span>,
-  caption_family <span class='op'>=</span> <span class='va'>font_inter</span>,
   caption_size <span class='op'>=</span> <span class='cn'>NULL</span>,
   caption_face <span class='op'>=</span> <span class='cn'>NULL</span>,
   caption_margin <span class='op'>=</span> <span class='fl'>25</span>,
   axis_text_size <span class='op'>=</span> <span class='cn'>NULL</span>,
-  axis_title_family <span class='op'>=</span> <span class='va'>base_family</span>,
   axis_title_size <span class='op'>=</span> <span class='cn'>NULL</span>,
   axis_title_face <span class='op'>=</span> <span class='st'>"plain"</span>,
   axis_title_just <span class='op'>=</span> <span class='st'>"rt"</span>,
   plot_margin <span class='op'>=</span> <span class='fu'>ggplot2</span><span class='fu'>::</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>margin</a></span><span class='op'>(</span><span class='fl'>30</span>, <span class='fl'>30</span>, <span class='fl'>30</span>, <span class='fl'>30</span><span class='op'>)</span>,
-  grid_col <span class='op'>=</span> <span class='va'>ios_text_on_dark_cols</span><span class='op'>[[</span><span class='st'>"white"</span><span class='op'>]</span><span class='op'>]</span>,
+  grid_col <span class='op'>=</span> <span class='va'>ios_text_on_dark_cols</span><span class='op'>[[</span><span class='st'>"label"</span><span class='op'>]</span><span class='op'>]</span>,
   grid <span class='op'>=</span> <span class='cn'>TRUE</span>,
-  axis_col <span class='op'>=</span> <span class='va'>ios_text_on_dark_cols</span><span class='op'>[[</span><span class='st'>"white"</span><span class='op'>]</span><span class='op'>]</span>,
+  axis_col <span class='op'>=</span> <span class='va'>ios_text_on_dark_cols</span><span class='op'>[[</span><span class='st'>"label"</span><span class='op'>]</span><span class='op'>]</span>,
   axis <span class='op'>=</span> <span class='cn'>TRUE</span>,
   ticks <span class='op'>=</span> <span class='cn'>TRUE</span>,
-  font_size_scale <span class='op'>=</span> <span class='st'>"xSmall"</span>,
-  element_size_scale <span class='op'>=</span> <span class='st'>"xSmall"</span>,
+  size_class <span class='op'>=</span> <span class='cn'>NULL</span>,
+  font_size_class <span class='op'>=</span> <span class='st'>"xSmall"</span>,
+  element_size_class <span class='op'>=</span> <span class='st'>"xSmall"</span>,
   offset_x_ticks <span class='op'>=</span> <span class='cn'>FALSE</span>,
-  offset_y_ticks <span class='op'>=</span> <span class='cn'>FALSE</span>,
-  scale <span class='op'>=</span> <span class='cn'>NULL</span>
+  offset_y_ticks <span class='op'>=</span> <span class='cn'>FALSE</span>
 <span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>base_family</th>
-      <td><p>base_size base font family and size</p></td>
-    </tr>
-    <tr>
-      <th>plot_title_family</th>
-      <td><p>plot_title_face,plot_title_size,plot_title_margin
-plot tilte family, face, size and margin</p></td>
-    </tr>
-    <tr>
-      <th>subtitle_family</th>
-      <td><p>subtitle_face,subtitle_size plot subtitle family,
-face and size</p></td>
+      <th>font_family</th>
+      <td><p>Primary font family of the plot</p></td>
     </tr>
     <tr>
       <th>subtitle_margin</th>
-      <td><p>plot subtitle margin bottom (single numeric value)</p></td>
-    </tr>
-    <tr>
-      <th>strip_text_family</th>
-      <td><p>strip_text_face,strip_text_size facet label font
-family, face and size</p></td>
-    </tr>
-    <tr>
-      <th>caption_family</th>
-      <td><p>caption_face,caption_size,caption_margin plot caption
-family, face, size and margin</p></td>
+      <td><p>Plot subtitle margin bottom (single numeric value)</p></td>
     </tr>
     <tr>
       <th>axis_text_size</th>
-      <td><p>font size of axis text</p></td>
-    </tr>
-    <tr>
-      <th>axis_title_family</th>
-      <td><p>axis_title_face,axis_title_size axis title font
-family, face and size</p></td>
+      <td><p>Font size of axis text</p></td>
     </tr>
     <tr>
       <th>axis_title_just</th>
-      <td><p>axis title font justification one of `[blmcrt]`</p></td>
+      <td><p>Axis title font justificationk one of <code>[blmcrt]</code></p></td>
     </tr>
     <tr>
       <th>plot_margin</th>
-      <td><p>plot margin (specify with [ggplot2::margin])</p></td>
+      <td><p>Plot margin (specify with ggplot2::margin)</p></td>
     </tr>
     <tr>
       <th>grid_col</th>
-      <td><p>grid color</p></td>
+      <td><p>Grid color</p></td>
     </tr>
     <tr>
       <th>grid</th>
-      <td><p>panel grid (`TRUE`, `FALSE`, or a combination of
-`X`, `x`, `Y`, `y`)</p></td>
+      <td><p>Panel grid (<code>TRUE</code>, <code>FALSE</code>, or a
+combination of <code>X</code>, <code>x</code>, <code>Y</code>, <code>y</code>)</p></td>
     </tr>
     <tr>
       <th>axis_col</th>
-      <td><p>axis color</p></td>
+      <td><p>Axis color</p></td>
     </tr>
     <tr>
       <th>axis</th>
-      <td><p>add x or y axes? `TRUE`, `FALSE`, "`xy`"</p></td>
+      <td><p>Add x or y axes? <code>TRUE</code>, <code>FALSE</code>, "<code>xy</code>"</p></td>
     </tr>
     <tr>
       <th>ticks</th>
-      <td><p>ticks if `TRUE` add ticks</p></td>
+      <td><p>Ticks if <code>TRUE</code> add ticks</p></td>
     </tr>
     <tr>
-      <th>font_size_scale</th>
-      <td><p>Scaling fonts</p></td>
+      <th>size_class</th>
+      <td><p>Resizes texts and elements based on one of the given <a href='../articles/size_classes.html'>size classes</a>:</p><ul>
+<li><p>A <code>character</code> from "xSmall", "Small", "Medium", "Large", "xLarge", "xxLarge", "xxxLarge"</p></li>
+</ul></td>
     </tr>
     <tr>
-      <th>element_size_scale</th>
-      <td><p>Scaling element sizes</p></td>
+      <th>font_size_class</th>
+      <td><p>Only resizes text based on one of the above size classes</p></td>
+    </tr>
+    <tr>
+      <th>element_size_class</th>
+      <td><p>Only resizes elements based on one of the above size classes</p></td>
     </tr>
     <tr>
       <th>offset_x_ticks</th>
-      <td><p>fancy x tick labels</p></td>
+      <td><p>Fancy x tick labels</p></td>
     </tr>
     <tr>
       <th>offset_y_ticks</th>
-      <td><p>fancy y tick labels</p></td>
-    </tr>
-    <tr>
-      <th>scale</th>
-      <td><p>scale everything</p></td>
+      <td><p>Fancy y tick labels</p></td>
     </tr>
     </table>
+
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+
+    <p>Recommended color and fill scales to be used with:</p><ul>
+<li><p><a href='scale_colour_ios_dark.html'>scale_colour_ios_dark</a></p></li>
+<li><p><a href='scale_colour_ios_dark.html'>scale_fill_ios_dark</a></p></li>
+<li><p><a href='scale_colour_macos_dark.html'>scale_colour_macos_dark</a></p></li>
+<li><p><a href='scale_colour_macos_dark.html'>scale_fill_macos_dark</a></p></li>
+<li><p><a href='scale_colour_watchos_dark.html'>scale_colour_watchos_dark</a></p></li>
+<li><p><a href='scale_colour_watchos_dark.html'>scale_fill_watchos_dark</a></p></li>
+</ul>
 
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>

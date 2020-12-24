@@ -3,9 +3,9 @@ pkgdown: 1.6.1
 pkgdown_sha: ~
 articles:
   colours: colours.html
-  scales: scales.html
+  size_classes: size_classes.html
   typography: typography.html
-last_built: 2020-12-23T22:22Z
+last_built: 2020-12-24T13:56Z
 urls:
   reference: https://sfthemes.amirmasoudabdol.name/reference
   article: https://sfthemes.amirmasoudabdol.name/articles
