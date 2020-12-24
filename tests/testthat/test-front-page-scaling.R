@@ -15,7 +15,7 @@ test_that("scaling light sample figures are generated", {
             geom_point(aes(shape=Species)) + xlab("Sepal Length") + ylab("Sepal Width") +
             labs(title = "Linear Fit", subtitle = classes[[i]]) +
             geom_smooth(method="lm") +
-            theme_sf_light(scale = classes[[i]]) +
+            theme_sf_light(size_class =  classes[[i]]) +
             scale_colour_ios_light(accessible = F) +
             theme(legend.position = "bottom")
 
@@ -27,7 +27,7 @@ test_that("scaling light sample figures are generated", {
             geom_point(aes(shape=Species)) + xlab("Sepal Length") + ylab("Sepal Width") +
             labs(title = "Linear Fit", subtitle = classes[[i]]) +
             geom_smooth(method="lm") +
-            theme_sf_dark(scale = classes[[i]]) +
+            theme_sf_dark(size_class =  classes[[i]]) +
             scale_colour_ios_dark(accessible = F) +
             theme(legend.position = "bottom")
 

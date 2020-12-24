@@ -16,7 +16,7 @@ test_that("size classes are correct", {
         xlab("Sepal Length") + ylab("Sepal Width") +
         labs(title = "Linear Fit", subtitle = classes[[i]], caption = "Lorem ipsum platea aliquam pharetra porttitor dictum orci quisque et suspendisse convallis") +
         geom_smooth(method="lm") +
-        theme_sf_light(scale = classes[[i]]) +
+        theme_sf_light(size_class =  classes[[i]]) +
         scale_colour_ios_light(accessible = T)
 
     ggsave(paste0("figures/size_classes/iris_linear_fit_light_", i, "_",
@@ -28,7 +28,7 @@ test_that("size classes are correct", {
         xlab("Sepal Length") + ylab("Sepal Width") +
         labs(title = "Linear Fit", subtitle = classes[[i]], caption = "Lorem ipsum platea aliquam pharetra porttitor dictum orci quisque et suspendisse convallis") +
         geom_smooth(method="lm") +
-        theme_sf_dark(scale = classes[[i]]) +
+        theme_sf_dark(size_class =  classes[[i]]) +
         scale_colour_ios_dark(accessible = T)
 
     ggsave(paste0("figures/size_classes/iris_linear_fit_dark_", i, "_",

@@ -1,22 +1,6 @@
 #' San Francisco Dark Theme
 #'
-#' @param font_family primary font family of the plot
-#' @param subtitle_margin plot subtitle margin bottom (single numeric value)
-#' @param axis_title_just axis title font justification one of `[blmcrt]`
-#' @param axis_text_size font size of axis text
-#' @param plot_margin plot margin (specify with [ggplot2::margin])
-#' @param grid_col grid color
-#' @param grid panel grid (`TRUE`, `FALSE`, or a combination of
-#' `X`, `x`, `Y`, `y`)
-#' @param axis_col axis color
-#' @param axis add x or y axes? `TRUE`, `FALSE`, "`xy`"
-#' @param ticks ticks if `TRUE` add ticks
-#'
-#' @param scale scale everything
-#' @param font_size_class Scaling fonts
-#' @param element_size_class Scaling element sizes
-#' @param offset_x_ticks fancy x tick labels
-#' @param offset_y_ticks fancy y tick labels
+#' @inheritParams sf_base
 #'
 #' @importFrom ggplot2 update_geom_defaults
 #'
@@ -72,7 +56,7 @@ theme_sf_dark <- function(
   axis_col = ios_text_on_dark_cols[["label"]],
   axis = TRUE,
   ticks = TRUE,
-  scale = NULL,
+  size_class =  NULL,
   font_size_class = "xSmall",
   element_size_class = "xSmall",
   offset_x_ticks = FALSE,
@@ -121,11 +105,11 @@ theme_sf_dark <- function(
     axis_col = axis_col,
     axis = TRUE,
     ticks = TRUE,
+    size_class = size_class,
     font_size_class = font_size_class,
     element_size_class = element_size_class,
     offset_x_ticks = offset_x_ticks,
-    offset_y_ticks = offset_y_ticks,
-    scale = scale
+    offset_y_ticks = offset_y_ticks
   )
 
 }

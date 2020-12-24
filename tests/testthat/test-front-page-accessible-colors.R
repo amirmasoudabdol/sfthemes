@@ -12,7 +12,7 @@ test_that("accessible light sample figures are generated", {
         geom_histogram(binwidth = 0.2) +
         xlab("Sepal Width") +  ylab("Frequency") +
         labs(title = "Histogram of Sepal Width") +
-        theme_sf_light(scale = "xxxLarge") +
+        theme_sf_light(size_class =  "xxxLarge") +
         facet_grid(Species ~ .) +
         scale_colour_ios_light(accessible = F) +
         scale_fill_ios_light(accessible = F) +
@@ -24,7 +24,7 @@ test_that("accessible light sample figures are generated", {
         geom_histogram(binwidth = 0.2) +
         xlab("Sepal Width") +  ylab("Frequency") +
         labs(title = "Histogram of Sepal Width") +
-        theme_sf_light(scale = "xxxLarge") +
+        theme_sf_light(size_class =  "xxxLarge") +
         facet_grid(Species ~ .) +
         scale_colour_ios_light(accessible = T) +
         scale_fill_ios_light(accessible = T) +
@@ -47,7 +47,7 @@ test_that("accessible dark sample figures are generated", {
         geom_histogram(binwidth = 0.2) +
         xlab("Sepal Width") +  ylab("Frequency") +
         labs(title = "Histogram of Sepal Width") +
-        theme_sf_dark(scale = "xxxLarge") +
+        theme_sf_dark(size_class =  "xxxLarge") +
         facet_grid(Species ~ .) +
         scale_colour_ios_dark(accessible = F) +
         scale_fill_ios_dark(accessible = F) +
@@ -59,7 +59,7 @@ test_that("accessible dark sample figures are generated", {
         geom_histogram(binwidth = 0.2) +
         xlab("Sepal Width") +  ylab("Frequency") +
         labs(title = "Histogram of Sepal Width") +
-        theme_sf_dark(scale = "xxxLarge") +
+        theme_sf_dark(size_class =  "xxxLarge") +
         facet_grid(Species ~ .) +
         scale_colour_ios_dark(accessible = T) +
         scale_fill_ios_dark(accessible = T) +

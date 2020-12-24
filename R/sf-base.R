@@ -1,26 +1,27 @@
 #'
-#'
-#' @param font_family primary font family of the plot
-#' @param subtitle_margin plot subtitle margin bottom (single numeric value)
-#' @param axis_title_just axis title font justificationk one of `[blmcrt]`
-#' @param axis_text_size font size of axis text
-#' @param plot_margin plot margin (specify with [ggplot2::margin])
-#' @param grid_col grid color
-#' @param grid panel grid (`TRUE`, `FALSE`, or a
+#' @md
+#' @param font_family Primary font family of the plot
+#' @param subtitle_margin Plot subtitle margin bottom (single numeric value)
+#' @param axis_title_just Axis title font justificationk one of `[blmcrt]`
+#' @param axis_text_size Font size of axis text
+#' @param plot_margin Plot margin (specify with [ggplot2::margin])
+#' @param grid_col Grid color
+#' @param grid Panel grid (`TRUE`, `FALSE`, or a
 #' combination of `X`, `x`, `Y`, `y`)
-#' @param axis_col axis color
-#' @param axis add x or y axes? `TRUE`, `FALSE`, "`xy`"
-#' @param ticks ticks if `TRUE` add ticks
+#' @param axis_col Axis color
+#' @param axis Add x or y axes? `TRUE`, `FALSE`, "`xy`"
+#' @param ticks Ticks if `TRUE` add ticks
 #'
-#' @param text_colour_palette text color palette
-#' @param plot_background_col plot background color
-#' @param panel_background_col panel backgroun color
+#' @param text_colour_palette Text color palette
+#' @param plot_background_col Plot background color
+#' @param panel_background_col Panel backgroun color
 #'
-#' @param scale scale everything
-#' @param font_size_class Scaling fonts
-#' @param element_size_class Scaling element sizes
-#' @param offset_x_ticks fancy x tick labels
-#' @param offset_y_ticks fancy y tick labels
+#' @param size_class Resizes texts and elements based on one of the given [size classes](../articles/scales.html):
+#'   * A `character` from {"xSmall", "Small", "Medium", "Large", "xLarge", "xxLarge", "xxxLarge"}
+#' @param font_size_class Only resizes text based on one of the above size classes
+#' @param element_size_class Only resizes elements based on one of the above size classes
+#' @param offset_x_ticks Fancy x tick labels
+#' @param offset_y_ticks Fancy y tick labels
 #'
 #' @importFrom ggplot2 margin theme theme_minimal element_blank element_rect element_text element_line update_geom_defaults
 sf_base <- function(
@@ -49,31 +50,31 @@ sf_base <- function(
   plot_margin = margin(30, 30, 30, 30),
   grid_col = NULL, grid = TRUE,
   axis_col = NULL, axis = TRUE, ticks = TRUE,
-  scale = NULL,
+  size_class =  NULL,
   font_size_class = "xSmall",
   element_size_class = "xSmall",
   offset_x_ticks = FALSE,
   offset_y_ticks = FALSE
   ) {
 
-  if (!is.null(scale)) {
-    font_size_class <- scale
-    element_size_class <- scale
+  if (!is.null(size_class)) {
+    font_size_class <- size_class
+    element_size_class <- size_class
   }
 
   # Setting the fonts
   if (font_family == "Inter") {
-    base_family <- font_inter 
-    plot_title_family <- font_inter_extra_bold 
+    base_family <- font_inter
+    plot_title_family <- font_inter_extra_bold
     subtitle_family <- font_inter
-    strip_text_family <- font_inter 
+    strip_text_family <- font_inter
     caption_family <- font_inter
     axis_title_family <- font_inter
   } else if (font_family == "SF Pro") {
-    base_family <- font_sf_pro 
-    plot_title_family <- font_sf_pro_extra_bold 
+    base_family <- font_sf_pro
+    plot_title_family <- font_sf_pro_extra_bold
     subtitle_family <- font_sf_pro
-    strip_text_family <- font_sf_pro 
+    strip_text_family <- font_sf_pro
     caption_family <- font_sf_pro
     axis_title_family <- font_sf_pro
   } else {

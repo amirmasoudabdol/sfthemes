@@ -28,44 +28,47 @@ theme_sf_light(
   axis_col = ios_text_on_light_cols[["label"]],
   axis = TRUE,
   ticks = TRUE,
-  font_size_scale = "xSmall",
-  element_size_scale = "xSmall",
+  size_class = NULL,
+  font_size_class = "xSmall",
+  element_size_class = "xSmall",
   offset_x_ticks = FALSE,
-  offset_y_ticks = FALSE,
-  scale = NULL
+  offset_y_ticks = FALSE
 )
 }
 \arguments{
-\item{font_family}{primary font family of the plot}
+\item{font_family}{Primary font family of the plot}
 
-\item{subtitle_margin}{plot subtitle margin bottom (single numeric value)}
+\item{subtitle_margin}{Plot subtitle margin bottom (single numeric value)}
 
-\item{axis_text_size}{font size of axis text}
+\item{axis_text_size}{Font size of axis text}
 
-\item{axis_title_just}{axis title font justificationk one of `[blmcrt]`}
+\item{axis_title_just}{Axis title font justificationk one of \verb{[blmcrt]}}
 
-\item{plot_margin}{plot margin (specify with [ggplot2::margin])}
+\item{plot_margin}{Plot margin (specify with \link[ggplot2:element]{ggplot2::margin})}
 
-\item{grid_col}{grid color}
+\item{grid_col}{Grid color}
 
-\item{grid}{panel grid (`TRUE`, `FALSE`, or a
-combination of `X`, `x`, `Y`, `y`)}
+\item{grid}{Panel grid (\code{TRUE}, \code{FALSE}, or a
+combination of \code{X}, \code{x}, \code{Y}, \code{y})}
 
-\item{axis_col}{axis color}
+\item{axis_col}{Axis color}
 
-\item{axis}{add x or y axes? `TRUE`, `FALSE`, "`xy`"}
+\item{axis}{Add x or y axes? \code{TRUE}, \code{FALSE}, "\code{xy}"}
 
-\item{ticks}{ticks if `TRUE` add ticks}
+\item{ticks}{Ticks if \code{TRUE} add ticks}
 
-\item{font_size_scale}{Scaling fonts}
+\item{size_class}{Resizes texts and elements based on one of the given \href{../articles/scales.html}{size classes}:
+\itemize{
+\item A \code{character} from {"xSmall", "Small", "Medium", "Large", "xLarge", "xxLarge", "xxxLarge"}
+}}
 
-\item{element_size_scale}{Scaling element sizes}
+\item{font_size_class}{Only resizes text based on one of the above size classes}
 
-\item{offset_x_ticks}{fancy x tick labels}
+\item{element_size_class}{Only resizes elements based on one of the above size classes}
 
-\item{offset_y_ticks}{fancy y tick labels}
+\item{offset_x_ticks}{Fancy x tick labels}
 
-\item{scale}{scale everything}
+\item{offset_y_ticks}{Fancy y tick labels}
 }
 \description{
 San Francisco Light Theme

@@ -12,7 +12,7 @@ test_that("front page figures are generated", {
         geom_point(aes(shape=Species)) + xlab("Sepal Length") + ylab("Sepal Width") +
         labs(title = "Linear Fit", subtitle = "Length ~ Width") +
         geom_smooth(method="lm") +
-        theme_sf_light(scale = "xxxLarge") +
+        theme_sf_light(size_class =  "xxxLarge") +
         scale_colour_ios_light(accessible = F) +
         theme(legend.position = "bottom")
 
@@ -24,7 +24,7 @@ test_that("front page figures are generated", {
         geom_point(aes(shape=Species)) + xlab("Sepal Length") + ylab("Sepal Width") +
         labs(title = "Linear Fit", subtitle = "Length ~ Width") +
         geom_smooth(method="lm") +
-        theme_sf_dark(scale = "xxxLarge") +
+        theme_sf_dark(size_class =  "xxxLarge") +
         scale_colour_ios_dark(accessible = F) +
         theme(legend.position = "bottom")
 
