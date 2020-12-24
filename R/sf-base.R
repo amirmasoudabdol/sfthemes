@@ -1,4 +1,3 @@
-#' San Francisco Base Theme
 #'
 #' @param base_family,base_size base font family and size
 #' @param plot_title_family,plot_title_face,plot_title_size,plot_title_margin
