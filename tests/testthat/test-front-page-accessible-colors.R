@@ -1,5 +1,5 @@
-context("samples")
-test_that("accessible light sample figures are generated", {
+context("pkgdown-front-page")
+test_that("front page figures showcasing the accessible light colors have been generated...", {
 
     testthat::skip_on_cran()
     testthat::skip_on_appveyor()
@@ -35,7 +35,7 @@ test_that("accessible light sample figures are generated", {
     system("../../misc/stitch_two.sh figures/front_page/accessible_off_light.png figures/front_page/accessible_on_light.png ../../man/figures/front-page-accessible-on-off-light.png")
 })
 
-test_that("accessible dark sample figures are generated", {
+test_that("front page figures showcasing the accessible dark colors have been generated...", {
 
     testthat::skip_on_cran()
     testthat::skip_on_appveyor()

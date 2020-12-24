@@ -16,7 +16,7 @@
 #' @param plot_background_col Plot background color
 #' @param panel_background_col Panel backgroun color
 #'
-#' @param size_class Resizes texts and elements based on one of the given [size classes](../articles/scales.html):
+#' @param size_class Resizes texts and elements based on one of the given [size classes](../articles/size_classes.html):
 #'   * A `character` from {"xSmall", "Small", "Medium", "Large", "xLarge", "xxLarge", "xxxLarge"}
 #' @param font_size_class Only resizes text based on one of the above size classes
 #' @param element_size_class Only resizes elements based on one of the above size classes
@@ -25,7 +25,7 @@
 #'
 #' @importFrom ggplot2 margin theme theme_minimal element_blank element_rect element_text element_line update_geom_defaults
 sf_base <- function(
-  font_family = "Inter",
+  font_family = NULL,
   base_size = NULL,
   plot_title_size = NULL,
   plot_title_face = NULL, 
@@ -48,8 +48,11 @@ sf_base <- function(
   plot_background_col = NULL,
   panel_background_col = NULL,
   plot_margin = margin(30, 30, 30, 30),
-  grid_col = NULL, grid = TRUE,
-  axis_col = NULL, axis = TRUE, ticks = TRUE,
+  grid_col = NULL, 
+  grid = TRUE,
+  axis_col = NULL,
+  axis = TRUE,
+  ticks = TRUE,
   size_class =  NULL,
   font_size_class = "xSmall",
   element_size_class = "xSmall",

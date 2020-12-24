@@ -1,5 +1,5 @@
-context("samples")
-test_that("scaling light sample figures are generated", {
+context("pkgdown-front-page")
+test_that("front page figures showcasing the scaling have been generated...", {
 
     testthat::skip_on_cran()
     testthat::skip_on_appveyor()

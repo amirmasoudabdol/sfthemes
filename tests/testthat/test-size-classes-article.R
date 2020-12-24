@@ -1,5 +1,5 @@
-context("samples")
-test_that("scaling light sample figures are generated", {
+context("pkgdown-articles")
+test_that("figures showcasing text rescaling have been generated...", {
 
     testthat::skip_on_cran()
     testthat::skip_on_appveyor()
@@ -48,7 +48,7 @@ test_that("scaling light sample figures are generated", {
 
 })
 
-test_that("scaling light sample figures are generated", {
+test_that("figures showcasing element rescaling have been generated...", {
 
     testthat::skip_on_cran()
     testthat::skip_on_appveyor()

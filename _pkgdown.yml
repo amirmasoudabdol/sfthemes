@@ -48,7 +48,7 @@ articles:
   contents:
   - typography
   - colours
-  - scales
+  - size_classes
 
 reference:
 - title: Typography

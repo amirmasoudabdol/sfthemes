@@ -57,7 +57,7 @@ combination of \code{X}, \code{x}, \code{Y}, \code{y})}
 
 \item{ticks}{Ticks if \code{TRUE} add ticks}
 
-\item{size_class}{Resizes texts and elements based on one of the given \href{../articles/scales.html}{size classes}:
+\item{size_class}{Resizes texts and elements based on one of the given \href{../articles/size_classes.html}{size classes}:
 \itemize{
 \item A \code{character} from {"xSmall", "Small", "Medium", "Large", "xLarge", "xxLarge", "xxxLarge"}
 }}

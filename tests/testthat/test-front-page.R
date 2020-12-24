@@ -1,5 +1,5 @@
-context("samples")
-test_that("front page figures are generated", {
+context("pkgdown-front-page")
+test_that("main front page figures have been generated...", {
 
     testthat::skip_on_cran()
     testthat::skip_on_appveyor()

@@ -1,8 +1,8 @@
 ---
-title: "Scales"
+title: "Size Classes"
 output: rmarkdown::html_vignette
 vignette: >
-    %\VignetteIndexEntry{Scales}
+    %\VignetteIndexEntry{Size Classes}
     %\VignetteEngine{knitr::rmarkdown}
     %\VignetteEncoding{UTF-8}
 ---
