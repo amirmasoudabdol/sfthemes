@@ -3,7 +3,6 @@
 #' @param font_family Primary font family of the plot
 #' @param subtitle_margin Plot subtitle margin bottom (single numeric value)
 #' @param axis_title_just Axis title font justificationk one of `[blmcrt]`
-#' @param axis_text_size Font size of axis text
 #' @param plot_margin Plot margin (specify with [ggplot2::margin])
 #' @param grid_col Grid color
 #' @param grid Panel grid (`TRUE`, `FALSE`, or a
@@ -78,17 +77,6 @@ sf_base <- function(
 
   font_scale <- sf_scale(font_size_class)
 
-  # TODO: These can be replaced by sf_set_font_size
-  base_size <- font_scale[["sizes"]][["body"]]  
-  plot_title_size <- font_scale[["sizes"]][["title_1"]]  
-  subtitle_size <- font_scale[["sizes"]][["headline"]]  
-  strip_text_size <- font_scale[["sizes"]][["footnote"]]  
-  caption_size <- font_scale[["sizes"]][["footnote"]]  
-  axis_text_size <- font_scale[["sizes"]][["footnote"]]  
-  axis_title_size <- font_scale[["sizes"]][["footnote"]]  
-  legend_title_size <- font_scale[["sizes"]][["subhead"]]
-
-
   if (!is.null(element_size_class)) {
     update_geom_defaults("point",
                list(size = sf_element_sizes[[element_size_class]]))
@@ -97,7 +85,10 @@ sf_base <- function(
   }
 
 
-  ret <- theme_minimal(base_family = base_family, base_size = base_size)
+  ret <- theme_minimal(base_family = base_family)
+
+  # Setting correct text sizes
+  ret <- sf_set_text_sizes(ret, size_class = font_size_class)
 
   ret <- ret + theme(legend.background = element_blank())
   ret <- ret + theme(legend.key = element_blank())
@@ -234,38 +225,32 @@ sf_base <- function(
 
   ret <- ret + theme(axis.text.x =
             element_text(color = text_colour_palette[["label"]],
-                  size = axis_text_size,
                   margin = x_ticks_margin,
                   hjust = x_axis_ticks_text_offset))
 
   ret <- ret + theme(axis.text.y =
             element_text(color = text_colour_palette[["label"]],
-                   size = axis_text_size,
                    margin = y_ticks_margin,
                    vjust = y_axis_ticks_text_offset))
 
   ret <- ret + theme(axis.title =
             element_text(color = text_colour_palette[["label"]],
-                   size = axis_title_size,
                    family = axis_title_family))
 
   ret <- ret + theme(axis.title.x =
             element_text(color = text_colour_palette[["label"]],
                    hjust = xj,
-                   size = axis_title_size,
                    family = axis_title_family,
                    face = axis_title_face))
 
   ret <- ret + theme(axis.title.y =
             element_text(color = text_colour_palette[["label"]],
                    hjust = yj,
-                   size = axis_title_size,
                    family = axis_title_family,
                    face = axis_title_face))
 
   ret <- ret + theme(axis.title.y.right =
             element_text(color = text_colour_palette[["label"]],
-                   size = axis_title_size,
                    hjust = yj,
                    angle = 90,
                    family = axis_title_family,
@@ -274,14 +259,12 @@ sf_base <- function(
   ret <- ret + theme(strip.text =
             element_text(color = text_colour_palette[["label"]],
                    hjust = 0,
-                   size = strip_text_size,
                    family = strip_text_family,
                    face = strip_text_face))
 
   ret <- ret + theme(plot.title =
             element_text(color = text_colour_palette[["label"]],
                    hjust = 0,
-                   size = plot_title_size,
                    margin = margin(b = plot_title_margin),
                    family = plot_title_family,
                    face = plot_title_face))
@@ -289,7 +272,6 @@ sf_base <- function(
   ret <- ret + theme(plot.subtitle =
             element_text(color = text_colour_palette[["label"]],
                    hjust = 0,
-                   size = subtitle_size,
                    margin = margin(b = subtitle_margin),
                    family = subtitle_family,
                    face = subtitle_face))
@@ -297,20 +279,17 @@ sf_base <- function(
   ret <- ret + theme(plot.caption =
             element_text(color = text_colour_palette[["label"]],
                    hjust = 0,
-                   size = caption_size,
                    margin = margin(t = caption_margin),
                    family = caption_family,
                    face = caption_face))
 
   ret <- ret + theme(legend.title =
             element_text(color = text_colour_palette[["label"]],
-                   size = legend_title_size,
                    family = caption_family,
                    face = legend_title_face))
 
   ret <- ret + theme(legend.text =
             element_text(color = text_colour_palette[["label"]],
-                   size = axis_text_size,
                    family = caption_family))
 
   ret
