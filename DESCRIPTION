@@ -2,7 +2,7 @@ Type: Package
 Package: sfthemes
 Title: Collection of ggplot2 themes, scales and colors inspired
     by Apple’s Human Interface Guidelines
-Version: 0.1.0
+Version: 0.2.0
 Authors@R: 
     person(given = "Amir Masoud",
            family = "Abdol",
