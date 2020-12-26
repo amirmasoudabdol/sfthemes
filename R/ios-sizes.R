@@ -7,7 +7,7 @@ sf_element_sizes <- list("xSmall" = .75,
                          "xxxLarge" = 5);
 
 sf_xsmall_font_sizes <- list(
-                types = list(
+                faces = list(
                     "large_title" = "bold",
                     "title_1" = "bold",
                     "title_2" = "bold",
@@ -31,7 +31,7 @@ sf_xsmall_font_sizes <- list(
                     "caption" = 11 - 2)
                 )
 sf_small_font_sizes <- list(
-                types = list(
+                faces = list(
                     "large_title" = "bold",
                     "title_1" = "bold",
                     "title_2" = "bold",
@@ -55,7 +55,7 @@ sf_small_font_sizes <- list(
                     "caption" = 11 - 2)
                 )
 sf_medium_font_sizes <- list(
-                types = list(
+                faces = list(
                     "large_title" = "bold",
                     "title_1" = "bold",
                     "title_2" = "bold",
@@ -79,7 +79,7 @@ sf_medium_font_sizes <- list(
                     "caption" = 13 - 2)
                 )
 sf_large_font_sizes <- list(
-                types = list(
+                faces = list(
                     "large_title" = "bold",
                     "title_1" = "bold",
                     "title_2" = "bold",
@@ -104,7 +104,7 @@ sf_large_font_sizes <- list(
                 )
 
 sf_xlarge_font_sizes <- list(
-                types = list(
+                faces = list(
                     "large_title" = "bold",
                     "title_1" = "bold",
                     "title_2" = "bold",
@@ -129,7 +129,7 @@ sf_xlarge_font_sizes <- list(
                 )
 
 sf_xxlarge_font_sizes <- list(
-                types = list(
+                faces = list(
                     "large_title" = "bold",
                     "title_1" = "bold",
                     "title_2" = "bold",
@@ -154,7 +154,7 @@ sf_xxlarge_font_sizes <- list(
                 )
 
 sf_xxxlarge_font_sizes <- list(
-                types = list(
+                faces = list(
                     "large_title" = "bold",
                     "title_1" = "bold",
                     "title_2" = "bold",

@@ -31,31 +31,38 @@ import_sf_pro <- function() {
 
 
 font_sf_pro <- "SFPro-Regular"
-font_sf_pro_text <- "SFProText"
-font_sf_pro_disply <- "SFProDisplay"
-
+font_sf_pro_light <- "SFPro-Light"
 font_sf_pro_bold <- "SFPro-Bold"
+font_sf_pro_extra_bold <- "SFPro-ExtraBold"
+
+font_sf_pro_text <- "SFProText"
 font_sf_pro_text_bold <- "SFProText-Bold"
+
+font_sf_pro_disply <- "SFProDisplay"
 font_sf_pro_disply_bold <- "SFProDisplay-Bold"
 
 #' @rdname sf_pro_font
 #'
-sf_set_sf_pro <- function() {
+sf_set_sf_pro <- function(ret) {
 
   # Overwriting all families
 
-  ret <- theme()
-  ret <- ret + theme(axis.title = element_text(family=font_sf_pro))
-  ret <- ret + theme(axis.title.x = element_text(family=font_sf_pro))
-  ret <- ret + theme(axis.title.y = element_text(family=font_sf_pro))
-  ret <- ret + theme(axis.title.y.right = element_text(family=font_sf_pro))
-  ret <- ret + theme(strip.text = element_text(family=font_sf_pro))
-  ret <- ret + theme(plot.title = element_text(family=font_sf_pro))
-  ret <- ret + theme(plot.subtitle = element_text(family=font_sf_pro))
-  ret <- ret + theme(plot.caption = element_text(family=font_sf_pro))
+  ret <- ret + theme(plot.title = element_text(family = font_sf_pro_extra_bold))
+  ret <- ret + theme(plot.subtitle = element_text(family = font_sf_pro))
+  ret <- ret + theme(plot.caption = element_text(family = font_sf_pro_light))
 
-  ret <- ret + theme(legend.title = element_text(family=font_sf_pro))
-  ret <- ret + theme(legend.text = element_text(family=font_sf_pro))
+  ret <- ret + theme(axis.title = element_text(family = font_sf_pro))
+  ret <- ret + theme(axis.title.x = element_text(family = font_sf_pro))
+  ret <- ret + theme(axis.title.y = element_text(family = font_sf_pro))
+  ret <- ret + theme(axis.title.y.right = element_text(family = font_sf_pro))
+
+  ret <- ret + theme(axis.text.x = element_text(family = font_sf_pro))
+  ret <- ret + theme(axis.text.y = element_text(family = font_sf_pro))
+
+  ret <- ret + theme(strip.text = element_text(family = font_sf_pro))
+
+  ret <- ret + theme(legend.title = element_text(family = font_sf_pro_bold))
+  ret <- ret + theme(legend.text = element_text(family = font_sf_pro))
 
   ret
 }
@@ -129,17 +136,83 @@ font_inter_extra_bold <- "Inter Extra Bold"
 #' @export
 sf_set_inter <- function(ret) {
 
-  ret <- ret + theme(axis.title = element_text(family=font_inter))
-  ret <- ret + theme(axis.title.x = element_text(family=font_inter))
-  ret <- ret + theme(axis.title.y = element_text(family=font_inter))
-  ret <- ret + theme(axis.title.y.right = element_text(family=font_inter))
-  ret <- ret + theme(strip.text = element_text(family=font_inter))
-  ret <- ret + theme(plot.title = element_text(family=font_inter))
-  ret <- ret + theme(plot.subtitle = element_text(family=font_inter))
-  ret <- ret + theme(plot.caption = element_text(family=font_inter))
+  ret <- ret + theme(plot.title = element_text(family = font_inter_extra_bold))
+  ret <- ret + theme(plot.subtitle = element_text(family = font_inter))
+  ret <- ret + theme(plot.caption = element_text(family = font_inter_light))
 
-  ret <- ret + theme(legend.title = element_text(family=font_inter))
-  ret <- ret + theme(legend.text = element_text(family=font_inter))
+  ret <- ret + theme(axis.title = element_text(family = font_inter))
+  ret <- ret + theme(axis.title.x = element_text(family = font_inter))
+  ret <- ret + theme(axis.title.y = element_text(family = font_inter))
+  ret <- ret + theme(axis.title.y.right = element_text(family = font_inter))
+
+  ret <- ret + theme(axis.text.x = element_text(family = font_inter))
+  ret <- ret + theme(axis.text.y = element_text(family = font_inter))
+
+  ret <- ret + theme(strip.text = element_text(family = font_inter))
+
+  ret <- ret + theme(legend.title = element_text(family = font_inter_bold))
+  ret <- ret + theme(legend.text = element_text(family = font_inter))
+
+  ret
+}
+
+
+#' @rdname inter_font
+#' @md
+#' @description
+#' `sf_set_inter()` accepts a [ggplot2::theme()] object as input, and replace
+#' all its fonts with Inter family fonts. For instance, you can pass
+#' [ggplot2::theme_linedraw()], and all its font will be
+#' replaced with Inter.
+#'
+#' @param ret An input theme object that is going to be patched
+#' @param font_family_name Font family name
+#' @examples \dontrun{
+#' library(ggplot2)
+#'
+#'ggplot(mtcars) +
+#'  geom_point(aes(x = wt, y = mpg, colour = factor(gear))) +
+#'  labs(title = "Fuel economy declines as weight increases",
+#'       subtitle = "(1973-74)",
+#'       caption = "Data from the 1974 Motor Trend US magazine.",
+#'       x = "Weight (1000 lbs)",
+#'       y = "Fuel economy (mpg)",
+#'       colour = "Gears") +
+#'  facet_grid(vs ~ am) +
+#'  sf_set_inter(theme_linedraw()) +
+#'  scale_colour_ios_light()
+#' }
+#' @export
+sf_set_custom_font <- function(ret, font_family_name) {
+
+  ret <- ret + theme(plot.title = element_text(family = font_family_name, 
+    face = "bold"))
+  ret <- ret + theme(plot.subtitle = element_text(family = font_family_name, 
+    face = "plain"))
+  ret <- ret + theme(plot.caption = element_text(family = font_family_name, 
+    face = "plain"))
+
+  ret <- ret + theme(axis.title = element_text(family = font_family_name, 
+    face = "plain"))
+  ret <- ret + theme(axis.title.x = element_text(family = font_family_name, 
+    face = "plain"))
+  ret <- ret + theme(axis.title.y = element_text(family = font_family_name, 
+    face = "plain"))
+  ret <- ret + theme(axis.title.y.right = element_text(family = font_family_name, 
+    face = "plain"))
+
+  ret <- ret + theme(axis.text.x = element_text(family = font_family_name, 
+    face = "plain"))
+  ret <- ret + theme(axis.text.y = element_text(family = font_family_name, 
+    face = "plain"))
+
+  ret <- ret + theme(strip.text = element_text(family = font_family_name, 
+    face = "plain"))
+
+  ret <- ret + theme(legend.title = element_text(family = font_family_name, 
+    face = "bold"))
+  ret <- ret + theme(legend.text = element_text(family = font_family_name, 
+    face = "plain"))
 
   ret
 }

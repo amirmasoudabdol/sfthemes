@@ -56,24 +56,7 @@ sf_base <- function(
     element_size_class <- size_class
   }
 
-  # Setting the fonts
-  if (font_family == "Inter") {
-    base_family <- font_inter
-    plot_title_family <- font_inter_extra_bold
-    subtitle_family <- font_inter
-    strip_text_family <- font_inter
-    caption_family <- font_inter
-    axis_title_family <- font_inter
-  } else if (font_family == "SF Pro") {
-    base_family <- font_sf_pro
-    plot_title_family <- font_sf_pro_extra_bold
-    subtitle_family <- font_sf_pro
-    strip_text_family <- font_sf_pro
-    caption_family <- font_sf_pro
-    axis_title_family <- font_sf_pro
-  } else {
-    # Do something else ...
-  }
+
 
   font_scale <- sf_scale(font_size_class)
 
@@ -85,10 +68,19 @@ sf_base <- function(
   }
 
 
-  ret <- theme_minimal(base_family = base_family)
+  ret <- theme_minimal()
 
-  # Setting correct text sizes
+  # Patch the correct text sizes
   ret <- sf_set_text_sizes(ret, size_class = font_size_class)
+
+  # Patch the fonts faces and families
+  if (font_family == "Inter") {
+    ret <- sf_set_inter(ret)
+  } else if (font_family == "SF Pro") {
+    ret <- sf_set_sf_pro(ret)
+  } else {
+    ret <- sf_set_custom_font(ret, font_family)
+  }
 
   ret <- ret + theme(legend.background = element_blank())
   ret <- ret + theme(legend.key = element_blank())
@@ -234,63 +226,45 @@ sf_base <- function(
                    vjust = y_axis_ticks_text_offset))
 
   ret <- ret + theme(axis.title =
-            element_text(color = text_colour_palette[["label"]],
-                   family = axis_title_family))
+            element_text(color = text_colour_palette[["label"]]))
 
   ret <- ret + theme(axis.title.x =
             element_text(color = text_colour_palette[["label"]],
-                   hjust = xj,
-                   family = axis_title_family,
-                   face = axis_title_face))
+                   hjust = xj))
 
   ret <- ret + theme(axis.title.y =
             element_text(color = text_colour_palette[["label"]],
-                   hjust = yj,
-                   family = axis_title_family,
-                   face = axis_title_face))
+                   hjust = yj))
 
   ret <- ret + theme(axis.title.y.right =
             element_text(color = text_colour_palette[["label"]],
                    hjust = yj,
-                   angle = 90,
-                   family = axis_title_family,
-                   face = axis_title_face))
+                   angle = 90))
 
   ret <- ret + theme(strip.text =
             element_text(color = text_colour_palette[["label"]],
-                   hjust = 0,
-                   family = strip_text_family,
-                   face = strip_text_face))
+                   hjust = 0))
 
   ret <- ret + theme(plot.title =
             element_text(color = text_colour_palette[["label"]],
                    hjust = 0,
-                   margin = margin(b = plot_title_margin),
-                   family = plot_title_family,
-                   face = plot_title_face))
+                   margin = margin(b = plot_title_margin)))
 
   ret <- ret + theme(plot.subtitle =
             element_text(color = text_colour_palette[["label"]],
                    hjust = 0,
-                   margin = margin(b = subtitle_margin),
-                   family = subtitle_family,
-                   face = subtitle_face))
+                   margin = margin(b = subtitle_margin)))
 
   ret <- ret + theme(plot.caption =
             element_text(color = text_colour_palette[["label"]],
                    hjust = 0,
-                   margin = margin(t = caption_margin),
-                   family = caption_family,
-                   face = caption_face))
+                   margin = margin(t = caption_margin)))
 
   ret <- ret + theme(legend.title =
-            element_text(color = text_colour_palette[["label"]],
-                   family = caption_family,
-                   face = legend_title_face))
+            element_text(color = text_colour_palette[["label"]]))
 
   ret <- ret + theme(legend.text =
-            element_text(color = text_colour_palette[["label"]],
-                   family = caption_family))
+            element_text(color = text_colour_palette[["label"]]))
 
   ret
 

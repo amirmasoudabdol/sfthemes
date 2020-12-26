@@ -7,7 +7,7 @@
 \usage{
 import_sf_pro()
 
-sf_set_sf_pro()
+sf_set_sf_pro(ret)
 }
 \description{
 SF Pro font for use in charts
