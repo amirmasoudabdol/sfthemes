@@ -49,14 +49,9 @@
 #' @export
 theme_sf_light <- function(
   font_family = "Inter",
-  plot_title_face = NULL,
   plot_title_margin = 10,
-  subtitle_face = NULL,
   subtitle_margin = 15,
-  strip_text_face = NULL,
-  caption_face = NULL,
   caption_margin = 25,
-  axis_title_face = "plain",
   axis_title_just = "rt",
   plot_margin = ggplot2::margin(30, 30, 30, 30),
   grid_col = ios_text_on_light_cols[["label"]],
@@ -88,15 +83,10 @@ theme_sf_light <- function(
 
   sf_base(
     font_family = font_family,
-    plot_title_face = plot_title_face,
     plot_title_margin = plot_title_margin,
-    subtitle_face = subtitle_face,
     subtitle_margin = subtitle_margin,
-    strip_text_face = strip_text_face,
-    caption_face = caption_face,
     caption_margin = caption_margin,
     text_colour_palette = ios_text_on_light_cols,
-    axis_title_face = axis_title_face,
     axis_title_just = "rt",
     plot_background_col = "#fafafa",
     panel_background_col = "#fafafa",

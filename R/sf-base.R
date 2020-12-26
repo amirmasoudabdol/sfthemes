@@ -25,17 +25,11 @@
 #' @importFrom ggplot2 margin theme theme_minimal element_blank element_rect element_text element_line update_geom_defaults
 sf_base <- function(
   font_family = NULL,
-  plot_title_face = NULL, 
   plot_title_margin = 10,
-  subtitle_face = "plain", 
   subtitle_margin = 25,
-  strip_text_face = "plain",
-  caption_face = "plain", 
   caption_margin = 25,
   text_colour_palette = NULL,
-  axis_title_face = "plain",
   axis_title_just = "rt",
-  legend_title_face = "bold",
   plot_background_col = NULL,
   panel_background_col = NULL,
   plot_margin = margin(30, 30, 30, 30),

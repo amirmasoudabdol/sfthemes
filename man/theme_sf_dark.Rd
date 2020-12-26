@@ -6,14 +6,9 @@
 \usage{
 theme_sf_dark(
   font_family = "Inter",
-  plot_title_face = NULL,
   plot_title_margin = 10,
-  subtitle_face = NULL,
   subtitle_margin = 15,
-  strip_text_face = NULL,
-  caption_face = NULL,
   caption_margin = 25,
-  axis_title_face = "plain",
   axis_title_just = "rt",
   plot_margin = ggplot2::margin(30, 30, 30, 30),
   grid_col = ios_text_on_dark_cols[["label"]],
