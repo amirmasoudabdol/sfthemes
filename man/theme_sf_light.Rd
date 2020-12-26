@@ -6,20 +6,13 @@
 \usage{
 theme_sf_light(
   font_family = "Inter",
-  base_size = NULL,
-  plot_title_size = NULL,
   plot_title_face = NULL,
   plot_title_margin = 10,
-  subtitle_size = NULL,
   subtitle_face = NULL,
   subtitle_margin = 15,
-  strip_text_size = NULL,
   strip_text_face = NULL,
-  caption_size = NULL,
   caption_face = NULL,
   caption_margin = 25,
-  axis_text_size = NULL,
-  axis_title_size = NULL,
   axis_title_face = "plain",
   axis_title_just = "rt",
   plot_margin = ggplot2::margin(30, 30, 30, 30),
@@ -39,8 +32,6 @@ theme_sf_light(
 \item{font_family}{Primary font family of the plot}
 
 \item{subtitle_margin}{Plot subtitle margin bottom (single numeric value)}
-
-\item{axis_text_size}{Font size of axis text}
 
 \item{axis_title_just}{Axis title font justificationk one of \verb{[blmcrt]}}
 

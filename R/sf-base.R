@@ -26,24 +26,16 @@
 #' @importFrom ggplot2 margin theme theme_minimal element_blank element_rect element_text element_line update_geom_defaults
 sf_base <- function(
   font_family = NULL,
-  base_size = NULL,
-  plot_title_size = NULL,
   plot_title_face = NULL, 
   plot_title_margin = 10,
-  subtitle_size = NULL,
   subtitle_face = "plain", 
   subtitle_margin = 25,
-  strip_text_size = NULL,
   strip_text_face = "plain",
-  caption_size = NULL,
   caption_face = "plain", 
   caption_margin = 25,
-  axis_text_size = NULL,
   text_colour_palette = NULL,
-  axis_title_size = NULL,
   axis_title_face = "plain",
   axis_title_just = "rt",
-  legend_title_size = NULL,
   legend_title_face = "bold",
   plot_background_col = NULL,
   panel_background_col = NULL,
@@ -86,61 +78,15 @@ sf_base <- function(
 
   font_scale <- sf_scale(font_size_class)
 
-  if (is.null(base_size))
-    base_size <- font_scale[["sizes"]][["body"]]
-  else
-    warning("The `base_size` variable is set manually.\n
-        Since SFThemes scales font sizes automatically, manual changes
-        to font sizes may cause disproportionate text sizes.")
-
-  if (is.null(plot_title_size))
-    plot_title_size <- font_scale[["sizes"]][["title_1"]]
-  else
-    warning("The `plot_title_size` variable is set manually.\n
-        Since SFThemes scales font sizes automatically, manual changes
-        to font sizes may cause disproportionate text sizes.")
-
-  if (is.null(subtitle_size))
-    subtitle_size <- font_scale[["sizes"]][["headline"]]
-  else
-    warning("The `subtitle_size` variable is set manually.\n
-        Since SFThemes scales font sizes automatically, manual changes
-        to font sizes may cause disproportionate text sizes.")
-
-  if (is.null(strip_text_size))
-    strip_text_size <- font_scale[["sizes"]][["footnote"]]
-  else
-    warning("The `strip_text_size` variable is set manually.\n
-        Since SFThemes scales font sizes automatically, manual changes
-        to font sizes may cause disproportionate text sizes.")
-
-  if (is.null(caption_size))
-    caption_size <- font_scale[["sizes"]][["footnote"]]
-  else
-    warning("The `caption_size` variable is set manually.\n
-        Since SFThemes scales font sizes automatically, manual changes
-        to font sizes may cause disproportionate text sizes.")
-
-  if (is.null(axis_text_size))
-    axis_text_size <- font_scale[["sizes"]][["footnote"]]
-  else
-    warning("The `axis_text_size` variable is set manually.\n
-        Since SFThemes scales font sizes automatically, manual changes
-        to font sizes may cause disproportionate text sizes.")
-
-  if (is.null(axis_title_size))
-    axis_title_size <- font_scale[["sizes"]][["footnote"]]
-  else
-    warning("The `axis_title_size` variable is set manually.\n
-        Since SFThemes scales font sizes automatically, manual changes
-        to font sizes may cause disproportionate text sizes.")
-
-  if (is.null(legend_title_size))
-    legend_title_size <- font_scale[["sizes"]][["subhead"]]
-  else
-    warning("The `legend_title_size` variable is set manually.\n
-        Since SFThemes scales font sizes automatically, manual changes
-        to font sizes may cause disproportionate text sizes.")
+  # TODO: These can be replaced by sf_set_font_size
+  base_size <- font_scale[["sizes"]][["body"]]  
+  plot_title_size <- font_scale[["sizes"]][["title_1"]]  
+  subtitle_size <- font_scale[["sizes"]][["headline"]]  
+  strip_text_size <- font_scale[["sizes"]][["footnote"]]  
+  caption_size <- font_scale[["sizes"]][["footnote"]]  
+  axis_text_size <- font_scale[["sizes"]][["footnote"]]  
+  axis_title_size <- font_scale[["sizes"]][["footnote"]]  
+  legend_title_size <- font_scale[["sizes"]][["subhead"]]
 
 
   if (!is.null(element_size_class)) {

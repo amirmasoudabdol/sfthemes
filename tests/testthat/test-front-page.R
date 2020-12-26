@@ -35,6 +35,7 @@ test_that("main front page figures have been generated...", {
     # Light →  Dark
     system("../../misc/stitch_two.sh figures/front_page/front_page_light.png figures/front_page/front_page_dark.png ../../man/figures/front-page-main.png")
 
+    # Adding rounded corner
     system("convert ../../man/figures/front-page-main.png \\
              \\( +clone  -alpha extract \\
                 -draw 'fill black polygon 0,0 0,15 15,0 fill white circle 15,15 15,0' \\
@@ -42,12 +43,14 @@ test_that("main front page figures have been generated...", {
                 \\( +clone -flop \\) -compose Multiply -composite \\
              \\) -alpha off -compose CopyOpacity -composite ../../man/figures/front-page-main.png")
 
+    # Adding shadow
     system("convert ../../man/figures/front-page-main.png \\( +clone  -background black -shadow 40x40+0+0 \\) +swap \\
                 -background none   -layers merge  +repage   ../../man/figures/front-page-main.png")
 
     # Dark →  Light
     system("../../misc/stitch_two.sh figures/front_page/front_page_dark_alt.png figures/front_page/front_page_light_alt.png ../../man/figures/front-page-main-alt.png")
 
+    # Adding rounded corner
     system("convert ../../man/figures/front-page-main-alt.png \\
              \\( +clone  -alpha extract \\
                 -draw 'fill black polygon 0,0 0,15 15,0 fill white circle 15,15 15,0' \\
@@ -55,7 +58,8 @@ test_that("main front page figures have been generated...", {
                 \\( +clone -flop \\) -compose Multiply -composite \\
              \\) -alpha off -compose CopyOpacity -composite ../../man/figures/front-page-main-alt.png")
 
-    system("convert ../../man/figures/front-page-main-alt.png \\( +clone  -background white -shadow 40x40+0+0 \\) +swap \\
+    # Adding shadow
+    system("convert ../../man/figures/front-page-main-alt.png \\( +clone  -background gray -shadow 40x40+0+0 \\) +swap \\
                 -background none   -layers merge  +repage   ../../man/figures/front-page-main-alt.png")
 
 
