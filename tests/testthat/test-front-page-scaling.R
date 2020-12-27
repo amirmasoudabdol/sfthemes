@@ -35,7 +35,7 @@ test_that("front page figures showcasing the scaling have been generated...", {
                       classes[[i]], ".png"),
                width = 20, height = 15, bg = "transparent", dpi = 72)
 
-        system(paste0("../../misc/stitch_two.sh",
+        system(paste0("../../misc/stitch_two_45.sh",
                       " figures/front_page/iris_linear_fit_light_", i, "_", classes[[i]], ".png",
                       " figures/front_page/iris_linear_fit_dark_", i, "_", classes[[i]], ".png",
                       " ../../tests/testthat/figures/front_page/iris_linear_fit_light_dark_", i, "_", classes[[i]], ".png"))

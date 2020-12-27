@@ -33,30 +33,24 @@ test_that("main front page figures have been generated...", {
     ggsave("figures/front_page/front_page_dark_alt.png", width = 20, height = 15, bg = "transparent", dpi = 72)
 
     # Light →  Dark
-    system("../../misc/stitch_two.sh figures/front_page/front_page_light.png figures/front_page/front_page_dark.png ../../man/figures/front-page-main.png")
+    system("../../misc/stitch_two_45.sh figures/front_page/front_page_light.png figures/front_page/front_page_dark.png ../../man/figures/front-page-main.png")
 
     # Adding rounded corner
-    system("convert ../../man/figures/front-page-main.png \\
-             \\( +clone  -alpha extract \\
-                -draw 'fill black polygon 0,0 0,15 15,0 fill white circle 15,15 15,0' \\
-                \\( +clone -flip \\) -compose Multiply -composite \\
-                \\( +clone -flop \\) -compose Multiply -composite \\
-             \\) -alpha off -compose CopyOpacity -composite ../../man/figures/front-page-main.png")
+    system("convert -size 1440x1080 xc:none -draw \"roundrectangle 0,0,1440,1080,15,15\" mask.png")
+    system("convert ../../man/figures/front-page-main.png -matte mask.png \\
+            -compose DstIn -composite ../../man/figures/front-page-main.png")
 
     # Adding shadow
     system("convert ../../man/figures/front-page-main.png \\( +clone  -background black -shadow 40x40+0+0 \\) +swap \\
                 -background none   -layers merge  +repage   ../../man/figures/front-page-main.png")
 
     # Dark →  Light
-    system("../../misc/stitch_two.sh figures/front_page/front_page_dark_alt.png figures/front_page/front_page_light_alt.png ../../man/figures/front-page-main-alt.png")
+    system("../../misc/stitch_two_45.sh figures/front_page/front_page_dark_alt.png figures/front_page/front_page_light_alt.png ../../man/figures/front-page-main-alt.png")
 
     # Adding rounded corner
-    system("convert ../../man/figures/front-page-main-alt.png \\
-             \\( +clone  -alpha extract \\
-                -draw 'fill black polygon 0,0 0,15 15,0 fill white circle 15,15 15,0' \\
-                \\( +clone -flip \\) -compose Multiply -composite \\
-                \\( +clone -flop \\) -compose Multiply -composite \\
-             \\) -alpha off -compose CopyOpacity -composite ../../man/figures/front-page-main-alt.png")
+    system("convert -size 1440x1080 xc:none -draw \"roundrectangle 0,0,1440,1080,15,15\" mask.png")
+    system("convert ../../man/figures/front-page-main-alt.png -matte mask.png \\
+            -compose DstIn -composite ../../man/figures/front-page-main-alt.png")
 
     # Adding shadow
     system("convert ../../man/figures/front-page-main-alt.png \\( +clone  -background gray -shadow 40x40+0+0 \\) +swap \\

@@ -55,6 +55,8 @@ In general, we recommend pairing light scales with `theme_sf_light` and dark sca
 
 Each color palette is accompanied with an accessible variant of itself. In order to access the accessible color palettes, we use `accessible` as follow:
 
+The [Colors](articles/colours.html) article elaborates on the availability, differences, and features of each system color palette.
+
 ```R
 # TODO: Update the code when the plot is finalized
 ```
@@ -63,11 +65,12 @@ Each color palette is accompanied with an accessible variant of itself. In order
 |--|--|
 |![](man/figures/front-page-accessible-on-off-light.png) | ![](man/figures/front-page-accessible-on-off-dark.png) |
 
-> The [Colors](articles/colours.html) article elaborates on the availability, differences, and features of each system color palette.
 
 #### Scaling
 
 sfthemes provides 7 scaling factor. Scaling factors can be applied to text, elements, or both. Figure below is generated from combination of light/dark plots in all available scaling factors. *Notice that that all elements are resizing at the same time.*
+
+The [Scales](articles/colours.html) article elaborates on the dynamic type sizing.
 
 ```R
 # TODO: Update the code when the plot is finalized
@@ -75,7 +78,7 @@ sfthemes provides 7 scaling factor. Scaling factors can be applied to text, elem
 
 ![](man/figures/front-page-scaling-animation-light-dark.gif)
 
-> The [Scales](articles/colours.html) article elaborates on the dynamic type sizing.
+
 
 - - -
 
