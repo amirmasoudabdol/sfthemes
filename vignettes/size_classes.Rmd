@@ -14,12 +14,13 @@ Besides dynamic type sizing, sfthemes can also scale all other elements of the p
 | multiplier | `0.75`   | `1`     | `1.25`   | `2`    | `3`      | `4`       | `5`        |
 
 In contarst to [ggplot2::ggsave()](https://ggplot2.tidyverse.org/reference/ggsave.html) where you are only able to scale your 
-elements, as mentioned, sfthemes can scale fonts, elements, or both at the same 
-time. Moreover, the rescaling effect can be previewed as you experiment with your plot.
+elements, as mentioned, sfthemes can scale fonts, elements, or both at the same time. Moreover, the rescaling effect can be previewed as you experiment with your plot.
 
 ⚠️ Keep in mind that these values will scale the existing sizes of each elements; therefore, it is recommended that you do not try to scale your entire plot if you are using `size` or `lwd` as one of your `aes`.
 
 ## Scaling element sizes
+
+Using `element_size_class` parameter, we can control the scaling of the **elements**. 
 
 ```R
 size_class <- "Medium"
@@ -48,6 +49,8 @@ gp + theme_sf_dark(element_size_class = size_class) +
 
 ## Scaling font sizes
 
+Using `font_size_class` parameter, we can control the scaling of the **fonts**.
+
 ```R
 size_class <- "Medium"
 
@@ -74,6 +77,8 @@ gp + theme_sf_dark(font_size_class = size_class) +
 <img src="images/size-classes-font-scaling-animation-light-dark.gif"/>
 
 ## Scaling everything together
+
+Using `size_class` parameter, we can control the scaling of the **elements**.
 
 See [readme](../../index.html) for the code.
 
