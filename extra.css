@@ -6,3 +6,7 @@ img {
 .center-block {
 	margin-top: 20px;
 }
+
+blockquote {
+	font-size: 110%;
+}

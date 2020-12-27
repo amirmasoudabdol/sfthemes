@@ -22,7 +22,7 @@
   }
 </script>
 
-<title>watchOS Color Palette — watchos_dark_pal • sfthemes</title>
+<title>Set Fonts — sf_set_inter • sfthemes</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -74,9 +74,13 @@
   <link href="../extra.css" rel="stylesheet">
   
 
-<meta property="og:title" content="watchOS Color Palette — watchos_dark_pal" />
-<meta property="og:description" content="Set of color palettes based on watchOS System Colors.
-General information about each palette can be found in the colors vignette." />
+<meta property="og:title" content="Set Fonts — sf_set_inter" />
+<meta property="og:description" content="These functions can be used to change the font of all text elements in any
+themes. Additionally, all font weights (or faces) of the given theme will be
+set appropriately to ensure readability, e.g., setting title font
+to be bold.
+
+" />
 <meta property="og:image" content="https://sfthemes.amirmasoudabdol.name/reference/figures/twitter-summary-card.png" />
 <meta property="og:image:alt" content="An accessible set of themes and color palettes optimized for light/dark appearances, and different screen sizes" />
 <meta name="twitter:card" content="summary_large_image" />
@@ -183,52 +187,80 @@ General information about each palette can be found in the colors vignette." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>watchOS Color Palette</h1>
-    <small class="dont-index">Source: <a href='https://github.com/amirmasoudabdol/sfthemes/blob/main/R/watchos-colours.R'><code>R/watchos-colours.R</code></a></small>
-    <div class="hidden name"><code>watchos_colour_palettes.Rd</code></div>
+    <h1>Set Fonts</h1>
+    <small class="dont-index">Source: <a href='https://github.com/amirmasoudabdol/sfthemes/blob/main/R/set-fonts.R'><code>R/set-fonts.R</code></a></small>
+    <div class="hidden name"><code>sf_set_font.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Set of color palettes based on <a href='https://developer.apple.com/design/human-interface-guidelines/watchos/visual/color/'>watchOS System Colors</a>.
-General information about each palette can be found in the <a href='../articles/colors.html'>colors</a> vignette.</p>
+    <p>These functions can be used to change the font of all text elements in any
+themes. Additionally, all font weights (or faces) of the given theme will be
+set appropriately to ensure readability, e.g., setting title font
+to be bold.</p>
+
+
     </div>
 
-    <pre class="usage"><span class='fu'>watchos_dark_pal</span><span class='op'>(</span>order <span class='op'>=</span> <span class='st'>"contrast"</span><span class='op'>)</span></pre>
+    <pre class="usage"><span class='fu'>sf_set_inter</span><span class='op'>(</span><span class='va'>ret</span><span class='op'>)</span>
+
+<span class='fu'>sf_set_sf_pro</span><span class='op'>(</span><span class='va'>ret</span><span class='op'>)</span>
+
+<span class='fu'>sf_set_custom_font</span><span class='op'>(</span><span class='va'>ret</span>, <span class='va'>font_family_name</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>order</th>
-      <td><p>Indicates the order of colors in the palette</p></td>
+      <th>ret</th>
+      <td><p>A <code><a href='https://ggplot2.tidyverse.org/reference/theme.html'>ggplot2::theme()</a></code> object</p></td>
+    </tr>
+    <tr>
+      <th>font_family_name</th>
+      <td><p>The name of the font</p></td>
     </tr>
     </table>
 
-    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+    <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
 
-    <p>These functions are ideal for accessing the raw color values, and
-can be used within functions where raw color values are needed, e.g.,
-<a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a>. In order to use them with <code>ggplot</code> functions, you must utilize one
-of the followings:</p><ul>
-<li><p><a href='scale_colour_watchos_dark.html'>scale_colour_watchos_dark</a></p></li>
-</ul>
-
-<p><strong>Note</strong></p><ul>
-<li><p>We recommend paining this palette with dark themes, as the high
-base brightness of colors may make them hard to distinguish in light
-themes</p></li>
+    
+<ul>
+<li><p>Due to limitation of <code>extrafont</code> and the format of SF Pro, <code>sf_set_sf_pro()</code>
+is not yet available, and SF Pro does not work as expected.</p></li>
 </ul>
 
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
-<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://scales.r-lib.org'>scales</a></span><span class='op'>)</span>
+    <pre class="examples"><div class='input'><span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://ggplot2.tidyverse.org'>ggplot2</a></span><span class='op'>)</span>
 
- <span class='fu'>scales</span><span class='fu'>::</span><span class='fu'><a href='https://scales.r-lib.org//reference/show_col.html'>show_col</a></span><span class='op'>(</span><span class='fu'>watchos_dark_pal</span><span class='op'>(</span>order <span class='op'>=</span> <span class='st'>"default"</span><span class='op'>)</span><span class='op'>(</span><span class='fl'>10</span><span class='op'>)</span>,
-                  borders <span class='op'>=</span> <span class='cn'>NA</span>, labels <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span>
-</div><div class='img'><img src='watchos_colour_palettes-1.png' alt='' width='700' height='433' /></div><div class='input'> <span class='fu'>scales</span><span class='fu'>::</span><span class='fu'><a href='https://scales.r-lib.org//reference/show_col.html'>show_col</a></span><span class='op'>(</span><span class='fu'>watchos_dark_pal</span><span class='op'>(</span>order <span class='op'>=</span> <span class='st'>"contrast"</span><span class='op'>)</span><span class='op'>(</span><span class='fl'>10</span><span class='op'>)</span>,
-                  borders <span class='op'>=</span> <span class='cn'>NA</span>, labels <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span>
-</div><div class='img'><img src='watchos_colour_palettes-2.png' alt='' width='700' height='433' /></div></pre>
+<span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='va'>mtcars</span><span class='op'>)</span> <span class='op'>+</span>
+ <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>wt</span>, y <span class='op'>=</span> <span class='va'>mpg</span>, colour <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>gear</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
+ <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span>title <span class='op'>=</span> <span class='st'>"Fuel economy declines as weight increases"</span>,
+      subtitle <span class='op'>=</span> <span class='st'>"(1973-74)"</span>,
+      caption <span class='op'>=</span> <span class='st'>"Data from the 1974 Motor Trend US magazine."</span>,
+      x <span class='op'>=</span> <span class='st'>"Weight (1000 lbs)"</span>,
+      y <span class='op'>=</span> <span class='st'>"Fuel economy (mpg)"</span>,
+      colour <span class='op'>=</span> <span class='st'>"Gears"</span><span class='op'>)</span> <span class='op'>+</span>
+ <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/facet_grid.html'>facet_grid</a></span><span class='op'>(</span><span class='va'>vs</span> <span class='op'>~</span> <span class='va'>am</span><span class='op'>)</span> <span class='op'>+</span>
+ <span class='fu'>sf_set_inter</span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggtheme.html'>theme_linedraw</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
+ <span class='fu'><a href='scale_colour_ios_light.html'>scale_colour_ios_light</a></span><span class='op'>(</span><span class='op'>)</span>
+<span class='op'>}</span>
+<span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://ggplot2.tidyverse.org'>ggplot2</a></span><span class='op'>)</span>
+
+<span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='va'>mtcars</span><span class='op'>)</span> <span class='op'>+</span>
+ <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>wt</span>, y <span class='op'>=</span> <span class='va'>mpg</span>, colour <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>gear</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
+ <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span>title <span class='op'>=</span> <span class='st'>"Fuel economy declines as weight increases"</span>,
+      subtitle <span class='op'>=</span> <span class='st'>"(1973-74)"</span>,
+      caption <span class='op'>=</span> <span class='st'>"Data from the 1974 Motor Trend US magazine."</span>,
+      x <span class='op'>=</span> <span class='st'>"Weight (1000 lbs)"</span>,
+      y <span class='op'>=</span> <span class='st'>"Fuel economy (mpg)"</span>,
+      colour <span class='op'>=</span> <span class='st'>"Gears"</span><span class='op'>)</span> <span class='op'>+</span>
+ <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/facet_grid.html'>facet_grid</a></span><span class='op'>(</span><span class='va'>vs</span> <span class='op'>~</span> <span class='va'>am</span><span class='op'>)</span> <span class='op'>+</span>
+ <span class='fu'>sf_set_inter</span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggtheme.html'>theme_linedraw</a></span><span class='op'>(</span><span class='op'>)</span>, <span class='st'>"Gill Sans"</span><span class='op'>)</span> <span class='op'>+</span>
+ <span class='fu'><a href='scale_colour_ios_light.html'>scale_colour_ios_light</a></span><span class='op'>(</span><span class='op'>)</span>
+<span class='op'>}</span>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

@@ -22,7 +22,7 @@
   }
 </script>
 
-<title>watchOS Color Palette — watchos_dark_pal • sfthemes</title>
+<title>Import Fonts — import_inter • sfthemes</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -74,9 +74,9 @@
   <link href="../extra.css" rel="stylesheet">
   
 
-<meta property="og:title" content="watchOS Color Palette — watchos_dark_pal" />
-<meta property="og:description" content="Set of color palettes based on watchOS System Colors.
-General information about each palette can be found in the colors vignette." />
+<meta property="og:title" content="Import Fonts — import_inter" />
+<meta property="og:description" content="A few handy functions facilitating the process of importing and installing
+custom fonts available in sfthemes." />
 <meta property="og:image" content="https://sfthemes.amirmasoudabdol.name/reference/figures/twitter-summary-card.png" />
 <meta property="og:image:alt" content="An accessible set of themes and color palettes optimized for light/dark appearances, and different screen sizes" />
 <meta name="twitter:card" content="summary_large_image" />
@@ -183,52 +183,35 @@ General information about each palette can be found in the colors vignette." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>watchOS Color Palette</h1>
-    <small class="dont-index">Source: <a href='https://github.com/amirmasoudabdol/sfthemes/blob/main/R/watchos-colours.R'><code>R/watchos-colours.R</code></a></small>
-    <div class="hidden name"><code>watchos_colour_palettes.Rd</code></div>
+    <h1>Import Fonts</h1>
+    <small class="dont-index">Source: <a href='https://github.com/amirmasoudabdol/sfthemes/blob/main/R/import-fonts.R'><code>R/import-fonts.R</code></a></small>
+    <div class="hidden name"><code>import_inter.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Set of color palettes based on <a href='https://developer.apple.com/design/human-interface-guidelines/watchos/visual/color/'>watchOS System Colors</a>.
-General information about each palette can be found in the <a href='../articles/colors.html'>colors</a> vignette.</p>
+    <p>A few handy functions facilitating the process of importing and installing
+custom fonts available in sfthemes.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>watchos_dark_pal</span><span class='op'>(</span>order <span class='op'>=</span> <span class='st'>"contrast"</span><span class='op'>)</span></pre>
+    <pre class="usage"><span class='fu'>import_inter</span><span class='op'>(</span><span class='op'>)</span></pre>
 
-    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
-    <table class="ref-arguments">
-    <colgroup><col class="name" /><col class="desc" /></colgroup>
-    <tr>
-      <th>order</th>
-      <td><p>Indicates the order of colors in the palette</p></td>
-    </tr>
-    </table>
 
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <p>These functions are ideal for accessing the raw color values, and
-can be used within functions where raw color values are needed, e.g.,
-<a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a>. In order to use them with <code>ggplot</code> functions, you must utilize one
-of the followings:</p><ul>
-<li><p><a href='scale_colour_watchos_dark.html'>scale_colour_watchos_dark</a></p></li>
+    <p>sfthemes package includes 8 faces of Inter typeface: Regular, Italic, Bold,
+Bold Italic, Light, Light Italic, Extra Bold, Extra Bold Italic. The
+<code>import_inter</code> function makes sure that these fonts are
+correctly installed and can be accessed by R.</p>
+    <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
+
+    
+<ul>
+<li><p>Make sure to run this command once after installing sfthemes, otherwise,
+you will encounter some warning messages regarding a missing font.
+Alternatively, you can download and install your fonts manually.</p></li>
 </ul>
 
-<p><strong>Note</strong></p><ul>
-<li><p>We recommend paining this palette with dark themes, as the high
-base brightness of colors may make them hard to distinguish in light
-themes</p></li>
-</ul>
 
-
-    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
-<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://scales.r-lib.org'>scales</a></span><span class='op'>)</span>
-
- <span class='fu'>scales</span><span class='fu'>::</span><span class='fu'><a href='https://scales.r-lib.org//reference/show_col.html'>show_col</a></span><span class='op'>(</span><span class='fu'>watchos_dark_pal</span><span class='op'>(</span>order <span class='op'>=</span> <span class='st'>"default"</span><span class='op'>)</span><span class='op'>(</span><span class='fl'>10</span><span class='op'>)</span>,
-                  borders <span class='op'>=</span> <span class='cn'>NA</span>, labels <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span>
-</div><div class='img'><img src='watchos_colour_palettes-1.png' alt='' width='700' height='433' /></div><div class='input'> <span class='fu'>scales</span><span class='fu'>::</span><span class='fu'><a href='https://scales.r-lib.org//reference/show_col.html'>show_col</a></span><span class='op'>(</span><span class='fu'>watchos_dark_pal</span><span class='op'>(</span>order <span class='op'>=</span> <span class='st'>"contrast"</span><span class='op'>)</span><span class='op'>(</span><span class='fl'>10</span><span class='op'>)</span>,
-                  borders <span class='op'>=</span> <span class='cn'>NA</span>, labels <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span>
-</div><div class='img'><img src='watchos_colour_palettes-2.png' alt='' width='700' height='433' /></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
