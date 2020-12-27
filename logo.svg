@@ -1,53 +1,52 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xl="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="-2431 1232 388 445.2844" width="388" height="445.2844">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xl="http://www.w3.org/1999/xlink" version="1.1" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="-1387.4 -104 389.52195 446.3844" width="389.52195" height="446.3844">
   <defs>
-    <font-face font-family="Nitti" font-size="39" panose-1="2 11 8 9 4 0 0 6 0 4" units-per-em="1000" underline-position="-105" underline-thickness="80" slope="0" x-height="447" cap-height="579" ascent="936.0019" descent="-264.00054" font-weight="700">
-      <font-face-src>
-        <font-face-name name="Nitti-Bold"/>
-      </font-face-src>
-    </font-face>
-    <font-face font-family="Stanley" font-size="105" panose-1="2 11 8 5 5 0 0 2 0 4" units-per-em="1000" underline-position="-142" underline-thickness="30" slope="0" x-height="511" cap-height="640" ascent="993.002" descent="-283.00057" font-weight="700" font-stretch="expanded">
+    <font-face font-family="Stanley" font-size="106" panose-1="2 11 8 5 5 0 0 2 0 4" units-per-em="1000" underline-position="-142" underline-thickness="30" slope="0" x-height="511" cap-height="640" ascent="993.002" descent="-283.00057" font-weight="700" font-stretch="expanded">
       <font-face-src>
         <font-face-name name="Stanley-Normal"/>
       </font-face-src>
     </font-face>
+    <font-face font-family="Nitti" font-size="33" panose-1="2 11 8 9 4 0 0 6 0 4" units-per-em="1000" underline-position="-105" underline-thickness="80" slope="0" x-height="447" cap-height="579" ascent="936.0019" descent="-264.00054" font-weight="700">
+      <font-face-src>
+        <font-face-name name="Nitti-Bold"/>
+      </font-face-src>
+    </font-face>
   </defs>
-  <metadata> Produced by OmniGraffle 7.18.1\n2020-12-22 14:32:32 +0000</metadata>
-  <g id="Canvas_1" fill="none" fill-opacity="1" stroke="none" stroke-opacity="1" stroke-dasharray="none">
+  <metadata> Produced by OmniGraffle 7.18.1\n2020-12-27 13:24:17 +0000</metadata>
+  <g id="Canvas_1" fill-opacity="1" stroke-dasharray="none" fill="none" stroke="none" stroke-opacity="1">
     <title>Canvas 1</title>
     <g id="Canvas_1_Layer_1">
       <title>Layer 1</title>
-      <g id="Graphic_231">
-        <path d="M -2335.4743 1619.715 L -2239.8438 1675.1397 C -2237.2104 1676.666 -2233.9615 1676.666 -2231.328 1675.1397 L -2048.2334 1569.0234 C -2045.613 1567.5048 -2044 1564.7054 -2044 1561.6768 L -2044 1349.3877 C -2044 1346.3591 -2045.613 1343.5598 -2048.2334 1342.0411 L -2143.0297 1287.1 Z" fill="#222"/>
-        <path d="M -2335.4743 1619.715 L -2239.8438 1675.1397 C -2237.2104 1676.666 -2233.9615 1676.666 -2231.328 1675.1397 L -2048.2334 1569.0234 C -2045.613 1567.5048 -2044 1564.7054 -2044 1561.6768 L -2044 1349.3877 C -2044 1346.3591 -2045.613 1343.5598 -2048.2334 1342.0411 L -2143.0297 1287.1 Z" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <g id="Graphic_324">
+        <path d="M -1077.1615 278 L -1286.6633 278 L -1291 285.49534 L -1194.829 341.23324 C -1192.1807 342.76813 -1188.9134 342.76813 -1186.265 341.23324 Z" fill="#5ac8fa"/>
       </g>
-      <g id="Graphic_230">
-        <path d="M -2146.9365 1297 L -2141.1474 1286.9943 L -2234.049 1233.1512 C -2235.3732 1232.3837 -2236.8522 1232 -2238.331 1232 C -2239.81 1232 -2241.2889 1232.3837 -2242.613 1233.1512 L -2352.7788 1297 Z" fill="#0981f9"/>
+      <g id="Graphic_323">
+        <path d="M -1077.1615 278 L -1002.1354 234.51713 C -999.5003 232.98987 -997.8781 230.1747 -997.8781 227.12895 L -997.8781 212 L -1248.477 212 L -1286.6633 278 Z" fill="#ff9500"/>
       </g>
-      <g id="Graphic_229">
-        <path d="M -2184.5443 1362 L -2146.9365 1297 L -2352.7788 1297 L -2426.7426 1339.8673 C -2429.3778 1341.3945 -2431 1344.2097 -2431 1347.2555 L -2431 1362 Z" fill="#30d158"/>
+      <g id="Graphic_322">
+        <path d="M -997.8781 212 L -997.8781 146 L -1210.2907 146 L -1248.477 212 Z" fill="#af52de"/>
       </g>
-      <g id="Graphic_228">
-        <path d="M -2297.3674 1557 L -2259.7597 1492 L -2431 1492 L -2431 1557 Z" fill="#ff9f0a"/>
+      <g id="Graphic_321">
+        <path d="M -997.8781 146 L -997.8781 80 L -1172.1044 80 L -1210.2907 146 Z" fill="#ff2d55"/>
       </g>
-      <g id="Graphic_227">
-        <path d="M -2222.152 1427 L -2184.5443 1362 L -2431 1362 L -2431 1427 Z" fill="#ff375f"/>
+      <g id="Graphic_320">
+        <path d="M -997.8781 80 L -997.8781 14 L -1133.9181 14 L -1172.1044 80 Z" fill="#34c759"/>
       </g>
-      <g id="Graphic_226">
-        <path d="M -2259.7597 1492 L -2222.152 1427 L -2431 1427 L -2431 1492 Z" fill="#bf5af1"/>
+      <g id="Graphic_319">
+        <path d="M -997.8781 14 L -997.8781 13.639869 C -997.8781 10.59413 -999.5003 7.778949 -1002.1354 6.251694 L -1097.4676 -49 L -1133.9181 14 Z" fill="#007aff"/>
       </g>
-      <g id="Graphic_225">
-        <path d="M -2297.3674 1557 L -2431 1557 L -2431 1560.7445 C -2431 1563.7903 -2429.3778 1566.6055 -2426.7426 1568.1327 L -2334.6799 1621.4896 Z" fill="#64d2ff"/>
+      <g id="Graphic_325">
+        <path d="M -1291.0799 285.4896 L -1097.5474 -49.00575 L -1190.4491 -102.84883 C -1193.0974 -104.38372 -1196.3647 -104.38372 -1199.013 -102.84883 L -1383.1426 3.8672817 C -1385.7778 5.394537 -1387.4 8.209718 -1387.4 11.255457 L -1387.4 224.74454 C -1387.4 227.79028 -1385.7778 230.60546 -1383.1426 232.13272 Z" fill="#222"/>
       </g>
-      <g id="Graphic_224">
-        <text transform="translate(-2224 1500)" fill="#fafafa">
-          <tspan font-family="Nitti" font-size="39" font-weight="700" fill="#fafafa" x="14.3" y="37">themes</tspan>
+      <g id="Graphic_326">
+        <text transform="translate(-1378 30)" fill="white">
+          <tspan font-family="Stanley" font-size="106" font-weight="700" fill="white" x="3.50643" y="105">SF</tspan>
         </text>
       </g>
-      <g id="Graphic_223">
-        <text transform="translate(-2213 1382)" fill="white">
-          <tspan font-family="Stanley" font-size="105" font-weight="700" fill="white" x=".4125" y="104">sf</tspan>
+      <g id="Graphic_327">
+        <text transform="translate(-1378 146)" fill="white">
+          <tspan font-family="Nitti" font-size="33" font-weight="700" fill="white" x="7.1" y="31">THEMES</tspan>
         </text>
       </g>
     </g>

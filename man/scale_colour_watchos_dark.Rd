@@ -68,11 +68,12 @@ The default, \code{TRUE}, uses the levels that appear in the data;
 watchOS colors are very bright but do not necessary have a lot of contrast.
 We strictly recommend to pair them with dark themes, e.g., `theme_sf_dark()`.
 
-**Note**: 
+**Notes** 
 - *While watchOS color palettes provide a total of 10 colors, we do not
 recommend using them for more than 7 groups. The last three colors often
 collide with other colors in the palette and may affect the clarity of your
 visualization.*
+- See [watchOS colors](watchos_colour_palettes.html) for more details on raw colors.
 }
 \seealso{
 Other colour scales: 

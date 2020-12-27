@@ -78,12 +78,13 @@ These scales meant to be used with light themes, e.g, \code{theme_sf_light()}.
 While they can be used with dark themes, in general, we recommend pairing
 \verb{scale_colour_*_light}s with light themes for better clarity and contrast.
 
-\strong{Note}:
+\strong{Notes}
 \itemize{
 \item \emph{While macOS color palettes provide a total of 11 colors, we do not
 recommend using them for more than 8 groups. The last three colors often
 collide with other colors in the palette and may affect the clarity of your
 visualization.}
+\item See \href{macos_colour_palettes.html}{macOS colors} for more details on raw colors.
 }
 }
 \seealso{

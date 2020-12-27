@@ -2,7 +2,7 @@ url: https://sfthemes.amirmasoudabdol.name
 
 home:
   title: San Francisco Themes
-  description: Collection of ggplot2 themes, scales and colors inspired by Apple’s Human Interface Guidelines
+  description: An accessible set of themes and color palettes optimized for light/dark appearances, and different screen sizes
 
 authors:
   Amir Masoud Abdol:
@@ -37,7 +37,7 @@ template:
   opengraph:
     image:
       src: man/figures/twitter-summary-card.png
-      alt: TO BE ADDED LATER
+      alt: An accessible set of themes and color palettes optimized for light/dark appearances, and different screen sizes
     twitter:
       creator: "@amirmasoudabdol"
       site: https://amirmasoudabdol.name
@@ -52,18 +52,18 @@ articles:
   - size_classes
 
 reference:
-- title: Typography
-  desc: This is about typography
-  contents:
-  - import_inter
-
 - title: Themes
-  desc:
   contents:
   - theme_sf_light
   - theme_sf_dark
 
+- title: Typography
+  contents:
+  - starts_with("import")
+  - starts_with("sf_set_")
+
 - title: Scales
+  desc: Collection of color scales and fill optimized for light and dark themes.
 - subtitle: iOS
   contents:
   - ends_with("ios_light")
@@ -81,6 +81,7 @@ reference:
   - ends_with("watchos_dark")
 
 - title: Palettes
+  desc: For accesing the raw colors, or using colors with other visualization packages than ggplot2 library.
   contents:
   - starts_with("ios_")
   - starts_with("macos_")

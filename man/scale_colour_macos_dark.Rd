@@ -83,7 +83,7 @@ These scales meant to be used with dark themes, e.g, \code{theme_sf_dark()}.
 While they can be used with light themes, in general, we recommend pairing
 \verb{scale_colour_*_dark}s with dark themes for better clarity and contrast.
 
-\strong{Note}:
+\strong{Note}
 \itemize{
 \item \emph{While macOS color palettes provide a total of 11 colors, we do not
 recommend using them for more than 8 groups. The last three colors often

@@ -39,8 +39,8 @@ sf_base <- function(
   axis = TRUE,
   ticks = TRUE,
   size_class =  NULL,
-  font_size_class = "xSmall",
-  element_size_class = "xSmall",
+  font_size_class = NULL,
+  element_size_class = NULL,
   offset_x_ticks = FALSE,
   offset_y_ticks = FALSE
   ) {
@@ -49,8 +49,6 @@ sf_base <- function(
     font_size_class <- size_class
     element_size_class <- size_class
   }
-
-
 
   font_scale <- sf_scale(font_size_class)
 

@@ -129,11 +129,12 @@ ios_light_pal <- function(order = "contrast", accessible = FALSE) {
 #' While they can be used with dark themes, in general, we recommend pairing 
 #' `scale_colour_*_light`s with light themes for better clarity and contrast.
 #' 
-#' **Note**: 
+#' **Notes**
 #' - *While iOS color palettes provide a total of 9 colors, we do not
 #' recommend using them for more than 6 groups. The last three colors often
 #' collide with other colors in the palette and may affect the clarity of your
 #' visualization.*
+#' - See [iOS colors](ios_colour_palettes.html) for more details on raw colors.
 #'
 #' @param accessible Indicates whether the accessible set of colors should be
 #' used
@@ -205,7 +206,7 @@ ios_dark_pal <- function(order = "contrast", accessible = FALSE) {
 #' While they can be used with light themes, in general, we recommend pairing 
 #' `scale_colour_*_dark`s with dark themes for better clarity and contrast.
 #' 
-#' **Note**: 
+#' **Note**
 #' - *While iOS color palettes provide a total of 9 colors, we do not
 #' recommend using them for more than 6 groups. The last three colors often
 #' collide with other colors in the palette and may affect the clarity of your

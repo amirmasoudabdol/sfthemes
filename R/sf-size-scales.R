@@ -42,6 +42,8 @@ sf_set_text_sizes <- function(ret, size_class = "xSmall") {
   legend_title_size <- font_scale[["sizes"]][["subhead"]]
   legend_text_size <- axis_text_size
 
+  tag_text_size <- axis_title_size
+
   ret <- ret + theme(plot.title = element_text(size = plot_title_size))
   ret <- ret + theme(plot.subtitle = element_text(size = subtitle_size))
   ret <- ret + theme(plot.caption = element_text(size = caption_size))
@@ -58,6 +60,8 @@ sf_set_text_sizes <- function(ret, size_class = "xSmall") {
 
   ret <- ret + theme(legend.title = element_text(size = legend_title_size))
   ret <- ret + theme(legend.text = element_text(size = legend_text_size))
+
+  ret <- ret + theme(plot.tag = element_text(size = tag_text_size))
 
   return(ret)
 }

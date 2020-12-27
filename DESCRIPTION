@@ -1,7 +1,7 @@
 Type: Package
 Package: sfthemes
-Title: Collection of ggplot2 themes, scales and colors inspired
-    by Apple’s Human Interface Guidelines
+Title: An accessible set of themes and color palettes optimized
+    for light/dark appearances, and different screen sizes
 Version: 0.2.0
 Authors@R: 
     person(given = "Amir Masoud",
@@ -9,14 +9,14 @@ Authors@R:
            role = c("aut", "cre"),
            email = "i@amirmasoudabdol.name")
 Maintainer: Amir Masoud Abdol <i@amirmasoudabdol.name>
-Description: This is a collection of ggplot2 themes,
-    scales, and colors inspired by Apple’s Human Interface Guidelines, and
-    based on occasional appearances of charts used by Apple within
-    different contexts, e.g., Apple Health app, Screen Time on iOS and
-    macOS.  In terms of typography, we optimized our themes to be
-    compatible with SF Pro.  Additionally, we adhere to HIG’s dynamic type
-    sizes in order to provide consistent and elegant overall
-    rescaling.
+Description: This is a pair of light and dark ggplot2 themes,
+    and a collection of color scales based on iOS, macOS and watchOS
+    system colors. Themes are inspired by the occasional appearances of
+    charts used by Apple within different contexts, e.g., Apple Health
+    app, Screen Time on iOS and macOS. And colors are adapted from iOS,
+    macOS, and watchOS system colors. Each color scale has a light and
+    dark variant as well that compliments the light/dark themes,
+    `scale_colour_ios_light()` and `scale_colour_ios_dark()` respectively.
 License: MIT + file LICENSE
 URL: https://sfthemes.amirmasoudabdol.name
 BugReports: https://github.com/amirmasoudabdol/sfthemes/issues
