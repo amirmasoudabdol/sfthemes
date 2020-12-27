@@ -13,7 +13,8 @@ test_that("figures showcasing text rescaling have been generated...", {
 
         ggplot(data=iris, aes(x=Sepal.Length, y=Sepal.Width, color=Species)) +
             geom_point(aes(shape=Species)) + xlab("Sepal Length") + ylab("Sepal Width") +
-            labs(title = "Linear Fit", subtitle = classes[[i]]) +
+            labs(title = "SF Light/Dark Theme", 
+									subtitle = paste0("Text Size Class: ", classes[[i]])) +
             geom_smooth(method="lm") +
             theme_sf_light(font_size_class = classes[[i]], element_size_class = "xLarge") +
             scale_colour_ios_light(accessible = F) +
@@ -25,7 +26,8 @@ test_that("figures showcasing text rescaling have been generated...", {
 
         ggplot(data=iris, aes(x=Sepal.Length, y=Sepal.Width, color=Species)) +
             geom_point(aes(shape=Species)) + xlab("Sepal Length") + ylab("Sepal Width") +
-            labs(title = "Linear Fit", subtitle = classes[[i]]) +
+            labs(title = "SF Light/Dark Theme", 
+									subtitle = paste0("Text Size Class: ", classes[[i]])) +
             geom_smooth(method="lm") +
             theme_sf_dark(font_size_class = classes[[i]], element_size_class = "xLarge") +
             scale_colour_ios_dark(accessible = F) +
@@ -62,7 +64,8 @@ test_that("figures showcasing element rescaling have been generated...", {
 
         ggplot(data=iris, aes(x=Sepal.Length, y=Sepal.Width, color=Species)) +
             geom_point(aes(shape=Species)) + xlab("Sepal Length") + ylab("Sepal Width") +
-            labs(title = "Linear Fit", subtitle = classes[[i]]) +
+            labs(title = "SF Light/Dark Theme", 
+									subtitle = paste0("Element Size Class: ", classes[[i]])) +
             geom_smooth(method="lm") +
             theme_sf_light(font_size_class = "xLarge", element_size_class = classes[[i]]) +
             scale_colour_ios_light(accessible = F) +
@@ -74,7 +77,8 @@ test_that("figures showcasing element rescaling have been generated...", {
 
         ggplot(data=iris, aes(x=Sepal.Length, y=Sepal.Width, color=Species)) +
             geom_point(aes(shape=Species)) + xlab("Sepal Length") + ylab("Sepal Width") +
-            labs(title = "Linear Fit", subtitle = classes[[i]]) +
+            labs(title = "SF Light/Dark Theme", 
+									subtitle = paste0("Element Size Class: ", classes[[i]])) +
             geom_smooth(method="lm") +
             theme_sf_dark(font_size_class = "xLarge", element_size_class = classes[[i]]) +
             scale_colour_ios_dark(accessible = F) +

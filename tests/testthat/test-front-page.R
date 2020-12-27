@@ -10,7 +10,8 @@ test_that("main front page figures have been generated...", {
 
     ggplot(data=iris, aes(x=Sepal.Length, y=Sepal.Width, color=Species)) +
         geom_point(aes(shape=Species)) + xlab("Sepal Length") + ylab("Sepal Width") +
-        labs(title = "Linear Fit", subtitle = "Length ~ Width") +
+        labs(title = "SF Light/Dark Themes", 
+							subtitle = "iOS Light/Dark Color Palette") +
         geom_smooth(method="lm") +
         theme_sf_light(size_class =  "xxxLarge") +
         scale_colour_ios_light(accessible = F) +
@@ -22,7 +23,8 @@ test_that("main front page figures have been generated...", {
 
     ggplot(data=iris, aes(x=Sepal.Length, y=Sepal.Width, color=Species)) +
         geom_point(aes(shape=Species)) + xlab("Sepal Length") + ylab("Sepal Width") +
-        labs(title = "Linear Fit", subtitle = "Length ~ Width") +
+        labs(title = "SF Light/Dark Themes", 
+							subtitle = "iOS Light/Dark Color Palette") +
         geom_smooth(method="lm") +
         theme_sf_dark(size_class =  "xxxLarge") +
         scale_colour_ios_dark(accessible = F) +

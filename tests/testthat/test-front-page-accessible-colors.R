@@ -36,6 +36,8 @@ test_that("front page figures showcasing the accessible light colors have been g
     ggplot(data = iris.sum, aes(x = Species)) +
         geom_bar(aes(y = PW.mean, fill = Species, color = Species), position = "dodge", stat = "identity") +
         geom_errorbar(aes(ymin = PW.mean - PW.sd, ymax = PW.mean + PW.sd), width = 0.5, position = position_dodge(width = 0.5), color = "black") + 
+				labs(title = "SF Light Theme", 
+							subtitle = "iOS Light Color Palette - Normal vs. Accessible") +
         theme_sf_light(size_class =  "xxxLarge") +
         scale_colour_ios_light(accessible = F) +
         scale_fill_ios_light(accessible = F) +
@@ -46,6 +48,8 @@ test_that("front page figures showcasing the accessible light colors have been g
     ggplot(data = iris.sum, aes(x = Species)) +
         geom_bar(aes(y = PW.mean, fill = Species, color = Species), position = "dodge", stat = "identity") +
         geom_errorbar(aes(ymin = PW.mean - PW.sd, ymax = PW.mean + PW.sd), width = 0.5, position = position_dodge(width = 0.5), color = "black") + 
+				labs(title = "SF Light Theme", 
+							subtitle = "iOS Light Color Palette - Normal vs. Accessible") +
         theme_sf_light(size_class =  "xxxLarge") +
         scale_colour_ios_light(accessible = T) +
         scale_fill_ios_light(accessible = T) +
@@ -92,6 +96,8 @@ test_that("front page figures showcasing the accessible dark colors have been ge
     ggplot(data = iris.sum, aes(x = Species)) +
         geom_bar(aes(y = PW.mean, fill = Species, color = Species), position = "dodge", stat = "identity") +
         geom_errorbar(aes(ymin = PW.mean - PW.sd, ymax = PW.mean + PW.sd), width = 0.5, position = position_dodge(width = 0.5), color = "white") + 
+				labs(title = "SF Dark Theme", 
+							subtitle = "iOS Dark Color Palette - Normal vs. Accessible") +
         theme_sf_dark(size_class =  "xxxLarge") +
         scale_colour_ios_dark(accessible = F) +
         scale_fill_ios_dark(accessible = F) +
@@ -102,6 +108,8 @@ test_that("front page figures showcasing the accessible dark colors have been ge
     ggplot(data = iris.sum, aes(x = Species)) +
         geom_bar(aes(y = PW.mean, fill = Species, color = Species), position = "dodge", stat = "identity") +
         geom_errorbar(aes(ymin = PW.mean - PW.sd, ymax = PW.mean + PW.sd), width = 0.5, position = position_dodge(width = 0.5), color = "white") + 
+				labs(title = "SF Dark Theme", 
+							subtitle = "iOS Dark Color Palette - Normal vs. Accessible") +
         theme_sf_dark(size_class =  "xxxLarge") +
         scale_colour_ios_dark(accessible = T) +
         scale_fill_ios_dark(accessible = T) +
