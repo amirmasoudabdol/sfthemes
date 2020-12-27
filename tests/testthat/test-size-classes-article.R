@@ -12,12 +12,14 @@ test_that("figures showcasing text rescaling have been generated...", {
     for (i in 1:7) {
 
         ggplot(data=iris, aes(x=Sepal.Length, y=Sepal.Width, color=Species)) +
-            geom_point(aes(shape=Species)) + xlab("Sepal Length") + ylab("Sepal Width") +
+            geom_point(aes(shape=Species)) + 
+            xlab("Sepal Length") + ylab("Sepal Width") +
             labs(title = "SF Light/Dark Theme", 
-									subtitle = paste0("Text Size Class: ", classes[[i]])) +
-            geom_smooth(method="lm") +
+					subtitle = paste0("Text Size Class: ", classes[[i]])) +
+            geom_smooth(method="lm", aes(fill = Species)) +
             theme_sf_light(font_size_class = classes[[i]], element_size_class = "xLarge") +
             scale_colour_ios_light(accessible = F) +
+            scale_fill_ios_light(accessible = F) +
             theme(legend.position = "bottom")
 
         ggsave(paste0("figures/articles/iris_linear_fit_light_font_", i, "_",
@@ -25,12 +27,14 @@ test_that("figures showcasing text rescaling have been generated...", {
                width = 20, height = 15, bg = "transparent", dpi = 72)
 
         ggplot(data=iris, aes(x=Sepal.Length, y=Sepal.Width, color=Species)) +
-            geom_point(aes(shape=Species)) + xlab("Sepal Length") + ylab("Sepal Width") +
+            geom_point(aes(shape=Species)) + 
+            xlab("Sepal Length") + ylab("Sepal Width") +
             labs(title = "SF Light/Dark Theme", 
-									subtitle = paste0("Text Size Class: ", classes[[i]])) +
-            geom_smooth(method="lm") +
+				    subtitle = paste0("Text Size Class: ", classes[[i]])) +
+            geom_smooth(method="lm", aes(fill = Species)) +
             theme_sf_dark(font_size_class = classes[[i]], element_size_class = "xLarge") +
             scale_colour_ios_dark(accessible = F) +
+            scale_fill_ios_dark(accessible = F) +
             theme(legend.position = "bottom")
 
         ggsave(paste0("figures/articles/iris_linear_fit_dark_font_", i, "_",
@@ -63,12 +67,14 @@ test_that("figures showcasing element rescaling have been generated...", {
     for (i in 1:7) {
 
         ggplot(data=iris, aes(x=Sepal.Length, y=Sepal.Width, color=Species)) +
-            geom_point(aes(shape=Species)) + xlab("Sepal Length") + ylab("Sepal Width") +
+            geom_point(aes(shape=Species)) + 
+            xlab("Sepal Length") + ylab("Sepal Width") +
             labs(title = "SF Light/Dark Theme", 
-									subtitle = paste0("Element Size Class: ", classes[[i]])) +
-            geom_smooth(method="lm") +
+					subtitle = paste0("Element Size Class: ", classes[[i]])) +
+            geom_smooth(method="lm", aes(fill = Species)) +
             theme_sf_light(font_size_class = "xLarge", element_size_class = classes[[i]]) +
             scale_colour_ios_light(accessible = F) +
+            scale_fill_ios_light(accessible = F) +
             theme(legend.position = "bottom")
 
         ggsave(paste0("figures/articles/iris_linear_fit_light_element_", i, "_",
@@ -76,12 +82,14 @@ test_that("figures showcasing element rescaling have been generated...", {
                width = 20, height = 15, bg = "transparent", dpi = 72)
 
         ggplot(data=iris, aes(x=Sepal.Length, y=Sepal.Width, color=Species)) +
-            geom_point(aes(shape=Species)) + xlab("Sepal Length") + ylab("Sepal Width") +
+            geom_point(aes(shape=Species)) + 
+            xlab("Sepal Length") + ylab("Sepal Width") +
             labs(title = "SF Light/Dark Theme", 
-									subtitle = paste0("Element Size Class: ", classes[[i]])) +
-            geom_smooth(method="lm") +
+					subtitle = paste0("Element Size Class: ", classes[[i]])) +
+            geom_smooth(method="lm", aes(fill = Species)) +
             theme_sf_dark(font_size_class = "xLarge", element_size_class = classes[[i]]) +
             scale_colour_ios_dark(accessible = F) +
+            scale_fill_ios_dark(accessible = F) +
             theme(legend.position = "bottom")
 
         ggsave(paste0("figures/articles/iris_linear_fit_dark_element_", i, "_",

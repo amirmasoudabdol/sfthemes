@@ -44,7 +44,26 @@ sfthemes offers two base themes, `theme_sf_light()` and `theme_sf_dark()`. The L
 In general, we recommend pairing light scales with `theme_sf_light` and dark scales with `theme_sf_dark` theme. Here we use `scale_colour_ios_light()`, and `scale_colour_ios_dark()` to recreate the figure above.
 
 ```R
-# TODO: Update the code when the plot is finalized
+library(ggplot2); library(sfthemes)
+
+gp <- ggplot(data = iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +
+        geom_point(aes(shape = Species)) + 
+        xlab("Sepal Length") + ylab("Sepal Width") +
+        labs(title = "SF Light/Dark Themes", 
+                subtitle = "iOS Light/Dark Color Palette") +
+        geom_smooth(method="lm", aes(fill = Species))
+
+# Light
+gp + theme_sf_light(size_class = "xxxLarge") +
+    scale_colour_ios_light(accessible = FALSE) +
+    scale_fill_ios_light(accessible = FALSE) +
+    theme(legend.position = "bottom")
+
+# Dark
+gp + theme_sf_dark(size_class = "xxxLarge") +
+    scale_colour_ios_dark(accessible = FALSE) +
+    scale_fill_ios_dark(accessible = FALSE) +
+    theme(legend.position = "bottom")
 ```
 
 | | |
@@ -58,7 +77,26 @@ Each color palette is accompanied with an accessible variant of itself. In order
 The [Colors](articles/colours.html) article elaborates on the availability, differences, and features of each system color palette.
 
 ```R
-# TODO: Update the code when the plot is finalized
+iris.sum <- iris %>%
+    group_by(Species) %>%
+    summarize(PW.mean= mean(Petal.Width),
+                PW.sd = sd(Petal.Width))
+
+gp <- ggplot(data = iris.sum, aes(x = Species)) +
+        geom_bar(aes(y = PW.mean, fill = Species, color = Species), position = "dodge", stat = "identity") +
+        geom_errorbar(aes(ymin = PW.mean - PW.sd, ymax = PW.mean + PW.sd), width = 0.5, position = position_dodge(width = 0.5), color = "black") + 
+        labs(title = "SF Light Theme", subtitle = "iOS Light Color Palette - Normal vs. Accessible", y = "Mean Petal Width", x = "Species") 
+# Normal
+gp + theme_sf_light(size_class = "xxxLarge") +
+    scale_colour_ios_light(accessible = FALSE) +
+    scale_fill_ios_light(accessible = FALSE) +
+    theme(legend.position = "bottom")
+
+# Accessible
+gp + theme_sf_light(size_class = "xxxLarge") +
+    scale_colour_ios_light(accessible = TRUE) +
+    scale_fill_ios_light(accessible = TRUE) +
+    theme(legend.position = "bottom")
 ```
 
 | | |
@@ -73,7 +111,26 @@ sfthemes provides 7 scaling factor. Scaling factors can be applied to text, elem
 The [Scales](articles/colours.html) article elaborates on the dynamic type sizing.
 
 ```R
-# TODO: Update the code when the plot is finalized
+size_class <- "Medium"
+
+gp <- ggplot(data = iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +
+        geom_point(aes(shape = Species)) + 
+        xlab("Sepal Length") + ylab("Sepal Width") +
+        labs(title = "SF Light/Dark Theme", 
+                subtitle = paste0("Size Class: ", size_class) +
+        geom_smooth(method="lm", aes(fill = Species))
+
+# Light
+gp + theme_sf_light(size_class = size_class) +
+    scale_colour_ios_light(accessible = FALSE) +
+    scale_fill_ios_light(accessible = FALSE) +
+    theme(legend.position = "bottom")
+
+# Dark
+gp + theme_sf_dark(size_class = size_class) +
+        scale_colour_ios_dark(accessible = FALSE) +
+        scale_fill_ios_dark(accessible = FALSE) +
+        theme(legend.position = "bottom")
 ```
 
 ![](man/figures/front-page-scaling-animation-light-dark.gif)

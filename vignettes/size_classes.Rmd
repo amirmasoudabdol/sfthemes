@@ -22,7 +22,26 @@ time. Moreover, the rescaling effect can be previewed as you experiment with you
 ## Scaling element sizes
 
 ```R
-# TODO: Update the code when the plot is finalized
+size_class <- "Medium"
+
+gp <- ggplot(data = iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +
+        geom_point(aes(shape = Species)) + 
+        xlab("Sepal Length") + ylab("Sepal Width") +
+        labs(title = "SF Light/Dark Theme", 
+                subtitle = paste0("Size Class: ", size_class) +
+        geom_smooth(method="lm", aes(fill = Species))
+
+# Light
+gp + theme_sf_light(element_size_class = size_class) +
+    scale_colour_ios_light(accessible = FALSE) +
+    scale_fill_ios_light(accessible = FALSE) +
+    theme(legend.position = "bottom")
+
+# Dark
+gp + theme_sf_dark(element_size_class = size_class) +
+        scale_colour_ios_dark(accessible = FALSE) +
+        scale_fill_ios_dark(accessible = FALSE) +
+        theme(legend.position = "bottom")
 ```
 
 <img src="images/size-classes-element-scaling-animation-light-dark.gif"/>
@@ -30,16 +49,32 @@ time. Moreover, the rescaling effect can be previewed as you experiment with you
 ## Scaling font sizes
 
 ```R
-# TODO: Update the code when the plot is finalized
+size_class <- "Medium"
+
+gp <- ggplot(data = iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +
+        geom_point(aes(shape = Species)) + 
+        xlab("Sepal Length") + ylab("Sepal Width") +
+        labs(title = "SF Light/Dark Theme", 
+                subtitle = paste0("Size Class: ", size_class) +
+        geom_smooth(method="lm", aes(fill = Species))
+
+# Light
+gp + theme_sf_light(font_size_class = size_class) +
+    scale_colour_ios_light(accessible = FALSE) +
+    scale_fill_ios_light(accessible = FALSE) +
+    theme(legend.position = "bottom")
+
+# Dark
+gp + theme_sf_dark(font_size_class = size_class) +
+        scale_colour_ios_dark(accessible = FALSE) +
+        scale_fill_ios_dark(accessible = FALSE) +
+        theme(legend.position = "bottom")
 ```
 
 <img src="images/size-classes-font-scaling-animation-light-dark.gif"/>
 
-
 ## Scaling everything together
 
-```R
-# TODO: Update the code when the plot is finalized
-```
+See [readme](../../index.html) for the code.
 
 <img src="../reference/figures/front-page-scaling-animation-light-dark.gif"/>

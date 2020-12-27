@@ -9,12 +9,14 @@ test_that("main front page figures have been generated...", {
     library(ggplot2)
 
     ggplot(data=iris, aes(x=Sepal.Length, y=Sepal.Width, color=Species)) +
-        geom_point(aes(shape=Species)) + xlab("Sepal Length") + ylab("Sepal Width") +
+        geom_point(aes(shape=Species)) + 
+        xlab("Sepal Length") + ylab("Sepal Width") +
         labs(title = "SF Light/Dark Themes", 
-							subtitle = "iOS Light/Dark Color Palette") +
-        geom_smooth(method="lm") +
+				subtitle = "iOS Light/Dark Color Palette") +
+        geom_smooth(method="lm", aes(fill = Species)) +
         theme_sf_light(size_class =  "xxxLarge") +
         scale_colour_ios_light(accessible = F) +
+        scale_fill_ios_light(accessible = F) +
         theme(legend.position = "bottom")
 
     ggsave("../../man/figures/front-page-sample-light.png", width = 20, height = 15, bg = "transparent", dpi = 72)
@@ -22,12 +24,14 @@ test_that("main front page figures have been generated...", {
     ggsave("figures/front_page/front_page_light_alt.png", width = 20, height = 15, bg = "transparent", dpi = 72)
 
     ggplot(data=iris, aes(x=Sepal.Length, y=Sepal.Width, color=Species)) +
-        geom_point(aes(shape=Species)) + xlab("Sepal Length") + ylab("Sepal Width") +
+        geom_point(aes(shape=Species)) + 
+        xlab("Sepal Length") + ylab("Sepal Width") +
         labs(title = "SF Light/Dark Themes", 
-							subtitle = "iOS Light/Dark Color Palette") +
-        geom_smooth(method="lm") +
+				subtitle = "iOS Light/Dark Color Palette") +
+        geom_smooth(method="lm", aes(fill = Species)) +
         theme_sf_dark(size_class =  "xxxLarge") +
         scale_colour_ios_dark(accessible = F) +
+        scale_fill_ios_dark(accessible = F) +
         theme(legend.position = "bottom")
 
     ggsave("../../man/figures/front-page-sample-dark.png", width = 20, height = 15, bg = "transparent", dpi = 72)
