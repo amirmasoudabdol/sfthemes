@@ -136,19 +136,19 @@
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"devtools"</span><span class="op">)</span>; <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">devtools</span><span class="op">)</span>
 <span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"amirmasoudabdol/sfthemes"</span><span class="op">)</span></code></pre></div>
-<p>Install from CRAN [Not available yet!]</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"sfthemes"</span><span class="op">)</span></code></pre></div>
+<p>→ I’m planning to apply this to CRAN as soon as they are open! :P</p>
 </div>
 <div id="preparation--usage" class="section level2">
 <h2 class="hasAnchor">
 <a href="#preparation--usage" class="anchor"></a>Preparation / Usage</h2>
 <p>You can load and configure sfthemes using the following commands. If you do not get any errors or warnings, sfthemes is fully configured and can access the required fonts.</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span>; <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://sfthemes.amirmasoudabdol.name">sfthemes</a></span><span class="op">)</span>
 
-<span class="co"># You only need to run these commands once!</span>
-<span class="fu"><a href="reference/import_inter.html">import_inter</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
+<span class="fu"><a href="reference/import_inter.html">import_inter</a></span><span class="op">(</span><span class="op">)</span> <span class="co"># ← DO NOT FORGET THIS!</span></code></pre></div>
+<blockquote>
+<p>🚨 I’m having a bit of trouble <em>automatically</em> installing the necessary fonts with the package. Therefore, I highly recommend manually installing the fonts on your system. The <code>import_inter</code> function tries to install the fonts, and will print the path containing the font files for manual installation.</p>
+</blockquote>
 <div id="quick-start" class="section level3">
 <h3 class="hasAnchor">
 <a href="#quick-start" class="anchor"></a>Quick Start</h3>
@@ -157,7 +157,7 @@
 <h4 class="hasAnchor">
 <a href="#light-and-dark-themes" class="anchor"></a>Light and Dark Themes</h4>
 <p><strong>In general, we recommend pairing light scales with light themes and dark scales with dark theme.</strong> Here we use <code><a href="reference/scale_colour_ios_light.html">scale_colour_ios_light()</a></code>, and <code><a href="reference/scale_colour_ios_dark.html">scale_colour_ios_dark()</a></code> to recreate the figure above.</p>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span>; <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://sfthemes.amirmasoudabdol.name">sfthemes</a></span><span class="op">)</span>
 
 <span class="va">gp</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">Sepal.Length</span>,
@@ -190,7 +190,7 @@
 <h4 class="hasAnchor">
 <a href="#accessible-colors" class="anchor"></a>Accessible Colors</h4>
 <p>Each color palette is accompanied with an <em>accessible</em> variant of itself. In order to access the accessible color palettes, you can use <code>accessible</code> parameter as follow. <em>The <a href="articles/colours.html">Colors</a> article elaborates on the availability, differences, and features of each system color palette.</em></p>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">iris.sum</span> <span class="op">&lt;-</span> <span class="va">iris</span> <span class="op">%&gt;%</span>
     <span class="fu">group_by</span><span class="op">(</span><span class="va">Species</span><span class="op">)</span> <span class="op">%&gt;%</span>
     <span class="fu">summarize</span><span class="op">(</span>PW.mean <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">Petal.Width</span><span class="op">)</span>,
@@ -226,28 +226,28 @@
 <h4 class="hasAnchor">
 <a href="#scaling" class="anchor"></a>Scaling</h4>
 <p>sfthemes provides 7 <em>size classes</em>, ie., scaling factors. Size classes can be applied to texts, elements, or both. The example below is generated from combination of light/dark plots and showcases all available size classes. <em>The <a href="articles/colours.html">Size Classes</a> article elaborates on the dynamic type sizing.</em></p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>size_class &lt;-<span class="st"> "Medium"</span> <span class="co"># ← You can modify the size class here</span></span>
-<span id="cb6-2"><a href="#cb6-2"></a></span>
-<span id="cb6-3"><a href="#cb6-3"></a>gp &lt;-<span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> Sepal.Length,</span>
-<span id="cb6-4"><a href="#cb6-4"></a>                 <span class="dt">y =</span> Sepal.Width,</span>
-<span id="cb6-5"><a href="#cb6-5"></a>                 <span class="dt">color =</span> Species)) <span class="op">+</span></span>
-<span id="cb6-6"><a href="#cb6-6"></a><span class="st">        </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">shape =</span> Species)) <span class="op">+</span><span class="st"> </span></span>
-<span id="cb6-7"><a href="#cb6-7"></a><span class="st">        </span><span class="kw">xlab</span>(<span class="st">"Sepal Length"</span>) <span class="op">+</span><span class="st"> </span><span class="kw">ylab</span>(<span class="st">"Sepal Width"</span>) <span class="op">+</span></span>
-<span id="cb6-8"><a href="#cb6-8"></a><span class="st">        </span><span class="kw">labs</span>(<span class="dt">title =</span> <span class="st">"SF Light/Dark Theme"</span>, </span>
-<span id="cb6-9"><a href="#cb6-9"></a>             <span class="dt">subtitle =</span> <span class="kw">paste0</span>(<span class="st">"Size Class: "</span>, size_class) <span class="op">+</span></span>
-<span id="cb6-10"><a href="#cb6-10"></a><span class="st">        </span><span class="kw">geom_smooth</span>(<span class="dt">method=</span><span class="st">"lm"</span>, <span class="kw">aes</span>(<span class="dt">fill =</span> Species))</span>
-<span id="cb6-11"><a href="#cb6-11"></a></span>
-<span id="cb6-12"><a href="#cb6-12"></a><span class="co"># Light</span></span>
-<span id="cb6-13"><a href="#cb6-13"></a>gp <span class="op">+</span><span class="st"> </span><span class="kw">theme_sf_light</span>(<span class="dt">size_class =</span> size_class) <span class="op">+</span><span class="st"> </span><span class="co"># ← Setting the size class</span></span>
-<span id="cb6-14"><a href="#cb6-14"></a><span class="st">        </span><span class="kw">scale_colour_ios_light</span>(<span class="dt">accessible =</span> <span class="ot">FALSE</span>) <span class="op">+</span></span>
-<span id="cb6-15"><a href="#cb6-15"></a><span class="st">        </span><span class="kw">scale_fill_ios_light</span>(<span class="dt">accessible =</span> <span class="ot">FALSE</span>) <span class="op">+</span></span>
-<span id="cb6-16"><a href="#cb6-16"></a><span class="st">        </span><span class="kw">theme</span>(<span class="dt">legend.position =</span> <span class="st">"bottom"</span>)</span>
-<span id="cb6-17"><a href="#cb6-17"></a></span>
-<span id="cb6-18"><a href="#cb6-18"></a><span class="co"># Dark</span></span>
-<span id="cb6-19"><a href="#cb6-19"></a>gp <span class="op">+</span><span class="st"> </span><span class="kw">theme_sf_dark</span>(<span class="dt">size_class =</span> size_class) <span class="op">+</span><span class="st"> </span><span class="co"># ← Setting the size class</span></span>
-<span id="cb6-20"><a href="#cb6-20"></a><span class="st">        </span><span class="kw">scale_colour_ios_dark</span>(<span class="dt">accessible =</span> <span class="ot">FALSE</span>) <span class="op">+</span></span>
-<span id="cb6-21"><a href="#cb6-21"></a><span class="st">        </span><span class="kw">scale_fill_ios_dark</span>(<span class="dt">accessible =</span> <span class="ot">FALSE</span>) <span class="op">+</span></span>
-<span id="cb6-22"><a href="#cb6-22"></a><span class="st">        </span><span class="kw">theme</span>(<span class="dt">legend.position =</span> <span class="st">"bottom"</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>size_class &lt;-<span class="st"> "Medium"</span> <span class="co"># ← You can modify the size class here</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a></span>
+<span id="cb5-3"><a href="#cb5-3"></a>gp &lt;-<span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> Sepal.Length,</span>
+<span id="cb5-4"><a href="#cb5-4"></a>                 <span class="dt">y =</span> Sepal.Width,</span>
+<span id="cb5-5"><a href="#cb5-5"></a>                 <span class="dt">color =</span> Species)) <span class="op">+</span></span>
+<span id="cb5-6"><a href="#cb5-6"></a><span class="st">        </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">shape =</span> Species)) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb5-7"><a href="#cb5-7"></a><span class="st">        </span><span class="kw">xlab</span>(<span class="st">"Sepal Length"</span>) <span class="op">+</span><span class="st"> </span><span class="kw">ylab</span>(<span class="st">"Sepal Width"</span>) <span class="op">+</span></span>
+<span id="cb5-8"><a href="#cb5-8"></a><span class="st">        </span><span class="kw">labs</span>(<span class="dt">title =</span> <span class="st">"SF Light/Dark Theme"</span>, </span>
+<span id="cb5-9"><a href="#cb5-9"></a>             <span class="dt">subtitle =</span> <span class="kw">paste0</span>(<span class="st">"Size Class: "</span>, size_class) <span class="op">+</span></span>
+<span id="cb5-10"><a href="#cb5-10"></a><span class="st">        </span><span class="kw">geom_smooth</span>(<span class="dt">method=</span><span class="st">"lm"</span>, <span class="kw">aes</span>(<span class="dt">fill =</span> Species))</span>
+<span id="cb5-11"><a href="#cb5-11"></a></span>
+<span id="cb5-12"><a href="#cb5-12"></a><span class="co"># Light</span></span>
+<span id="cb5-13"><a href="#cb5-13"></a>gp <span class="op">+</span><span class="st"> </span><span class="kw">theme_sf_light</span>(<span class="dt">size_class =</span> size_class) <span class="op">+</span><span class="st"> </span><span class="co"># ← Setting the size class</span></span>
+<span id="cb5-14"><a href="#cb5-14"></a><span class="st">        </span><span class="kw">scale_colour_ios_light</span>(<span class="dt">accessible =</span> <span class="ot">FALSE</span>) <span class="op">+</span></span>
+<span id="cb5-15"><a href="#cb5-15"></a><span class="st">        </span><span class="kw">scale_fill_ios_light</span>(<span class="dt">accessible =</span> <span class="ot">FALSE</span>) <span class="op">+</span></span>
+<span id="cb5-16"><a href="#cb5-16"></a><span class="st">        </span><span class="kw">theme</span>(<span class="dt">legend.position =</span> <span class="st">"bottom"</span>)</span>
+<span id="cb5-17"><a href="#cb5-17"></a></span>
+<span id="cb5-18"><a href="#cb5-18"></a><span class="co"># Dark</span></span>
+<span id="cb5-19"><a href="#cb5-19"></a>gp <span class="op">+</span><span class="st"> </span><span class="kw">theme_sf_dark</span>(<span class="dt">size_class =</span> size_class) <span class="op">+</span><span class="st"> </span><span class="co"># ← Setting the size class</span></span>
+<span id="cb5-20"><a href="#cb5-20"></a><span class="st">        </span><span class="kw">scale_colour_ios_dark</span>(<span class="dt">accessible =</span> <span class="ot">FALSE</span>) <span class="op">+</span></span>
+<span id="cb5-21"><a href="#cb5-21"></a><span class="st">        </span><span class="kw">scale_fill_ios_dark</span>(<span class="dt">accessible =</span> <span class="ot">FALSE</span>) <span class="op">+</span></span>
+<span id="cb5-22"><a href="#cb5-22"></a><span class="st">        </span><span class="kw">theme</span>(<span class="dt">legend.position =</span> <span class="st">"bottom"</span>)</span></code></pre></div>
 <p><img src="reference/figures/front-page-scaling-animation-light-dark.gif"></p>
 <hr>
 </div>
