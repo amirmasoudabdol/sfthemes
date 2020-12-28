@@ -27,11 +27,11 @@ import_inter <- function() {
   suppressWarnings(suppressMessages(font_import(inter_font_dir,
                                                            prompt=FALSE)))
   message(
-    sprintf(
-      "Inter fonts are installed in your R enviroments; however, you will likely
- need to install these fonts on your system as well.\n
-You can find them in [%s]",
-      inter_font_dir)
+    paste0(
+      "Inter fonts are installed in your R enviroments; however, ",
+      "different OSes handle fonts managements differently. So, I ",
+      "recommend manually installing them on your system.\n\n",
+      "You can find them in ", inter_font_dir)
   )
 
 }

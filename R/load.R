@@ -5,9 +5,9 @@
     if (interactive()) {
       packageStartupMessage("sfthemes is under *active* development. ")
       packageStartupMessage("See https://github.com/amirmasoudabdol/sfthemes for info/news.")
-      packageStartupMessage(paste0("The process of importing fonts may not",
-                            "work as expected, if not, please install them ",
-                            "manually on your system."))
+      packageStartupMessage(paste0("The process of importing fonts may not ",
+                            "work as expected, if not, please manually install ",
+                            "them on your system."))
     }
 
     if (.Platform$OS.type == "windows") { # nocov start

@@ -9,7 +9,6 @@ When combined, sfthemes offers a unique opportunity to generate two version of y
     <img src="man/figures/front-page-main-alt.png" class = "img-responsive center-block d-block mx-auto"/>
 </picture>
 
-
 ## Install
 
 Install the development version from GitHub
@@ -19,11 +18,7 @@ install.packages("devtools"); library(devtools)
 devtools::install_github("amirmasoudabdol/sfthemes")
 ```
 
-Install from CRAN [Not available yet!]
-
-```R
-install.packages("sfthemes")
-```
+→ I'm planning to apply this to CRAN as soon as they are open! :P
 
 ## Preparation / Usage
 
@@ -32,9 +27,10 @@ You can load and configure sfthemes using the following commands. If you do not 
 ```R
 library(ggplot2); library(sfthemes)
 
-# You only need to run these commands once!
-import_inter()
+import_inter() # ← DO NOT FORGET THIS!
 ```
+
+> 🚨 I'm having a bit of trouble *automatically* installing the necessary fonts with the package. Therefore, I highly recommend manually installing the fonts on your system. The `import_inter` function tries to install the fonts, and will print the path containing the font files for manual installation.
 
 ### Quick Start
 
