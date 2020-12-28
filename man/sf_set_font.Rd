@@ -33,33 +33,35 @@ is not yet available, and SF Pro does not work as expected.
 }
 \examples{
 \dontrun{
-library(ggplot2)
 
-ggplot(mtcars) +
- geom_point(aes(x = wt, y = mpg, colour = factor(gear))) +
- labs(title = "Fuel economy declines as weight increases",
-      subtitle = "(1973-74)",
-      caption = "Data from the 1974 Motor Trend US magazine.",
-      x = "Weight (1000 lbs)",
-      y = "Fuel economy (mpg)",
-      colour = "Gears") +
- facet_grid(vs ~ am) +
- sf_set_inter(theme_linedraw()) +
- scale_colour_ios_light()
+  library(ggplot2)
+
+  ggplot(mtcars) +
+   geom_point(aes(x = wt, y = mpg, colour = factor(gear))) +
+   labs(title = "Fuel Economy",
+        subtitle = "Fuel economy declines as weight increases, 1973-74",
+        caption = "Data from the 1974 Motor Trend US magazine.",
+        x = "Weight (1000 lbs)",
+        y = "MPG",
+        colour = "Gears") +
+   facet_grid(vs ~ am) +
+   sf_set_inter(theme_linedraw()) +
+   scale_colour_ios_light()
+
 }
 \dontrun{
 library(ggplot2)
 
 ggplot(mtcars) +
  geom_point(aes(x = wt, y = mpg, colour = factor(gear))) +
- labs(title = "Fuel economy declines as weight increases",
-      subtitle = "(1973-74)",
+ labs(title = "Fuel Economy",
+      subtitle = "Fuel economy declines as weight increases, 1973-74",
       caption = "Data from the 1974 Motor Trend US magazine.",
       x = "Weight (1000 lbs)",
-      y = "Fuel economy (mpg)",
+      y = "MPG",
       colour = "Gears") +
  facet_grid(vs ~ am) +
- sf_set_inter(theme_linedraw(), "Gill Sans") +
+ sf_set_custom_font(theme_linedraw(), "Gill Sans") +
  scale_colour_ios_light()
 }
 }

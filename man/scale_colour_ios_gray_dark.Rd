@@ -77,6 +77,22 @@ plotting; so consider your use-case carefully before adapting them. You can
 loosely compare them to \code{ggplot2::scale_alpha()}.}
 }
 }
+\examples{
+\dontrun{
+
+library(ggplot2)
+
+ggplot(mtcars, aes(y = mpg, x = as.factor(cyl))) +
+  geom_boxplot(aes(color = as.factor(cyl), fill = as.factor(cyl))) +
+  labs(x = "Miles Per Gallon", y = "MPG", fill = "Number of Cylinders", color = "Number of Cylinders",
+       title = "Fuel Economy",
+       subtitle = "Fuel economy declines as engines gets bigger",
+       caption = "Data from the 1974 Motor Trend US magazine.") +
+  theme_sf_dark() +
+  scale_fill_ios_gray_dark() +
+  scale_colour_ios_gray_dark()
+}
+}
 \seealso{
 Other colour scales: 
 \code{\link{scale_colour_ios_dark}()},

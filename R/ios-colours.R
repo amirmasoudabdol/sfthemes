@@ -96,7 +96,7 @@ ios_accessible_dark_palette <- unname(unlist(ios_accessible_dark_cols))
 #' @param order Indicates the order of colors in the palette
 #' @rdname ios_colour_palettes
 #'
-#' @examples
+#' @examples \dontrun{
 #' library(scales)
 #' scales::show_col(
 #'     ios_light_pal(order = "default", accessible = FALSE)(9),
@@ -126,9 +126,9 @@ ios_light_pal <- function(order = "contrast", accessible = FALSE) {
 #' @description
 #'
 #' These scales meant to be used with light themes, e.g, `theme_sf_light()`.
-#' While they can be used with dark themes, in general, we recommend pairing 
+#' While they can be used with dark themes, in general, we recommend pairing
 #' `scale_colour_*_light`s with light themes for better clarity and contrast.
-#' 
+#'
 #' **Notes**
 #' - *While iOS color palettes provide a total of 9 colors, we do not
 #' recommend using them for more than 6 groups. The last three colors often
@@ -144,6 +144,21 @@ ios_light_pal <- function(order = "contrast", accessible = FALSE) {
 #' @inheritDotParams ggplot2::discrete_scale -expand -position
 #' @rdname scale_colour_ios_light
 #' @family colour scales
+#'
+#' @examples \dontrun{
+#' 
+#' library(ggplot2)
+#'
+#' ggplot(mtcars, aes(y = mpg, x = as.factor(cyl))) +
+#'   geom_boxplot(aes(color = as.factor(cyl), fill = as.factor(cyl))) +
+#'   labs(x = "Miles Per Gallon", y = "MPG", fill = "Number of Cylinders", color = "Number of Cylinders",
+#'        title = "Fuel Economy",
+#'        subtitle = "Fuel economy declines as engines gets bigger",
+#'        caption = "Data from the 1974 Motor Trend US magazine.") +
+#'   theme_sf_light() +
+#'   scale_fill_ios_light() +
+#'   scale_colour_ios_light()
+#' }
 #' @export
 scale_colour_ios_light <- function(order = "contrast", accessible = FALSE, ...) {
     if (accessible) {
@@ -173,7 +188,7 @@ scale_fill_ios_light <- function(order = "contrast", accessible = FALSE, ...) {
 #' @param order Indicates the order of colors in the palette
 #' @rdname ios_colour_palettes
 #'
-#' @examples
+#' @examples \dontrun{
 #' library(scales)
 #' scales::show_col(
 #'     ios_dark_pal(order = "default", accessible = FALSE)(9),
@@ -203,9 +218,9 @@ ios_dark_pal <- function(order = "contrast", accessible = FALSE) {
 #' @md
 #' @description
 #' These scales meant to be used with dark themes, e.g, `theme_sf_dark()`.
-#' While they can be used with light themes, in general, we recommend pairing 
+#' While they can be used with light themes, in general, we recommend pairing
 #' `scale_colour_*_dark`s with dark themes for better clarity and contrast.
-#' 
+#'
 #' **Note**
 #' - *While iOS color palettes provide a total of 9 colors, we do not
 #' recommend using them for more than 6 groups. The last three colors often
@@ -220,6 +235,21 @@ ios_dark_pal <- function(order = "contrast", accessible = FALSE) {
 #' @inheritDotParams ggplot2::discrete_scale -expand -position
 #' @rdname scale_colour_ios_dark
 #' @family colour scales
+#'
+#' @examples \dontrun{
+#' 
+#' library(ggplot2)
+#'
+#' ggplot(mtcars, aes(y = mpg, x = as.factor(cyl))) +
+#'   geom_boxplot(aes(color = as.factor(cyl), fill = as.factor(cyl))) +
+#'   labs(x = "Miles Per Gallon", y = "MPG", fill = "Number of Cylinders", color = "Number of Cylinders",
+#'        title = "Fuel Economy",
+#'        subtitle = "Fuel economy declines as engines gets bigger",
+#'        caption = "Data from the 1974 Motor Trend US magazine.") +
+#'   theme_sf_dark() +
+#'   scale_fill_ios_dark() +
+#'   scale_colour_ios_dark()
+#' }
 #' @export
 scale_colour_ios_dark <- function(order = "contrast", accessible = FALSE, ...) {
     if (accessible) {
@@ -293,7 +323,7 @@ ios_accessible_gray_dark_palette <-
 #'
 #' @rdname ios_colour_palettes
 #'
-#' @examples
+#' @examples \dontrun{
 #' library(scales)
 #' scales::show_col(
 #'     ios_gray_light_pal(accessible = FALSE)(6),
@@ -316,11 +346,11 @@ ios_gray_light_pal <- function(accessible = FALSE) {
 #' @md
 #' @description
 #' These scales are based on light gray palette of iOS system colors. They have
-#' only been implemented in sfthemes because I wanted to bring all the color 
+#' only been implemented in sfthemes because I wanted to bring all the color
 #' palettes mentioned in the Apple's HIG.
-#' 
-#' **Warning**: 
-#' - *iOS gray colors are not necessary suitable for general 
+#'
+#' **Warning**:
+#' - *iOS gray colors are not necessary suitable for general
 #' plotting; so consider your use-case carefully before adapting them. You can
 #' loosely compare them to `ggplot2::scale_alpha()`.*
 #'
@@ -331,6 +361,21 @@ ios_gray_light_pal <- function(accessible = FALSE) {
 #' @inheritDotParams ggplot2::discrete_scale -expand -position
 #' @rdname scale_colour_ios_gray_light
 #' @family colour scales
+#'
+#' @examples \dontrun{
+#' 
+#' library(ggplot2)
+#'
+#' ggplot(mtcars, aes(y = mpg, x = as.factor(cyl))) +
+#'   geom_boxplot(aes(color = as.factor(cyl), fill = as.factor(cyl))) +
+#'   labs(x = "Miles Per Gallon", y = "MPG", fill = "Number of Cylinders", color = "Number of Cylinders",
+#'        title = "Fuel Economy",
+#'        subtitle = "Fuel economy declines as engines gets bigger",
+#'        caption = "Data from the 1974 Motor Trend US magazine.") +
+#'   theme_sf_light() +
+#'   scale_fill_ios_gray_light() +
+#'   scale_colour_ios_gray_light()
+#' }
 #' @export
 scale_colour_ios_gray_light <- function(accessible = FALSE, ...) {
     if (accessible) {
@@ -365,7 +410,7 @@ scale_fill_ios_gray_light <- function(accessible = FALSE, ...) {
 #'
 #' @rdname ios_colour_palettes
 #'
-#' @examples
+#' @examples \dontrun{
 #' library(scales)
 #' scales::show_col(
 #'     ios_gray_dark_pal(accessible = FALSE)(6),
@@ -384,15 +429,15 @@ ios_gray_dark_pal <- function(accessible = FALSE) {
 }
 
 #' iOS Gray Dark Color Palette
-#' 
+#'
 #' @md
 #' @description
 #' These scales are based on dark gray palette of iOS system colors. They have
-#' only been implemented in sfthemes because I wanted to bring all the color 
+#' only been implemented in sfthemes because I wanted to bring all the color
 #' palettes mentioned in the Apple's HIG.
-#' 
+#'
 #' **Warning**:
-#' - *iOS gray colors are not necessary suitable for general 
+#' - *iOS gray colors are not necessary suitable for general
 #' plotting; so consider your use-case carefully before adapting them. You can
 #' loosely compare them to `ggplot2::scale_alpha()`.*
 #'
@@ -403,6 +448,21 @@ ios_gray_dark_pal <- function(accessible = FALSE) {
 #' @inheritDotParams ggplot2::discrete_scale -expand -position
 #' @rdname scale_colour_ios_gray_dark
 #' @family colour scales
+#'
+#' @examples \dontrun{
+#' 
+#' library(ggplot2)
+#'
+#' ggplot(mtcars, aes(y = mpg, x = as.factor(cyl))) +
+#'   geom_boxplot(aes(color = as.factor(cyl), fill = as.factor(cyl))) +
+#'   labs(x = "Miles Per Gallon", y = "MPG", fill = "Number of Cylinders", color = "Number of Cylinders",
+#'        title = "Fuel Economy",
+#'        subtitle = "Fuel economy declines as engines gets bigger",
+#'        caption = "Data from the 1974 Motor Trend US magazine.") +
+#'   theme_sf_dark() +
+#'   scale_fill_ios_gray_dark() +
+#'   scale_colour_ios_gray_dark()
+#' }
 #' @export
 scale_colour_ios_gray_dark <- function(accessible = FALSE, ...) {
     if (accessible) {

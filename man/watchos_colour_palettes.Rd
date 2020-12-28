@@ -29,12 +29,3 @@ base brightness of colors may make them hard to distinguish in light
 themes
 }
 }
-\examples{
-
-library(scales)
-
- scales::show_col(watchos_dark_pal(order = "default")(10),
-                  borders = NA, labels = FALSE)
- scales::show_col(watchos_dark_pal(order = "contrast")(10),
-                  borders = NA, labels = FALSE)
-}

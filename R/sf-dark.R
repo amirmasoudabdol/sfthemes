@@ -1,53 +1,39 @@
 #' San Francisco Dark Theme
-#' 
+#'
 #' @md
 #' @description
 #' A minimal theme with dark background inspired by — and adapted from — the
-#' occasional appearances of charts used by Apple within different 
-#' contexts, e.g., [Apple Health](https://www.apple.com/ios/health/) app, 
-#' [Screen Time on iOS](https://support.apple.com/en-us/HT208982) and macOS. 
-#' 
+#' occasional appearances of charts used by Apple within different
+#' contexts, e.g., [Apple Health](https://www.apple.com/ios/health/) app,
+#' [Screen Time on iOS](https://support.apple.com/en-us/HT208982) and macOS.
+#'
 #' @details
 #' Recommended color and fill scales to be used with:
-#' 
+#'
 #' - [scale_colour_ios_dark]
 #' - [scale_fill_ios_dark]
 #' - [scale_colour_macos_dark]
 #' - [scale_fill_macos_dark]
 #' - [scale_colour_watchos_dark]
 #' - [scale_fill_watchos_dark]
-#' 
+#'
 #' @inheritParams sf_base
 #'
 #' @importFrom ggplot2 update_geom_defaults
 #'
 #' @examples \dontrun{
-#' library(ggplot2); library(sfthemes)
+#' library(ggplot2)
 #'
 #' ggplot(mpg, aes(x = displ, y = hwy, colour = class)) +
 #'   geom_point() +
-#'   labs(x= "Displacement", y = "Highway Miles per Gallon",
-#'        color = "Class",
-#'        title = "San Francisco Dark Theme",
-#'        subtitle = "Using iOS Dark Color Palette",
-#'        caption = "Fuel economy data from 1999 to 2008 for 38
-#'                      popular models of cars.") +
+#'   labs(x = "Displacement", y ="MPG",
+#'        color = "Type of Car",
+#'        title = "Fuel Economy",
+#'        subtitle = "Fuel economy declines as engines get bigger",
+#'        caption = "Fuel economy data from 1999 to 2008.") +
 #'   theme_sf_dark() +
 #'   scale_colour_ios_dark()
 #'
-#' ggplot(mpg, aes(y = class)) +
-#'   geom_bar(aes(fill = drv), color = NA) +
-#'   labs(x= "Class", y= "Count",
-#'        fill = "Drive",
-#'        title = "San Francisco Dark Theme",
-#'        subtitle = "Using Accessible iOS Dark Palette",
-#'        caption = "Fuel economy data from 1999 to 2008 for 38
-#'                       popular models of cars.") +
-#'   theme_sf_dark() +
-#'   scale_fill_ios_dark(accessible = TRUE) +
-#'   scale_colour_ios_dark(accessible = TRUE)
-#'
-#' }
 #' @export
 theme_sf_dark <- function(
   font_family = "Inter",

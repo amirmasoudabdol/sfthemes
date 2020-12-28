@@ -150,7 +150,7 @@ macos_cols_order <- list(default = 1:11,
 #' @rdname macos_colour_palettes
 #'
 #' @export
-#' @examples
+#' @examples \dontrun{
 #' library(scales)
 #' scales::show_col(
 #'     macos_light_pal(order = "default", accessible = FALSE)(11),
@@ -206,9 +206,9 @@ macos_light_pal <- function(order = "contrast", accessible = FALSE, vibrant = FA
 #' @md
 #' @description
 #' These scales meant to be used with light themes, e.g, `theme_sf_light()`.
-#' While they can be used with dark themes, in general, we recommend pairing 
+#' While they can be used with dark themes, in general, we recommend pairing
 #' `scale_colour_*_light`s with light themes for better clarity and contrast.
-#' 
+#'
 #' **Notes**
 #' - *While macOS color palettes provide a total of 11 colors, we do not
 #' recommend using them for more than 8 groups. The last three colors often
@@ -224,6 +224,21 @@ macos_light_pal <- function(order = "contrast", accessible = FALSE, vibrant = FA
 #' @inheritDotParams ggplot2::discrete_scale -expand -position
 #' @rdname scale_colour_macos_light
 #' @family colour scales
+#'
+#' @examples \dontrun{
+#' 
+#' library(ggplot2)
+#'
+#' ggplot(mtcars, aes(y = mpg, x = as.factor(cyl))) +
+#'   geom_boxplot(aes(color = as.factor(cyl), fill = as.factor(cyl))) +
+#'   labs(x = "Miles Per Gallon", y = "MPG", fill = "Number of Cylinders", color = "Number of Cylinders",
+#'        title = "Fuel Economy", 
+#'        subtitle = "Fuel economy declines as engines gets bigger",
+#'        caption = "Data from the 1974 Motor Trend US magazine.") +
+#'   theme_sf_light() +
+#'   scale_fill_macos_light() +
+#'   scale_colour_macos_light()
+#' }
 #' @export
 scale_colour_macos_light <- function(order = "contrast", accessible = FALSE, vibrant = FALSE, ...) {
     if (accessible) {
@@ -299,7 +314,7 @@ scale_fill_macos_light <- function(order = order, accessible = FALSE,
 #' @rdname macos_colour_palettes
 #'
 #' @export
-#' @examples
+#' @examples \dontrun{
 #' library(scales)
 #' scales::show_col(
 #'     macos_dark_pal(order = "default", accessible = FALSE)(11),
@@ -355,9 +370,9 @@ macos_dark_pal <- function(order = "contrast", accessible = FALSE, vibrant = FAL
 #' @md
 #' @description
 #' These scales meant to be used with dark themes, e.g, `theme_sf_dark()`.
-#' While they can be used with light themes, in general, we recommend pairing 
+#' While they can be used with light themes, in general, we recommend pairing
 #' `scale_colour_*_dark`s with dark themes for better clarity and contrast.
-#'                        
+#'
 #' **Note**
 #' - *While macOS color palettes provide a total of 11 colors, we do not
 #' recommend using them for more than 8 groups. The last three colors often
@@ -372,6 +387,21 @@ macos_dark_pal <- function(order = "contrast", accessible = FALSE, vibrant = FAL
 #' @inheritDotParams ggplot2::discrete_scale -expand -position
 #' @rdname scale_colour_macos_dark
 #' @family colour scales
+#'
+#' @examples \dontrun{
+#' 
+#' library(ggplot2)
+#'
+#' ggplot(mtcars, aes(y = mpg, x = as.factor(cyl))) +
+#'   geom_boxplot(aes(color = as.factor(cyl), fill = as.factor(cyl))) +
+#'   labs(x = "Miles Per Gallon", y = "MPG", fill = "Number of Cylinders", color = "Number of Cylinders",
+#'        title = "Fuel Economy",
+#'        subtitle = "Fuel economy declines as engines gets bigger",
+#'        caption = "Data from the 1974 Motor Trend US magazine.") +
+#'   theme_sf_dark() +
+#'   scale_fill_macos_dark() +
+#'   scale_colour_macos_dark()
+#' }
 #' @export
 scale_colour_macos_dark <- function(order = "contrast", accessible = FALSE,
                                     vibrant = FALSE, ...) {

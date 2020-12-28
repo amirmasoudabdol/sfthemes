@@ -68,12 +68,28 @@ The default, \code{TRUE}, uses the levels that appear in the data;
 watchOS colors are very bright but do not necessary have a lot of contrast.
 We strictly recommend to pair them with dark themes, e.g., `theme_sf_dark()`.
 
-**Notes** 
+**Notes**
 - *While watchOS color palettes provide a total of 10 colors, we do not
 recommend using them for more than 7 groups. The last three colors often
 collide with other colors in the palette and may affect the clarity of your
 visualization.*
 - See [watchOS colors](watchos_colour_palettes.html) for more details on raw colors.
+}
+\examples{
+\dontrun{
+
+library(ggplot2)
+
+ggplot(mtcars, aes(y = mpg, x = as.factor(cyl))) +
+  geom_boxplot(aes(color = as.factor(cyl), fill = as.factor(cyl))) +
+  labs(x = "Miles Per Gallon", y = "MPG", fill = "Number of Cylinders", color = "Number of Cylinders",
+       title = "Fuel Economy",
+       subtitle = "Fuel economy declines as engines gets bigger",
+       caption = "Data from the 1974 Motor Trend US magazine.") +
+  theme_sf_dark() +
+  scale_fill_watchos_dark() +
+  scale_colour_watchos_dark()
+}
 }
 \seealso{
 Other colour scales: 

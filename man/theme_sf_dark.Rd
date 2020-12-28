@@ -73,32 +73,3 @@ Recommended color and fill scales to be used with:
 \item \link{scale_fill_watchos_dark}
 }
 }
-\examples{
-\dontrun{
-library(ggplot2); library(sfthemes)
-
-ggplot(mpg, aes(x = displ, y = hwy, colour = class)) +
-  geom_point() +
-  labs(x= "Displacement", y = "Highway Miles per Gallon",
-       color = "Class",
-       title = "San Francisco Dark Theme",
-       subtitle = "Using iOS Dark Color Palette",
-       caption = "Fuel economy data from 1999 to 2008 for 38
-                     popular models of cars.") +
-  theme_sf_dark() +
-  scale_colour_ios_dark()
-
-ggplot(mpg, aes(y = class)) +
-  geom_bar(aes(fill = drv), color = NA) +
-  labs(x= "Class", y= "Count",
-       fill = "Drive",
-       title = "San Francisco Dark Theme",
-       subtitle = "Using Accessible iOS Dark Palette",
-       caption = "Fuel economy data from 1999 to 2008 for 38
-                      popular models of cars.") +
-  theme_sf_dark() +
-  scale_fill_ios_dark(accessible = TRUE) +
-  scale_colour_ios_dark(accessible = TRUE)
-
-}
-}
