@@ -21,14 +21,13 @@ License: MIT + file LICENSE
 URL: https://sfthemes.amirmasoudabdol.name
 BugReports: https://github.com/amirmasoudabdol/sfthemes/issues
 Depends:
-    R (>= 3.4.0)
-Imports:
-    extrafont,
+    R (>= 3.4.0),
     ggplot2 (>= 3.3.0),
-    grid,
+    extrafont,
     scales
 Suggests:
     dplyr,
+    grid,
     gridExtra,
     svglite,
     testthat,

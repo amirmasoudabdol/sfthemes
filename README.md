@@ -171,7 +171,7 @@ I stared this project by cloning the amazing [hrbrthemes](https://hrbrmstr.githu
 
 Please let me know if you happen to use sfthemes in your projects. I would love to know how you are using it and whether you like it. 
 
-Lastly, I quite like [ko-fi](https://ko-fi.com/C0C47DMK)! 😋
+Lastly, I quite like [ko-fi](https://ko-fi.com/C0C47DMK)!
 
 - - -
 

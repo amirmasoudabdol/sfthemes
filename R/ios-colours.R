@@ -95,7 +95,7 @@ ios_accessible_dark_palette <- unname(unlist(ios_accessible_dark_cols))
 #' @param accessible Indicates whether the accessible set of colors should be used
 #' @param order Indicates the order of colors in the palette
 #' @rdname ios_colour_palettes
-#'
+#' 
 #' @examples
 #' library(scales)
 #' scales::show_col(
@@ -112,6 +112,7 @@ ios_accessible_dark_palette <- unname(unlist(ios_accessible_dark_cols))
 #'     ios_light_pal(order = "contrast", accessible = TRUE)(9),
 #'     borders = NA, labels = FALSE)
 #'
+#' @import scales
 #' @export
 ios_light_pal <- function(order = "contrast", accessible = FALSE) {
     if (accessible) {
@@ -206,6 +207,7 @@ scale_fill_ios_light <- function(order = "contrast", accessible = FALSE, ...) {
 #'     ios_dark_pal(order = "contrast", accessible = TRUE)(9),
 #'     borders = NA, labels = FALSE)
 #'
+#' @import scales
 #' @export
 ios_dark_pal <- function(order = "contrast", accessible = FALSE) {
     if (accessible) {
@@ -336,6 +338,7 @@ ios_accessible_gray_dark_palette <-
 #'     ios_gray_light_pal(accessible = TRUE)(6),
 #'     borders = NA, labels = FALSE)
 #'
+#' @import scales
 #' @export
 ios_gray_light_pal <- function(accessible = FALSE) {
     if (accessible) {
@@ -425,6 +428,7 @@ scale_fill_ios_gray_light <- function(accessible = FALSE, ...) {
 #'     ios_gray_dark_pal(accessible = TRUE)(6),
 #'     borders = NA, labels = FALSE)
 #'
+#' @import scales
 #' @export
 ios_gray_dark_pal <- function(accessible = FALSE) {
     if (accessible) {

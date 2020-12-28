@@ -39,7 +39,6 @@ watchos_col_order <-
 #' @param order Indicates the order of colors in the palette
 #'
 #' @rdname watchos_colour_palettes
-#' @export
 #' @examples
 #'
 #' library(scales)
@@ -48,6 +47,9 @@ watchos_col_order <-
 #'                   borders = NA, labels = FALSE)
 #'  scales::show_col(watchos_dark_pal(order = "contrast")(10),
 #'                   borders = NA, labels = FALSE)
+#'
+#' @import scales
+#' @export
 watchos_dark_pal <- function(order = "contrast") {
     scales::manual_pal(watchos_dark_palette[watchos_col_order[[order]]])
 }

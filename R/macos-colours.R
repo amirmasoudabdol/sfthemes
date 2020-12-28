@@ -149,7 +149,6 @@ macos_cols_order <- list(default = 1:11,
 #'
 #' @rdname macos_colour_palettes
 #'
-#' @export
 #' @examples
 #' library(scales)
 #' scales::show_col(
@@ -181,6 +180,9 @@ macos_cols_order <- list(default = 1:11,
 #'     macos_light_pal(order = "contrast", accessible = TRUE,
 #'     vibrant = TRUE)(11),
 #'     borders = NA, labels = FALSE)
+#'
+#' @import scales
+#' @export
 macos_light_pal <- function(order = "contrast", accessible = FALSE, vibrant = FALSE) {
     if (accessible) {
         if (vibrant) {
@@ -315,7 +317,6 @@ scale_fill_macos_light <- function(order = order, accessible = FALSE,
 #'
 #' @rdname macos_colour_palettes
 #'
-#' @export
 #' @examples
 #' library(scales)
 #' scales::show_col(
@@ -347,6 +348,9 @@ scale_fill_macos_light <- function(order = order, accessible = FALSE,
 #'     macos_dark_pal(order = "contrast", accessible = TRUE,
 #'     vibrant = TRUE)(11),
 #'     borders = NA, labels = FALSE)
+#'
+#' @import scales
+#' @export
 macos_dark_pal <- function(order = "contrast", accessible = FALSE, vibrant = FALSE) {
     if (accessible) {
         if (vibrant) {

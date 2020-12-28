@@ -17,19 +17,20 @@
 #' - Make sure to run this command once after installing sfthemes, otherwise,
 #' you will encounter some warning messages regarding a missing font.
 #' Alternatively, you can download and install your fonts manually.
-#'
+#' 
+#' @import extrafont
 #' @export
 import_inter <- function() {
 
   inter_font_dir <- system.file("fonts", "Inter", package="sfthemes")
 
-  suppressWarnings(suppressMessages(extrafont::font_import(inter_font_dir,
+  suppressWarnings(suppressMessages(font_import(inter_font_dir,
                                                            prompt=FALSE)))
-
   message(
     sprintf(
-      "You will likely need to install these fonts on your system as well.\n\n
-    You can find them in [%s]",
+      "Inter fonts are installed in your R enviroments; however, you will likely
+ need to install these fonts on your system as well.\n
+You can find them in [%s]",
       inter_font_dir)
   )
 

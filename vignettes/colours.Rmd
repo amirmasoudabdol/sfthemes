@@ -1,6 +1,5 @@
 ---
 title: "Colours"
-output: rmarkdown::html_vignette
 vignette: >
     %\VignetteIndexEntry{Colours}
     %\VignetteEngine{knitr::rmarkdown}

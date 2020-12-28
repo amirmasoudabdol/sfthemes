@@ -37,4 +37,5 @@ library(scales)
                   borders = NA, labels = FALSE)
  scales::show_col(watchos_dark_pal(order = "contrast")(10),
                   borders = NA, labels = FALSE)
+
 }

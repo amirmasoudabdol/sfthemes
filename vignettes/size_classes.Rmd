@@ -1,6 +1,5 @@
 ---
 title: "Size Classes"
-output: rmarkdown::html_vignette
 vignette: >
     %\VignetteIndexEntry{Size Classes}
     %\VignetteEngine{knitr::rmarkdown}
