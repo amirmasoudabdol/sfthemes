@@ -1,9 +1,10 @@
 ---
 title: "Colours"
+output: rmarkdown::html_vignette
 vignette: >
-    %\VignetteIndexEntry{Colours}
-    %\VignetteEngine{knitr::rmarkdown}
-    %\VignetteEncoding{UTF-8}
+  %\VignetteIndexEntry{Colours}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
 ---
 
 [Apple's Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/) provides two primary color palettes for each platform, light and dark. 

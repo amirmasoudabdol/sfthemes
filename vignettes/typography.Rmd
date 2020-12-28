@@ -1,5 +1,6 @@
 ---
 title: "Typography"
+output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Typography}
   %\VignetteEngine{knitr::rmarkdown}

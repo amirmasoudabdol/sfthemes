@@ -1,9 +1,10 @@
 ---
 title: "Size Classes"
+output: rmarkdown::html_vignette
 vignette: >
-    %\VignetteIndexEntry{Size Classes}
-    %\VignetteEngine{knitr::rmarkdown}
-    %\VignetteEncoding{UTF-8}
+   %\VignetteIndexEntry{Size Classes}
+   %\VignetteEngine{knitr::rmarkdown}
+   %\VignetteEncoding{UTF-8}
 ---
 
 Besides dynamic type sizing, sfthemes can also scale all other elements of the plot. This is being done by multiplying all element sizes with a specific multiplier. 
@@ -86,4 +87,4 @@ By using the `size_class` parameter, we can control the scaling of both the
 
 See [readme](../../index.html) for the code.
 
-<img src="../reference/figures/front-page-scaling-animation-light-dark.gif"/>
+<img src="../man/figures/front-page-scaling-animation-light-dark.gif"/>
