@@ -5,6 +5,7 @@
 #' An Accessible Set of Themes and Color Palettes Optimized for Light/Dark 
 #' Appearances, and Different Screen Sizes
 #'
+#' @md
 #' @details
 #' sfthemes is a pair of [`ggplot2`](https://ggplot2.tidyverse.org) themes,
 #' `theme_sf_light()`, `theme_sf_dark()`, and a collection of color scales based
