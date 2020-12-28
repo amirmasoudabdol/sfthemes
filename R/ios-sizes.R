@@ -4,7 +4,7 @@ sf_element_sizes <- list("xSmall" = .75,
                          "Large" = 2,
                          "xLarge" = 3,
                          "xxLarge" = 4,
-                         "xxxLarge" = 5);
+                         "xxxLarge" = 5)
 
 sf_xsmall_font_sizes <- list(
                 faces = list(

@@ -8,7 +8,7 @@ on all elements and fonts of any `ggplot2::themes()`
 
 ##### Changed
 
-- Both themes are now accepting fewer parameters, and therefore are simplier to
+- Both themes are now accepting fewer parameters, and therefore are easier to
 use.
 - A new `font_family` parameters of the themes can be used to set the entire 
 font family of the theme.
@@ -30,7 +30,7 @@ This is the initial release of the *sfthemes* package. This version offers two
 main themes, `theme_sf_light()` and `theme_sf_dark()` alongside 9 different color
 palettes, each offering a complementary accessible variant. Inter is set as the
 default typeface of the package while we resolve some issues around full
-integeration of SF Pro.
+integration of SF Pro.
 
 ##### Known Bugs
 
