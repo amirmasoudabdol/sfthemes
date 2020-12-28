@@ -26,8 +26,25 @@ sf_xxxlarge_text <- function() {
   return(sf_set_text_sizes("xxxLarge"))
 }
 
-# THIS DOESN'T WORK FOR NOW!
-#' @export
+
+#' 
+#' @examples \dontrun{
+#'
+#'   library(ggplot2)
+#'
+#'   ggplot(mtcars) +
+#'    geom_point(aes(x = wt, y = mpg, colour = factor(gear))) +
+#'    labs(title = "Fuel Economy",
+#'         subtitle = "Fuel economy declines as weight increases, 1973-74",
+#'         caption = "Data from the 1974 Motor Trend US magazine.",
+#'         x = "Weight (1000 lbs)",
+#'         y = "MPG",
+#'         colour = "Gears") +
+#'    facet_grid(vs ~ am) +
+#'    sf_set_text_sizes(theme_linedraw(), "Large") +
+#'    scale_colour_ios_light()
+#' 
+#' }
 sf_set_text_sizes <- function(ret, size_class = "xSmall") {
   font_scale <- sf_scale(size_class)
 

@@ -4,10 +4,9 @@
 #' @param subtitle_margin Plot subtitle margin bottom (single numeric value)
 #' @param axis_title_just Axis title font justificationk one of `[blmcrt]`
 #' @param plot_margin Plot margin (specify with [ggplot2::margin])
-#' @param grid_col Grid color
+#'
 #' @param grid Panel grid (`TRUE`, `FALSE`, or a
 #' combination of `X`, `x`, `Y`, `y`)
-#' @param axis_col Axis color
 #' @param axis Add x or y axes? `TRUE`, `FALSE`, "`xy`"
 #' @param ticks Ticks if `TRUE` add ticks
 #'
@@ -19,20 +18,15 @@
 #'   * A `character` from {"xSmall", "Small", "Medium", "Large", "xLarge", "xxLarge", "xxxLarge"}
 #' @param font_size_class Only resizes text based on one of the above size classes
 #' @param element_size_class Only resizes elements based on one of the above size classes
-#' @param offset_x_ticks Fancy x tick labels
-#' @param offset_y_ticks Fancy y tick labels
+#' @param offset_x_ticks Fancier x tick labels \[Experimental\]
+#' @param offset_y_ticks Fancier y tick labels \[Experimental\]
 #'
 #' @importFrom ggplot2 margin theme theme_minimal element_blank element_rect element_text element_line update_geom_defaults
 sf_base <- function(
   font_family = NULL,
-  plot_title_margin = 10,
-  subtitle_margin = 25,
-  caption_margin = 25,
   text_colour_palette = NULL,
-  axis_title_just = "rt",
   plot_background_col = NULL,
   panel_background_col = NULL,
-  plot_margin = margin(30, 30, 30, 30),
   grid_col = NULL, 
   grid = TRUE,
   axis_col = NULL,
@@ -44,6 +38,12 @@ sf_base <- function(
   offset_x_ticks = FALSE,
   offset_y_ticks = FALSE
   ) {
+
+  plot_title_margin <- 10
+  subtitle_margin <- 25
+  caption_margin <- 25
+  plot_margin <- margin(30, 30, 30, 30)
+  axis_title_just <- "rt"
 
   if (!is.null(size_class)) {
     font_size_class <- size_class

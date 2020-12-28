@@ -33,18 +33,11 @@
 #'        caption = "Fuel economy data from 1999 to 2008.") +
 #'   theme_sf_dark() +
 #'   scale_colour_ios_dark()
-#'
+#' }
 #' @export
 theme_sf_dark <- function(
   font_family = "Inter",
-  plot_title_margin = 10,
-  subtitle_margin = 15,
-  caption_margin = 25,
-  axis_title_just = "rt",
-  plot_margin = ggplot2::margin(30, 30, 30, 30),
-  grid_col = ios_text_on_dark_cols[["label"]],
   grid = TRUE,
-  axis_col = ios_text_on_dark_cols[["label"]],
   axis = TRUE,
   ticks = TRUE,
   size_class =  NULL,
@@ -71,17 +64,12 @@ theme_sf_dark <- function(
 
   sf_base(
     font_family = font_family,
-    plot_title_margin = plot_title_margin,
-    subtitle_margin = subtitle_margin,
-    caption_margin = caption_margin,
     text_colour_palette = ios_text_on_dark_cols,
-    axis_title_just = "rt",
     plot_background_col = "#141414",
     panel_background_col = "#141414",
-    plot_margin = ggplot2::margin(30, 30, 30, 30),
-    grid_col = grid_col,
+    grid_col = ios_text_on_dark_cols[["label"]],
     grid = TRUE,
-    axis_col = axis_col,
+    axis_col = ios_text_on_dark_cols[["label"]],
     axis = TRUE,
     ticks = TRUE,
     size_class = size_class,

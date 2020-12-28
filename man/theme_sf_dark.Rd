@@ -6,14 +6,7 @@
 \usage{
 theme_sf_dark(
   font_family = "Inter",
-  plot_title_margin = 10,
-  subtitle_margin = 15,
-  caption_margin = 25,
-  axis_title_just = "rt",
-  plot_margin = ggplot2::margin(30, 30, 30, 30),
-  grid_col = ios_text_on_dark_cols[["label"]],
   grid = TRUE,
-  axis_col = ios_text_on_dark_cols[["label"]],
   axis = TRUE,
   ticks = TRUE,
   size_class = NULL,
@@ -26,18 +19,8 @@ theme_sf_dark(
 \arguments{
 \item{font_family}{Primary font family of the plot}
 
-\item{subtitle_margin}{Plot subtitle margin bottom (single numeric value)}
-
-\item{axis_title_just}{Axis title font justificationk one of \verb{[blmcrt]}}
-
-\item{plot_margin}{Plot margin (specify with \link[ggplot2:element]{ggplot2::margin})}
-
-\item{grid_col}{Grid color}
-
 \item{grid}{Panel grid (\code{TRUE}, \code{FALSE}, or a
 combination of \code{X}, \code{x}, \code{Y}, \code{y})}
-
-\item{axis_col}{Axis color}
 
 \item{axis}{Add x or y axes? \code{TRUE}, \code{FALSE}, "\code{xy}"}
 
@@ -52,9 +35,9 @@ combination of \code{X}, \code{x}, \code{Y}, \code{y})}
 
 \item{element_size_class}{Only resizes elements based on one of the above size classes}
 
-\item{offset_x_ticks}{Fancy x tick labels}
+\item{offset_x_ticks}{Fancier x tick labels [Experimental]}
 
-\item{offset_y_ticks}{Fancy y tick labels}
+\item{offset_y_ticks}{Fancier y tick labels [Experimental]}
 }
 \description{
 A minimal theme with dark background inspired by — and adapted from — the
@@ -71,5 +54,20 @@ Recommended color and fill scales to be used with:
 \item \link{scale_fill_macos_dark}
 \item \link{scale_colour_watchos_dark}
 \item \link{scale_fill_watchos_dark}
+}
+}
+\examples{
+\dontrun{
+library(ggplot2)
+
+ggplot(mpg, aes(x = displ, y = hwy, colour = class)) +
+  geom_point() +
+  labs(x = "Displacement", y ="MPG",
+       color = "Type of Car",
+       title = "Fuel Economy",
+       subtitle = "Fuel economy declines as engines get bigger",
+       caption = "Fuel economy data from 1999 to 2008.") +
+  theme_sf_dark() +
+  scale_colour_ios_dark()
 }
 }

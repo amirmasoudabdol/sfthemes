@@ -40,7 +40,7 @@ watchos_col_order <-
 #'
 #' @rdname watchos_colour_palettes
 #' @export
-#' @examples \dontrun{
+#' @examples
 #'
 #' library(scales)
 #'
@@ -77,7 +77,9 @@ watchos_dark_pal <- function(order = "contrast") {
 #'
 #' ggplot(mtcars, aes(y = mpg, x = as.factor(cyl))) +
 #'   geom_boxplot(aes(color = as.factor(cyl), fill = as.factor(cyl))) +
-#'   labs(x = "Miles Per Gallon", y = "MPG", fill = "Number of Cylinders", color = "Number of Cylinders",
+#'   labs(x = "Miles Per Gallon", y = "MPG", 
+#'        fill = "Number of Cylinders",
+#'        color = "Number of Cylinders",
 #'        title = "Fuel Economy",
 #'        subtitle = "Fuel economy declines as engines gets bigger",
 #'        caption = "Data from the 1974 Motor Trend US magazine.") +

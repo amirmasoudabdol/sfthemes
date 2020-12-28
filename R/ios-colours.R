@@ -96,7 +96,7 @@ ios_accessible_dark_palette <- unname(unlist(ios_accessible_dark_cols))
 #' @param order Indicates the order of colors in the palette
 #' @rdname ios_colour_palettes
 #'
-#' @examples \dontrun{
+#' @examples
 #' library(scales)
 #' scales::show_col(
 #'     ios_light_pal(order = "default", accessible = FALSE)(9),
@@ -151,7 +151,9 @@ ios_light_pal <- function(order = "contrast", accessible = FALSE) {
 #'
 #' ggplot(mtcars, aes(y = mpg, x = as.factor(cyl))) +
 #'   geom_boxplot(aes(color = as.factor(cyl), fill = as.factor(cyl))) +
-#'   labs(x = "Miles Per Gallon", y = "MPG", fill = "Number of Cylinders", color = "Number of Cylinders",
+#'   labs(x = "Miles Per Gallon", y = "MPG", 
+#'        fill = "Number of Cylinders",
+#'        color = "Number of Cylinders",
 #'        title = "Fuel Economy",
 #'        subtitle = "Fuel economy declines as engines gets bigger",
 #'        caption = "Data from the 1974 Motor Trend US magazine.") +
@@ -188,7 +190,7 @@ scale_fill_ios_light <- function(order = "contrast", accessible = FALSE, ...) {
 #' @param order Indicates the order of colors in the palette
 #' @rdname ios_colour_palettes
 #'
-#' @examples \dontrun{
+#' @examples
 #' library(scales)
 #' scales::show_col(
 #'     ios_dark_pal(order = "default", accessible = FALSE)(9),
@@ -242,7 +244,9 @@ ios_dark_pal <- function(order = "contrast", accessible = FALSE) {
 #'
 #' ggplot(mtcars, aes(y = mpg, x = as.factor(cyl))) +
 #'   geom_boxplot(aes(color = as.factor(cyl), fill = as.factor(cyl))) +
-#'   labs(x = "Miles Per Gallon", y = "MPG", fill = "Number of Cylinders", color = "Number of Cylinders",
+#'   labs(x = "Miles Per Gallon", y = "MPG", 
+#'        fill = "Number of Cylinders",
+#'        color = "Number of Cylinders",
 #'        title = "Fuel Economy",
 #'        subtitle = "Fuel economy declines as engines gets bigger",
 #'        caption = "Data from the 1974 Motor Trend US magazine.") +
@@ -323,7 +327,7 @@ ios_accessible_gray_dark_palette <-
 #'
 #' @rdname ios_colour_palettes
 #'
-#' @examples \dontrun{
+#' @examples
 #' library(scales)
 #' scales::show_col(
 #'     ios_gray_light_pal(accessible = FALSE)(6),
@@ -368,7 +372,9 @@ ios_gray_light_pal <- function(accessible = FALSE) {
 #'
 #' ggplot(mtcars, aes(y = mpg, x = as.factor(cyl))) +
 #'   geom_boxplot(aes(color = as.factor(cyl), fill = as.factor(cyl))) +
-#'   labs(x = "Miles Per Gallon", y = "MPG", fill = "Number of Cylinders", color = "Number of Cylinders",
+#'   labs(x = "Miles Per Gallon", y = "MPG", 
+#'        fill = "Number of Cylinders",
+#'        color = "Number of Cylinders",
 #'        title = "Fuel Economy",
 #'        subtitle = "Fuel economy declines as engines gets bigger",
 #'        caption = "Data from the 1974 Motor Trend US magazine.") +
@@ -410,7 +416,7 @@ scale_fill_ios_gray_light <- function(accessible = FALSE, ...) {
 #'
 #' @rdname ios_colour_palettes
 #'
-#' @examples \dontrun{
+#' @examples
 #' library(scales)
 #' scales::show_col(
 #'     ios_gray_dark_pal(accessible = FALSE)(6),
@@ -455,7 +461,9 @@ ios_gray_dark_pal <- function(accessible = FALSE) {
 #'
 #' ggplot(mtcars, aes(y = mpg, x = as.factor(cyl))) +
 #'   geom_boxplot(aes(color = as.factor(cyl), fill = as.factor(cyl))) +
-#'   labs(x = "Miles Per Gallon", y = "MPG", fill = "Number of Cylinders", color = "Number of Cylinders",
+#'   labs(x = "Miles Per Gallon", y = "MPG", 
+#'        fill = "Number of Cylinders",
+#'        color = "Number of Cylinders",
 #'        title = "Fuel Economy",
 #'        subtitle = "Fuel economy declines as engines gets bigger",
 #'        caption = "Data from the 1974 Motor Trend US magazine.") +
