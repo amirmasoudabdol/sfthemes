@@ -126,10 +126,9 @@
 <div class="page-header"><h1 class="hasAnchor">
 <a href="#san-francisco-themes-" class="anchor"></a>San Francisco Themes <picture><source srcset="reference/figures/logo-light.png" media="(prefers-color-scheme: dark)"><img src="reference/figures/logo-dark.png" width="120" align="right"></source></picture>
 </h1></div>
-<p>sfthemes is a pair of <a href="https://ggplot2.tidyverse.org"><code>ggplot2</code></a> themes, <code><a href="reference/theme_sf_light.html">theme_sf_light()</a></code>, <code><a href="reference/theme_sf_dark.html">theme_sf_dark()</a></code>, and a collection of color scales based on <a href="https://developer.apple.com/design/human-interface-guidelines/">Apple’s Human Interface Guidelines</a>. Themes are inspired by the occasional appearances of charts used by Apple within different contexts, e.g., Apple Health app, Screen Time on iOS and macOS. And colors are adapted from iOS, macOS, and watchOS system colors. Each color scale has a light and dark variant as well that compliments the light/dark themes, <code><a href="reference/scale_colour_ios_light.html">scale_colour_ios_light()</a></code> and <code><a href="reference/scale_colour_ios_dark.html">scale_colour_ios_dark()</a></code> respectively.</p>
-<p>When bond together, sfthemes offers a unique opportunity to generate two version of your plot, i.e., light/dark, with two <em>similar</em> but <em>individually</em> optimized color scales for each variant of your plot.</p>
+<p>sfthemes is a pair of <a href="https://ggplot2.tidyverse.org"><code>ggplot2</code></a> themes, <code><a href="reference/theme_sf_light.html">theme_sf_light()</a></code>, <code><a href="reference/theme_sf_dark.html">theme_sf_dark()</a></code>, and a collection of color scales based on <a href="https://developer.apple.com/design/human-interface-guidelines/">Apple’s Human Interface Guidelines</a>. Themes are inspired by the occasional appearances of charts used by Apple within different contexts, e.g., Apple Health app, Screen Time on iOS and macOS. And colors are adapted from iOS, macOS, and watchOS system colors. Each color scale has a light and dark variant as well that compliments the light/dark themes, <code><a href="reference/scale_colour_ios_light.html">scale_colour_ios_light()</a></code> and <code><a href="reference/scale_colour_ios_dark.html">scale_colour_ios_dark()</a></code>, respectively. In addition, sfthemes uses <a href="https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/typography/">dynamic type sizing</a> in order to provide a consistent and elegant overall resizing and re-scaling of plot elements. Read more <a href="articles/typography.html">here</a>.</p>
+<p>When combined, sfthemes offers a unique opportunity to generate two version of your plot with two <em>similar</em> yet <em>individually</em> optimized color palettes for light and dark themes.</p>
 <p><picture><source srcset="reference/figures/front-page-main.png" media="(prefers-color-scheme: dark)" class="img-responsive center-block d-block mx-auto"></source><img src="reference/figures/front-page-main-alt.png" class="img-responsive center-block d-block mx-auto"></picture></p>
-<p>In addition, sfthemes uses <a href="https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/typography/">dynamic type sizing</a> in order to provide a consistent and elegant overall resizing and re-scaling of plot elements. <strong>Read more <a href="articles/typography.html">here</a>.</strong></p>
 <div id="install" class="section level2">
 <h2 class="hasAnchor">
 <a href="#install" class="anchor"></a>Install</h2>
@@ -161,54 +160,63 @@
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span>; <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://sfthemes.amirmasoudabdol.name">sfthemes</a></span><span class="op">)</span>
 
-<span class="va">gp</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">iris</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">Sepal.Length</span>, y <span class="op">=</span> <span class="va">Sepal.Width</span>, color <span class="op">=</span> <span class="va">Species</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
+<span class="va">gp</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">Sepal.Length</span>,
+                 y <span class="op">=</span> <span class="va">Sepal.Width</span>,
+                 color <span class="op">=</span> <span class="va">Species</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
         <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>shape <span class="op">=</span> <span class="va">Species</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> 
         <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">xlab</a></span><span class="op">(</span><span class="st">"Sepal Length"</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ylab</a></span><span class="op">(</span><span class="st">"Sepal Width"</span><span class="op">)</span> <span class="op">+</span>
         <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"SF Light/Dark Themes"</span>, 
-                subtitle <span class="op">=</span> <span class="st">"iOS Light/Dark Color Palette"</span><span class="op">)</span> <span class="op">+</span>
+             subtitle <span class="op">=</span> <span class="st">"iOS Light/Dark Color Palette"</span><span class="op">)</span> <span class="op">+</span>
         <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_smooth.html">geom_smooth</a></span><span class="op">(</span>method<span class="op">=</span><span class="st">"lm"</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>fill <span class="op">=</span> <span class="va">Species</span><span class="op">)</span><span class="op">)</span>
 
 <span class="co"># Light</span>
 <span class="va">gp</span> <span class="op">+</span> <span class="fu"><a href="reference/theme_sf_light.html">theme_sf_light</a></span><span class="op">(</span>size_class <span class="op">=</span> <span class="st">"xxxLarge"</span><span class="op">)</span> <span class="op">+</span>
-    <span class="fu"><a href="reference/scale_colour_ios_light.html">scale_colour_ios_light</a></span><span class="op">(</span>accessible <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op">+</span>
-    <span class="fu"><a href="reference/scale_colour_ios_light.html">scale_fill_ios_light</a></span><span class="op">(</span>accessible <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op">+</span>
-    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>legend.position <span class="op">=</span> <span class="st">"bottom"</span><span class="op">)</span>
+        <span class="fu"><a href="reference/scale_colour_ios_light.html">scale_colour_ios_light</a></span><span class="op">(</span>accessible <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op">+</span>
+        <span class="fu"><a href="reference/scale_colour_ios_light.html">scale_fill_ios_light</a></span><span class="op">(</span>accessible <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op">+</span>
+        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>legend.position <span class="op">=</span> <span class="st">"bottom"</span><span class="op">)</span>
 
 <span class="co"># Dark</span>
 <span class="va">gp</span> <span class="op">+</span> <span class="fu"><a href="reference/theme_sf_dark.html">theme_sf_dark</a></span><span class="op">(</span>size_class <span class="op">=</span> <span class="st">"xxxLarge"</span><span class="op">)</span> <span class="op">+</span>
-    <span class="fu"><a href="reference/scale_colour_ios_dark.html">scale_colour_ios_dark</a></span><span class="op">(</span>accessible <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op">+</span>
-    <span class="fu"><a href="reference/scale_colour_ios_dark.html">scale_fill_ios_dark</a></span><span class="op">(</span>accessible <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op">+</span>
-    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>legend.position <span class="op">=</span> <span class="st">"bottom"</span><span class="op">)</span></code></pre></div>
+        <span class="fu"><a href="reference/scale_colour_ios_dark.html">scale_colour_ios_dark</a></span><span class="op">(</span>accessible <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op">+</span>
+        <span class="fu"><a href="reference/scale_colour_ios_dark.html">scale_fill_ios_dark</a></span><span class="op">(</span>accessible <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op">+</span>
+        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>legend.position <span class="op">=</span> <span class="st">"bottom"</span><span class="op">)</span></code></pre></div>
 <table class="table"><tbody><tr class="odd">
 <td><img src="reference/figures/front-page-sample-light.png"></td>
 <td><img src="reference/figures/front-page-sample-dark.png"></td>
 </tr></tbody></table>
+<p>While, sfthemes color scales are optimized for sfthemes themes, you can mix and match any light or dark themes with them; however, you need to make sure that they visually work together.</p>
 </div>
 <div id="accessible-colors" class="section level4">
 <h4 class="hasAnchor">
 <a href="#accessible-colors" class="anchor"></a>Accessible Colors</h4>
-<p>Each color palette is accompanied with an accessible variant of itself. In order to access the accessible color palettes, you can use <code>accessible</code> parameter as follow. <em>The <a href="articles/colours.html">Colors</a> article elaborates on the availability, differences, and features of each system color palette.</em></p>
+<p>Each color palette is accompanied with an <em>accessible</em> variant of itself. In order to access the accessible color palettes, you can use <code>accessible</code> parameter as follow. <em>The <a href="articles/colours.html">Colors</a> article elaborates on the availability, differences, and features of each system color palette.</em></p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">iris.sum</span> <span class="op">&lt;-</span> <span class="va">iris</span> <span class="op">%&gt;%</span>
     <span class="fu">group_by</span><span class="op">(</span><span class="va">Species</span><span class="op">)</span> <span class="op">%&gt;%</span>
-    <span class="fu">summarize</span><span class="op">(</span>PW.mean<span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">Petal.Width</span><span class="op">)</span>,
+    <span class="fu">summarize</span><span class="op">(</span>PW.mean <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">Petal.Width</span><span class="op">)</span>,
                 PW.sd <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/sd.html">sd</a></span><span class="op">(</span><span class="va">Petal.Width</span><span class="op">)</span><span class="op">)</span>
 
-<span class="va">gp</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">iris.sum</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">Species</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
-        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>y <span class="op">=</span> <span class="va">PW.mean</span>, fill <span class="op">=</span> <span class="va">Species</span>, color <span class="op">=</span> <span class="va">Species</span><span class="op">)</span>, position <span class="op">=</span> <span class="st">"dodge"</span>, stat <span class="op">=</span> <span class="st">"identity"</span><span class="op">)</span> <span class="op">+</span>
-        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_linerange.html">geom_errorbar</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>ymin <span class="op">=</span> <span class="va">PW.mean</span> <span class="op">-</span> <span class="va">PW.sd</span>, ymax <span class="op">=</span> <span class="va">PW.mean</span> <span class="op">+</span> <span class="va">PW.sd</span><span class="op">)</span>, width <span class="op">=</span> <span class="fl">0.5</span>, position <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/position_dodge.html">position_dodge</a></span><span class="op">(</span>width <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span>, color <span class="op">=</span> <span class="st">"black"</span><span class="op">)</span> <span class="op">+</span> 
-        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"SF Light Theme"</span>, subtitle <span class="op">=</span> <span class="st">"iOS Light Color Palette - Normal vs. Accessible"</span>, y <span class="op">=</span> <span class="st">"Mean Petal Width"</span>, x <span class="op">=</span> <span class="st">"Species"</span><span class="op">)</span> 
+<span class="va">gp</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">iris.sum</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">Species</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
+        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>y <span class="op">=</span> <span class="va">PW.mean</span>, fill <span class="op">=</span> <span class="va">Species</span>, color <span class="op">=</span> <span class="va">Species</span><span class="op">)</span>, 
+                 position <span class="op">=</span> <span class="st">"dodge"</span>, stat <span class="op">=</span> <span class="st">"identity"</span><span class="op">)</span> <span class="op">+</span>
+        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_linerange.html">geom_errorbar</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>ymin <span class="op">=</span> <span class="va">PW.mean</span> <span class="op">-</span> <span class="va">PW.sd</span>, ymax <span class="op">=</span> <span class="va">PW.mean</span> <span class="op">+</span> <span class="va">PW.sd</span><span class="op">)</span>,
+                      position <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/position_dodge.html">position_dodge</a></span><span class="op">(</span>width <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span>,
+                      width <span class="op">=</span> <span class="fl">0.5</span>, 
+                      color <span class="op">=</span> <span class="st">"black"</span><span class="op">)</span> <span class="op">+</span> <span class="co"># ← or "white" in dark theme</span>
+        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"SF Light Theme"</span>,
+             subtitle <span class="op">=</span> <span class="st">"iOS Light Color Palette - Normal vs. Accessible"</span>, 
+             y <span class="op">=</span> <span class="st">"Mean Petal Width"</span>, x <span class="op">=</span> <span class="st">"Species"</span><span class="op">)</span> 
 <span class="co"># Normal</span>
 <span class="va">gp</span> <span class="op">+</span> <span class="fu"><a href="reference/theme_sf_light.html">theme_sf_light</a></span><span class="op">(</span>size_class <span class="op">=</span> <span class="st">"xxxLarge"</span><span class="op">)</span> <span class="op">+</span>
-    <span class="fu"><a href="reference/scale_colour_ios_light.html">scale_colour_ios_light</a></span><span class="op">(</span>accessible <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op">+</span>
-    <span class="fu"><a href="reference/scale_colour_ios_light.html">scale_fill_ios_light</a></span><span class="op">(</span>accessible <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op">+</span>
-    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>legend.position <span class="op">=</span> <span class="st">"bottom"</span><span class="op">)</span>
+        <span class="fu"><a href="reference/scale_colour_ios_light.html">scale_colour_ios_light</a></span><span class="op">(</span>accessible <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op">+</span>
+        <span class="fu"><a href="reference/scale_colour_ios_light.html">scale_fill_ios_light</a></span><span class="op">(</span>accessible <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op">+</span>
+        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>legend.position <span class="op">=</span> <span class="st">"bottom"</span><span class="op">)</span>
 
 <span class="co"># Accessible</span>
 <span class="va">gp</span> <span class="op">+</span> <span class="fu"><a href="reference/theme_sf_light.html">theme_sf_light</a></span><span class="op">(</span>size_class <span class="op">=</span> <span class="st">"xxxLarge"</span><span class="op">)</span> <span class="op">+</span>
-    <span class="fu"><a href="reference/scale_colour_ios_light.html">scale_colour_ios_light</a></span><span class="op">(</span>accessible <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="op">+</span>
-    <span class="fu"><a href="reference/scale_colour_ios_light.html">scale_fill_ios_light</a></span><span class="op">(</span>accessible <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="op">+</span>
-    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>legend.position <span class="op">=</span> <span class="st">"bottom"</span><span class="op">)</span></code></pre></div>
+        <span class="fu"><a href="reference/scale_colour_ios_light.html">scale_colour_ios_light</a></span><span class="op">(</span>accessible <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="op">+</span>
+        <span class="fu"><a href="reference/scale_colour_ios_light.html">scale_fill_ios_light</a></span><span class="op">(</span>accessible <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="op">+</span>
+        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>legend.position <span class="op">=</span> <span class="st">"bottom"</span><span class="op">)</span></code></pre></div>
 <table class="table"><tbody><tr class="odd">
 <td><img src="reference/figures/front-page-accessible-on-off-light.png"></td>
 <td><img src="reference/figures/front-page-accessible-on-off-dark.png"></td>
@@ -218,26 +226,28 @@
 <h4 class="hasAnchor">
 <a href="#scaling" class="anchor"></a>Scaling</h4>
 <p>sfthemes provides 7 <em>size classes</em>, ie., scaling factors. Size classes can be applied to texts, elements, or both. The example below is generated from combination of light/dark plots and showcases all available size classes. <em>The <a href="articles/colours.html">Size Classes</a> article elaborates on the dynamic type sizing.</em></p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>size_class &lt;-<span class="st"> "Medium"</span></span>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>size_class &lt;-<span class="st"> "Medium"</span> <span class="co"># ← You can modify the size class here</span></span>
 <span id="cb6-2"><a href="#cb6-2"></a></span>
-<span id="cb6-3"><a href="#cb6-3"></a>gp &lt;-<span class="st"> </span><span class="kw">ggplot</span>(<span class="dt">data =</span> iris, <span class="kw">aes</span>(<span class="dt">x =</span> Sepal.Length, <span class="dt">y =</span> Sepal.Width, <span class="dt">color =</span> Species)) <span class="op">+</span></span>
-<span id="cb6-4"><a href="#cb6-4"></a><span class="st">        </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">shape =</span> Species)) <span class="op">+</span><span class="st"> </span></span>
-<span id="cb6-5"><a href="#cb6-5"></a><span class="st">        </span><span class="kw">xlab</span>(<span class="st">"Sepal Length"</span>) <span class="op">+</span><span class="st"> </span><span class="kw">ylab</span>(<span class="st">"Sepal Width"</span>) <span class="op">+</span></span>
-<span id="cb6-6"><a href="#cb6-6"></a><span class="st">        </span><span class="kw">labs</span>(<span class="dt">title =</span> <span class="st">"SF Light/Dark Theme"</span>, </span>
-<span id="cb6-7"><a href="#cb6-7"></a>                <span class="dt">subtitle =</span> <span class="kw">paste0</span>(<span class="st">"Size Class: "</span>, size_class) <span class="op">+</span></span>
-<span id="cb6-8"><a href="#cb6-8"></a><span class="st">        </span><span class="kw">geom_smooth</span>(<span class="dt">method=</span><span class="st">"lm"</span>, <span class="kw">aes</span>(<span class="dt">fill =</span> Species))</span>
-<span id="cb6-9"><a href="#cb6-9"></a></span>
-<span id="cb6-10"><a href="#cb6-10"></a><span class="co"># Light</span></span>
-<span id="cb6-11"><a href="#cb6-11"></a>gp <span class="op">+</span><span class="st"> </span><span class="kw">theme_sf_light</span>(<span class="dt">size_class =</span> size_class) <span class="op">+</span></span>
-<span id="cb6-12"><a href="#cb6-12"></a><span class="st">    </span><span class="kw">scale_colour_ios_light</span>(<span class="dt">accessible =</span> <span class="ot">FALSE</span>) <span class="op">+</span></span>
-<span id="cb6-13"><a href="#cb6-13"></a><span class="st">    </span><span class="kw">scale_fill_ios_light</span>(<span class="dt">accessible =</span> <span class="ot">FALSE</span>) <span class="op">+</span></span>
-<span id="cb6-14"><a href="#cb6-14"></a><span class="st">    </span><span class="kw">theme</span>(<span class="dt">legend.position =</span> <span class="st">"bottom"</span>)</span>
-<span id="cb6-15"><a href="#cb6-15"></a></span>
-<span id="cb6-16"><a href="#cb6-16"></a><span class="co"># Dark</span></span>
-<span id="cb6-17"><a href="#cb6-17"></a>gp <span class="op">+</span><span class="st"> </span><span class="kw">theme_sf_dark</span>(<span class="dt">size_class =</span> size_class) <span class="op">+</span></span>
-<span id="cb6-18"><a href="#cb6-18"></a><span class="st">        </span><span class="kw">scale_colour_ios_dark</span>(<span class="dt">accessible =</span> <span class="ot">FALSE</span>) <span class="op">+</span></span>
-<span id="cb6-19"><a href="#cb6-19"></a><span class="st">        </span><span class="kw">scale_fill_ios_dark</span>(<span class="dt">accessible =</span> <span class="ot">FALSE</span>) <span class="op">+</span></span>
-<span id="cb6-20"><a href="#cb6-20"></a><span class="st">        </span><span class="kw">theme</span>(<span class="dt">legend.position =</span> <span class="st">"bottom"</span>)</span></code></pre></div>
+<span id="cb6-3"><a href="#cb6-3"></a>gp &lt;-<span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> Sepal.Length,</span>
+<span id="cb6-4"><a href="#cb6-4"></a>                 <span class="dt">y =</span> Sepal.Width,</span>
+<span id="cb6-5"><a href="#cb6-5"></a>                 <span class="dt">color =</span> Species)) <span class="op">+</span></span>
+<span id="cb6-6"><a href="#cb6-6"></a><span class="st">        </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">shape =</span> Species)) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb6-7"><a href="#cb6-7"></a><span class="st">        </span><span class="kw">xlab</span>(<span class="st">"Sepal Length"</span>) <span class="op">+</span><span class="st"> </span><span class="kw">ylab</span>(<span class="st">"Sepal Width"</span>) <span class="op">+</span></span>
+<span id="cb6-8"><a href="#cb6-8"></a><span class="st">        </span><span class="kw">labs</span>(<span class="dt">title =</span> <span class="st">"SF Light/Dark Theme"</span>, </span>
+<span id="cb6-9"><a href="#cb6-9"></a>             <span class="dt">subtitle =</span> <span class="kw">paste0</span>(<span class="st">"Size Class: "</span>, size_class) <span class="op">+</span></span>
+<span id="cb6-10"><a href="#cb6-10"></a><span class="st">        </span><span class="kw">geom_smooth</span>(<span class="dt">method=</span><span class="st">"lm"</span>, <span class="kw">aes</span>(<span class="dt">fill =</span> Species))</span>
+<span id="cb6-11"><a href="#cb6-11"></a></span>
+<span id="cb6-12"><a href="#cb6-12"></a><span class="co"># Light</span></span>
+<span id="cb6-13"><a href="#cb6-13"></a>gp <span class="op">+</span><span class="st"> </span><span class="kw">theme_sf_light</span>(<span class="dt">size_class =</span> size_class) <span class="op">+</span><span class="st"> </span><span class="co"># ← Setting the size class</span></span>
+<span id="cb6-14"><a href="#cb6-14"></a><span class="st">        </span><span class="kw">scale_colour_ios_light</span>(<span class="dt">accessible =</span> <span class="ot">FALSE</span>) <span class="op">+</span></span>
+<span id="cb6-15"><a href="#cb6-15"></a><span class="st">        </span><span class="kw">scale_fill_ios_light</span>(<span class="dt">accessible =</span> <span class="ot">FALSE</span>) <span class="op">+</span></span>
+<span id="cb6-16"><a href="#cb6-16"></a><span class="st">        </span><span class="kw">theme</span>(<span class="dt">legend.position =</span> <span class="st">"bottom"</span>)</span>
+<span id="cb6-17"><a href="#cb6-17"></a></span>
+<span id="cb6-18"><a href="#cb6-18"></a><span class="co"># Dark</span></span>
+<span id="cb6-19"><a href="#cb6-19"></a>gp <span class="op">+</span><span class="st"> </span><span class="kw">theme_sf_dark</span>(<span class="dt">size_class =</span> size_class) <span class="op">+</span><span class="st"> </span><span class="co"># ← Setting the size class</span></span>
+<span id="cb6-20"><a href="#cb6-20"></a><span class="st">        </span><span class="kw">scale_colour_ios_dark</span>(<span class="dt">accessible =</span> <span class="ot">FALSE</span>) <span class="op">+</span></span>
+<span id="cb6-21"><a href="#cb6-21"></a><span class="st">        </span><span class="kw">scale_fill_ios_dark</span>(<span class="dt">accessible =</span> <span class="ot">FALSE</span>) <span class="op">+</span></span>
+<span id="cb6-22"><a href="#cb6-22"></a><span class="st">        </span><span class="kw">theme</span>(<span class="dt">legend.position =</span> <span class="st">"bottom"</span>)</span></code></pre></div>
 <p><img src="reference/figures/front-page-scaling-animation-light-dark.gif"></p>
 <hr>
 </div>
@@ -249,12 +259,12 @@
 <div id="goals" class="section level4">
 <h4 class="hasAnchor">
 <a href="#goals" class="anchor"></a>Goals</h4>
-<p>The goal of sfthemes is to provide a pair of minimal and accessible light and dark themes. Moreover, sfthemes focus on bringing Apple’s system colors to ggplot2, as set of color and fill scales. Finally, sfthemes tries to incorporate modern typographical advancement into theme’s structure and aesthetic in order to guarantee an elegant visualization for different screen resolutions and sizes.</p>
+<p>The goal of sfthemes is to provide a pair of minimal and accessible light and dark themes. Moreover, sfthemes focuses on bringing Apple’s system colors to ggplot2, in the form of color and fill scales. Lastly, sfthemes tries to incorporate modern typographical advancement into theme’s structure and aesthetic in order to guarantee an elegant visualization for different screen resolutions and sizes.</p>
 </div>
 <div id="future-plan" class="section level4">
 <h4 class="hasAnchor">
 <a href="#future-plan" class="anchor"></a>Future Plan</h4>
-<p>While I will mainly focus on keeping sfthemes functional, I have a short list of features that I would like to implement if I find some times.</p>
+<p>While I will mainly focus on keeping sfthemes functional, I have a short list of features that I would like to implement, if I find some times.</p>
 <ul>
 <li>Adding three <em>spacing classes</em> to control the spacing and margins of plots elements.</li>
 <li>Adding the SF Pro to themes, and using different variants of it for optimal readability in different <em>size classes</em>
@@ -264,7 +274,7 @@
 <div id="contribution" class="section level4">
 <h4 class="hasAnchor">
 <a href="#contribution" class="anchor"></a>Contribution</h4>
-<p>If you found any bugs, or have any suggestions, please feel free to reach out to me, either by opening an <a href="https://github.com/amirmasoudabdol/sfthemes/issues/">issue</a> or a pull request, or dropping an email.</p>
+<p>If you find any bugs, or have any suggestions, please feel free to reach out to me, either by opening an <a href="https://github.com/amirmasoudabdol/sfthemes/issues/">issue</a> or a pull request, or dropping an email.</p>
 </div>
 <div id="credits" class="section level4">
 <h4 class="hasAnchor">
@@ -274,8 +284,8 @@
 <div id="support" class="section level4">
 <h4 class="hasAnchor">
 <a href="#support" class="anchor"></a>Support</h4>
-<p>Please let me know if you happen to use sfthemes. I would love to know how you are using it and whether you like it.</p>
-<p>Lastly, I quite like <a href="https://ko-fi.com/C0C47DMK">ko-fi</a>! 😋</p>
+<p>Please let me know if you happen to use sfthemes in your projects. I would love to know how you are using it and whether you like it.</p>
+<p>Lastly, I quite like <a href="https://ko-fi.com/C0C47DMK">ko-fi</a>!</p>
 <hr>
 </div>
 </div>

@@ -22,7 +22,7 @@
   }
 </script>
 
-<title>San Francisco Dark Theme — theme_sf_dark • sfthemes</title>
+<title>San Francisco Themes — sfthemes • sfthemes</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -74,11 +74,9 @@
   <link href="../extra.css" rel="stylesheet">
   
 
-<meta property="og:title" content="San Francisco Dark Theme — theme_sf_dark" />
-<meta property="og:description" content="A minimal theme with dark background inspired by — and adapted from — the
-occasional appearances of charts used by Apple within different
-contexts, e.g., Apple Health app,
-Screen Time on iOS and macOS." />
+<meta property="og:title" content="San Francisco Themes — sfthemes" />
+<meta property="og:description" content="An Accessible Set of Themes and Color Palettes Optimized for Light/Dark
+Appearances, and Different Screen Sizes" />
 <meta property="og:image" content="https://sfthemes.amirmasoudabdol.name/reference/figures/twitter-summary-card.png" />
 <meta property="og:image:alt" content="An accessible set of themes and color palettes optimized for light/dark appearances, and different screen sizes" />
 <meta name="twitter:card" content="summary_large_image" />
@@ -185,101 +183,46 @@ Screen Time on iOS and macOS." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>San Francisco Dark Theme</h1>
-    <small class="dont-index">Source: <a href='https://github.com/amirmasoudabdol/sfthemes/blob/main/R/sf-dark.R'><code>R/sf-dark.R</code></a></small>
-    <div class="hidden name"><code>theme_sf_dark.Rd</code></div>
+    <h1>San Francisco Themes</h1>
+    <small class="dont-index">Source: <a href='https://github.com/amirmasoudabdol/sfthemes/blob/main/R/sfthemes-package.R'><code>R/sfthemes-package.R</code></a></small>
+    <div class="hidden name"><code>sfthemes.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>A minimal theme with dark background inspired by — and adapted from — the
-occasional appearances of charts used by Apple within different
-contexts, e.g., <a href='https://www.apple.com/ios/health/'>Apple Health</a> app,
-<a href='https://support.apple.com/en-us/HT208982'>Screen Time on iOS</a> and macOS.</p>
+    <p>An Accessible Set of Themes and Color Palettes Optimized for Light/Dark
+Appearances, and Different Screen Sizes</p>
     </div>
 
-    <pre class="usage"><span class='fu'>theme_sf_dark</span><span class='op'>(</span>
-  font_family <span class='op'>=</span> <span class='st'>"Inter"</span>,
-  grid <span class='op'>=</span> <span class='cn'>TRUE</span>,
-  axis <span class='op'>=</span> <span class='cn'>TRUE</span>,
-  ticks <span class='op'>=</span> <span class='cn'>TRUE</span>,
-  size_class <span class='op'>=</span> <span class='cn'>NULL</span>,
-  font_size_class <span class='op'>=</span> <span class='st'>"xSmall"</span>,
-  element_size_class <span class='op'>=</span> <span class='st'>"xSmall"</span>,
-  offset_x_ticks <span class='op'>=</span> <span class='cn'>FALSE</span>,
-  offset_y_ticks <span class='op'>=</span> <span class='cn'>FALSE</span>
-<span class='op'>)</span></pre>
 
-    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
-    <table class="ref-arguments">
-    <colgroup><col class="name" /><col class="desc" /></colgroup>
-    <tr>
-      <th>font_family</th>
-      <td><p>Primary font family of the plot</p></td>
-    </tr>
-    <tr>
-      <th>grid</th>
-      <td><p>Panel grid (<code>TRUE</code>, <code>FALSE</code>, or a
-combination of <code>X</code>, <code>x</code>, <code>Y</code>, <code>y</code>)</p></td>
-    </tr>
-    <tr>
-      <th>axis</th>
-      <td><p>Add x or y axes? <code>TRUE</code>, <code>FALSE</code>, "<code>xy</code>"</p></td>
-    </tr>
-    <tr>
-      <th>ticks</th>
-      <td><p>Ticks if <code>TRUE</code> add ticks</p></td>
-    </tr>
-    <tr>
-      <th>size_class</th>
-      <td><p>Resizes texts and elements based on one of the given <a href='../articles/size_classes.html'>size classes</a>:</p><ul>
-<li><p>A <code>character</code> from "xSmall", "Small", "Medium", "Large", "xLarge", "xxLarge", "xxxLarge"</p></li>
-</ul></td>
-    </tr>
-    <tr>
-      <th>font_size_class</th>
-      <td><p>Only resizes text based on one of the above size classes</p></td>
-    </tr>
-    <tr>
-      <th>element_size_class</th>
-      <td><p>Only resizes elements based on one of the above size classes</p></td>
-    </tr>
-    <tr>
-      <th>offset_x_ticks</th>
-      <td><p>Fancier x tick labels [Experimental]</p></td>
-    </tr>
-    <tr>
-      <th>offset_y_ticks</th>
-      <td><p>Fancier y tick labels [Experimental]</p></td>
-    </tr>
-    </table>
 
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <p>Recommended color and fill scales to be used with:</p><ul>
-<li><p><a href='scale_colour_ios_dark.html'>scale_colour_ios_dark</a></p></li>
-<li><p><a href='scale_colour_ios_dark.html'>scale_fill_ios_dark</a></p></li>
-<li><p><a href='scale_colour_macos_dark.html'>scale_colour_macos_dark</a></p></li>
-<li><p><a href='scale_colour_macos_dark.html'>scale_fill_macos_dark</a></p></li>
-<li><p><a href='scale_colour_watchos_dark.html'>scale_colour_watchos_dark</a></p></li>
-<li><p><a href='scale_colour_watchos_dark.html'>scale_fill_watchos_dark</a></p></li>
+    <p>sfthemes is a pair of <a href='https://ggplot2.tidyverse.org'><code>ggplot2</code></a> themes,
+<code><a href='theme_sf_light.html'>theme_sf_light()</a></code>, <code><a href='theme_sf_dark.html'>theme_sf_dark()</a></code>, and a collection of color scales based
+on <a href='https://developer.apple.com/design/human-interface-guidelines/'>Apple's Human Interface Guidelines</a>.
+Themes are inspired by the occasional appearances of charts used by Apple within different
+contexts, e.g., Apple Health app, Screen Time on iOS and macOS. And colors are
+adapted from iOS, macOS, and watchOS system colors. Each color scale has a
+light and dark variant as well that compliments the light/dark themes,
+<code><a href='scale_colour_ios_light.html'>scale_colour_ios_light()</a></code> and <code><a href='scale_colour_ios_dark.html'>scale_colour_ios_dark()</a></code>, respectively. In
+addition, sfthemes uses <a href='https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/typography/'>dynamic type sizing</a>
+in order to provide a consistent and elegant overall resizing and re-scaling of
+plot elements. Read more <a href='articles/typography.html'>here</a>.</p>
+<p>When combined, sfthemes offers a unique opportunity to generate two version of
+your plot with two <em>similar</em> yet <em>individually</em> optimized color palettes for
+light and dark themes.</p>
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+
+    <div class='dont-index'><p>Useful links:</p><ul>
+<li><p><a href='https://sfthemes.amirmasoudabdol.name'>https://sfthemes.amirmasoudabdol.name</a></p></li>
+<li><p>Report bugs at <a href='https://github.com/amirmasoudabdol/sfthemes/issues'>https://github.com/amirmasoudabdol/sfthemes/issues</a></p></li>
 </ul>
 
+</div>
+    <h2 class="hasAnchor" id="author"><a class="anchor" href="#author"></a>Author</h2>
 
-    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span>
-<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://ggplot2.tidyverse.org'>ggplot2</a></span><span class='op'>)</span>
+    <p>Amir Masoud Abdol (i@amirmasoudabdol.name)</p>
 
-<span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='va'>mpg</span>, <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>displ</span>, y <span class='op'>=</span> <span class='va'>hwy</span>, colour <span class='op'>=</span> <span class='va'>class</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
-  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span>
-  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='st'>"Displacement"</span>, y <span class='op'>=</span><span class='st'>"MPG"</span>,
-       color <span class='op'>=</span> <span class='st'>"Type of Car"</span>,
-       title <span class='op'>=</span> <span class='st'>"Fuel Economy"</span>,
-       subtitle <span class='op'>=</span> <span class='st'>"Fuel economy declines as engines get bigger"</span>,
-       caption <span class='op'>=</span> <span class='st'>"Fuel economy data from 1999 to 2008."</span><span class='op'>)</span> <span class='op'>+</span>
-  <span class='fu'>theme_sf_dark</span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span>
-  <span class='fu'><a href='scale_colour_ios_dark.html'>scale_colour_ios_dark</a></span><span class='op'>(</span><span class='op'>)</span>
-<span class='op'>}</span>
-</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
