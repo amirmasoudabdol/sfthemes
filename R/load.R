@@ -7,11 +7,6 @@
         extrafont::loadfonts("win", quiet = TRUE)
     }
 
-    # Load fonts
-    if (interactive()) packageStartupMessage("Registering PDF & PostScript fonts with R")
-    extrafont::loadfonts("pdf", quiet = TRUE)
-    extrafont::loadfonts("postscript", quiet = TRUE)
-
     fnt <- extrafont::fonttable()
     if (!any(grepl("SF[ ]Pro|Inter[ ]", fnt$FamilyName))) {
         packageStartupMessage("NOTE: Either SF Pro or Inter fonts are required
