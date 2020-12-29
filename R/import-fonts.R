@@ -24,13 +24,13 @@ import_inter <- function() {
 
   inter_font_dir <- system.file("fonts", "Inter", package="sfthemes")
 
-  suppressWarnings(suppressMessages(font_import(inter_font_dir,
-                                                           prompt=FALSE)))
+  suppressWarnings(suppressMessages(font_import(inter_font_dir, prompt=FALSE)))
+  
   message(
     paste0(
       "Inter fonts are installed in your R enviroments; however, ",
       "different OSes handle fonts managements differently. So, I ",
-      "recommend manually installing them on your system.\n\n",
+      "highly recommend manually installing them on your system.\n\n",
       "You can find them in ", inter_font_dir)
   )
 

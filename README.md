@@ -18,7 +18,7 @@ install.packages("devtools"); library(devtools)
 devtools::install_github("amirmasoudabdol/sfthemes")
 ```
 
-→ I'm planning to apply this to CRAN as soon as they are open! :P
+I'm planning to apply this to CRAN as soon as they are open! :P
 
 ## Preparation / Usage
 
@@ -30,7 +30,7 @@ library(ggplot2); library(sfthemes)
 import_inter() # ← DO NOT FORGET THIS!
 ```
 
-> 🚨 I'm having a bit of trouble *automatically* installing the necessary fonts with the package. Therefore, I highly recommend manually installing the fonts on your system. The `import_inter` function tries to install the fonts, and will print the path containing the font files for manual installation.
+> **Important**: I'm having a bit of trouble *automatically* installing the necessary fonts with the package. Therefore, I highly recommend manually installing the fonts on your system. The `import_inter` function tries to install the fonts, and will print the path containing the font files for manual installation.
 
 ### Quick Start
 
@@ -154,6 +154,10 @@ While I will mainly focus on keeping sfthemes functional, I have a short list of
 
 - Adding three *spacing classes* to control the spacing and margins of plots elements.
 - Adding the SF Pro to themes, and using different variants of it for optimal readability in different *size classes*
+
+##### Know Issues
+
+As I mentioned above, I am not so sure if I handled the fonts installation correctly. So, if someone has an idea how to improve it, please let me know! :)
 
 #### Contribution
 

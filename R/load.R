@@ -3,21 +3,12 @@
 .onAttach <- function(libname, pkgname) {
 
     if (interactive()) {
-      packageStartupMessage("sfthemes is under *active* development. ")
+      packageStartupMessage("sfthemes is under _active_ development...")
       packageStartupMessage("See https://github.com/amirmasoudabdol/sfthemes for info/news.")
-      packageStartupMessage(paste0("The process of importing fonts may not ",
+      packageStartupMessage(paste0("-> The process of importing fonts may not ",
                             "work as expected, if not, please manually install ",
-                            "them on your system."))
+                            "them on your system.\n"))
     }
-
-    if (.Platform$OS.type == "windows") { # nocov start
-        if (interactive()) packageStartupMessage("Registering Windows fonts with R")
-        extrafont::loadfonts("win", quiet = TRUE)
-    }
-
-    if (interactive()) packageStartupMessage("Registering PDF & PostScript fonts with R")
-    extrafont::loadfonts("pdf", quiet = TRUE)
-    extrafont::loadfonts("postscript", quiet = TRUE)
 
     fnt <- extrafont::fonttable()
     if (!any(grepl("SF[ ]Pro|Inter[ ]", fnt$FamilyName))) {
