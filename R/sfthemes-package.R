@@ -28,5 +28,5 @@
 #' @docType package
 #' @author Amir Masoud Abdol (i@amirmasoudabdol.name)
 #' @keywords internal
-#' @import ggplot2 scales extrafont
+#' @import ggplot2 scales extrafont grDevices grid
 "_PACKAGE"

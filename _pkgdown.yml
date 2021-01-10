@@ -50,6 +50,7 @@ articles:
   - colours
   - typography
   - size_classes
+  - dynamic_light_and_dark_plots_in_web
 
 reference:
 - title: Themes
