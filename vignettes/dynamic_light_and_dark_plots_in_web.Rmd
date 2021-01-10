@@ -3,7 +3,7 @@ title: "Dynamic Light and Dark Plots in Web"
 description: "A guide to dynamically show a light/dark plot in a website based on the user's preference."
 opengraph:
   image: 
-    src: "images/dynamic-light-and-dark-static.png"
+    src: https://amirmasoudabdol.github.io/sfthemes/articles/images/dynamic-light-and-dark-static.png
   twitter:
     card: summary_large_image
     creator: "@amirmasoudabdol"
