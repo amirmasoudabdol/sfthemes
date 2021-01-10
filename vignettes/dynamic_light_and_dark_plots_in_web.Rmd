@@ -1,7 +1,6 @@
 ---
 title: "Dynamic Light and Dark Plots in Web"
 description: "A guide to dynamically show a light/dark plot in a website based on the user's preference."
-author: "Amir Masoud Abdol"
 opengraph:
   image: 
     src: "images/dynamic-light-and-dark-static.png"
@@ -15,7 +14,7 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-Nowadays, most modern web browsers can detect users system preferences and consequently notify a website to deliver an accessible and customized experience to the visitors. Recently, I developed the [preferebly](https://amirmasoudabdol.github.io/preferably) to take advantages of this, and customize `pkgdown` websites based on users' preferred system appearances, e.g., *light/dark* mode. However, background and text colors are not the only elements of a websites that should be adjust based on users’ preferences, figures, and plots should adapt their appearances as well. Fortunately, it is possible to provide two versions of a same image and inform the browser on when to use one instead of the other. For instance, as you can see below, a light themed plot is used in the light version of the website, and a dark themed plot in the dark version.
+Nowadays, most modern web browsers can detect users system preferences and notify a website to deliver an accessible and customized experience to the visitors. Recently, I developed [preferebly](https://amirmasoudabdol.github.io/preferably) to take advantages of this, and customize `pkgdown` websites based on user's preferred system appearances, e.g., *light/dark mode*. However, background and text colors are not the only elements of a website that should be adjust based on users’ preferences, figures and plots should adapt their appearances as well. Fortunately, it is possible to provide two versions of a same image and inform browsers on when to use one instead of the other. For instance, as you can see below, a light themed plot is used in the light version of the website, and a dark themed plot in the dark version.
 
 ![](images/dynamic-light-and-dark-static.png)
 
@@ -25,11 +24,11 @@ Here, I describe how you can achieve this behavior using my custom pkgdown templ
 
 ## Instruction
 
-So, as I mentioned, what we need is two versions of the same plot, each optimized for light and dark appearances, respectively, and a method of delivering them based on the user’s preference.
+So, as I mentioned, what we need is two versions of the same plot, each optimized for light and dark appearance, and a method of delivering them based on the user’s system preference.
 
 ### Creating Light/Dark Plots
 
-As shown in [here](../../index.html#light-and-dark-themes), you can produce two variants of your visualization by using `theme_sf_light()` and `theme_sf_dark()` themes, and your selected color scheme in light and dark mode. For instance,
+As shown [here](../../index.html#light-and-dark-themes), you can produce two variants of your visualization by using `theme_sf_light()` and `theme_sf_dark()` themes, and your selected color scheme in light and dark mode.
 
 ```R
 library(ggplot2); library(sfthemes)
@@ -65,7 +64,7 @@ ggsave("theme-sf-dark.png")
 
 ### Markdown Integration
 
-Now that we have our plots, we can use HTML’s [`<picture>` and `<source>`](https://www.w3schools.com/TAgs/att_source_srcset.asp) tag to provide a different image to the `<img href=“”>`, and notify the browser about the presence of an alternative image for the alternative appearance. For example,
+Now that we have our plots, we can use HTML’s [`<picture>` and `<source>`](https://www.w3schools.com/TAgs/att_source_srcset.asp) tags and set a different image to `<img href=“”>` based on website's appearance. For example, the code block below makes sure that `theme-sf-dark.png` will be the source when the user seeing a dark version of the website.
 
 ```html
 <picture>
@@ -74,7 +73,7 @@ Now that we have our plots, we can use HTML’s [`<picture>` and `<source>`](htt
 </picture>
 ```
 
-Don't be alarmed by the use of HTML, you don’t necessarily need to edit your HTML files, in fact, you can just write this inside your markdown files. Most Markdown parsers are smart enough to detect this as a piece of HTML code, and simply inject it into the rendered HTML. For instance, you can see that [this page]() is generated using from a markdown file, using `rmarkdown`.
+Don't be alarmed by the use of HTML, you don’t necessarily need to edit your HTML files, in fact, you can just write this inside your markdown files. Most Markdown parsers are smart enough to detect this as a piece of HTML code, and simply inject it into the rendered HTML. For instance, you can see that [this page](https://github.com/amirmasoudabdol/sfthemes/blob/main/vignettes/dynamic_light_and_dark_plots_in_web.Rmd) is generated using from a markdown file, using `rmarkdown`.
 
 The figure below is created using the above snippet, and will change based on your preference.
 
