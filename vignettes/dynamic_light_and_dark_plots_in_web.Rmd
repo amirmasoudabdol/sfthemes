@@ -14,7 +14,7 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-Nowadays, most modern web browsers can detect users system preferences and notify a website to deliver an accessible and customized experience to the visitors. Recently, I developed [preferebly](https://amirmasoudabdol.github.io/preferably) to take advantages of this, and customize `pkgdown` websites based on user's preferred system appearances, e.g., *light/dark mode*. However, background and text colors are not the only elements of a website that should be adjust based on users’ preferences, figures and plots should adapt their appearances as well. Fortunately, it is possible to provide two versions of a same image and inform browsers on when to use one instead of the other. For instance, as you can see below, a light themed plot is used in the light version of the website, and a dark themed plot in the dark version.
+Nowadays, most modern web browsers can detect users system preferences and notify a website to deliver an accessible and customized experience to the visitors. Recently, I developed [preferably](https://amirmasoudabdol.github.io/preferably) to take advantages of this, and customize `pkgdown` websites based on user's preferred system appearances, e.g., *light/dark mode*. However, background and text colors are not the only elements of a website that should be adjust based on users’ preferences, figures and plots should adapt their appearances as well. Fortunately, it is possible to provide two versions of a same image and inform browsers on when to use one instead of the other. For instance, as you can see below, a light themed plot is used in the light version of the website, and a dark themed plot in the dark version.
 
 ![](images/dynamic-light-and-dark-static.png)
 
