@@ -22,11 +22,7 @@ development:
 navbar:
   structure:
     left:  [home, reference, articles, news]
-    right: [github, kofi]
-  components:
-    kofi:
-      icon: "fas fa-coffee fa-lg"
-      href: https://ko-fi.com/C0C47DMK
+    right: [github]
 
 template:
   package: preferably
@@ -34,6 +30,8 @@ template:
     canalytics:
       domain: sfthemes.amirmasoudabdol.name
       src: https://stats.sfthemes.amirmasoudabdol.name/js/index.js
+    github-sponsor:
+      url: https://github.com/sponsors/amirmasoudabdol/
   opengraph:
     image:
       src: man/figures/twitter-summary-card.png
