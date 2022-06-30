@@ -1,10 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://sfthemes.amirmasoudabdol.name/404.html</loc>
+  </url>
+  <url>
+    <loc>https://sfthemes.amirmasoudabdol.name/LICENSE-text.html</loc>
+  </url>
+  <url>
+    <loc>https://sfthemes.amirmasoudabdol.name/articles/colours.html</loc>
+  </url>
+  <url>
+    <loc>https://sfthemes.amirmasoudabdol.name/articles/dynamic_light_and_dark_plots_in_web.html</loc>
+  </url>
+  <url>
+    <loc>https://sfthemes.amirmasoudabdol.name/articles/index.html</loc>
+  </url>
+  <url>
+    <loc>https://sfthemes.amirmasoudabdol.name/articles/size_classes.html</loc>
+  </url>
+  <url>
+    <loc>https://sfthemes.amirmasoudabdol.name/articles/typography.html</loc>
+  </url>
+  <url>
+    <loc>https://sfthemes.amirmasoudabdol.name/authors.html</loc>
+  </url>
+  <url>
     <loc>https://sfthemes.amirmasoudabdol.name/index.html</loc>
   </url>
   <url>
+    <loc>https://sfthemes.amirmasoudabdol.name/news/index.html</loc>
+  </url>
+  <url>
     <loc>https://sfthemes.amirmasoudabdol.name/reference/import_inter.html</loc>
+  </url>
+  <url>
+    <loc>https://sfthemes.amirmasoudabdol.name/reference/index.html</loc>
   </url>
   <url>
     <loc>https://sfthemes.amirmasoudabdol.name/reference/ios_colour_palettes.html</loc>
@@ -47,17 +77,5 @@
   </url>
   <url>
     <loc>https://sfthemes.amirmasoudabdol.name/reference/watchos_colour_palettes.html</loc>
-  </url>
-  <url>
-    <loc>https://sfthemes.amirmasoudabdol.name/articles/colours.html</loc>
-  </url>
-  <url>
-    <loc>https://sfthemes.amirmasoudabdol.name/articles/dynamic_light_and_dark_plots_in_web.html</loc>
-  </url>
-  <url>
-    <loc>https://sfthemes.amirmasoudabdol.name/articles/size_classes.html</loc>
-  </url>
-  <url>
-    <loc>https://sfthemes.amirmasoudabdol.name/articles/typography.html</loc>
   </url>
 </urlset>

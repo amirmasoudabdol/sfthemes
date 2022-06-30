@@ -1,12 +1,12 @@
 pandoc: 2.7.3
-pkgdown: 1.6.1
+pkgdown: 2.0.5
 pkgdown_sha: ~
 articles:
   colours: colours.html
   dynamic_light_and_dark_plots_in_web: dynamic_light_and_dark_plots_in_web.html
   size_classes: size_classes.html
   typography: typography.html
-last_built: 2021-01-17T16:23Z
+last_built: 2022-06-30T15:38Z
 urls:
   reference: https://sfthemes.amirmasoudabdol.name/reference
   article: https://sfthemes.amirmasoudabdol.name/articles
