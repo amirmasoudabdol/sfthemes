@@ -34,7 +34,7 @@ jobs:
       - name: Install dependencies
         run: |
           remotes::install_deps(dependencies = TRUE)
-          install.packages("pkgdown", type = "binary")
+          install.packages(c("pkgdown", "ggplot2", "devtools", "extrafonts"), type = "binary")
           install.packages("preferably")
         shell: Rscript {0}
 
