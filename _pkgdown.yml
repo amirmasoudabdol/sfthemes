@@ -22,10 +22,19 @@ development:
 navbar:
   structure:
     left:  [home, reference, articles, news]
-    right: [github]
+    right: [packages, github]
+  components:
+    packages:
+      text: "Packages"
+      menu:
+      - text: "Preferably Template"
+        href: https://preferably.amirmasoudabdol.name
+      - text: "Primer R Markdown"
+        href: https://primermd.amirmasoudabdol.name
 
 template:
   package: preferably
+  bootstrap: 5
   params:
     canalytics:
       domain: sfthemes.amirmasoudabdol.name
