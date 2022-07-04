@@ -36,9 +36,6 @@ template:
   package: preferably
   bootstrap: 5
   params:
-    canalytics:
-      domain: sfthemes.amirmasoudabdol.name
-      src: https://stats.sfthemes.amirmasoudabdol.name/js/index.js
     github-sponsor:
       url: https://github.com/sponsors/amirmasoudabdol/
   opengraph:
